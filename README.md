@@ -1,5 +1,17 @@
 # SSVEP-TRIAL-REPO
 
+## Project Overview
+
+This project focuses on processing and classifying SSVEP EEG signals for Brain-Computer Interface (BCI) applications.
+
+### Technologies Used
+
+- Python
+- EEG Signal Processing
+- FFT
+- Graph Neural Networks
+- PyTorch / PyTorch Geometric
+
 A GNN-based classifier for 40-target SSVEP EEG frequency classification, built on the Benchmark SSVEP Dataset (Wang, Chen, Gao, Gao, 2016, IEEE TNSRE).
 
 **Research goal:** Replace the standard DNN classifier in an SSVEP pipeline with a Graph Neural Network that explicitly models spatial relationships between EEG electrodes, and test whether this improves 40-target classification accuracy (8.0–15.8 Hz targets).

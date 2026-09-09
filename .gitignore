@@ -1,12 +1,11 @@
-﻿# Raw dataset - too large, not ours to redistribute
-data/raw/benchmark/
+# Processed data (regenerate via step08_preprocess.py)
+data/processed/*.npz
 
-# MATLAB exploration data
-EXPLORATION-USING-MATLAB/*.mat
+# OS junk
+.DS_Store
+**/.DS_Store
 
-# Virtual environment
-venv/
-
-# Python cache
+# Python
 __pycache__/
 *.pyc
+data/raw/benchmark/

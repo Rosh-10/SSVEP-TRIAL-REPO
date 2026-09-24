@@ -20,7 +20,10 @@ Example of the bug this prevents:
 import sys
 from pathlib import Path
 
-sys.path.append(str(Path(__file__).resolve().parent.parent))
+# Add repo root to path to import config
+repo_root = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(repo_root))
+
 from config import BENCHMARK_DIR
 
 import scipy.io as sio

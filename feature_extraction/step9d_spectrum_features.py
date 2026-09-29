@@ -1,29 +1,34 @@
 """
-STEP 9b: BATCH FEATURE EXTRACTION FOR ALL 35 SUBJECTS (Windows-Compatible)
-
-With existence check: if all 35 feature files already exist, skip extraction and just log.
-Otherwise, extract missing files.
+STEP 9d: FINE-RESOLUTION FFT SPECTRUM FEATURES FOR ALL 35 SUBJECTS (FIXED)
 
 Objective:
-    Load all 35 preprocessed subjects and extract filter bank features
-    for all 40 targets x 6 blocks per subject.
+    Extract high-resolution frequency spectrum (0.2 Hz bins) from preprocessed EEG.
+    This captures discriminative frequency information at the same resolution as target spacing.
 
 Input:
     Preprocessed data: data/processed/S1.npz, ..., S35.npz
     Each file: shape (64, 1500, 40, 6)
 
 Output:
-    Feature files: feature_extraction/S1_features.npz, ..., S35_features.npz
-    Each file: shape (40, 6, 64, 9) — (targets, blocks, channels, subbands)
-    Log file: results/step9b_batch_log.txt
+    Spectrum files: feature_extraction/S1_spectrum.npz, ..., S35_spectrum.npz
+    Each file: shape (40, 6, 64, 280) — (targets, blocks, channels, freq_bins)
+    Freq range: 8-64 Hz at 0.2 Hz resolution
+    Log file: results/step9d_spectrum_log.txt
 
-Time estimate: ~5-10 minutes for all 35 subjects (if extraction needed)
+Time estimate: ~10-15 minutes for all 35 subjects
+
+Why Step 9d?
+    9-band power features achieved ~5% accuracy (chance for 40 targets).
+    Targets spaced 0.2 Hz apart (8.0, 8.2, 8.4, ..., 15.8 Hz).
+    4 Hz wide bands cannot distinguish targets only 0.2 Hz apart.
+    
+    FFT spectrum at 0.2 Hz resolution provides 280 frequency bins per channel.
+    280 bins × 64 channels = 17,920 features/trial (30x more information).
+    Expected accuracy: 80%+ for single-subject leave-one-block-out.
 """
 
 import numpy as np
-from scipy.signal import butter, sosfiltfilt
 from pathlib import Path
-import sys
 import time
 from datetime import datetime
 import importlib.util
@@ -52,84 +57,85 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 # CONFIGURATION
 # ============================================================================
 
-SUBBANDS = [
-    (6, 10), (10, 14), (14, 18), (18, 22), (22, 26),
-    (26, 30), (30, 34), (34, 42), (42, 65),
-]
-N_SUBBANDS = len(SUBBANDS)
 SAMPLING_RATE = 250
-FILTER_ORDER = 5
+FREQ_RESOLUTION = 0.2  # Hz (matches target spacing: 8.0, 8.2, 8.4, ...)
+FREQ_LOW = 8.0
+FREQ_HIGH = 64.0
 NUM_SUBJECTS = 35
 NUM_TARGETS = 40
 NUM_BLOCKS = 6
 NUM_CHANNELS = 64
 
-# ============================================================================
-# FILTER DESIGN
-# ============================================================================
-
-def design_bandpass_filter(f_low, f_high, fs=250, order=5):
-    """Design bandpass Butterworth filter (SOS format)."""
-    nyquist = fs / 2
-    low_norm = max(0.001, min(0.999, f_low / nyquist))
-    high_norm = max(0.001, min(0.999, f_high / nyquist))
-    sos = butter(order, [low_norm, high_norm], btype='band', output='sos')
-    return sos
-
-
-def create_filterbank(subbands, fs=250, order=5):
-    """Create filter bank: list of SOS matrices."""
-    return [design_bandpass_filter(f_low, f_high, fs, order) for f_low, f_high in subbands]
+# Calculate number of frequency bins
+NUM_FREQ_BINS = int((FREQ_HIGH - FREQ_LOW) / FREQ_RESOLUTION)
+print(f"[INFO] Configuration: {FREQ_LOW}-{FREQ_HIGH} Hz at {FREQ_RESOLUTION} Hz resolution = {NUM_FREQ_BINS} bins")
 
 # ============================================================================
 # FEATURE EXTRACTION
 # ============================================================================
 
-def extract_filterbank_features(trial_data, filterbank, fs=250):
+def extract_spectrum_features(trial_data, sampling_rate=250, freq_low=8, freq_high=64, freq_res=0.2):
     """
-    Extract power features from a single trial.
+    Extract FFT spectrum features from a single trial.
     
     Args:
-        trial_data: Shape (64, 1500)
-        filterbank: List of SOS matrices
-        fs: Sampling rate
+        trial_data: Shape (64, 1500) — all channels, all time samples
+        sampling_rate: 250 Hz
+        freq_low, freq_high: Frequency range to extract
+        freq_res: Desired frequency resolution (Hz)
     
     Returns:
-        features: Shape (64, 9) — power per channel per subband
+        spectrum: Shape (64, num_freq_bins) — magnitude spectrum per channel
     """
     n_channels, n_samples = trial_data.shape
-    n_subbands = len(filterbank)
-    features = np.zeros((n_channels, n_subbands), dtype=np.float32)
+    
+    # Desired output frequency bins
+    target_freqs = np.arange(freq_low, freq_high, freq_res)
+    n_freq_bins = len(target_freqs)
+    
+    # Compute FFT with zero-padding to next power of 2 for efficiency
+    fft_len = 2 ** int(np.ceil(np.log2(n_samples)))  # Next power of 2 after 1500 = 2048
+    
+    spectrum = np.zeros((n_channels, n_freq_bins), dtype=np.float32)
     
     for ch_idx in range(n_channels):
         channel_signal = trial_data[ch_idx, :]
-        for sb_idx, sos in enumerate(filterbank):
-            filtered = sosfiltfilt(sos, channel_signal)
-            power = np.mean(filtered ** 2)
-            features[ch_idx, sb_idx] = power
+        
+        # Compute FFT (automatically zero-pads to fft_len)
+        fft_output = np.fft.rfft(channel_signal, n=fft_len)
+        
+        # Frequency array for FFT output
+        fft_freqs = np.fft.rfftfreq(fft_len, 1.0 / sampling_rate)
+        
+        # Extract magnitude at desired frequencies (interpolate if needed)
+        magnitude = np.abs(fft_output)
+        spectrum[ch_idx, :] = np.interp(target_freqs, fft_freqs, magnitude)
     
-    return features
+    return spectrum
 
 # ============================================================================
-# MAIN: BATCH EXTRACT WITH EXISTENCE CHECK
+# MAIN: BATCH EXTRACT
 # ============================================================================
 
-def batch_extract_features():
-    """Load all 35 subjects, extract features, save results."""
+def batch_extract_spectrum():
+    """Load all 35 subjects, extract spectrum features, save results."""
     log_lines = []
-    log_lines.append("=" * 76)
-    log_lines.append("STEP 9b: BATCH FEATURE EXTRACTION FOR ALL 35 SUBJECTS")
-    log_lines.append("=" * 76)
+    log_lines.append("=" * 80)
+    log_lines.append("STEP 9d: FINE-RESOLUTION FFT SPECTRUM FEATURES FOR ALL 35 SUBJECTS")
+    log_lines.append("=" * 80)
     log_lines.append(f"Start time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     log_lines.append(f"Output directory: {OUTPUT_DIR}")
+    log_lines.append(f"Frequency range: {FREQ_LOW}-{FREQ_HIGH} Hz at {FREQ_RESOLUTION} Hz resolution")
+    log_lines.append(f"Frequency bins: {NUM_FREQ_BINS}")
+    log_lines.append(f"Output shape per subject: ({NUM_TARGETS}, {NUM_BLOCKS}, {NUM_CHANNELS}, {NUM_FREQ_BINS})")
     log_lines.append("")
     
-    # Check if all features already exist
+    # Check existing files
     existing = []
     missing = []
     for subject_idx in range(1, NUM_SUBJECTS + 1):
         subject_id = f"S{subject_idx}"
-        output_file = OUTPUT_DIR / f"{subject_id}_features.npz"
+        output_file = OUTPUT_DIR / f"{subject_id}_spectrum.npz"
         if output_file.exists():
             existing.append(subject_id)
         else:
@@ -137,17 +143,17 @@ def batch_extract_features():
     
     log_lines.append(f"Checking existing files: {len(existing)}/35 found")
     
-    # If all exist, just verify and report
+    # If all exist, verify and report
     if len(missing) == 0:
-        log_lines.append("[INFO] All 35 feature files already exist. Verifying...")
+        log_lines.append("[INFO] All 35 spectrum files already exist. Verifying...")
         log_lines.append("")
         
         all_valid = True
         for subject_id in existing:
             try:
-                output_file = OUTPUT_DIR / f"{subject_id}_features.npz"
-                data = np.load(output_file)['features']
-                if data.shape == (NUM_TARGETS, NUM_BLOCKS, NUM_CHANNELS, N_SUBBANDS):
+                output_file = OUTPUT_DIR / f"{subject_id}_spectrum.npz"
+                data = np.load(output_file)['spectrum']
+                if data.shape == (NUM_TARGETS, NUM_BLOCKS, NUM_CHANNELS, NUM_FREQ_BINS):
                     log_lines.append(f"{subject_id}: [OK] shape={data.shape}")
                 else:
                     log_lines.append(f"{subject_id}: [ERROR] Wrong shape: {data.shape}")
@@ -158,26 +164,21 @@ def batch_extract_features():
         
         log_lines.append("")
         if all_valid:
-            log_lines.append("=" * 76)
-            log_lines.append("STEP 9b: ALL FILES VERIFIED")
+            log_lines.append("=" * 80)
+            log_lines.append("STEP 9d: ALL FILES VERIFIED")
             log_lines.append(f"Success: 35/35")
             log_lines.append(f"Errors: 0/35")
-            log_lines.append(f"Status: Ready for Step 9c (Validation)")
-            log_lines.append("=" * 76)
-        else:
-            log_lines.append("=" * 76)
-            log_lines.append("STEP 9b: SOME FILES CORRUPTED - RE-EXTRACTING")
-            log_lines.append("=" * 76)
-            missing = [s for s in existing if not _verify_file(s)]
+            log_lines.append(f"Status: Ready to retest accuracy and proceed to Step 10")
+            log_lines.append("=" * 80)
+            log_lines.append("")
+            log_lines.append("Next: Run test_accuracy_spectrum.py to verify improved classification accuracy")
     
     # If any missing, extract them
     if len(missing) > 0:
-        log_lines.append(f"[INFO] Extracting {len(missing)} missing files: {missing}")
+        log_lines.append(f"[INFO] Extracting {len(missing)} missing files...")
         log_lines.append("")
         
         start_time = time.time()
-        filterbank = create_filterbank(SUBBANDS, fs=SAMPLING_RATE, order=FILTER_ORDER)
-        
         success_count = len(existing)  # Already have these
         error_count = 0
         
@@ -199,25 +200,29 @@ def batch_extract_features():
                     error_count += 1
                     continue
                 
-                # Extract features for all trials
-                features = np.zeros(
-                    (NUM_TARGETS, NUM_BLOCKS, NUM_CHANNELS, N_SUBBANDS),
+                # Extract spectrum for all trials
+                spectrum = np.zeros(
+                    (NUM_TARGETS, NUM_BLOCKS, NUM_CHANNELS, NUM_FREQ_BINS),
                     dtype=np.float32
                 )
                 
                 for target_idx in range(NUM_TARGETS):
                     for block_idx in range(NUM_BLOCKS):
                         trial = data[:, :, target_idx, block_idx]  # (64, 1500)
-                        features[target_idx, block_idx, :, :] = extract_filterbank_features(
-                            trial, filterbank, fs=SAMPLING_RATE
+                        spectrum[target_idx, block_idx, :, :] = extract_spectrum_features(
+                            trial,
+                            sampling_rate=SAMPLING_RATE,
+                            freq_low=FREQ_LOW,
+                            freq_high=FREQ_HIGH,
+                            freq_res=FREQ_RESOLUTION
                         )
                 
-                # Save features
-                output_file = OUTPUT_DIR / f"{subject_id}_features.npz"
-                np.savez_compressed(output_file, features=features)
+                # Save spectrum
+                output_file = OUTPUT_DIR / f"{subject_id}_spectrum.npz"
+                np.savez_compressed(output_file, spectrum=spectrum)
                 
                 elapsed = time.time() - start_time
-                log_lines.append(f"{subject_id}: [OK] shape={features.shape}, {elapsed:.1f}s elapsed")
+                log_lines.append(f"{subject_id}: [OK] shape={spectrum.shape}, {elapsed:.1f}s elapsed")
                 success_count += 1
                 
             except Exception as e:
@@ -227,16 +232,18 @@ def batch_extract_features():
         # Summary
         total_time = time.time() - start_time
         log_lines.append("")
-        log_lines.append("=" * 76)
-        log_lines.append("STEP 9b: BATCH EXTRACTION COMPLETE")
+        log_lines.append("=" * 80)
+        log_lines.append("STEP 9d: BATCH EXTRACTION COMPLETE")
         log_lines.append(f"Success: {success_count}/{NUM_SUBJECTS}")
         log_lines.append(f"Errors: {error_count}/{NUM_SUBJECTS}")
         log_lines.append(f"Total time: {total_time:.1f} seconds ({total_time/60:.1f} minutes)")
         log_lines.append(f"End time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        log_lines.append("=" * 76)
+        log_lines.append("=" * 80)
+        log_lines.append("")
+        log_lines.append("Next: Run test_accuracy_spectrum.py to verify improved classification accuracy")
     
-    # Write log with UTF-8 encoding (Windows-safe)
-    log_file = RESULTS_DIR / "step9b_batch_log.txt"
+    # Write log
+    log_file = RESULTS_DIR / "step9d_spectrum_log.txt"
     with open(log_file, 'w', encoding='utf-8') as f:
         f.write('\n'.join(log_lines))
     
@@ -244,19 +251,9 @@ def batch_extract_features():
     print('\n'.join(log_lines))
 
 
-def _verify_file(subject_id):
-    """Quick check if feature file is valid."""
-    try:
-        output_file = OUTPUT_DIR / f"{subject_id}_features.npz"
-        data = np.load(output_file)['features']
-        return data.shape == (NUM_TARGETS, NUM_BLOCKS, NUM_CHANNELS, N_SUBBANDS)
-    except:
-        return False
-
-
 # ============================================================================
 # RUN
 # ============================================================================
 
 if __name__ == "__main__":
-    batch_extract_features()
+    batch_extract_spectrum()

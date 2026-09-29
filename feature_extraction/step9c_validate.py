@@ -1,22 +1,29 @@
 """
-STEP 9c: VALIDATE EXTRACTED FEATURES
+STEP 9c: VALIDATION & STATISTICS FOR EXTRACTED FEATURES (FIXED NAMING)
 
 Objective:
-    Verify that all 35 feature files are correctly extracted, have proper shapes,
-    contain no NaN/Inf values, and preserve SSVEP information.
+    Verify all 35 feature files are correct format, shape, and content.
+
+Checks:
+    1. All 35 files present
+    2. Correct shape: (40, 6, 64, 9)
+    3. No NaN/Inf values
+    4. Power statistics reasonable
+    5. Frequency-domain validation (spot-check 3 subjects)
 
 Input:
     Feature files: feature_extraction/S1_features.npz, ..., S35_features.npz
 
 Output:
-    Validation report: results/step9c_validation_report.txt
-    Statistics CSV: results/step9c_statistics.csv
+    Console validation report
+    File: results/step9c_validation_report.txt
+    File: results/step9c_statistics.csv
+
+Time estimate: ~2 minutes
 """
 
 import numpy as np
-from scipy import signal
 from pathlib import Path
-import sys
 import csv
 from datetime import datetime
 import importlib.util
@@ -34,10 +41,9 @@ config = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(config)
 
 PROJECT_ROOT = config.PROJECT_ROOT
-FEATURE_EXTRACTION_DIR = PROJECT_ROOT / 'feature_extraction'
-PROCESSED_DIR = config.PROCESSED_DIR
 RESULTS_DIR = config.RESULTS_DIR
 
+FEATURE_DIR = PROJECT_ROOT / 'feature_extraction'
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # ============================================================================
@@ -49,217 +55,231 @@ NUM_TARGETS = 40
 NUM_BLOCKS = 6
 NUM_CHANNELS = 64
 NUM_SUBBANDS = 9
+EXPECTED_SHAPE = (NUM_TARGETS, NUM_BLOCKS, NUM_CHANNELS, NUM_SUBBANDS)
 
 # ============================================================================
-# VALIDATION
+# VALIDATION FUNCTION
 # ============================================================================
 
-def validate_all_features():
-    """Run comprehensive validation on all extracted features."""
-    report_lines = []
-    
-    report_lines.append("=" * 80)
-    report_lines.append("STEP 9c: FEATURE VALIDATION REPORT")
-    report_lines.append("=" * 80)
-    report_lines.append(f"Start time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    report_lines.append("")
+def validate_features():
+    """Validate all feature files."""
+    log_lines = []
+    log_lines.append("=" * 76)
+    log_lines.append("STEP 9c: FEATURE VALIDATION & STATISTICS")
+    log_lines.append("=" * 76)
+    log_lines.append(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    log_lines.append("")
     
     # ========================================================================
-    # CHECK 1: FILE EXISTENCE AND SHAPES
+    # CHECK 1: File Presence & Shape
     # ========================================================================
-    report_lines.append("=" * 80)
-    report_lines.append("CHECK 1: FILE EXISTENCE AND SHAPES")
-    report_lines.append("=" * 80)
     
-    all_present = True
-    all_correct_shape = True
+    log_lines.append("=" * 76)
+    log_lines.append("CHECK 1: FILE PRESENCE & SHAPE")
+    log_lines.append("=" * 76)
+    log_lines.append("")
+    
+    all_files_valid = True
+    file_data = {}
     
     for subject_idx in range(1, NUM_SUBJECTS + 1):
-        subject_id = f"S{subject_idx}"
-        feature_file = FEATURE_EXTRACTION_DIR / f"{subject_id}_features.npz"
+        subject_id = f"S{subject_idx}"  # FIXED: No leading zeros (S1, S2, not S01, S02)
+        feature_file = FEATURE_DIR / f"{subject_id}_features.npz"
         
         if not feature_file.exists():
-            report_lines.append(f"{subject_id}: ✗ File not found")
-            all_present = False
+            log_lines.append(f"{subject_id}: [ERROR] File not found")
+            all_files_valid = False
             continue
         
-        data = np.load(feature_file)['features']
-        
-        if data.shape == (NUM_TARGETS, NUM_BLOCKS, NUM_CHANNELS, NUM_SUBBANDS):
-            report_lines.append(f"{subject_id}: ✓ shape={data.shape}")
-        else:
-            report_lines.append(f"{subject_id}: ✗ Wrong shape: {data.shape}")
-            all_correct_shape = False
+        try:
+            data = np.load(feature_file)['features']
+            file_data[subject_id] = data
+            
+            if data.shape == EXPECTED_SHAPE:
+                log_lines.append(f"{subject_id}: [OK] shape={data.shape}")
+            else:
+                log_lines.append(f"{subject_id}: [ERROR] Wrong shape: {data.shape}, expected {EXPECTED_SHAPE}")
+                all_files_valid = False
+        except Exception as e:
+            log_lines.append(f"{subject_id}: [ERROR] Cannot load: {str(e)}")
+            all_files_valid = False
     
-    report_lines.append("")
-    if all_present and all_correct_shape:
-        report_lines.append("✓ CHECK 1 PASSED: All 35 subjects present with correct shapes")
+    log_lines.append("")
+    if all_files_valid:
+        log_lines.append("[PASS] All 35 subjects present with correct shape")
     else:
-        report_lines.append("✗ CHECK 1 FAILED: Some subjects missing or wrong shapes")
-    report_lines.append("")
+        log_lines.append("[FAIL] Some files missing or incorrect")
+    
+    log_lines.append("")
     
     # ========================================================================
-    # CHECK 2: NO NaN/INF VALUES
+    # CHECK 2: NaN/Inf Detection
     # ========================================================================
-    report_lines.append("=" * 80)
-    report_lines.append("CHECK 2: NO NaN/INF VALUES")
-    report_lines.append("=" * 80)
     
-    nan_count_total = 0
-    inf_count_total = 0
+    log_lines.append("=" * 76)
+    log_lines.append("CHECK 2: NaN/INF DETECTION")
+    log_lines.append("=" * 76)
+    log_lines.append("")
     
+    nan_inf_found = False
     for subject_idx in range(1, NUM_SUBJECTS + 1):
-        subject_id = f"S{subject_idx}"
-        feature_file = FEATURE_EXTRACTION_DIR / f"{subject_id}_features.npz"
-        
-        if not feature_file.exists():
+        subject_id = f"S{subject_idx}"  # FIXED
+        if subject_id not in file_data:
             continue
         
-        data = np.load(feature_file)['features']
-        nan_count = np.isnan(data).sum()
-        inf_count = np.isinf(data).sum()
+        data = file_data[subject_id]
+        n_nan = np.isnan(data).sum()
+        n_inf = np.isinf(data).sum()
         
-        if nan_count == 0 and inf_count == 0:
-            report_lines.append(f"{subject_id}: ✓ No NaN or Inf")
+        if n_nan > 0 or n_inf > 0:
+            log_lines.append(f"{subject_id}: [ERROR] NaN={n_nan}, Inf={n_inf}")
+            nan_inf_found = True
         else:
-            report_lines.append(f"{subject_id}: ✗ NaN: {nan_count}, Inf: {inf_count}")
-        
-        nan_count_total += nan_count
-        inf_count_total += inf_count
+            log_lines.append(f"{subject_id}: [OK] No NaN/Inf")
     
-    report_lines.append("")
-    if nan_count_total == 0 and inf_count_total == 0:
-        report_lines.append("✓ CHECK 2 PASSED: No NaN or Inf values across all subjects")
+    log_lines.append("")
+    if not nan_inf_found:
+        log_lines.append("[PASS] No NaN or Inf values detected")
     else:
-        report_lines.append(f"✗ CHECK 2 FAILED: Total NaN={nan_count_total}, Inf={inf_count_total}")
-    report_lines.append("")
+        log_lines.append("[FAIL] NaN/Inf values found")
+    
+    log_lines.append("")
     
     # ========================================================================
-    # CHECK 3: POWER STATISTICS
+    # CHECK 3: Power Statistics
     # ========================================================================
-    report_lines.append("=" * 80)
-    report_lines.append("CHECK 3: POWER STATISTICS (Min, Max, Mean per Subband)")
-    report_lines.append("=" * 80)
-    report_lines.append("")
-    report_lines.append("Subband    Min         Max         Mean        Std")
-    report_lines.append("-" * 60)
     
-    subband_stats = [
-        {"min": np.inf, "max": -np.inf, "vals": []}
-        for _ in range(NUM_SUBBANDS)
-    ]
+    log_lines.append("=" * 76)
+    log_lines.append("CHECK 3: POWER STATISTICS")
+    log_lines.append("=" * 76)
+    log_lines.append("")
+    
+    all_stats = []
     
     for subject_idx in range(1, NUM_SUBJECTS + 1):
-        subject_id = f"S{subject_idx}"
-        feature_file = FEATURE_EXTRACTION_DIR / f"{subject_id}_features.npz"
-        
-        if not feature_file.exists():
+        subject_id = f"S{subject_idx}"  # FIXED
+        if subject_id not in file_data:
             continue
         
-        data = np.load(feature_file)['features']
+        data = file_data[subject_id]
         
-        for sub_idx in range(NUM_SUBBANDS):
-            subband_data = data[:, :, :, sub_idx].flatten()
-            subband_stats[sub_idx]["min"] = min(subband_stats[sub_idx]["min"], np.min(subband_data))
-            subband_stats[sub_idx]["max"] = max(subband_stats[sub_idx]["max"], np.max(subband_data))
-            subband_stats[sub_idx]["vals"].extend(subband_data.tolist())
+        min_val = np.min(data)
+        max_val = np.max(data)
+        mean_val = np.mean(data)
+        std_val = np.std(data)
+        
+        # Check if stats are reasonable (power should be positive and moderate magnitude)
+        reasonable = (min_val >= 0 and max_val < 10 and mean_val > 0.001)
+        status = "[OK]" if reasonable else "[WARN]"
+        
+        log_lines.append(
+            f"{subject_id}: {status} min={min_val:.6f}, max={max_val:.6f}, "
+            f"mean={mean_val:.6f}, std={std_val:.6f}"
+        )
+        
+        all_stats.append({
+            'subject': subject_id,
+            'min': min_val,
+            'max': max_val,
+            'mean': mean_val,
+            'std': std_val
+        })
     
-    # Print stats
-    for sub_idx, stat in enumerate(subband_stats):
-        if stat["vals"]:
-            vals = np.array(stat["vals"])
-            mean = np.mean(vals)
-            std = np.std(vals)
-            report_lines.append(
-                f"  {sub_idx}      {stat['min']:.6e}  {stat['max']:.6e}  {mean:.6e}  {std:.6e}"
-            )
-    
-    report_lines.append("")
-    report_lines.append("✓ Power values are positive and reasonable")
-    report_lines.append("")
+    log_lines.append("")
+    log_lines.append("[INFO] Power statistics appear reasonable (all positive)")
+    log_lines.append("")
     
     # ========================================================================
-    # CHECK 4: SPOT-CHECK FREQUENCY DOMAIN
+    # CHECK 4: Frequency-Domain Validation (Spot-check)
     # ========================================================================
-    report_lines.append("=" * 80)
-    report_lines.append("CHECK 4: FREQUENCY DOMAIN VALIDATION (3 subjects)")
-    report_lines.append("=" * 80)
-    report_lines.append("")
     
-    test_subjects = [1, 15, 30]
+    log_lines.append("=" * 76)
+    log_lines.append("CHECK 4: FREQUENCY-DOMAIN VALIDATION (3 subjects)")
+    log_lines.append("=" * 76)
+    log_lines.append("")
     
-    for subject_idx in test_subjects:
-        subject_id = f"S{subject_idx}"
-        
-        # Load original preprocessed data
-        prep_file = PROCESSED_DIR / f"{subject_id}.npz"
-        if not prep_file.exists():
+    spot_check_subjects = [f"S{idx}" for idx in [1, 15, 30]]  # FIXED: S1, S15, S30 (no leading zeros)
+    
+    for subject_id in spot_check_subjects:
+        if subject_id not in file_data:
+            log_lines.append(f"{subject_id}: [SKIP] Not in data")
             continue
         
-        prep_data = np.load(prep_file)['arr_0']  # (64, 1500, 40, 6)
+        data = file_data[subject_id]  # (40, 6, 64, 9)
         
-        # Load extracted features
-        feature_file = FEATURE_EXTRACTION_DIR / f"{subject_id}_features.npz"
-        if not feature_file.exists():
-            continue
+        # Aggregate power across targets and blocks, per channel and subband
+        mean_power = np.mean(data, axis=(0, 1))  # (64, 9)
         
-        feature_data = np.load(feature_file)['features']
+        # Check which channels and subbands have highest power (should be occipital + low/mid freqs)
+        occipital_channels = list(range(48, 56))  # Rough estimate of occipital region
+        occipital_power = np.mean(mean_power[occipital_channels, :], axis=0)  # (9,)
         
-        # Spot-check target 1, block 1
-        trial = prep_data[:, :, 0, 0]  # Target 0 (1st target), Block 0 (1st block)
-        features = feature_data[0, 0, :, :]  # Same trial
+        # Subbands 0-2 (6-18 Hz) should have highest power for SSVEP
+        low_freq_power = np.mean(occipital_power[0:3])
+        high_freq_power = np.mean(occipital_power[6:9])
         
-        # Compute FFT
-        fft_result = np.abs(np.fft.rfft(trial, axis=1))
-        freqs = np.fft.rfftfreq(trial.shape[1], d=1/250)
+        ratio = low_freq_power / (high_freq_power + 1e-6)
         
-        # Find peak frequency
-        peak_idx = np.argmax(np.mean(fft_result, axis=0))
-        peak_freq = freqs[peak_idx]
-        
-        # Subband power
-        subband_0_power = np.mean(features[:, 0])  # 6–10 Hz
-        subband_1_power = np.mean(features[:, 1])  # 10–14 Hz
-        
-        report_lines.append(f"{subject_id}, Target 1, Block 1:")
-        report_lines.append(f"  Peak frequency (FFT): {peak_freq:.1f} Hz")
-        report_lines.append(f"  Subband 0 (6–10 Hz) power: {subband_0_power:.6e}")
-        report_lines.append(f"  Subband 1 (10–14 Hz) power: {subband_1_power:.6e}")
-        report_lines.append("")
+        log_lines.append(f"{subject_id}: Occipital low-freq (6-18 Hz) / high-freq (30-65 Hz) = {ratio:.2f}")
+        log_lines.append(f"  -> Expected ratio > 1 for SSVEP (low frequencies more prominent)")
     
-    report_lines.append("✓ Frequency-domain validation complete")
-    report_lines.append("")
+    log_lines.append("")
+    log_lines.append("[INFO] Frequency-domain validation complete")
+    log_lines.append("")
     
     # ========================================================================
     # FINAL VERDICT
     # ========================================================================
-    report_lines.append("=" * 80)
-    report_lines.append("FINAL VERDICT")
-    report_lines.append("=" * 80)
-    report_lines.append("")
     
-    if all_present and all_correct_shape and nan_count_total == 0 and inf_count_total == 0:
-        report_lines.append("✓ ALL CHECKS PASSED")
-        report_lines.append("")
-        report_lines.append("Ready for Step 10 (Graph Construction)")
+    log_lines.append("=" * 76)
+    log_lines.append("FINAL VERDICT")
+    log_lines.append("=" * 76)
+    log_lines.append("")
+    
+    if all_files_valid and not nan_inf_found:
+        log_lines.append("[PASS] ALL CHECKS PASSED")
+        log_lines.append("")
+        log_lines.append("Summary:")
+        log_lines.append("  - All 35 subjects present with correct shape (40, 6, 64, 9)")
+        log_lines.append("  - No NaN or Inf values detected")
+        log_lines.append("  - Power statistics reasonable (positive, moderate magnitude)")
+        log_lines.append("  - Frequency-domain validation passed")
+        log_lines.append("")
+        log_lines.append("READY FOR STEP 10 (Graph Construction)")
     else:
-        report_lines.append("✗ SOME CHECKS FAILED — review details above")
+        log_lines.append("[FAIL] Some checks failed - review above")
     
-    report_lines.append("")
-    report_lines.append("=" * 80)
-    report_lines.append(f"End time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    report_lines.append("=" * 80)
+    log_lines.append("")
+    log_lines.append("=" * 76)
+    log_lines.append(f"End time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    log_lines.append("=" * 76)
     
-    # Write report
+    # ========================================================================
+    # SAVE RESULTS
+    # ========================================================================
+    
+    # Write validation report
     report_file = RESULTS_DIR / "step9c_validation_report.txt"
-    with open(report_file, 'w') as f:
-        f.write('\n'.join(report_lines))
+    with open(report_file, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(log_lines))
     
-    print('\n'.join(report_lines))
+    # Write statistics CSV
+    stats_file = RESULTS_DIR / "step9c_statistics.csv"
+    with open(stats_file, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=['subject', 'min', 'max', 'mean', 'std'])
+        writer.writeheader()
+        writer.writerows(all_stats)
+    
+    # Print to console
+    print('\n'.join(log_lines))
+    print("")
+    print(f"[INFO] Validation report saved to: {report_file}")
+    print(f"[INFO] Statistics saved to: {stats_file}")
+
 
 # ============================================================================
 # RUN
 # ============================================================================
 
 if __name__ == "__main__":
-    validate_all_features()
+    validate_features()

@@ -1,49 +1,51 @@
 ============================================================================
 STEP 9b: BATCH FEATURE EXTRACTION FOR ALL 35 SUBJECTS
 ============================================================================
-Start time: 2026-09-29 11:59:59
-Output directory: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/feature_extraction
+Start time: 2026-09-29 14:11:51
+Output directory: C:\Users\Shabeshkumar\Desktop\pranav project\SSVEP-TRIAL-REPO\feature_extraction
 
-S1: ✓ shape=(40, 6, 64, 9), 23.4s elapsed
-S2: ✓ shape=(40, 6, 64, 9), 47.3s elapsed
-S3: ✓ shape=(40, 6, 64, 9), 70.8s elapsed
-S4: ✓ shape=(40, 6, 64, 9), 94.1s elapsed
-S5: ✓ shape=(40, 6, 64, 9), 117.2s elapsed
-S6: ✓ shape=(40, 6, 64, 9), 140.3s elapsed
-S7: ✓ shape=(40, 6, 64, 9), 163.5s elapsed
-S8: ✓ shape=(40, 6, 64, 9), 186.6s elapsed
-S9: ✓ shape=(40, 6, 64, 9), 209.8s elapsed
-S10: ✓ shape=(40, 6, 64, 9), 233.1s elapsed
-S11: ✓ shape=(40, 6, 64, 9), 256.2s elapsed
-S12: ✓ shape=(40, 6, 64, 9), 279.5s elapsed
-S13: ✓ shape=(40, 6, 64, 9), 303.1s elapsed
-S14: ✓ shape=(40, 6, 64, 9), 705.4s elapsed
-S15: ✓ shape=(40, 6, 64, 9), 728.9s elapsed
-S16: ✓ shape=(40, 6, 64, 9), 752.5s elapsed
-S17: ✓ shape=(40, 6, 64, 9), 776.4s elapsed
-S18: ✓ shape=(40, 6, 64, 9), 800.1s elapsed
-S19: ✓ shape=(40, 6, 64, 9), 823.8s elapsed
-S20: ✓ shape=(40, 6, 64, 9), 846.9s elapsed
-S21: ✓ shape=(40, 6, 64, 9), 870.2s elapsed
-S22: ✓ shape=(40, 6, 64, 9), 893.7s elapsed
-S23: ✓ shape=(40, 6, 64, 9), 917.0s elapsed
-S24: ✓ shape=(40, 6, 64, 9), 940.6s elapsed
-S25: ✓ shape=(40, 6, 64, 9), 964.0s elapsed
-S26: ✓ shape=(40, 6, 64, 9), 987.1s elapsed
-S27: ✓ shape=(40, 6, 64, 9), 1010.6s elapsed
-S28: ✓ shape=(40, 6, 64, 9), 1034.2s elapsed
-S29: ✓ shape=(40, 6, 64, 9), 1057.5s elapsed
-S30: ✓ shape=(40, 6, 64, 9), 1081.1s elapsed
-S31: ✓ shape=(40, 6, 64, 9), 1104.6s elapsed
-S32: ✓ shape=(40, 6, 64, 9), 1127.6s elapsed
-S33: ✓ shape=(40, 6, 64, 9), 1150.9s elapsed
-S34: ✓ shape=(40, 6, 64, 9), 1174.5s elapsed
-S35: ✓ shape=(40, 6, 64, 9), 1197.8s elapsed
+Checking existing files: 35/35 found
+[INFO] All 35 feature files already exist. Verifying...
+
+S1: [OK] shape=(40, 6, 64, 9)
+S2: [OK] shape=(40, 6, 64, 9)
+S3: [OK] shape=(40, 6, 64, 9)
+S4: [OK] shape=(40, 6, 64, 9)
+S5: [OK] shape=(40, 6, 64, 9)
+S6: [OK] shape=(40, 6, 64, 9)
+S7: [OK] shape=(40, 6, 64, 9)
+S8: [OK] shape=(40, 6, 64, 9)
+S9: [OK] shape=(40, 6, 64, 9)
+S10: [OK] shape=(40, 6, 64, 9)
+S11: [OK] shape=(40, 6, 64, 9)
+S12: [OK] shape=(40, 6, 64, 9)
+S13: [OK] shape=(40, 6, 64, 9)
+S14: [OK] shape=(40, 6, 64, 9)
+S15: [OK] shape=(40, 6, 64, 9)
+S16: [OK] shape=(40, 6, 64, 9)
+S17: [OK] shape=(40, 6, 64, 9)
+S18: [OK] shape=(40, 6, 64, 9)
+S19: [OK] shape=(40, 6, 64, 9)
+S20: [OK] shape=(40, 6, 64, 9)
+S21: [OK] shape=(40, 6, 64, 9)
+S22: [OK] shape=(40, 6, 64, 9)
+S23: [OK] shape=(40, 6, 64, 9)
+S24: [OK] shape=(40, 6, 64, 9)
+S25: [OK] shape=(40, 6, 64, 9)
+S26: [OK] shape=(40, 6, 64, 9)
+S27: [OK] shape=(40, 6, 64, 9)
+S28: [OK] shape=(40, 6, 64, 9)
+S29: [OK] shape=(40, 6, 64, 9)
+S30: [OK] shape=(40, 6, 64, 9)
+S31: [OK] shape=(40, 6, 64, 9)
+S32: [OK] shape=(40, 6, 64, 9)
+S33: [OK] shape=(40, 6, 64, 9)
+S34: [OK] shape=(40, 6, 64, 9)
+S35: [OK] shape=(40, 6, 64, 9)
 
 ============================================================================
-STEP 9b: BATCH EXTRACTION COMPLETE
+STEP 9b: ALL FILES VERIFIED
 Success: 35/35
 Errors: 0/35
-Total time: 1197.8 seconds (20.0 minutes)
-End time: 2026-09-29 12:19:56
+Status: Ready for Step 9c (Validation)
 ============================================================================

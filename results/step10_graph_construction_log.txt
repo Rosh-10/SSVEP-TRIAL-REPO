@@ -1,0 +1,15 @@
+================================================================================
+STEP 10: GRAPH CONSTRUCTION
+================================================================================
+Start time: 2026-09-29 14:45:41
+Output directory: C:\Users\Shabeshkumar\Desktop\pranav project\SSVEP-TRIAL-REPO\graph_construction
+Distance threshold: 30.0 mm
+
+Loaded 63 electrodes
+
+[ERROR] Expected 64 electrodes, got 63
+
+Traceback (most recent call last):
+  File "C:\Users\Shabeshkumar\Desktop\pranav project\SSVEP-TRIAL-REPO\graph_construction\step10_graph_construction.py", line 159, in build_graph
+    raise ValueError(f"Expected {NUM_CHANNELS} electrodes, got {len(positions)}")
+ValueError: Expected 64 electrodes, got 63

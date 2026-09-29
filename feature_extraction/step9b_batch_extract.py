@@ -138,7 +138,7 @@ def batch_extract_features():
                 error_count += 1
                 continue
             
-            data = np.load(input_file)['arr_0']  # Shape: (64, 1500, 40, 6)
+            data = np.load(input_file)['data']  # Shape: (64, 1500, 40, 6)
             
             if data.shape != (NUM_CHANNELS, 1500, NUM_TARGETS, NUM_BLOCKS):
                 log_lines.append(f"{subject_id}: ✗ Unexpected shape: {data.shape}")

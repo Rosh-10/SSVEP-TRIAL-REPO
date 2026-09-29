@@ -1,0 +1,49 @@
+============================================================================
+STEP 9b: BATCH FEATURE EXTRACTION FOR ALL 35 SUBJECTS
+============================================================================
+Start time: 2026-09-29 11:59:59
+Output directory: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/feature_extraction
+
+S1: ✓ shape=(40, 6, 64, 9), 23.4s elapsed
+S2: ✓ shape=(40, 6, 64, 9), 47.3s elapsed
+S3: ✓ shape=(40, 6, 64, 9), 70.8s elapsed
+S4: ✓ shape=(40, 6, 64, 9), 94.1s elapsed
+S5: ✓ shape=(40, 6, 64, 9), 117.2s elapsed
+S6: ✓ shape=(40, 6, 64, 9), 140.3s elapsed
+S7: ✓ shape=(40, 6, 64, 9), 163.5s elapsed
+S8: ✓ shape=(40, 6, 64, 9), 186.6s elapsed
+S9: ✓ shape=(40, 6, 64, 9), 209.8s elapsed
+S10: ✓ shape=(40, 6, 64, 9), 233.1s elapsed
+S11: ✓ shape=(40, 6, 64, 9), 256.2s elapsed
+S12: ✓ shape=(40, 6, 64, 9), 279.5s elapsed
+S13: ✓ shape=(40, 6, 64, 9), 303.1s elapsed
+S14: ✓ shape=(40, 6, 64, 9), 705.4s elapsed
+S15: ✓ shape=(40, 6, 64, 9), 728.9s elapsed
+S16: ✓ shape=(40, 6, 64, 9), 752.5s elapsed
+S17: ✓ shape=(40, 6, 64, 9), 776.4s elapsed
+S18: ✓ shape=(40, 6, 64, 9), 800.1s elapsed
+S19: ✓ shape=(40, 6, 64, 9), 823.8s elapsed
+S20: ✓ shape=(40, 6, 64, 9), 846.9s elapsed
+S21: ✓ shape=(40, 6, 64, 9), 870.2s elapsed
+S22: ✓ shape=(40, 6, 64, 9), 893.7s elapsed
+S23: ✓ shape=(40, 6, 64, 9), 917.0s elapsed
+S24: ✓ shape=(40, 6, 64, 9), 940.6s elapsed
+S25: ✓ shape=(40, 6, 64, 9), 964.0s elapsed
+S26: ✓ shape=(40, 6, 64, 9), 987.1s elapsed
+S27: ✓ shape=(40, 6, 64, 9), 1010.6s elapsed
+S28: ✓ shape=(40, 6, 64, 9), 1034.2s elapsed
+S29: ✓ shape=(40, 6, 64, 9), 1057.5s elapsed
+S30: ✓ shape=(40, 6, 64, 9), 1081.1s elapsed
+S31: ✓ shape=(40, 6, 64, 9), 1104.6s elapsed
+S32: ✓ shape=(40, 6, 64, 9), 1127.6s elapsed
+S33: ✓ shape=(40, 6, 64, 9), 1150.9s elapsed
+S34: ✓ shape=(40, 6, 64, 9), 1174.5s elapsed
+S35: ✓ shape=(40, 6, 64, 9), 1197.8s elapsed
+
+============================================================================
+STEP 9b: BATCH EXTRACTION COMPLETE
+Success: 35/35
+Errors: 0/35
+Total time: 1197.8 seconds (20.0 minutes)
+End time: 2026-09-29 12:19:56
+============================================================================

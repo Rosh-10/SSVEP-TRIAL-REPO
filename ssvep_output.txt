@@ -1109,3 +1109,61 @@ Ready for Step 9 (Feature Extraction)
 STEP 8D COMPLETE
 ======================================================================
 
+EXPLORATION-USING-MATLAB LICENSE README.md __pycache__ config.py data evaluation feature_extraction models myenv notebooks preprocessing presentation report requirements.txt results run.sh ssvep_output.txt training
+========================================================================
+STEP 9a: FILTER BANK FEATURE EXTRACTION - SINGLE TRIAL TEST
+========================================================================
+======================================================================
+STEP 9a: FILTER BANK FEATURE EXTRACTION - SINGLE TRIAL TEST
+======================================================================
+
+[1/5] Loading preprocessed data for S1...
+  Looking for: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/data/processed/S1.npz
+✓ Loaded S1: shape (64, 1500, 40, 6)
+
+[2/5] Extracting one trial (target 0, block 0)...
+✓ Trial shape: (64, 1500)
+  Channels: 64, Time points: 1500
+
+[3/5] Designing filter bank...
+✓ Filter bank created: 9 subbands
+  Subband 0: 6–10 Hz
+  Subband 1: 10–14 Hz
+  Subband 2: 14–18 Hz
+  Subband 3: 18–22 Hz
+  Subband 4: 22–26 Hz
+  Subband 5: 26–30 Hz
+  Subband 6: 30–34 Hz
+  Subband 7: 34–42 Hz
+  Subband 8: 42–65 Hz
+
+[4/5] Extracting filter bank features...
+✓ Features extracted: shape (64, 9)
+
+[5/5] Validating features...
+
+--- Validating S01_T1_B1 ---
+Shape: (64, 9)
+Data type: float64
+NaN count: 0
+Inf count: 0
+Min value: 9.750673e-03
+Max value: 5.069315e-01
+Mean value: 9.798890e-02
+Std value: 1.031900e-01
+✓ All power values non-negative
+
+Generating visualization...
+
+Saving results...
+✓ Saved: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/feature_extraction/step9a_single_trial_features.npz
+✓ Saved: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/results/step9a_visualization.png
+
+======================================================================
+STEP 9a: SUCCESS
+======================================================================
+Features shape: (64, 9)
+Expected: (64, 9)
+No NaN values: True
+All power > 0: True
+

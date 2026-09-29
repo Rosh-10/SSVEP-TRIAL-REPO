@@ -1,6 +1,9 @@
 # Processed data (regenerate via step08_preprocess.py)
 data/processed/*.npz
 
+*.npz
+
+
 # OS junk
 .DS_Store
 **/.DS_Store

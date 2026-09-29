@@ -18,6 +18,7 @@ PREPROCESSING_DIR="./preprocessing"
 
 cd "$PREPROCESSING_DIR/"
 echo $(ls)
+
 echo "================================================================"
 echo "Step 0a: verify_data.py"
 echo "================================================================"
@@ -107,10 +108,24 @@ echo "This may take 2–5 minutes depending on I/O speed."
 echo "========================================================================"
 python step8c_batch_process.py
 echo ""
- 
+
 echo "========================================================================"
 echo "Step 8D: Validate preprocessed dataset"
 echo "========================================================================"
 python step8d_validate.py
 echo ""
- 
+
+#
+
+
+cd ..
+
+echo $(ls)
+cd feature_extraction
+
+echo "========================================================================"
+echo "STEP 9a: FILTER BANK FEATURE EXTRACTION - SINGLE TRIAL TEST"
+echo "========================================================================"
+python step9a_filter_design.py
+
+echo ""

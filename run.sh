@@ -176,11 +176,53 @@ python test_accuracy_spectrum_v2.py
 
 echo ""
 
+echo "========================================================================"
+echo "STEP 9e: exact 5 s spectrum (used by Step 11)"
+echo "========================================================================"
+python step9e_spectrum_5s.py
+
+echo ""
+
+echo "========================================================================"
+echo "STEP 9e check"
+echo "========================================================================"
+python step9e_check.py
+
+echo ""
+
 cd ..
 
 echo "========================================================================"
 echo "Graph construction"
 echo "========================================================================"
 python graph_construction/step10_graph_construction_fixed.py 
+
+echo ""
+
+echo "========================================================================"
+echo "STEP 11b: logistic-regression baseline"
+echo "========================================================================"
+python training1/step11b_baseline.py $(seq 1 35) | tee results/11b_baseline.txt
+
+echo ""
+
+echo "========================================================================"
+echo "STEP 11c: harmonic rule"
+echo "========================================================================"
+python training1/step11c_harmonic_rule.py $(seq 1 35) | tee results/11c_harmonic.txt
+
+echo ""
+
+echo "========================================================================"
+echo "STEP 11d: GCN, occipital-10"
+echo "========================================================================"
+python training1/step11d_gcn_edited.py --occ $(seq 1 35) | tee results/11d_occ_gcn_all35.txt
+
+echo ""
+
+echo "========================================================================"
+echo "STEP 11d: no-graph ablation, occipital-10"
+echo "========================================================================"
+python training1/step11d_gcn_edited.py --occ --noadj $(seq 1 35) | tee results/11d_occ_nograph_all35.txt
 
 echo ""

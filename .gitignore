@@ -2,7 +2,7 @@
 data/processed/*.npz
 
 *.npz
-
+!graph_construction/electrode_adjacency.npz
 
 # OS junk
 .DS_Store

@@ -1,316 +1,146 @@
 """
-STEP 10: GRAPH CONSTRUCTION - BUILD ELECTRODE ADJACENCY MATRIX (FIXED)
+STEP 10: GRAPH CONSTRUCTION - electrode adjacency (k-NN on 3D scalp positions)
 
-Objective:
-    Load 64-channel electrode positions and build distance-based graphs.
-    Each graph is a static adjacency matrix for spatial neighborhood of EEG channels.
-
-Input:
-    Electrode positions: 64-channels.loc (spherical coordinates on 10-20 system)
-    Format: index, index_repeat, theta (degrees), rho (0-1 normalized), label
-
-Output:
-    Graph files: graph_construction/electrode_adjacency.npz
-    - Contains distance matrix and binary adjacency (threshold 30mm)
-
-Coordinate System:
-    Input: Spherical (theta, rho) on standard 10-20 electrode layout
-    Output: Cartesian (X, Y, Z) in 3D space (mm)
-    Head radius: 85 mm (standard reference for scalp surface)
+Input : 64-channels.loc  -> columns: index  theta(deg)  rho  label
+        theta: 0 deg = nose, + = right; rho: 0 = vertex, 0.5 = head equator (90 deg from vertex)
+Output: graph_construction/electrode_adjacency.npz
+        positions (64,3) mm, distance_matrix (64,64), adjacency_matrix (64,64) symmetric 0/1 (no self-loops),
+        labels, k, head_radius
+Assumption: spherical head, radius HEAD_RADIUS (k-NN ordering is scale-invariant, so K result doesn't depend on it).
 """
-
 import numpy as np
 from pathlib import Path
 from datetime import datetime
 import importlib.util
 
-# ============================================================================
-# LOAD CONFIG
-# ============================================================================
-
 CONFIG_PATH = Path(__file__).resolve().parent.parent / 'config.py'
 if not CONFIG_PATH.exists():
     raise FileNotFoundError(f"config.py not found at {CONFIG_PATH}")
-
 spec = importlib.util.spec_from_file_location("config", CONFIG_PATH)
 config = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(config)
 
 PROJECT_ROOT = config.PROJECT_ROOT
 RESULTS_DIR = config.RESULTS_DIR
-
 OUTPUT_DIR = PROJECT_ROOT / 'graph_construction'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-# ============================================================================
-# CONFIGURATION
-# ============================================================================
-
 NUM_CHANNELS = 64
-DISTANCE_THRESHOLD = 30.0  # mm (functional neighborhood)
-HEAD_RADIUS = 85.0  # mm (standard reference for scalp surface)
+K = 5                # neighbours per node (before symmetrizing)
+HEAD_RADIUS = 85.0   # mm
 
-# Try multiple possible locations for electrode file
 ELECTRODE_CANDIDATES = [
     PROJECT_ROOT / '64-channels.loc',
     PROJECT_ROOT / 'data' / 'raw' / 'benchmark' / '64-channels.loc',
     Path('64-channels.loc'),
 ]
 
-# ============================================================================
-# LOAD ELECTRODE POSITIONS
-# ============================================================================
 
 def load_electrode_positions():
-    """
-    Load 64-channel electrode positions from .loc file.
-    
-    Format (spherical coordinates on 10-20 layout):
-    index, index_repeat, theta (degrees), rho (0-1), label
-    
-    Converts to Cartesian 3D: (X, Y, Z) in mm on head surface
-    
-    Returns:
-        positions: Shape (64, 3) — X, Y, Z coordinates in mm
-        labels: List of 64 channel names
-    """
-    print(f"[INFO] Loading electrode positions from .loc file...")
-    
-    loc_file = None
-    for candidate in ELECTRODE_CANDIDATES:
-        if candidate.exists():
-            loc_file = candidate
-            print(f"[INFO] Found: {loc_file}")
-            break
-    
+    """Returns positions (64,3) in mm and list of 64 labels."""
+    loc_file = next((c for c in ELECTRODE_CANDIDATES if c.exists()), None)
     if loc_file is None:
-        print(f"[WARNING] Tried: {ELECTRODE_CANDIDATES}")
-        raise FileNotFoundError(f"64-channels.loc not found in any expected location")
-    
-    positions = []
-    labels = []
-    
+        raise FileNotFoundError(f"64-channels.loc not found. Tried: {ELECTRODE_CANDIDATES}")
+    print(f"[INFO] Found: {loc_file}")
+
+    positions, labels = [], []
     with open(loc_file, 'r') as f:
         for line in f:
-            line = line.strip()
-            if not line or line.startswith('#'):
-                continue
-            
             parts = line.split()
-            if len(parts) < 5:
+            if len(parts) != 4:          # index theta rho label
                 continue
-            
-            try:
-                # Format: index, index_repeat, theta, rho, label
-                idx = int(parts[0])
-                theta_deg = float(parts[2])  # Azimuth angle in degrees
-                rho = float(parts[3])  # Normalized radius (0-1, where 1 = scalp surface)
-                label = parts[4]
-                
-                # Convert spherical to Cartesian
-                # Theta: 0° = right (positive X), 90° = back (negative Y), 180° = left, 270° = front
-                # Rho: 0 = center, 1 = scalp surface
-                theta_rad = np.radians(theta_deg)
-                
-                # 3D Cartesian (assuming on sphere surface)
-                # Using standard spherical coords: theta (azimuth), phi would be elevation
-                # For 10-20 system, we'll use 2D projection on scalp plane with Z=0 at center
-                radius_mm = rho * HEAD_RADIUS
-                x = radius_mm * np.cos(theta_rad)
-                y = radius_mm * np.sin(theta_rad)
-                z = 0  # All on same plane (scalp surface approximation)
-                
-                labels.append(label)
-                positions.append([x, y, z])
-                
-            except (ValueError, IndexError) as e:
-                continue
-    
+            theta = np.radians(float(parts[1]))        # 0 = nose, + = right
+            phi = np.radians(float(parts[2]) * 180.0)  # polar angle from vertex
+            positions.append([HEAD_RADIUS * np.sin(phi) * np.sin(theta),
+                              HEAD_RADIUS * np.sin(phi) * np.cos(theta),   # +y = nose
+                              HEAD_RADIUS * np.cos(phi)])
+            labels.append(parts[3])
+
     positions = np.array(positions, dtype=np.float32)
-    
     if len(positions) != NUM_CHANNELS:
-        print(f"[WARNING] Expected {NUM_CHANNELS} channels, found {len(positions)}")
-    
-    print(f"[INFO] Loaded {len(positions)} electrode positions")
-    print(f"[INFO] Position range: X [{positions[:, 0].min():.1f}, {positions[:, 0].max():.1f}] mm")
-    print(f"[INFO] Position range: Y [{positions[:, 1].min():.1f}, {positions[:, 1].max():.1f}] mm")
-    print(f"[INFO] Position range: Z [{positions[:, 2].min():.1f}, {positions[:, 2].max():.1f}] mm")
-    
+        raise ValueError(f"Expected {NUM_CHANNELS} electrodes, parsed {len(positions)}")
     return positions, labels
 
-# ============================================================================
-# BUILD ADJACENCY MATRIX
-# ============================================================================
 
-def build_adjacency_matrix(positions, threshold=30.0):
-    """
-    Build adjacency matrix based on Euclidean distance.
-    
-    Args:
-        positions: Shape (64, 3) — electrode positions
-        threshold: Distance threshold (mm) for connectivity
-    
-    Returns:
-        distance_matrix: Shape (64, 64) — pairwise distances
-        adjacency_matrix: Shape (64, 64) — binary (0/1), 1 if distance <= threshold
-        edge_count: Number of edges in graph
-    """
-    n_channels = len(positions)
-    
-    # Compute pairwise distances
-    distance_matrix = np.zeros((n_channels, n_channels), dtype=np.float32)
-    
-    for i in range(n_channels):
-        for j in range(i, n_channels):
-            dist = np.linalg.norm(positions[i] - positions[j])
-            distance_matrix[i, j] = dist
-            distance_matrix[j, i] = dist
-    
-    # Binary adjacency: 1 if distance <= threshold
-    adjacency_matrix = (distance_matrix <= threshold).astype(np.float32)
-    
-    # Diagonal should be 0 (no self-loops)
-    np.fill_diagonal(adjacency_matrix, 0)
-    
-    # Count edges (upper triangle only to avoid double-counting)
-    edge_count = int(np.sum(np.triu(adjacency_matrix, k=1)))
-    
+def build_adjacency_matrix(positions, k=K):
+    """Symmetrized k-NN graph. Returns distance_matrix, adjacency_matrix, edge_count."""
+    n = len(positions)
+    distance_matrix = np.linalg.norm(positions[:, None] - positions[None], axis=-1).astype(np.float32)
+    d = np.round(distance_matrix, 3) + np.diag(np.full(n, np.inf))      # exclude self; round so ties are exact
+    nn = np.argsort(d, axis=1, kind='stable')[:, :k]
+    adjacency_matrix = np.zeros((n, n), np.float32)
+    adjacency_matrix[np.arange(n)[:, None], nn] = 1
+    adjacency_matrix = np.maximum(adjacency_matrix, adjacency_matrix.T)   # i~j if either is in the other's k-NN
+    edge_count = int(np.triu(adjacency_matrix, 1).sum())
     return distance_matrix, adjacency_matrix, edge_count
 
-# ============================================================================
-# MAIN
-# ============================================================================
+
+def check_graph(A):
+    """Sanity checks; raises AssertionError on failure."""
+    from scipy.sparse.csgraph import connected_components
+    assert A.shape == (NUM_CHANNELS, NUM_CHANNELS)
+    assert (A == A.T).all(), "adjacency not symmetric"
+    assert np.diag(A).sum() == 0, "self-loops present"
+    assert A.sum(1).min() >= 1, "isolated node"
+    ncomp = connected_components(A)[0]
+    assert ncomp == 1, f"graph has {ncomp} components"
+
 
 def build_graph():
-    """Build and save electrode graph."""
-    log_lines = []
-    log_lines.append("=" * 80)
-    log_lines.append("STEP 10: GRAPH CONSTRUCTION (Fixed - Spherical Coordinates)")
-    log_lines.append("=" * 80)
-    log_lines.append(f"Start time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    log_lines.append(f"Output directory: {OUTPUT_DIR}")
-    log_lines.append(f"Distance threshold: {DISTANCE_THRESHOLD} mm")
-    log_lines.append(f"Head radius (scalp surface): {HEAD_RADIUS} mm")
-    log_lines.append("")
-    
+    log = ["=" * 80, "STEP 10: GRAPH CONSTRUCTION (k-NN, 3D spherical positions)", "=" * 80,
+           f"Start: {datetime.now():%Y-%m-%d %H:%M:%S}", f"K = {K}, head radius = {HEAD_RADIUS} mm", ""]
     try:
-        # Load electrode positions
         positions, labels = load_electrode_positions()
-        log_lines.append(f"Loaded {len(positions)} electrodes")
-        log_lines.append("")
-        
-        # Build adjacency matrix
-        log_lines.append("Building adjacency matrix...")
-        distance_matrix, adjacency_matrix, edge_count = build_adjacency_matrix(
-            positions, 
-            threshold=DISTANCE_THRESHOLD
-        )
-        
-        log_lines.append(f"Distance matrix shape: {distance_matrix.shape}")
-        log_lines.append(f"Adjacency matrix shape: {adjacency_matrix.shape}")
-        log_lines.append(f"Distance range: {distance_matrix.min():.2f} - {distance_matrix.max():.2f} mm")
-        log_lines.append(f"Edges (distance <= {DISTANCE_THRESHOLD} mm): {edge_count}")
-        log_lines.append(f"Graph density: {edge_count / (NUM_CHANNELS * (NUM_CHANNELS - 1) / 2):.2%}")
-        log_lines.append("")
-        
-        # Statistics
-        log_lines.append("Degree distribution (neighbors per node):")
-        degrees = np.sum(adjacency_matrix, axis=1)
-        log_lines.append(f"  Min: {int(degrees.min())} neighbors")
-        log_lines.append(f"  Max: {int(degrees.max())} neighbors")
-        log_lines.append(f"  Mean: {degrees.mean():.1f} neighbors")
-        log_lines.append(f"  Std: {degrees.std():.1f}")
-        log_lines.append("")
-        
-        # Save graph
-        output_file = OUTPUT_DIR / 'electrode_adjacency.npz'
-        np.savez_compressed(
-            output_file,
-            positions=positions,
-            distance_matrix=distance_matrix,
-            adjacency_matrix=adjacency_matrix,
-            labels=labels,
-            threshold=DISTANCE_THRESHOLD
-        )
-        
-        log_lines.append(f"Saved: {output_file}")
-        log_lines.append("")
-        
-        # Generate visualization (if matplotlib available)
+        dist, A, edges = build_adjacency_matrix(positions, K)
+        check_graph(A)
+        deg = A.sum(1)
+        log += [f"Loaded {len(positions)} electrodes",
+                f"Distance range: {dist.min():.1f}-{dist.max():.1f} mm",
+                f"Edges: {edges}  density: {edges / (NUM_CHANNELS * (NUM_CHANNELS - 1) / 2):.2%}",
+                f"Degree min/mean/max: {int(deg.min())}/{deg.mean():.1f}/{int(deg.max())}",
+                "Checks passed: symmetric, no self-loops, no isolated nodes, 1 connected component", ""]
+        for name in ('O1', 'Oz', 'O2', 'POz', 'M1', 'Cz'):
+            if name in labels:
+                i = labels.index(name)
+                log.append(f"  {name}: {[labels[j] for j in np.where(A[i])[0]]}")
+        log.append("")
+
+        out = OUTPUT_DIR / 'electrode_adjacency.npz'
+        np.savez_compressed(out, positions=positions, distance_matrix=dist, adjacency_matrix=A,
+                            labels=np.array(labels), k=K, head_radius=HEAD_RADIUS)
+        log.append(f"Saved: {out}")
+
         try:
             import matplotlib.pyplot as plt
-            
-            # Plot 1: Electrode positions
-            fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-            
-            # Top view: X-Y plane
-            ax = axes[0]
-            scatter = ax.scatter(positions[:, 0], positions[:, 1], c=degrees, cmap='viridis', s=100, alpha=0.7)
-            ax.set_xlabel('X (mm)')
-            ax.set_ylabel('Y (mm)')
-            ax.set_title(f'Electrode Positions (Top View)\nColored by degree (neighbors)')
-            ax.grid(True, alpha=0.3)
-            ax.set_aspect('equal')
-            cbar = plt.colorbar(scatter, ax=ax)
-            cbar.set_label('Number of Neighbors')
-            
-            # Plot 2: Adjacency matrix heatmap
-            ax = axes[1]
-            im = ax.imshow(adjacency_matrix, cmap='binary', aspect='auto')
-            ax.set_xlabel('Channel')
-            ax.set_ylabel('Channel')
-            ax.set_title(f'Adjacency Matrix\n({edge_count} edges, threshold={DISTANCE_THRESHOLD}mm)')
-            plt.colorbar(im, ax=ax)
-            
+            fig, ax = plt.subplots(1, 2, figsize=(15, 7))
+            # top view: nose up; drawn for all electrodes (x right, y nose)
+            for i, j in zip(*np.where(np.triu(A, 1))):
+                ax[0].plot(positions[[i, j], 0], positions[[i, j], 1], 'k-', lw=0.6, alpha=0.5)
+            sc = ax[0].scatter(positions[:, 0], positions[:, 1], c=deg, cmap='viridis', s=180, zorder=3)
+            for i, l in enumerate(labels):
+                ax[0].text(positions[i, 0], positions[i, 1], l, ha='center', va='center', fontsize=6, zorder=4)
+            ax[0].set_aspect('equal'); ax[0].set_title(f'k-NN graph (K={K}), top view, nose up\ncolour = degree')
+            ax[0].set_xlabel('X (mm, right +)'); ax[0].set_ylabel('Y (mm, nose +)')
+            plt.colorbar(sc, ax=ax[0], label='degree')
+            ax[1].imshow(A, cmap='binary'); ax[1].set_title(f'Adjacency ({edges} edges)')
+            ax[1].set_xlabel('Channel'); ax[1].set_ylabel('Channel')
             plt.tight_layout()
-            viz_file = RESULTS_DIR / 'step10_electrode_positions.png'
-            plt.savefig(viz_file, dpi=100, bbox_inches='tight')
-            plt.close()
-            
-            log_lines.append(f"Saved visualization: {viz_file}")
-            log_lines.append("")
+            viz = RESULTS_DIR / 'step10_electrode_graph.png'
+            plt.savefig(viz, dpi=120, bbox_inches='tight'); plt.close()
+            log.append(f"Saved plot: {viz}")
         except ImportError:
-            log_lines.append("[INFO] Matplotlib not available, skipping visualization")
-            log_lines.append("")
-        
-        # Summary
-        log_lines.append("=" * 80)
-        log_lines.append("STEP 10: GRAPH CONSTRUCTION COMPLETE")
-        log_lines.append("=" * 80)
-        log_lines.append("")
-        log_lines.append("Summary:")
-        log_lines.append(f"  - Loaded {NUM_CHANNELS} electrode positions (10-20 system)")
-        log_lines.append(f"  - Converted from spherical to Cartesian coordinates")
-        log_lines.append(f"  - Built adjacency matrix (threshold {DISTANCE_THRESHOLD} mm)")
-        log_lines.append(f"  - Graph has {edge_count} edges, density {edge_count / (NUM_CHANNELS * (NUM_CHANNELS - 1) / 2):.1%}")
-        log_lines.append(f"  - Average degree: {degrees.mean():.1f} neighbors/node")
-        log_lines.append("")
-        log_lines.append("Graph saved to: graph_construction/electrode_adjacency.npz")
-        log_lines.append("")
-        log_lines.append("Next step: Step 11 (GNN Model Training)")
-        log_lines.append("  - Use spectrum features from Step 9d")
-        log_lines.append("  - Use electrode graph from this step")
-        log_lines.append("  - Train GraphConv and DDGCNN models")
-        
+            log.append("[INFO] matplotlib not available, skipping plot")
+
+        log += ["", "=" * 80, "STEP 10 COMPLETE", "=" * 80,
+                "Next: Step 11 (GNN). Node features: 280-bin spectrum from Step 9d, shape (64, 280)."]
     except Exception as e:
         import traceback
-        log_lines.append(f"[ERROR] {str(e)}")
-        log_lines.append(traceback.format_exc())
-        log_lines.append("")
-    
-    # Write log
-    log_file = RESULTS_DIR / "step10_graph_construction_log.txt"
-    with open(log_file, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(log_lines))
-    
-    # Print to console
-    print('\n'.join(log_lines))
+        log += [f"[ERROR] {e}", traceback.format_exc()]
 
+    (RESULTS_DIR / "step10_graph_construction_log.txt").write_text('\n'.join(log), encoding='utf-8')
+    print('\n'.join(log))
 
-# ============================================================================
-# RUN
-# ============================================================================
 
 if __name__ == "__main__":
     build_graph()

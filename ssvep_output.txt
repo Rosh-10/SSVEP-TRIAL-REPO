@@ -891,6 +891,16 @@ Designing 5-order Butterworth bandpass filter:
 STEP 8A COMPLETE
 ======================================================================
 
+============================================================b============
+Step 8b 
+========================================================================
+Testing preprocessing on one trial...
+Raw trial shape: (64, 1500), dtype: float64
+Raw: mean=0.022, std=7.909, min=-61.583, max=144.606
+Processed trial shape: (64, 1500), dtype: float32
+Processed: mean=0.000, std=1.000, min=-5.447, max=4.944
+✓ Test passed
+
 ========================================================================
 Step 8C: Batch preprocess all 35 subjects
 This may take 2–5 minutes depending on I/O speed.
@@ -1109,7 +1119,7 @@ Ready for Step 9 (Feature Extraction)
 STEP 8D COMPLETE
 ======================================================================
 
-EXPLORATION-USING-MATLAB LICENSE README.md __pycache__ config.py data evaluation feature_extraction models myenv notebooks preprocessing presentation report requirements.txt results run.sh ssvep_output.txt training
+EXPLORATION-USING-MATLAB LICENSE README.md __pycache__ config.py data evaluation feature_extraction graph_construction models myenv notebooks preprocessing presentation report requirements.txt results run.sh ssvep_output.txt training
 ========================================================================
 STEP 9a: FILTER BANK FEATURE EXTRACTION - SINGLE TRIAL TEST
 ========================================================================
@@ -1167,3 +1177,363 @@ Expected: (64, 9)
 No NaN values: True
 All power > 0: True
 
+Next: Inspect visualization, then run Step 9b (batch extraction)
+======================================================================
+
+========================================================================
+STEP 9b:Batch_extraction
+========================================================================
+============================================================================
+STEP 9b: BATCH FEATURE EXTRACTION FOR ALL 35 SUBJECTS
+============================================================================
+Start time: 2026-09-30 23:11:12
+Output directory: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/feature_extraction
+
+Checking existing files: 35/35 found
+[INFO] All 35 feature files already exist. Verifying...
+
+S1: [OK] shape=(40, 6, 64, 9)
+S2: [OK] shape=(40, 6, 64, 9)
+S3: [OK] shape=(40, 6, 64, 9)
+S4: [OK] shape=(40, 6, 64, 9)
+S5: [OK] shape=(40, 6, 64, 9)
+S6: [OK] shape=(40, 6, 64, 9)
+S7: [OK] shape=(40, 6, 64, 9)
+S8: [OK] shape=(40, 6, 64, 9)
+S9: [OK] shape=(40, 6, 64, 9)
+S10: [OK] shape=(40, 6, 64, 9)
+S11: [OK] shape=(40, 6, 64, 9)
+S12: [OK] shape=(40, 6, 64, 9)
+S13: [OK] shape=(40, 6, 64, 9)
+S14: [OK] shape=(40, 6, 64, 9)
+S15: [OK] shape=(40, 6, 64, 9)
+S16: [OK] shape=(40, 6, 64, 9)
+S17: [OK] shape=(40, 6, 64, 9)
+S18: [OK] shape=(40, 6, 64, 9)
+S19: [OK] shape=(40, 6, 64, 9)
+S20: [OK] shape=(40, 6, 64, 9)
+S21: [OK] shape=(40, 6, 64, 9)
+S22: [OK] shape=(40, 6, 64, 9)
+S23: [OK] shape=(40, 6, 64, 9)
+S24: [OK] shape=(40, 6, 64, 9)
+S25: [OK] shape=(40, 6, 64, 9)
+S26: [OK] shape=(40, 6, 64, 9)
+S27: [OK] shape=(40, 6, 64, 9)
+S28: [OK] shape=(40, 6, 64, 9)
+S29: [OK] shape=(40, 6, 64, 9)
+S30: [OK] shape=(40, 6, 64, 9)
+S31: [OK] shape=(40, 6, 64, 9)
+S32: [OK] shape=(40, 6, 64, 9)
+S33: [OK] shape=(40, 6, 64, 9)
+S34: [OK] shape=(40, 6, 64, 9)
+S35: [OK] shape=(40, 6, 64, 9)
+
+============================================================================
+STEP 9b: ALL FILES VERIFIED
+Success: 35/35
+Errors: 0/35
+Status: Ready for Step 9c (Validation)
+============================================================================
+
+========================================================================
+STEP 9c:Validation
+========================================================================
+============================================================================
+STEP 9c: FEATURE VALIDATION & STATISTICS
+============================================================================
+Timestamp: 2026-09-30 23:11:12
+
+============================================================================
+CHECK 1: FILE PRESENCE & SHAPE
+============================================================================
+
+S1: [OK] shape=(40, 6, 64, 9)
+S2: [OK] shape=(40, 6, 64, 9)
+S3: [OK] shape=(40, 6, 64, 9)
+S4: [OK] shape=(40, 6, 64, 9)
+S5: [OK] shape=(40, 6, 64, 9)
+S6: [OK] shape=(40, 6, 64, 9)
+S7: [OK] shape=(40, 6, 64, 9)
+S8: [OK] shape=(40, 6, 64, 9)
+S9: [OK] shape=(40, 6, 64, 9)
+S10: [OK] shape=(40, 6, 64, 9)
+S11: [OK] shape=(40, 6, 64, 9)
+S12: [OK] shape=(40, 6, 64, 9)
+S13: [OK] shape=(40, 6, 64, 9)
+S14: [OK] shape=(40, 6, 64, 9)
+S15: [OK] shape=(40, 6, 64, 9)
+S16: [OK] shape=(40, 6, 64, 9)
+S17: [OK] shape=(40, 6, 64, 9)
+S18: [OK] shape=(40, 6, 64, 9)
+S19: [OK] shape=(40, 6, 64, 9)
+S20: [OK] shape=(40, 6, 64, 9)
+S21: [OK] shape=(40, 6, 64, 9)
+S22: [OK] shape=(40, 6, 64, 9)
+S23: [OK] shape=(40, 6, 64, 9)
+S24: [OK] shape=(40, 6, 64, 9)
+S25: [OK] shape=(40, 6, 64, 9)
+S26: [OK] shape=(40, 6, 64, 9)
+S27: [OK] shape=(40, 6, 64, 9)
+S28: [OK] shape=(40, 6, 64, 9)
+S29: [OK] shape=(40, 6, 64, 9)
+S30: [OK] shape=(40, 6, 64, 9)
+S31: [OK] shape=(40, 6, 64, 9)
+S32: [OK] shape=(40, 6, 64, 9)
+S33: [OK] shape=(40, 6, 64, 9)
+S34: [OK] shape=(40, 6, 64, 9)
+S35: [OK] shape=(40, 6, 64, 9)
+
+[PASS] All 35 subjects present with correct shape
+
+============================================================================
+CHECK 2: NaN/INF DETECTION
+============================================================================
+
+S1: [OK] No NaN/Inf
+S2: [OK] No NaN/Inf
+S3: [OK] No NaN/Inf
+S4: [OK] No NaN/Inf
+S5: [OK] No NaN/Inf
+S6: [OK] No NaN/Inf
+S7: [OK] No NaN/Inf
+S8: [OK] No NaN/Inf
+S9: [OK] No NaN/Inf
+S10: [OK] No NaN/Inf
+S11: [OK] No NaN/Inf
+S12: [OK] No NaN/Inf
+S13: [OK] No NaN/Inf
+S14: [OK] No NaN/Inf
+S15: [OK] No NaN/Inf
+S16: [OK] No NaN/Inf
+S17: [OK] No NaN/Inf
+S18: [OK] No NaN/Inf
+S19: [OK] No NaN/Inf
+S20: [OK] No NaN/Inf
+S21: [OK] No NaN/Inf
+S22: [OK] No NaN/Inf
+S23: [OK] No NaN/Inf
+S24: [OK] No NaN/Inf
+S25: [OK] No NaN/Inf
+S26: [OK] No NaN/Inf
+S27: [OK] No NaN/Inf
+S28: [OK] No NaN/Inf
+S29: [OK] No NaN/Inf
+S30: [OK] No NaN/Inf
+S31: [OK] No NaN/Inf
+S32: [OK] No NaN/Inf
+S33: [OK] No NaN/Inf
+S34: [OK] No NaN/Inf
+S35: [OK] No NaN/Inf
+
+[PASS] No NaN or Inf values detected
+
+============================================================================
+CHECK 3: POWER STATISTICS
+============================================================================
+
+S1: [OK] min=0.002060, max=0.844260, mean=0.098330, std=0.129155
+S2: [OK] min=0.002260, max=0.832874, mean=0.096757, std=0.134125
+S3: [OK] min=0.001743, max=0.796726, mean=0.095851, std=0.102231
+S4: [OK] min=0.007276, max=0.655336, mean=0.096579, std=0.091973
+S5: [OK] min=0.005319, max=0.675808, mean=0.096348, std=0.087233
+S6: [OK] min=0.006217, max=0.615816, mean=0.096298, std=0.080564
+S7: [OK] min=0.005346, max=0.758662, mean=0.097592, std=0.101958
+S8: [OK] min=0.006602, max=0.652208, mean=0.096918, std=0.094343
+S9: [OK] min=0.002084, max=0.807153, mean=0.098046, std=0.119514
+S10: [OK] min=0.011034, max=0.531576, mean=0.096886, std=0.069338
+S11: [OK] min=0.001689, max=0.574032, mean=0.097307, std=0.059411
+S12: [OK] min=0.008977, max=0.585546, mean=0.097335, std=0.063672
+S13: [OK] min=0.007950, max=0.651342, mean=0.096983, std=0.058003
+S14: [OK] min=0.003135, max=0.821586, mean=0.096766, std=0.116525
+S15: [OK] min=0.005577, max=0.560673, mean=0.096664, std=0.063102
+S16: [OK] min=0.002060, max=0.792189, mean=0.096924, std=0.136415
+S17: [OK] min=0.002767, max=0.678467, mean=0.096223, std=0.091699
+S18: [OK] min=0.004456, max=0.730122, mean=0.097667, std=0.109598
+S19: [OK] min=0.006814, max=0.640657, mean=0.095379, std=0.051791
+S20: [OK] min=0.005351, max=0.686569, mean=0.095073, std=0.094180
+S21: [OK] min=0.001942, max=0.772357, mean=0.096247, std=0.137568
+S22: [OK] min=0.004011, max=0.722536, mean=0.095980, std=0.087459
+S23: [OK] min=0.002221, max=0.810769, mean=0.096970, std=0.090836
+S24: [OK] min=0.002547, max=0.826312, mean=0.098501, std=0.148196
+S25: [OK] min=0.007458, max=0.675155, mean=0.096354, std=0.083766
+S26: [OK] min=0.006011, max=0.739443, mean=0.096898, std=0.089889
+S27: [OK] min=0.003694, max=0.725284, mean=0.098139, std=0.112775
+S28: [OK] min=0.002718, max=0.705842, mean=0.095116, std=0.094995
+S29: [OK] min=0.004599, max=0.668613, mean=0.096751, std=0.065183
+S30: [OK] min=0.007765, max=0.721992, mean=0.097069, std=0.073599
+S31: [OK] min=0.004784, max=0.773923, mean=0.095292, std=0.071535
+S32: [OK] min=0.003832, max=0.721525, mean=0.095394, std=0.104924
+S33: [OK] min=0.000009, max=0.720264, mean=0.093304, std=0.078383
+S34: [OK] min=0.006577, max=0.582901, mean=0.097800, std=0.076172
+S35: [OK] min=0.008498, max=0.654357, mean=0.095974, std=0.070887
+
+[INFO] Power statistics appear reasonable (all positive)
+
+============================================================================
+CHECK 4: FREQUENCY-DOMAIN VALIDATION (3 subjects)
+============================================================================
+
+S1: Occipital low-freq (6-18 Hz) / high-freq (30-65 Hz) = 9.62
+  -> Expected ratio > 1 for SSVEP (low frequencies more prominent)
+S15: Occipital low-freq (6-18 Hz) / high-freq (30-65 Hz) = 3.29
+  -> Expected ratio > 1 for SSVEP (low frequencies more prominent)
+S30: Occipital low-freq (6-18 Hz) / high-freq (30-65 Hz) = 5.19
+  -> Expected ratio > 1 for SSVEP (low frequencies more prominent)
+
+[INFO] Frequency-domain validation complete
+
+============================================================================
+FINAL VERDICT
+============================================================================
+
+[PASS] ALL CHECKS PASSED
+
+Summary:
+  - All 35 subjects present with correct shape (40, 6, 64, 9)
+  - No NaN or Inf values detected
+  - Power statistics reasonable (positive, moderate magnitude)
+  - Frequency-domain validation passed
+
+READY FOR STEP 10 (Graph Construction)
+
+============================================================================
+End time: 2026-09-30 23:11:13
+============================================================================
+
+[INFO] Validation report saved to: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/results/step9c_validation_report.txt
+[INFO] Statistics saved to: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/results/step9c_statistics.csv
+
+========================================================================
+STEP 9d: Spectrum features
+========================================================================
+[INFO] Configuration: 8.0-64.0 Hz at 0.2 Hz resolution = 280 bins
+================================================================================
+STEP 9d: FINE-RESOLUTION FFT SPECTRUM FEATURES FOR ALL 35 SUBJECTS
+================================================================================
+Start time: 2026-09-30 23:11:13
+Output directory: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/feature_extraction
+Frequency range: 8.0-64.0 Hz at 0.2 Hz resolution
+Frequency bins: 280
+Output shape per subject: (40, 6, 64, 280)
+
+Checking existing files: 35/35 found
+[INFO] All 35 spectrum files already exist. Verifying...
+
+S1: [OK] shape=(40, 6, 64, 280)
+S2: [OK] shape=(40, 6, 64, 280)
+S3: [OK] shape=(40, 6, 64, 280)
+S4: [OK] shape=(40, 6, 64, 280)
+S5: [OK] shape=(40, 6, 64, 280)
+S6: [OK] shape=(40, 6, 64, 280)
+S7: [OK] shape=(40, 6, 64, 280)
+S8: [OK] shape=(40, 6, 64, 280)
+S9: [OK] shape=(40, 6, 64, 280)
+S10: [OK] shape=(40, 6, 64, 280)
+S11: [OK] shape=(40, 6, 64, 280)
+S12: [OK] shape=(40, 6, 64, 280)
+S13: [OK] shape=(40, 6, 64, 280)
+S14: [OK] shape=(40, 6, 64, 280)
+S15: [OK] shape=(40, 6, 64, 280)
+S16: [OK] shape=(40, 6, 64, 280)
+S17: [OK] shape=(40, 6, 64, 280)
+S18: [OK] shape=(40, 6, 64, 280)
+S19: [OK] shape=(40, 6, 64, 280)
+S20: [OK] shape=(40, 6, 64, 280)
+S21: [OK] shape=(40, 6, 64, 280)
+S22: [OK] shape=(40, 6, 64, 280)
+S23: [OK] shape=(40, 6, 64, 280)
+S24: [OK] shape=(40, 6, 64, 280)
+S25: [OK] shape=(40, 6, 64, 280)
+S26: [OK] shape=(40, 6, 64, 280)
+S27: [OK] shape=(40, 6, 64, 280)
+S28: [OK] shape=(40, 6, 64, 280)
+S29: [OK] shape=(40, 6, 64, 280)
+S30: [OK] shape=(40, 6, 64, 280)
+S31: [OK] shape=(40, 6, 64, 280)
+S32: [OK] shape=(40, 6, 64, 280)
+S33: [OK] shape=(40, 6, 64, 280)
+S34: [OK] shape=(40, 6, 64, 280)
+S35: [OK] shape=(40, 6, 64, 280)
+
+================================================================================
+STEP 9d: ALL FILES VERIFIED
+Success: 35/35
+Errors: 0/35
+Status: Ready to retest accuracy and proceed to Step 10
+================================================================================
+
+Next: Run test_accuracy_spectrum.py to verify improved classification accuracy
+
+
+[INFO] Loaded spectrum features: shape (40, 6, 64, 280)
+[INFO] Flattened to X shape: (240, 17920)
+[INFO] Training set: (200, 17920) (blocks 1-5)
+[INFO] Test set: (40, 17920) (block 6)
+
+[TRAINING] Fitting logistic regression...
+
+============================================================
+S1 Single-subject accuracy (spectrum): 22.5%
+Chance (40 targets): 2.5%
+Improvement over 9-band power: 5% → 22.5% (4x better)
+============================================================
+
+[WARNING] Accuracy still modest. May need subject-specific preprocessing.
+[INFO] Loaded spectrum features: shape (40, 6, 64, 280)
+[INFO] Flattened to X shape: (240, 17920)
+[INFO] Classes: 40 targets
+[INFO] Training set: (200, 17920) (blocks 1-5)
+[INFO] Test set: (40, 17920) (block 6)
+
+[PREPROCESSING] Normalizing features...
+
+[TESTING] Multiple regularization strengths...
+C          Accuracy        Notes
+----------------------------------------
+0.001      40.0%           [BEST]
+0.010      45.0%           [BEST]
+0.100      52.5%           [BEST]
+1.000      17.5%           
+10.000     17.5%           
+100.000    20.0%           
+
+============================================================
+Best accuracy (normalized + regularized): 52.5% (C=0.1)
+Chance (40 targets): 2.5%
+Improvement factor: 21.0x chance level
+============================================================
+
+[OK] Spectrum features work well.
+Ready for Step 10 (Graph Construction).
+[INFO] Loading electrode positions from .loc file...
+[INFO] Found: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/data/raw/benchmark/64-channels.loc
+[WARNING] Expected 64 channels, found 0
+[INFO] Loaded 0 electrode positions
+[INFO] Found: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/data/raw/benchmark/64-channels.loc
+[INFO] Found: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/data/raw/benchmark/64-channels.loc
+================================================================================
+STEP 10: GRAPH CONSTRUCTION (k-NN, 3D spherical positions)
+================================================================================
+Start: 2026-09-30 23:57:52
+K = 5, head radius = 85.0 mm
+
+Loaded 64 electrodes
+Distance range: 0.0-169.9 mm
+Edges: 189  density: 9.38%
+Degree min/mean/max: 5/5.9/8
+Checks passed: symmetric, no self-loops, no isolated nodes, 1 connected component
+
+  O1: ['PO7', 'PO5', 'PO3', 'POz', 'CB1', 'Oz']
+  Oz: ['PO3', 'POz', 'PO4', 'O1', 'O2']
+  O2: ['POz', 'PO4', 'PO6', 'PO8', 'Oz', 'CB2']
+  POz: ['P1', 'PZ', 'P2', 'PO3', 'PO4', 'O1', 'Oz', 'O2']
+  M1: ['F8', 'FT8', 'T8', 'TP8', 'CB2']
+  Cz: ['FC1', 'FCz', 'C1', 'C2', 'CPZ']
+
+Saved: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/graph_construction/electrode_adjacency.npz
+Saved plot: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/results/step10_electrode_graph.png
+
+================================================================================
+STEP 10 COMPLETE
+================================================================================
+Next: Step 11 (GNN). Node features: 280-bin spectrum from Step 9d, shape (64, 280).

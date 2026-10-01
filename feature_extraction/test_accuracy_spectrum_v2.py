@@ -8,8 +8,10 @@ from sklearn.preprocessing import StandardScaler
 from pathlib import Path
 
 # Load S1 spectrum features
+spectrum_path = Path("feature_extraction") / "S1_spectrum.npz"
+
 try:
-    data = np.load('feature_extraction\\S1_spectrum.npz')['spectrum']  # (40, 6, 64, 280)
+    data = np.load(spectrum_path)["spectrum"]
 except FileNotFoundError:
     print("[ERROR] S1_spectrum.npz not found. Run step9d_spectrum_features.py first.")
     exit(1)

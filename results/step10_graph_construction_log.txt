@@ -1,15 +1,26 @@
 ================================================================================
-STEP 10: GRAPH CONSTRUCTION
+STEP 10: GRAPH CONSTRUCTION (k-NN, 3D spherical positions)
 ================================================================================
-Start time: 2026-09-29 14:45:41
-Output directory: C:\Users\Shabeshkumar\Desktop\pranav project\SSVEP-TRIAL-REPO\graph_construction
-Distance threshold: 30.0 mm
+Start: 2026-09-30 23:57:52
+K = 5, head radius = 85.0 mm
 
-Loaded 63 electrodes
+Loaded 64 electrodes
+Distance range: 0.0-169.9 mm
+Edges: 189  density: 9.38%
+Degree min/mean/max: 5/5.9/8
+Checks passed: symmetric, no self-loops, no isolated nodes, 1 connected component
 
-[ERROR] Expected 64 electrodes, got 63
+  O1: ['PO7', 'PO5', 'PO3', 'POz', 'CB1', 'Oz']
+  Oz: ['PO3', 'POz', 'PO4', 'O1', 'O2']
+  O2: ['POz', 'PO4', 'PO6', 'PO8', 'Oz', 'CB2']
+  POz: ['P1', 'PZ', 'P2', 'PO3', 'PO4', 'O1', 'Oz', 'O2']
+  M1: ['F8', 'FT8', 'T8', 'TP8', 'CB2']
+  Cz: ['FC1', 'FCz', 'C1', 'C2', 'CPZ']
 
-Traceback (most recent call last):
-  File "C:\Users\Shabeshkumar\Desktop\pranav project\SSVEP-TRIAL-REPO\graph_construction\step10_graph_construction.py", line 159, in build_graph
-    raise ValueError(f"Expected {NUM_CHANNELS} electrodes, got {len(positions)}")
-ValueError: Expected 64 electrodes, got 63
+Saved: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/graph_construction/electrode_adjacency.npz
+Saved plot: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/results/step10_electrode_graph.png
+
+================================================================================
+STEP 10 COMPLETE
+================================================================================
+Next: Step 11 (GNN). Node features: 280-bin spectrum from Step 9d, shape (64, 280).

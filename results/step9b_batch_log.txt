@@ -1,8 +1,8 @@
 ============================================================================
 STEP 9b: BATCH FEATURE EXTRACTION FOR ALL 35 SUBJECTS
 ============================================================================
-Start time: 2026-09-29 14:11:51
-Output directory: C:\Users\Shabeshkumar\Desktop\pranav project\SSVEP-TRIAL-REPO\feature_extraction
+Start time: 2026-09-30 23:11:12
+Output directory: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/feature_extraction
 
 Checking existing files: 35/35 found
 [INFO] All 35 feature files already exist. Verifying...

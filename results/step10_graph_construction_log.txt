@@ -1,7 +1,7 @@
 ================================================================================
 STEP 10: GRAPH CONSTRUCTION (k-NN, 3D spherical positions)
 ================================================================================
-Start: 2026-09-30 23:57:52
+Start: 2026-10-02 08:42:53
 K = 5, head radius = 85.0 mm
 
 Loaded 64 electrodes
@@ -17,8 +17,8 @@ Checks passed: symmetric, no self-loops, no isolated nodes, 1 connected componen
   M1: ['F8', 'FT8', 'T8', 'TP8', 'CB2']
   Cz: ['FC1', 'FCz', 'C1', 'C2', 'CPZ']
 
-Saved: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/graph_construction/electrode_adjacency.npz
-Saved plot: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/results/step10_electrode_graph.png
+Saved: /mnt/c/Users/Admin/Desktop/roshan final year proejct/SSVEP-TRIAL-REPO/graph_construction/electrode_adjacency.npz
+Saved plot: /mnt/c/Users/Admin/Desktop/roshan final year proejct/SSVEP-TRIAL-REPO/results/step10_electrode_graph.png
 
 ================================================================================
 STEP 10 COMPLETE

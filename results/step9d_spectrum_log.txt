@@ -1,8 +1,8 @@
 ================================================================================
 STEP 9d: FINE-RESOLUTION FFT SPECTRUM FEATURES FOR ALL 35 SUBJECTS
 ================================================================================
-Start time: 2026-09-30 23:11:13
-Output directory: /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/feature_extraction
+Start time: 2026-10-02 08:41:01
+Output directory: /mnt/c/Users/Admin/Desktop/roshan final year proejct/SSVEP-TRIAL-REPO/feature_extraction
 Frequency range: 8.0-64.0 Hz at 0.2 Hz resolution
 Frequency bins: 280
 Output shape per subject: (40, 6, 64, 280)

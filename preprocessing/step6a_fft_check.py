@@ -50,7 +50,7 @@ plt.tight_layout()
 save_path = Path(__file__).resolve().parent.parent / "results" / "step6a_fft_check.png"
 plt.savefig(save_path)
 print(f"Plot saved to: {save_path}")
-plt.show()
+
 
 # --- Print the actual peak values near frequencies of interest, for numeric confirmation ---
 def magnitude_near(target_hz, tolerance=0.3):

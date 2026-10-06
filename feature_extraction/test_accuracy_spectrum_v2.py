@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from pathlib import Path
 
 # Load S1 spectrum features
-spectrum_path = Path("feature_extraction") / "S1_spectrum.npz"
+spectrum_path = Path(".") / "S1_spectrum.npz"
 
 try:
     data = np.load(spectrum_path)["spectrum"]

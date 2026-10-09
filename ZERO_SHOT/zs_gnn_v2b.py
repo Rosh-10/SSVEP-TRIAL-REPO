@@ -133,7 +133,7 @@ class GNNv2_G2(nn.Module):
             groups=groups,
             bias=True,
         )
-        self.conv_bn  = nn.BatchNorm1d(groups * d_t)
+        self.conv_bn  = nn.GroupNorm(min(8, groups * d_t), groups * d_t)
         self.conv_act = nn.ELU()
 
         node_feat_dim = n_bands * d_t   # features per node (24 with d_t=8)

@@ -1,0 +1,53 @@
+
+Device: mps
+Subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+Windows: [0.5, 1.0]
+Variants: ['g2', 'g3']
+Epochs: 100  Batch: 128  LR: 0.0002  Seed: 41
+
+
+=== sl=0.5 ===
+
+--- variant=g2 ---
+  S01 sl=0.5 GNNv2-G2  [skipping — checkpoint exists]
+  S02 sl=0.5 GNNv2-G2  34 source subjects  device=mps
+  S02 sl=0.5 GNNv2-G2  train=8160  test=240
+  S02 sl=0.5 GNNv2-G2  params=335,742
+    ep   1  loss=3.8243
+    ep  25  loss=0.1463
+    ep  50  loss=0.0280
+    ep  75  loss=0.0133
+    ep 100  loss=0.0131
+  S02 sl=0.5 GNNv2-G2  acc=0.4125  ITR=74.34  (1077.3s)
+  S03 sl=0.5 GNNv2-G2  34 source subjects  device=mps
+  S03 sl=0.5 GNNv2-G2  train=8160  test=240
+  S03 sl=0.5 GNNv2-G2  params=335,742
+    ep   1  loss=3.8634
+    ep  25  loss=0.1519
+    ep  50  loss=0.0284
+    ep  75  loss=0.0127
+    ep 100  loss=0.0121
+  S03 sl=0.5 GNNv2-G2  acc=0.7417  ITR=187.94  (1042.2s)
+  S04 sl=0.5 GNNv2-G2  34 source subjects  device=mps
+  S04 sl=0.5 GNNv2-G2  train=8160  test=240
+  S04 sl=0.5 GNNv2-G2  params=335,742
+    ep   1  loss=3.8202
+    ep  25  loss=0.1443
+    ep  50  loss=0.0255
+    ep  75  loss=0.0124
+    ep 100  loss=0.0108
+  S04 sl=0.5 GNNv2-G2  acc=0.2500  ITR=32.80  (888.0s)
+  S05 sl=0.5 GNNv2-G2  34 source subjects  device=mps
+  S05 sl=0.5 GNNv2-G2  train=8160  test=240
+  S05 sl=0.5 GNNv2-G2  params=335,742
+    ep   1  loss=3.8242
+    ep  25  loss=0.1461
+    ep  50  loss=0.0259
+    ep  75  loss=0.0119
+    ep 100  loss=0.0117
+  S05 sl=0.5 GNNv2-G2  acc=0.3000  ITR=44.45  (856.6s)
+  S06 sl=0.5 GNNv2-G2  34 source subjects  device=mps
+  S06 sl=0.5 GNNv2-G2  train=8160  test=240
+  S06 sl=0.5 GNNv2-G2  params=335,742
+    ep   1  loss=3.8302
+    ep  25  loss=0.1446

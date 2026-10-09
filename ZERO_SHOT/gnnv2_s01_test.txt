@@ -1,0 +1,43 @@
+
+Device: mps
+Subjects: [1]
+Windows: [0.5]
+Variants: ['g2', 'g3']
+Epochs: 100  Batch: 128  LR: 0.0002  Seed: 41
+
+
+=== sl=0.5 ===
+
+--- variant=g2 ---
+  S01 sl=0.5 GNNv2-G2  34 source subjects  device=mps
+  S01 sl=0.5 GNNv2-G2  train=8160  test=240
+  S01 sl=0.5 GNNv2-G2  params=335,742
+    ep   1  loss=3.8303
+    ep  25  loss=0.1521
+    ep  50  loss=0.0268
+    ep  75  loss=0.0115
+    ep 100  loss=0.0093
+  S01 sl=0.5 GNNv2-G2  acc=0.4792  ITR=94.22  (866.4s)
+
+--- variant=g3 ---
+  S01 sl=0.5 GNNv2-G3  34 source subjects  device=mps
+  S01 sl=0.5 GNNv2-G3  train=8160  test=240
+  S01 sl=0.5 GNNv2-G3  params=248,248
+    ep   1  loss=3.5294
+    ep  25  loss=1.1406
+    ep  50  loss=0.5787
+    ep  75  loss=0.3073
+    ep 100  loss=0.1792
+  S01 sl=0.5 GNNv2-G3  acc=0.3875  ITR=67.29  (127.9s)
+
+=== SUMMARY ===
+
+GNNv2-G2  sl=0.5  n=1 subjects
+  acc  mean=0.4792  std=0.0000  se=0.0000
+  ITR  mean=94.22   std=0.00   se=0.00
+  per-subject acc: [0.479]
+
+GNNv2-G3  sl=0.5  n=1 subjects
+  acc  mean=0.3875  std=0.0000  se=0.0000
+  ITR  mean=67.29   std=0.00   se=0.00
+  per-subject acc: [0.388]

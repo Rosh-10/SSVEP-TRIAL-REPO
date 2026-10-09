@@ -1,0 +1,174 @@
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/sklearn/cross_decomposition/_pls.py:104: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+
+=== sl=0.5 ===
+  S01 sl=0.5 FBCCA       acc=0.1792  ITR=18.31  (52.2s)
+  S02 sl=0.5 FBCCA       acc=0.2958  ITR=43.44  (52.3s)
+  S03 sl=0.5 FBCCA       acc=0.4750  ITR=92.93  (51.7s)
+  S04 sl=0.5 FBCCA       acc=0.4500  ITR=85.33  (51.9s)
+  S05 sl=0.5 FBCCA       acc=0.2750  ITR=38.49  (52.4s)
+  S06 sl=0.5 FBCCA       acc=0.1958  ITR=21.48  (51.8s)
+  S07 sl=0.5 FBCCA       acc=0.2083  ITR=23.96  (51.4s)
+  S08 sl=0.5 FBCCA       acc=0.0958  ITR=5.24  (51.5s)
+  S09 sl=0.5 FBCCA       acc=0.1458  ITR=12.48  (50.9s)
+  S10 sl=0.5 FBCCA       acc=0.1917  ITR=20.68  (51.2s)
+  S11 sl=0.5 FBCCA       acc=0.0667  ITR=2.13  (51.2s)
+  S12 sl=0.5 FBCCA       acc=0.2417  ITR=30.96  (51.0s)
+  S13 sl=0.5 FBCCA       acc=0.1708  ITR=16.79  (51.3s)
+  S14 sl=0.5 FBCCA       acc=0.2708  ITR=37.52  (51.6s)
+  S15 sl=0.5 FBCCA       acc=0.1042  ITR=6.30  (51.1s)
+  S16 sl=0.5 FBCCA       acc=0.0750  ITR=2.92  (50.5s)
+  S17 sl=0.5 FBCCA       acc=0.1208  ITR=8.61  (51.2s)
+  S18 sl=0.5 FBCCA       acc=0.2875  ITR=41.44  (51.4s)
+  S19 sl=0.5 FBCCA       acc=0.0417  ITR=0.41  (51.5s)
+  S20 sl=0.5 FBCCA       acc=0.1375  ITR=11.14  (51.8s)
+  S21 sl=0.5 FBCCA       acc=0.0625  ITR=1.77  (51.6s)
+  S22 sl=0.5 FBCCA       acc=0.3583  ITR=59.35  (52.0s)
+  S23 sl=0.5 FBCCA       acc=0.2458  ITR=31.87  (50.8s)
+  S24 sl=0.5 FBCCA       acc=0.2042  ITR=23.13  (52.2s)
+  S25 sl=0.5 FBCCA       acc=0.2625  ITR=35.61  (52.1s)
+  S26 sl=0.5 FBCCA       acc=0.3333  ITR=52.80  (51.0s)
+  S27 sl=0.5 FBCCA       acc=0.1917  ITR=20.68  (52.1s)
+  S28 sl=0.5 FBCCA       acc=0.2708  ITR=37.52  (51.7s)
+  S29 sl=0.5 FBCCA       acc=0.1292  ITR=9.84  (51.3s)
+  S30 sl=0.5 FBCCA       acc=0.1125  ITR=7.42  (51.1s)
+  S31 sl=0.5 FBCCA       acc=0.2708  ITR=37.52  (51.6s)
+  S32 sl=0.5 FBCCA       acc=0.3500  ITR=57.14  (51.3s)
+  S33 sl=0.5 FBCCA       acc=0.0958  ITR=5.24  (51.7s)
+  S34 sl=0.5 FBCCA       acc=0.2250  ITR=27.39  (51.2s)
+  S35 sl=0.5 FBCCA       acc=0.0833  ITR=3.79  (51.7s)
+
+=== sl=1.0 ===
+  S01 sl=1.0 FBCCA       acc=0.5792  ITR=84.63  (54.2s)
+  S02 sl=1.0 FBCCA       acc=0.8125  ITR=145.39  (53.3s)
+  S03 sl=1.0 FBCCA       acc=0.9500  ITR=190.85  (54.7s)
+  S04 sl=1.0 FBCCA       acc=0.8667  ITR=162.03  (54.8s)
+  S05 sl=1.0 FBCCA       acc=0.8542  ITR=158.07  (54.5s)
+  S06 sl=1.0 FBCCA       acc=0.6250  ITR=95.42  (53.7s)
+  S07 sl=1.0 FBCCA       acc=0.7000  ITR=114.20  (54.3s)
+  S08 sl=1.0 FBCCA       acc=0.3583  ITR=39.57  (53.9s)
+  S09 sl=1.0 FBCCA       acc=0.5833  ITR=85.59  (54.6s)
+  S10 sl=1.0 FBCCA       acc=0.6667  ITR=105.67  (53.2s)
+  S11 sl=1.0 FBCCA       acc=0.1833  ITR=12.73  (54.5s)
+  S12 sl=1.0 FBCCA       acc=0.8208  ITR=147.87  (54.5s)
+  S13 sl=1.0 FBCCA       acc=0.5500  ITR=78.03  (53.8s)
+  S14 sl=1.0 FBCCA       acc=0.7333  ITR=123.03  (54.4s)
+  S15 sl=1.0 FBCCA       acc=0.4250  ITR=51.96  (54.8s)
+  S16 sl=1.0 FBCCA       acc=0.3792  ITR=43.32  (55.3s)
+  S17 sl=1.0 FBCCA       acc=0.3792  ITR=43.32  (53.9s)
+  S18 sl=1.0 FBCCA       acc=0.6708  ITR=106.72  (54.4s)
+  S19 sl=1.0 FBCCA       acc=0.1792  ITR=12.21  (55.6s)
+  S20 sl=1.0 FBCCA       acc=0.6875  ITR=110.97  (54.0s)
+  S21 sl=1.0 FBCCA       acc=0.4250  ITR=51.96  (54.8s)
+  S22 sl=1.0 FBCCA       acc=0.9167  ITR=178.71  (54.7s)
+  S23 sl=1.0 FBCCA       acc=0.8333  ITR=151.64  (54.6s)
+  S24 sl=1.0 FBCCA       acc=0.7583  ITR=129.87  (54.6s)
+  S25 sl=1.0 FBCCA       acc=0.7708  ITR=133.37  (55.1s)
+  S26 sl=1.0 FBCCA       acc=0.8000  ITR=141.72  (54.1s)
+  S27 sl=1.0 FBCCA       acc=0.8250  ITR=149.12  (54.4s)
+  S28 sl=1.0 FBCCA       acc=0.7750  ITR=134.54  (54.2s)
+  S29 sl=1.0 FBCCA       acc=0.3708  ITR=41.81  (54.5s)
+  S30 sl=1.0 FBCCA       acc=0.5833  ITR=85.59  (53.9s)
+  S31 sl=1.0 FBCCA       acc=0.7833  ITR=136.91  (54.0s)
+  S32 sl=1.0 FBCCA       acc=0.8667  ITR=162.03  (54.0s)
+  S33 sl=1.0 FBCCA       acc=0.3167  ITR=32.38  (54.6s)
+  S34 sl=1.0 FBCCA       acc=0.7167  ITR=118.58  (54.1s)
+  S35 sl=1.0 FBCCA       acc=0.4750  ITR=61.96  (54.7s)
+
+=== SUMMARY ===
+
+FBCCA  sl=0.5  n=35 subjects
+  acc   mean=0.2064  std=0.1065  se=0.0180
+  ITR   mean=26.62    std=22.47    se=3.80
+  per-subject acc: [0.179, 0.296, 0.475, 0.45, 0.275, 0.196, 0.208, 0.096, 0.146, 0.192, 0.067, 0.242, 0.171, 0.271, 0.104, 0.075, 0.121, 0.287, 0.042, 0.138, 0.062, 0.358, 0.246, 0.204, 0.263, 0.333, 0.192, 0.271, 0.129, 0.113, 0.271, 0.35, 0.096, 0.225, 0.083]
+
+FBCCA  sl=1.0  n=35 subjects
+  acc   mean=0.6349  std=0.2086  se=0.0353
+  ITR   mean=103.48    std=48.60    se=8.22
+  per-subject acc: [0.579, 0.812, 0.95, 0.867, 0.854, 0.625, 0.7, 0.358, 0.583, 0.667, 0.183, 0.821, 0.55, 0.733, 0.425, 0.379, 0.379, 0.671, 0.179, 0.688, 0.425, 0.917, 0.833, 0.758, 0.771, 0.8, 0.825, 0.775, 0.371, 0.583, 0.783, 0.867, 0.317, 0.717, 0.475]

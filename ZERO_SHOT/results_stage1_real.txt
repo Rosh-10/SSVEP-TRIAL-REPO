@@ -1,0 +1,79 @@
+
+=== T1 shapes/dtypes/NaN  +  T2 window indices ===
+[sl=0.5] LATENCY=160  slice=[160:285]  T=125  int((0.14+0.5)*250)=160
+  raw64 .mat                  (64, 1500, 40, 6)         float64  nan=0 inf=0 min=-533.4 max=267.1 mean=0.01445 std=8.738
+  9ch cache                   (9, 1500, 40, 6)          float64  nan=0 inf=0 min=-114.7 max=74.88 mean=0.007998 std=7.775
+  trials X                    (240, 9, 125)             float64  nan=0 inf=0 min=-48.91 max=45.35 mean=0.4547 std=6.492
+  y                           (240,)                    int64    nan=0 inf=0
+  blk                         (240,)                    int64    nan=0 inf=0
+  first/last time idx used: 160 284 (independent re-index matches OK)
+  bank A out                  (240, 3, 9, 125)          float64  nan=0 inf=0 min=-23.65 max=24.2 mean=0.001666 std=3.003
+  bank C out                  (240, 5, 9, 125)          float64  nan=0 inf=0 min=-23.65 max=24.2 mean=0.0007265 std=2.516
+  bank B out                  (240, 5, 9, 125)          float64  nan=0 inf=0 min=-23.7 max=24.72 mean=0.001099 std=2.496
+  A after FB_stand            (240, 3, 9, 125)          float64  nan=0 inf=0 min=-4.64 max=4.541 mean=1.171e-19 std=1
+[sl=1.0] LATENCY=160  slice=[160:410]  T=250  int((0.14+0.5)*250)=160
+  raw64 .mat                  (64, 1500, 40, 6)         float64  nan=0 inf=0 min=-533.4 max=267.1 mean=0.01445 std=8.738
+  9ch cache                   (9, 1500, 40, 6)          float64  nan=0 inf=0 min=-114.7 max=74.88 mean=0.007998 std=7.775
+  trials X                    (240, 9, 250)             float64  nan=0 inf=0 min=-55.41 max=45.35 mean=0.569 std=6.54
+  y                           (240,)                    int64    nan=0 inf=0
+  blk                         (240,)                    int64    nan=0 inf=0
+  first/last time idx used: 160 409 (independent re-index matches OK)
+  bank A out                  (240, 3, 9, 250)          float64  nan=0 inf=0 min=-35.66 max=33 mean=0.001168 std=3.153
+  bank C out                  (240, 5, 9, 250)          float64  nan=0 inf=0 min=-35.66 max=33 mean=0.0006124 std=2.625
+  bank B out                  (240, 5, 9, 250)          float64  nan=0 inf=0 min=-42.76 max=36.81 mean=0.0007938 std=2.614
+  A after FB_stand            (240, 3, 9, 250)          float64  nan=0 inf=0 min=-4.868 max=6.18 mean=-9.622e-20 std=1
+  freqs                       (40,)                     float64  nan=0 inf=0 min=8 max=15.8 mean=11.9 std=2.309
+  phases(repo)                (40,)                     float64  nan=0 inf=0 min=0 max=4.712 mean=2.356 std=1.756
+  freqs[:8] (keyboard order, not sorted): [ 8.  9. 10. 11. 12. 13. 14. 15.] | sorted? False
+  repo phase list == Freq_Phase.mat 'phases' (mod 2pi)? True
+  loc labels at CHANNELS (0-based): [(47, 'PZ'), (53, 'PO5'), (54, 'PO3'), (55, 'POz'), (56, 'PO4'), (57, 'PO6'), (60, 'O1'), (61, 'Oz'), (62, 'O2')]
+
+=== T3 filter responses, max|pole|, SOS-vs-analytic on sines ===
+bank A (b,a), single-pass dB at stopband-low / passband-low / mid / passband-hi / stopband-hi
+  band0 N=6 len(b)=13 padlen=36 max|pole|=0.989404  dB: [-36.5  -0.5  -0.   -0.5 -33.9]
+      sine 20 Hz: filtfilt gain measured=0.97405 predicted |H|^2=0.97405
+  band1 N=6 len(b)=13 padlen=36 max|pole|=0.977971  dB: [-33.6  -0.5  -0.2  -0.5 -35.8]
+      sine 20 Hz: filtfilt gain measured=0.95490 predicted |H|^2=0.95490
+  band2 N=6 len(b)=13 padlen=36 max|pole|=0.969677  dB: [-34.8  -0.5  -0.4  -0.5 -37.9]
+      sine 45 Hz: filtfilt gain measured=0.96898 predicted |H|^2=0.96898
+bank C (b,a), single-pass dB at stopband-low / passband-low / mid / passband-hi / stopband-hi
+  band0 N=6 len(b)=13 padlen=36 max|pole|=0.989404  dB: [-36.5  -0.5  -0.   -0.5 -33.9]
+      sine 20 Hz: filtfilt gain measured=0.97405 predicted |H|^2=0.97405
+  band1 N=6 len(b)=13 padlen=36 max|pole|=0.977971  dB: [-33.6  -0.5  -0.2  -0.5 -35.8]
+      sine 20 Hz: filtfilt gain measured=0.95490 predicted |H|^2=0.95490
+  band2 N=6 len(b)=13 padlen=36 max|pole|=0.969677  dB: [-34.8  -0.5  -0.4  -0.5 -37.9]
+      sine 45 Hz: filtfilt gain measured=0.96898 predicted |H|^2=0.96898
+  band3 N=7 len(b)=15 padlen=42 max|pole|=0.973765  dB: [-36.6  -0.5  -0.   -0.5 -49.5]
+      sine 45 Hz: filtfilt gain measured=0.99182 predicted |H|^2=0.99182
+  band4 N=7 len(b)=15 padlen=42 max|pole|=0.973765  dB: [-33.9  -0.5  -0.   -0.5 -52.8]
+      sine 45 Hz: filtfilt gain measured=0.91869 predicted |H|^2=0.91869
+bank B (order 15 SOS) vs the same filter in (b,a) form
+  band0 wp=(5, 90) SOS max|pole|=0.998541  (b,a) max|pole|=1.015170 | dB@[wp0-2,wp0,mid,wp1]: [-1.313e+02 -5.000e-01 -1.000e-01 -5.000e-01] | sine20Hz SOS meas=0.95031 pred=0.95031 (b,a) meas=8.0192e+15
+  band1 wp=(14, 90) SOS max|pole|=0.996403  (b,a) max|pole|=0.996403 | dB@[wp0-2,wp0,mid,wp1]: [-65.7  -0.5  -0.4  -0.5] | sine20Hz SOS meas=0.97686 pred=0.97686 (b,a) meas=0.97686
+  band2 wp=(22, 90) SOS max|pole|=0.995047  (b,a) max|pole|=0.995047 | dB@[wp0-2,wp0,mid,wp1]: [-52.   -0.5  -0.4  -0.5] | sine45Hz SOS meas=0.98327 pred=0.98327 (b,a) meas=0.98327
+  band3 wp=(30, 90) SOS max|pole|=0.994207  (b,a) max|pole|=0.994207 | dB@[wp0-2,wp0,mid,wp1]: [-46.2  -0.5  -0.1  -0.5] | sine45Hz SOS meas=0.99920 pred=0.99920 (b,a) meas=0.9992
+  band4 wp=(38, 90) SOS max|pole|=0.994215  (b,a) max|pole|=0.994215 | dB@[wp0-2,wp0,mid,wp1]: [-44.1  -0.5  -0.   -0.5] | sine45Hz SOS meas=0.94813 pred=0.94813 (b,a) meas=0.94813
+
+=== T6-style: my banks vs the OFFICIAL functions on random input (same filters? NOT a data validation) ===
+ T=125 bank A  max|mine - official filter_bank| = 0.0
+ T=125 bank C  max|mine - official FBCCA.filterbank| = 0.0
+ T=250 bank A  max|mine - official filter_bank| = 0.0
+ T=250 bank C  max|mine - official FBCCA.filterbank| = 0.0
+ bank B  max|mine - official generate_filterbank| (SOS coefs) = 0.0
+ bank A coefs == first 3 bands of bank C coefs? True
+ FB_stand max|mine - official(sklearn)| = 0.0
+ phase list in official main.py Dataset=1 branch == zs_config.PHASE? True
+ phase list in official config.py Dataset=1 branch == zs_config.PHASE? True
+
+=== T4 leakage checks ===
+ 35 folds: each subject tested once; train/val/test disjoint; |train|=30 |val|=4; deterministic re-creation OK
+ example fold test=S1 val = [18, 28, 31, 34] | seed 41
+ manifest saved -> /Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/ZERO_SHOT/results/stage1_folds.json
+ FB_stand is per-trial: trial 0 unchanged when all other trials are replaced OK (no cross-trial/cross-subject stats)
+  split train subjects=[2, 3, 4, 5, 6, 7]... n=7200  A(7200, 3, 9, 125)
+     A                        (7200, 3, 9, 125)         float64  nan=0 inf=0 min=-6.746 max=8.976 mean=-1.103e-20 std=1
+  split val   subjects=[18, 28, 31, 34] n=960  A(960, 3, 9, 125)
+     A                        (960, 3, 9, 125)          float64  nan=0 inf=0 min=-5.67 max=6.347 mean=1.069e-20 std=1
+  split test  subjects=[1] n=240  A(240, 3, 9, 125)
+     A                        (240, 3, 9, 125)          float64  nan=0 inf=0 min=-4.64 max=4.541 mean=1.171e-19 std=1
+ per-trial subject-id audit: test subject absent from train/val OK

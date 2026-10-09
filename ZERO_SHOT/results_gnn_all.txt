@@ -1,0 +1,843 @@
+
+Device: mps
+Subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+Windows: [0.5, 1.0]
+Epochs: 150  Patience: 20  Batch: 64
+
+
+=== sl=0.5 ===
+  S01 sl=0.5 GNN  [skipping — checkpoint exists]
+  S02 sl=0.5 GNN  [skipping — checkpoint exists]
+  S03 sl=0.5 GNN  [skipping — checkpoint exists]
+  S04 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S04 sl=0.5 GNN  data loaded in 2.3s  train=7200 val=960 test=240
+/Users/roshan/projects/gnn/myenv/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+    ep   1  loss=3.7984  val_acc=0.0365  best=0.0365@1
+    ep  10  loss=3.3306  val_acc=0.1031  best=0.1031@10
+    ep  20  loss=3.1526  val_acc=0.1187  best=0.1187@19
+    ep  30  loss=3.0401  val_acc=0.1125  best=0.1302@28
+    ep  40  loss=2.9663  val_acc=0.1062  best=0.1385@34
+    ep  50  loss=2.8996  val_acc=0.1135  best=0.1385@34
+    early stop at epoch 54 (patience=20)
+  S04 sl=0.5 GNN  acc=0.1000  ITR=5.76  best_val=0.1385@ep34  (83.0s)
+  S05 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S05 sl=0.5 GNN  data loaded in 2.0s  train=7200 val=960 test=240
+    ep   1  loss=3.8091  val_acc=0.0323  best=0.0323@1
+    ep  10  loss=3.3047  val_acc=0.0813  best=0.0813@10
+    ep  20  loss=3.1049  val_acc=0.0823  best=0.0865@11
+    ep  30  loss=2.9902  val_acc=0.0771  best=0.0906@28
+    ep  40  loss=2.9091  val_acc=0.0771  best=0.1000@36
+    ep  50  loss=2.8264  val_acc=0.0708  best=0.1000@36
+    early stop at epoch 56 (patience=20)
+  S05 sl=0.5 GNN  acc=0.1125  ITR=7.42  best_val=0.1000@ep36  (89.1s)
+  S06 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S06 sl=0.5 GNN  data loaded in 2.1s  train=7200 val=960 test=240
+    ep   1  loss=3.7859  val_acc=0.0417  best=0.0417@1
+    ep  10  loss=3.3542  val_acc=0.1292  best=0.1292@10
+    ep  20  loss=3.1901  val_acc=0.1417  best=0.1583@17
+    ep  30  loss=3.0831  val_acc=0.1656  best=0.1792@26
+    ep  40  loss=3.0065  val_acc=0.1583  best=0.1812@39
+    ep  50  loss=2.9230  val_acc=0.1604  best=0.1896@45
+    ep  60  loss=2.8462  val_acc=0.1688  best=0.1969@56
+    ep  70  loss=2.7834  val_acc=0.1562  best=0.2000@69
+    ep  80  loss=2.7236  val_acc=0.1969  best=0.2000@69
+    early stop at epoch 89 (patience=20)
+  S06 sl=0.5 GNN  acc=0.1292  ITR=9.84  best_val=0.2000@ep69  (132.5s)
+  S07 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S07 sl=0.5 GNN  data loaded in 2.0s  train=7200 val=960 test=240
+    ep   1  loss=3.7934  val_acc=0.0344  best=0.0344@1
+    ep  10  loss=3.3498  val_acc=0.0854  best=0.0906@9
+    ep  20  loss=3.1607  val_acc=0.1187  best=0.1187@20
+    ep  30  loss=3.0453  val_acc=0.1208  best=0.1208@30
+    ep  40  loss=2.9447  val_acc=0.1094  best=0.1281@38
+    ep  50  loss=2.8825  val_acc=0.1167  best=0.1281@38
+    early stop at epoch 58 (patience=20)
+  S07 sl=0.5 GNN  acc=0.1167  ITR=8.01  best_val=0.1281@ep38  (89.9s)
+  S08 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S08 sl=0.5 GNN  data loaded in 2.0s  train=7200 val=960 test=240
+    ep   1  loss=3.8055  val_acc=0.0323  best=0.0323@1
+    ep  10  loss=3.3561  val_acc=0.1031  best=0.1250@8
+    ep  20  loss=3.1893  val_acc=0.1323  best=0.1427@13
+    ep  30  loss=3.0590  val_acc=0.1521  best=0.1604@29
+    ep  40  loss=2.9633  val_acc=0.1531  best=0.1615@36
+    ep  50  loss=2.8897  val_acc=0.1479  best=0.1688@43
+    ep  60  loss=2.8275  val_acc=0.1646  best=0.1698@57
+    ep  70  loss=2.7600  val_acc=0.1625  best=0.1698@57
+    ep  80  loss=2.6828  val_acc=0.1594  best=0.1729@78
+    ep  90  loss=2.6158  val_acc=0.1677  best=0.1760@81
+    ep 100  loss=2.5857  val_acc=0.1625  best=0.1760@81
+    early stop at epoch 101 (patience=20)
+  S08 sl=0.5 GNN  acc=0.0875  ITR=4.26  best_val=0.1760@ep81  (182.0s)
+  S09 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S09 sl=0.5 GNN  data loaded in 2.1s  train=7200 val=960 test=240
+    ep   1  loss=3.7799  val_acc=0.0333  best=0.0333@1
+    ep  10  loss=3.3380  val_acc=0.0896  best=0.1021@9
+    ep  20  loss=3.1721  val_acc=0.1344  best=0.1344@20
+    ep  30  loss=3.0850  val_acc=0.1219  best=0.1344@20
+    ep  40  loss=2.9987  val_acc=0.1469  best=0.1469@40
+    ep  50  loss=2.9093  val_acc=0.1156  best=0.1469@40
+    ep  60  loss=2.8245  val_acc=0.1250  best=0.1469@40
+    early stop at epoch 60 (patience=20)
+  S09 sl=0.5 GNN  acc=0.1292  ITR=9.84  best_val=0.1469@ep40  (87.8s)
+  S10 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S10 sl=0.5 GNN  data loaded in 1.9s  train=7200 val=960 test=240
+    ep   1  loss=3.7800  val_acc=0.0323  best=0.0323@1
+    ep  10  loss=3.2991  val_acc=0.0802  best=0.0802@10
+    ep  20  loss=3.1232  val_acc=0.0885  best=0.0927@14
+    ep  30  loss=3.0203  val_acc=0.0948  best=0.0979@23
+    ep  40  loss=2.9316  val_acc=0.0906  best=0.1115@36
+    ep  50  loss=2.8882  val_acc=0.0917  best=0.1177@45
+    ep  60  loss=2.7828  val_acc=0.0979  best=0.1208@59
+    ep  70  loss=2.7122  val_acc=0.1083  best=0.1208@59
+    early stop at epoch 79 (patience=20)
+  S10 sl=0.5 GNN  acc=0.1417  ITR=11.80  best_val=0.1208@ep59  (116.0s)
+  S11 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S11 sl=0.5 GNN  data loaded in 1.9s  train=7200 val=960 test=240
+    ep   1  loss=3.7947  val_acc=0.0417  best=0.0417@1
+    ep  10  loss=3.3216  val_acc=0.0844  best=0.0844@10
+    ep  20  loss=3.1392  val_acc=0.0948  best=0.1042@19
+    ep  30  loss=3.0189  val_acc=0.1083  best=0.1094@24
+    ep  40  loss=2.9382  val_acc=0.1042  best=0.1135@37
+    ep  50  loss=2.8721  val_acc=0.1115  best=0.1240@48
+    ep  60  loss=2.7929  val_acc=0.1198  best=0.1240@48
+    early stop at epoch 68 (patience=20)
+  S11 sl=0.5 GNN  acc=0.0375  ITR=0.24  best_val=0.1240@ep48  (96.7s)
+  S12 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S12 sl=0.5 GNN  data loaded in 2.0s  train=7200 val=960 test=240
+    ep   1  loss=3.7992  val_acc=0.0333  best=0.0333@1
+    ep  10  loss=3.3149  val_acc=0.0875  best=0.0885@8
+    ep  20  loss=3.1191  val_acc=0.1073  best=0.1073@20
+    ep  30  loss=3.0098  val_acc=0.1219  best=0.1271@24
+    ep  40  loss=2.9391  val_acc=0.1240  best=0.1271@24
+    early stop at epoch 44 (patience=20)
+  S12 sl=0.5 GNN  acc=0.0792  ITR=3.34  best_val=0.1271@ep24  (60.3s)
+  S13 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S13 sl=0.5 GNN  data loaded in 1.9s  train=7200 val=960 test=240
+    ep   1  loss=3.7818  val_acc=0.0437  best=0.0437@1
+    ep  10  loss=3.3074  val_acc=0.0854  best=0.0854@10
+    ep  20  loss=3.1641  val_acc=0.1115  best=0.1115@20
+    ep  30  loss=3.0309  val_acc=0.0802  best=0.1125@24
+    ep  40  loss=2.9473  val_acc=0.1167  best=0.1167@31
+    ep  50  loss=2.8695  val_acc=0.1042  best=0.1177@42
+    ep  60  loss=2.8213  val_acc=0.1292  best=0.1292@60
+    ep  70  loss=2.7462  val_acc=0.1240  best=0.1292@60
+    ep  80  loss=2.6820  val_acc=0.1229  best=0.1292@60
+    early stop at epoch 80 (patience=20)
+  S13 sl=0.5 GNN  acc=0.0625  ITR=1.77  best_val=0.1292@ep60  (119.2s)
+  S14 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S14 sl=0.5 GNN  data loaded in 2.1s  train=7200 val=960 test=240
+    ep   1  loss=3.7770  val_acc=0.0333  best=0.0333@1
+    ep  10  loss=3.3249  val_acc=0.0698  best=0.0719@9
+    ep  20  loss=3.1277  val_acc=0.1000  best=0.1000@20
+    ep  30  loss=3.0322  val_acc=0.1031  best=0.1156@29
+    ep  40  loss=2.9409  val_acc=0.1146  best=0.1167@38
+    ep  50  loss=2.8594  val_acc=0.1062  best=0.1187@43
+    ep  60  loss=2.7825  val_acc=0.1198  best=0.1292@52
+    ep  70  loss=2.7104  val_acc=0.1135  best=0.1292@52
+    early stop at epoch 72 (patience=20)
+  S14 sl=0.5 GNN  acc=0.0792  ITR=3.34  best_val=0.1292@ep52  (553.4s)
+  S15 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S15 sl=0.5 GNN  data loaded in 2.2s  train=7200 val=960 test=240
+    ep   1  loss=3.8047  val_acc=0.0344  best=0.0344@1
+    ep  10  loss=3.3303  val_acc=0.0875  best=0.0979@8
+    ep  20  loss=3.1569  val_acc=0.1073  best=0.1073@20
+    ep  30  loss=3.0257  val_acc=0.0875  best=0.1083@27
+    ep  40  loss=2.9508  val_acc=0.1042  best=0.1083@27
+    ep  50  loss=2.8830  val_acc=0.0896  best=0.1104@42
+    ep  60  loss=2.8267  val_acc=0.1073  best=0.1104@42
+    early stop at epoch 62 (patience=20)
+  S15 sl=0.5 GNN  acc=0.0958  ITR=5.24  best_val=0.1104@ep42  (92.7s)
+  S16 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S16 sl=0.5 GNN  data loaded in 2.0s  train=7200 val=960 test=240
+    ep   1  loss=3.7860  val_acc=0.0271  best=0.0271@1
+    ep  10  loss=3.3799  val_acc=0.1156  best=0.1156@9
+    ep  20  loss=3.1976  val_acc=0.1406  best=0.1604@18
+    ep  30  loss=3.0671  val_acc=0.1458  best=0.1656@29
+    ep  40  loss=2.9927  val_acc=0.1594  best=0.1750@32
+    ep  50  loss=2.8992  val_acc=0.1354  best=0.1865@42
+    ep  60  loss=2.8335  val_acc=0.1677  best=0.1865@42
+    early stop at epoch 62 (patience=20)
+  S16 sl=0.5 GNN  acc=0.1333  ITR=10.48  best_val=0.1865@ep42  (94.1s)
+  S17 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S17 sl=0.5 GNN  data loaded in 1.9s  train=7200 val=960 test=240
+    ep   1  loss=3.7896  val_acc=0.0375  best=0.0375@1
+    ep  10  loss=3.3696  val_acc=0.0979  best=0.1125@9
+    ep  20  loss=3.1734  val_acc=0.1021  best=0.1229@19
+    ep  30  loss=3.0576  val_acc=0.1250  best=0.1250@30
+    ep  40  loss=2.9729  val_acc=0.1250  best=0.1344@33
+    ep  50  loss=2.8890  val_acc=0.1229  best=0.1396@49
+    ep  60  loss=2.8237  val_acc=0.1187  best=0.1479@59
+    ep  70  loss=2.7769  val_acc=0.1344  best=0.1479@59
+    early stop at epoch 79 (patience=20)
+  S17 sl=0.5 GNN  acc=0.1042  ITR=6.30  best_val=0.1479@ep59  (114.2s)
+  S18 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S18 sl=0.5 GNN  data loaded in 1.9s  train=7200 val=960 test=240
+    ep   1  loss=3.7704  val_acc=0.0271  best=0.0271@1
+    ep  10  loss=3.3335  val_acc=0.0917  best=0.0927@8
+    ep  20  loss=3.1594  val_acc=0.0958  best=0.1104@19
+    ep  30  loss=3.0768  val_acc=0.1115  best=0.1146@21
+    ep  40  loss=2.9880  val_acc=0.1167  best=0.1167@35
+    ep  50  loss=2.8908  val_acc=0.1115  best=0.1281@49
+    ep  60  loss=2.8351  val_acc=0.1365  best=0.1365@60
+    ep  70  loss=2.7600  val_acc=0.1240  best=0.1385@63
+    ep  80  loss=2.6858  val_acc=0.1240  best=0.1437@78
+    ep  90  loss=2.6326  val_acc=0.1260  best=0.1437@78
+    early stop at epoch 98 (patience=20)
+  S18 sl=0.5 GNN  acc=0.2333  ITR=29.16  best_val=0.1437@ep78  (135.8s)
+  S19 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S19 sl=0.5 GNN  data loaded in 2.0s  train=7200 val=960 test=240
+    ep   1  loss=3.7805  val_acc=0.0302  best=0.0302@1
+    ep  10  loss=3.2987  val_acc=0.0656  best=0.0990@8
+    ep  20  loss=3.1282  val_acc=0.0865  best=0.0990@8
+    early stop at epoch 28 (patience=20)
+  S19 sl=0.5 GNN  acc=0.0458  ITR=0.62  best_val=0.0990@ep8  (37.1s)
+  S20 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S20 sl=0.5 GNN  data loaded in 1.8s  train=7200 val=960 test=240
+    ep   1  loss=3.8003  val_acc=0.0354  best=0.0354@1
+    ep  10  loss=3.3590  val_acc=0.0979  best=0.1062@7
+    ep  20  loss=3.1622  val_acc=0.1292  best=0.1469@17
+    ep  30  loss=3.0491  val_acc=0.1396  best=0.1573@29
+    ep  40  loss=2.9734  val_acc=0.1406  best=0.1573@29
+    ep  50  loss=2.9086  val_acc=0.1646  best=0.1646@50
+    ep  60  loss=2.8236  val_acc=0.1531  best=0.1646@50
+    ep  70  loss=2.7470  val_acc=0.1333  best=0.1719@68
+    ep  80  loss=2.6783  val_acc=0.1594  best=0.1719@68
+    early stop at epoch 88 (patience=20)
+  S20 sl=0.5 GNN  acc=0.1333  ITR=10.48  best_val=0.1719@ep68  (118.8s)
+  S21 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S21 sl=0.5 GNN  data loaded in 1.9s  train=7200 val=960 test=240
+    ep   1  loss=3.7737  val_acc=0.0240  best=0.0240@1
+    ep  10  loss=3.3629  val_acc=0.1010  best=0.1010@10
+    ep  20  loss=3.1737  val_acc=0.1292  best=0.1292@20
+    ep  30  loss=3.0846  val_acc=0.1292  best=0.1417@28
+    ep  40  loss=2.9999  val_acc=0.1177  best=0.1437@38
+    ep  50  loss=2.9190  val_acc=0.1448  best=0.1458@42
+    ep  60  loss=2.8249  val_acc=0.1302  best=0.1562@54
+    ep  70  loss=2.7639  val_acc=0.1396  best=0.1562@54
+    early stop at epoch 74 (patience=20)
+  S21 sl=0.5 GNN  acc=0.1458  ITR=12.48  best_val=0.1562@ep54  (1063.4s)
+  S22 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S22 sl=0.5 GNN  data loaded in 2.1s  train=7200 val=960 test=240
+    ep   1  loss=3.8030  val_acc=0.0271  best=0.0271@1
+    ep  10  loss=3.3554  val_acc=0.0969  best=0.0969@10
+    ep  20  loss=3.1912  val_acc=0.1010  best=0.1240@18
+    ep  30  loss=3.0783  val_acc=0.1208  best=0.1292@22
+    ep  40  loss=2.9901  val_acc=0.1177  best=0.1344@36
+    ep  50  loss=2.9339  val_acc=0.1187  best=0.1385@48
+    ep  60  loss=2.8598  val_acc=0.1302  best=0.1396@54
+    ep  70  loss=2.7754  val_acc=0.1458  best=0.1490@62
+    ep  80  loss=2.7188  val_acc=0.1219  best=0.1490@62
+    early stop at epoch 82 (patience=20)
+  S22 sl=0.5 GNN  acc=0.2042  ITR=23.13  best_val=0.1490@ep62  (136.6s)
+  S23 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S23 sl=0.5 GNN  data loaded in 2.2s  train=7200 val=960 test=240
+    ep   1  loss=3.7931  val_acc=0.0292  best=0.0292@1
+    ep  10  loss=3.3638  val_acc=0.1229  best=0.1323@9
+    ep  20  loss=3.2036  val_acc=0.1469  best=0.1604@11
+    ep  30  loss=3.0961  val_acc=0.1573  best=0.1812@25
+    ep  40  loss=3.0100  val_acc=0.1729  best=0.1927@35
+    ep  50  loss=2.9001  val_acc=0.1833  best=0.1927@35
+    ep  60  loss=2.8618  val_acc=0.2021  best=0.2021@60
+    ep  70  loss=2.7966  val_acc=0.2042  best=0.2042@70
+    ep  80  loss=2.7147  val_acc=0.1948  best=0.2042@70
+    ep  90  loss=2.6426  val_acc=0.1823  best=0.2042@70
+    early stop at epoch 90 (patience=20)
+  S23 sl=0.5 GNN  acc=0.0833  ITR=3.79  best_val=0.2042@ep70  (173.1s)
+  S24 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S24 sl=0.5 GNN  data loaded in 2.1s  train=7200 val=960 test=240
+    ep   1  loss=3.7939  val_acc=0.0281  best=0.0281@1
+    ep  10  loss=3.3893  val_acc=0.1260  best=0.1260@10
+    ep  20  loss=3.2097  val_acc=0.1875  best=0.1875@20
+    ep  30  loss=3.0980  val_acc=0.1583  best=0.1948@24
+    ep  40  loss=3.0179  val_acc=0.1854  best=0.2083@39
+    ep  50  loss=2.9562  val_acc=0.1979  best=0.2083@39
+    early stop at epoch 59 (patience=20)
+  S24 sl=0.5 GNN  acc=0.2542  ITR=33.73  best_val=0.2083@ep39  (101.1s)
+  S25 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S25 sl=0.5 GNN  data loaded in 2.2s  train=7200 val=960 test=240
+    ep   1  loss=3.8074  val_acc=0.0344  best=0.0344@1
+    ep  10  loss=3.3782  val_acc=0.1281  best=0.1281@10
+    ep  20  loss=3.2010  val_acc=0.1490  best=0.1594@17
+    ep  30  loss=3.0867  val_acc=0.1635  best=0.1812@26
+    ep  40  loss=2.9947  val_acc=0.1615  best=0.1812@26
+    ep  50  loss=2.9103  val_acc=0.1833  best=0.1958@44
+    ep  60  loss=2.8247  val_acc=0.1948  best=0.1958@44
+    early stop at epoch 64 (patience=20)
+  S25 sl=0.5 GNN  acc=0.0958  ITR=5.24  best_val=0.1958@ep44  (113.7s)
+  S26 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S26 sl=0.5 GNN  data loaded in 2.1s  train=7200 val=960 test=240
+    ep   1  loss=3.8122  val_acc=0.0323  best=0.0323@1
+    ep  10  loss=3.3291  val_acc=0.0927  best=0.0927@10
+    ep  20  loss=3.1610  val_acc=0.1104  best=0.1115@17
+    ep  30  loss=3.0715  val_acc=0.1198  best=0.1260@23
+    ep  40  loss=2.9706  val_acc=0.1229  best=0.1323@33
+    ep  50  loss=2.9353  val_acc=0.1396  best=0.1396@44
+    ep  60  loss=2.8608  val_acc=0.1479  best=0.1510@57
+    ep  70  loss=2.7978  val_acc=0.1385  best=0.1510@57
+    early stop at epoch 77 (patience=20)
+  S26 sl=0.5 GNN  acc=0.1208  ITR=8.61  best_val=0.1510@ep57  (131.3s)
+  S27 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S27 sl=0.5 GNN  data loaded in 2.2s  train=7200 val=960 test=240
+    ep   1  loss=3.7947  val_acc=0.0271  best=0.0271@1
+    ep  10  loss=3.3517  val_acc=0.1229  best=0.1229@10
+    ep  20  loss=3.2011  val_acc=0.1198  best=0.1354@18
+    ep  30  loss=3.0947  val_acc=0.1490  best=0.1500@24
+    ep  40  loss=2.9855  val_acc=0.1458  best=0.1625@37
+    ep  50  loss=2.9214  val_acc=0.1583  best=0.1625@37
+    early stop at epoch 57 (patience=20)
+  S27 sl=0.5 GNN  acc=0.1833  ITR=19.09  best_val=0.1625@ep37  (83.1s)
+  S28 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S28 sl=0.5 GNN  data loaded in 2.1s  train=7200 val=960 test=240
+    ep   1  loss=3.8029  val_acc=0.0271  best=0.0271@1
+    ep  10  loss=3.3632  val_acc=0.0927  best=0.1083@8
+    ep  20  loss=3.1785  val_acc=0.1073  best=0.1365@17
+    ep  30  loss=3.0640  val_acc=0.1167  best=0.1375@23
+    ep  40  loss=2.9925  val_acc=0.1469  best=0.1469@40
+    ep  50  loss=2.9269  val_acc=0.1313  best=0.1583@48
+    ep  60  loss=2.8460  val_acc=0.1427  best=0.1583@48
+    early stop at epoch 68 (patience=20)
+  S28 sl=0.5 GNN  acc=0.2292  ITR=28.27  best_val=0.1583@ep48  (392.4s)
+  S29 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S29 sl=0.5 GNN  data loaded in 2.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7851  val_acc=0.0365  best=0.0365@1
+    ep  10  loss=3.3323  val_acc=0.0771  best=0.0927@7
+    ep  20  loss=3.1468  val_acc=0.1156  best=0.1260@16
+    ep  30  loss=3.0278  val_acc=0.1187  best=0.1385@27
+    ep  40  loss=2.9431  val_acc=0.1281  best=0.1448@34
+    ep  50  loss=2.8602  val_acc=0.1271  best=0.1448@34
+    early stop at epoch 54 (patience=20)
+  S29 sl=0.5 GNN  acc=0.0417  ITR=0.41  best_val=0.1448@ep34  (95.8s)
+  S30 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S30 sl=0.5 GNN  data loaded in 2.2s  train=7200 val=960 test=240
+    ep   1  loss=3.7934  val_acc=0.0448  best=0.0448@1
+    ep  10  loss=3.3609  val_acc=0.0906  best=0.1010@8
+    ep  20  loss=3.1951  val_acc=0.1365  best=0.1365@18
+    ep  30  loss=3.0908  val_acc=0.1385  best=0.1583@29
+    ep  40  loss=2.9890  val_acc=0.1542  best=0.1677@35
+    ep  50  loss=2.9096  val_acc=0.1531  best=0.1677@35
+    early stop at epoch 55 (patience=20)
+  S30 sl=0.5 GNN  acc=0.1167  ITR=8.01  best_val=0.1677@ep35  (92.3s)
+  S31 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S31 sl=0.5 GNN  data loaded in 2.0s  train=7200 val=960 test=240
+    ep   1  loss=3.7794  val_acc=0.0302  best=0.0302@1
+    ep  10  loss=3.3303  val_acc=0.0646  best=0.0792@7
+    ep  20  loss=3.1698  val_acc=0.0813  best=0.0844@18
+    ep  30  loss=3.0416  val_acc=0.0760  best=0.0854@29
+    ep  40  loss=2.9428  val_acc=0.0604  best=0.0865@32
+    ep  50  loss=2.8819  val_acc=0.0750  best=0.0875@45
+    ep  60  loss=2.8109  val_acc=0.0833  best=0.0875@45
+    early stop at epoch 65 (patience=20)
+  S31 sl=0.5 GNN  acc=0.2000  ITR=22.30  best_val=0.0875@ep45  (111.2s)
+  S32 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S32 sl=0.5 GNN  data loaded in 2.1s  train=7200 val=960 test=240
+    ep   1  loss=3.8176  val_acc=0.0344  best=0.0344@1
+    ep  10  loss=3.3995  val_acc=0.1240  best=0.1240@10
+    ep  20  loss=3.2305  val_acc=0.1583  best=0.1615@18
+    ep  30  loss=3.1071  val_acc=0.1792  best=0.1792@30
+    ep  40  loss=3.0263  val_acc=0.1708  best=0.1958@39
+    ep  50  loss=2.9433  val_acc=0.1594  best=0.1958@39
+    early stop at epoch 59 (patience=20)
+  S32 sl=0.5 GNN  acc=0.3417  ITR=54.96  best_val=0.1958@ep39  (101.0s)
+  S33 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S33 sl=0.5 GNN  data loaded in 2.2s  train=7200 val=960 test=240
+    ep   1  loss=3.7840  val_acc=0.0292  best=0.0292@1
+    ep  10  loss=3.3182  val_acc=0.0979  best=0.0979@10
+    ep  20  loss=3.1329  val_acc=0.0792  best=0.1042@17
+    ep  30  loss=3.0189  val_acc=0.1146  best=0.1198@28
+    ep  40  loss=2.9215  val_acc=0.1219  best=0.1219@39
+    ep  50  loss=2.8642  val_acc=0.1240  best=0.1240@50
+    ep  60  loss=2.7814  val_acc=0.1187  best=0.1240@50
+    ep  70  loss=2.7261  val_acc=0.1146  best=0.1240@50
+    early stop at epoch 70 (patience=20)
+  S33 sl=0.5 GNN  acc=0.0833  ITR=3.79  best_val=0.1240@ep50  (114.6s)
+  S34 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S34 sl=0.5 GNN  data loaded in 2.2s  train=7200 val=960 test=240
+    ep   1  loss=3.7973  val_acc=0.0375  best=0.0375@1
+    ep  10  loss=3.3452  val_acc=0.1240  best=0.1240@10
+    ep  20  loss=3.1882  val_acc=0.1573  best=0.1573@20
+    ep  30  loss=3.0797  val_acc=0.1677  best=0.1708@24
+    ep  40  loss=3.0180  val_acc=0.1854  best=0.1865@39
+    ep  50  loss=2.9154  val_acc=0.1646  best=0.1865@39
+    ep  60  loss=2.8762  val_acc=0.1875  best=0.1990@51
+    ep  70  loss=2.7790  val_acc=0.2062  best=0.2062@70
+    ep  80  loss=2.7308  val_acc=0.1948  best=0.2062@70
+    ep  90  loss=2.6685  val_acc=0.1854  best=0.2104@84
+    ep 100  loss=2.6099  val_acc=0.1854  best=0.2104@84
+    early stop at epoch 104 (patience=20)
+  S34 sl=0.5 GNN  acc=0.0958  ITR=5.24  best_val=0.2104@ep84  (168.5s)
+  S35 sl=0.5 GNN  train=30 val=4 subjects  device=mps
+  S35 sl=0.5 GNN  data loaded in 2.1s  train=7200 val=960 test=240
+    ep   1  loss=3.7907  val_acc=0.0396  best=0.0396@1
+    ep  10  loss=3.3730  val_acc=0.1052  best=0.1052@10
+    ep  20  loss=3.1822  val_acc=0.1406  best=0.1406@20
+    ep  30  loss=3.0641  val_acc=0.1437  best=0.1531@27
+    ep  40  loss=2.9952  val_acc=0.1490  best=0.1615@36
+    ep  50  loss=2.8980  val_acc=0.1594  best=0.1615@36
+    ep  60  loss=2.8184  val_acc=0.1552  best=0.1625@56
+    ep  70  loss=2.7534  val_acc=0.1552  best=0.1667@62
+    ep  80  loss=2.6858  val_acc=0.1500  best=0.1667@62
+    early stop at epoch 82 (patience=20)
+  S35 sl=0.5 GNN  acc=0.1083  ITR=6.85  best_val=0.1667@ep62  (135.3s)
+
+=== sl=1.0 ===
+  S01 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S01 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7770  val_acc=0.0656  best=0.0656@1
+    ep  10  loss=2.9638  val_acc=0.1729  best=0.1792@9
+    ep  20  loss=2.7781  val_acc=0.2333  best=0.2406@19
+    ep  30  loss=2.6809  val_acc=0.2531  best=0.2615@22
+    ep  40  loss=2.5911  val_acc=0.2635  best=0.2833@38
+    ep  50  loss=2.5613  val_acc=0.2812  best=0.2833@38
+    ep  60  loss=2.4863  val_acc=0.2844  best=0.2948@57
+    ep  70  loss=2.4288  val_acc=0.2833  best=0.3052@69
+    ep  80  loss=2.3514  val_acc=0.3000  best=0.3052@69
+    ep  90  loss=2.3027  val_acc=0.3010  best=0.3073@87
+    ep 100  loss=2.2374  val_acc=0.2948  best=0.3135@99
+    ep 110  loss=2.2135  val_acc=0.3104  best=0.3135@99
+    ep 120  loss=2.1551  val_acc=0.3083  best=0.3198@117
+    ep 130  loss=2.1392  val_acc=0.3177  best=0.3198@117
+    early stop at epoch 137 (patience=20)
+  S01 sl=1.0 GNN  acc=0.2125  ITR=16.54  best_val=0.3198@ep117  (347.2s)
+  S02 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S02 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7859  val_acc=0.0458  best=0.0458@1
+    ep  10  loss=2.9456  val_acc=0.1573  best=0.1594@7
+    ep  20  loss=2.7253  val_acc=0.1875  best=0.1906@19
+    ep  30  loss=2.6467  val_acc=0.2052  best=0.2156@28
+    ep  40  loss=2.5449  val_acc=0.2146  best=0.2219@36
+    ep  50  loss=2.4952  val_acc=0.2062  best=0.2323@41
+    ep  60  loss=2.4198  val_acc=0.2219  best=0.2323@41
+    early stop at epoch 61 (patience=20)
+  S02 sl=1.0 GNN  acc=0.1208  ITR=5.74  best_val=0.2323@ep41  (157.7s)
+  S03 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S03 sl=1.0 GNN  data loaded in 3.3s  train=7200 val=960 test=240
+    ep   1  loss=3.7842  val_acc=0.0396  best=0.0396@1
+    ep  10  loss=2.8992  val_acc=0.1083  best=0.1250@8
+    ep  20  loss=2.7157  val_acc=0.1083  best=0.1281@19
+    ep  30  loss=2.6016  val_acc=0.1240  best=0.1281@19
+    early stop at epoch 39 (patience=20)
+  S03 sl=1.0 GNN  acc=0.4333  ITR=53.59  best_val=0.1281@ep19  (106.6s)
+  S04 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S04 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7865  val_acc=0.0406  best=0.0406@1
+    ep  10  loss=3.0016  val_acc=0.1885  best=0.1885@10
+    ep  20  loss=2.7839  val_acc=0.1812  best=0.2229@19
+    ep  30  loss=2.6842  val_acc=0.2333  best=0.2469@28
+    ep  40  loss=2.5953  val_acc=0.2344  best=0.2469@28
+    ep  50  loss=2.5289  val_acc=0.2385  best=0.2615@47
+    ep  60  loss=2.4635  val_acc=0.2490  best=0.2615@47
+    early stop at epoch 67 (patience=20)
+  S04 sl=1.0 GNN  acc=0.3000  ITR=29.63  best_val=0.2615@ep47  (171.8s)
+  S05 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S05 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7597  val_acc=0.0500  best=0.0500@1
+    ep  10  loss=2.8775  val_acc=0.1240  best=0.1240@10
+    ep  20  loss=2.6683  val_acc=0.1417  best=0.1542@16
+    ep  30  loss=2.5786  val_acc=0.1510  best=0.1542@16
+    ep  40  loss=2.4963  val_acc=0.1458  best=0.1552@31
+    ep  50  loss=2.4172  val_acc=0.1500  best=0.1594@49
+    ep  60  loss=2.3698  val_acc=0.1542  best=0.1594@49
+    early stop at epoch 69 (patience=20)
+  S05 sl=1.0 GNN  acc=0.2208  ITR=17.68  best_val=0.1594@ep49  (176.7s)
+  S06 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S06 sl=1.0 GNN  data loaded in 3.6s  train=7200 val=960 test=240
+    ep   1  loss=3.7722  val_acc=0.0458  best=0.0458@1
+    ep  10  loss=2.9877  val_acc=0.2156  best=0.2156@10
+    ep  20  loss=2.8346  val_acc=0.2677  best=0.2677@20
+    ep  30  loss=2.7179  val_acc=0.2708  best=0.2771@28
+    ep  40  loss=2.6390  val_acc=0.2844  best=0.2979@33
+    ep  50  loss=2.5456  val_acc=0.2854  best=0.3208@46
+    ep  60  loss=2.4828  val_acc=0.2865  best=0.3208@46
+    ep  70  loss=2.4394  val_acc=0.3021  best=0.3344@63
+    ep  80  loss=2.3574  val_acc=0.3281  best=0.3344@63
+    early stop at epoch 83 (patience=20)
+  S06 sl=1.0 GNN  acc=0.2125  ITR=16.54  best_val=0.3344@ep63  (211.7s)
+  S07 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S07 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7804  val_acc=0.0344  best=0.0344@1
+    ep  10  loss=2.9150  val_acc=0.1635  best=0.1635@9
+    ep  20  loss=2.7182  val_acc=0.1865  best=0.1906@17
+    ep  30  loss=2.6330  val_acc=0.1896  best=0.2010@23
+    ep  40  loss=2.5424  val_acc=0.1990  best=0.2062@32
+    ep  50  loss=2.4665  val_acc=0.2031  best=0.2083@41
+    ep  60  loss=2.4311  val_acc=0.1990  best=0.2167@58
+    ep  70  loss=2.3425  val_acc=0.2031  best=0.2188@65
+    ep  80  loss=2.2825  val_acc=0.2021  best=0.2271@74
+    ep  90  loss=2.2240  val_acc=0.2073  best=0.2271@74
+    early stop at epoch 94 (patience=20)
+  S07 sl=1.0 GNN  acc=0.2875  ITR=27.62  best_val=0.2271@ep74  (237.7s)
+  S08 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S08 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7766  val_acc=0.0302  best=0.0302@1
+    ep  10  loss=2.9506  val_acc=0.2104  best=0.2104@10
+    ep  20  loss=2.7752  val_acc=0.2417  best=0.2562@18
+    ep  30  loss=2.6365  val_acc=0.2385  best=0.2573@27
+    ep  40  loss=2.5814  val_acc=0.2333  best=0.2646@32
+    ep  50  loss=2.5094  val_acc=0.2354  best=0.2667@44
+    ep  60  loss=2.4568  val_acc=0.2427  best=0.2667@44
+    early stop at epoch 64 (patience=20)
+  S08 sl=1.0 GNN  acc=0.2208  ITR=17.68  best_val=0.2667@ep44  (162.5s)
+  S09 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S09 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7788  val_acc=0.0365  best=0.0365@1
+    ep  10  loss=2.9378  val_acc=0.1333  best=0.1490@8
+    ep  20  loss=2.7642  val_acc=0.1719  best=0.1958@16
+    ep  30  loss=2.6530  val_acc=0.1771  best=0.2146@29
+    ep  40  loss=2.5532  val_acc=0.1833  best=0.2146@29
+    ep  50  loss=2.4726  val_acc=0.2000  best=0.2188@47
+    ep  60  loss=2.4154  val_acc=0.1854  best=0.2188@47
+    early stop at epoch 67 (patience=20)
+  S09 sl=1.0 GNN  acc=0.2042  ITR=15.42  best_val=0.2188@ep47  (171.0s)
+  S10 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S10 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7899  val_acc=0.0437  best=0.0437@1
+    ep  10  loss=2.9128  val_acc=0.1396  best=0.1396@10
+    ep  20  loss=2.6887  val_acc=0.1406  best=0.1417@17
+    ep  30  loss=2.5996  val_acc=0.1510  best=0.1542@25
+    ep  40  loss=2.5086  val_acc=0.1344  best=0.1583@36
+    ep  50  loss=2.4295  val_acc=0.1510  best=0.1583@36
+    ep  60  loss=2.3732  val_acc=0.1437  best=0.1698@51
+    ep  70  loss=2.3210  val_acc=0.1427  best=0.1698@51
+    early stop at epoch 71 (patience=20)
+  S10 sl=1.0 GNN  acc=0.1417  ITR=7.87  best_val=0.1698@ep51  (448.3s)
+  S11 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S11 sl=1.0 GNN  data loaded in 3.7s  train=7200 val=960 test=240
+    ep   1  loss=3.7585  val_acc=0.0375  best=0.0375@1
+    ep  10  loss=2.8864  val_acc=0.1625  best=0.1646@8
+    ep  20  loss=2.7339  val_acc=0.1812  best=0.1896@17
+    ep  30  loss=2.6119  val_acc=0.1865  best=0.2083@26
+    ep  40  loss=2.5415  val_acc=0.2021  best=0.2125@37
+    ep  50  loss=2.4728  val_acc=0.2125  best=0.2188@48
+    ep  60  loss=2.3965  val_acc=0.2188  best=0.2260@55
+    ep  70  loss=2.3386  val_acc=0.2365  best=0.2406@67
+    ep  80  loss=2.2558  val_acc=0.2313  best=0.2406@67
+    ep  90  loss=2.2158  val_acc=0.2333  best=0.2510@81
+    ep 100  loss=2.1579  val_acc=0.2385  best=0.2521@93
+    ep 110  loss=2.0956  val_acc=0.2458  best=0.2521@93
+    ep 120  loss=2.0513  val_acc=0.2302  best=0.2573@116
+    ep 130  loss=2.0307  val_acc=0.2490  best=0.2573@116
+    early stop at epoch 136 (patience=20)
+  S11 sl=1.0 GNN  acc=0.0458  ITR=0.41  best_val=0.2573@ep116  (338.1s)
+  S12 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S12 sl=1.0 GNN  data loaded in 3.7s  train=7200 val=960 test=240
+    ep   1  loss=3.7650  val_acc=0.0385  best=0.0385@1
+    ep  10  loss=2.8984  val_acc=0.1094  best=0.1156@9
+    ep  20  loss=2.7127  val_acc=0.1250  best=0.1490@19
+    ep  30  loss=2.6022  val_acc=0.1365  best=0.1490@19
+    ep  40  loss=2.5245  val_acc=0.1448  best=0.1594@36
+    ep  50  loss=2.4754  val_acc=0.1323  best=0.1594@36
+    ep  60  loss=2.3683  val_acc=0.1490  best=0.1646@52
+    ep  70  loss=2.3041  val_acc=0.1552  best=0.1646@52
+    early stop at epoch 72 (patience=20)
+  S12 sl=1.0 GNN  acc=0.1542  ITR=9.25  best_val=0.1646@ep52  (183.8s)
+  S13 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S13 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7953  val_acc=0.0385  best=0.0385@1
+    ep  10  loss=2.8876  val_acc=0.1437  best=0.1437@10
+    ep  20  loss=2.7000  val_acc=0.1521  best=0.1573@17
+    ep  30  loss=2.6010  val_acc=0.1573  best=0.1708@24
+    ep  40  loss=2.5048  val_acc=0.1750  best=0.1927@39
+    ep  50  loss=2.4558  val_acc=0.1938  best=0.1938@50
+    ep  60  loss=2.3724  val_acc=0.1917  best=0.1969@56
+    ep  70  loss=2.3195  val_acc=0.1906  best=0.2031@64
+    ep  80  loss=2.2494  val_acc=0.2062  best=0.2073@78
+    ep  90  loss=2.1876  val_acc=0.2094  best=0.2094@90
+    ep 100  loss=2.1234  val_acc=0.1917  best=0.2146@94
+    ep 110  loss=2.0663  val_acc=0.1979  best=0.2146@94
+    early stop at epoch 114 (patience=20)
+  S13 sl=1.0 GNN  acc=0.1042  ITR=4.20  best_val=0.2146@ep94  (290.9s)
+  S14 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S14 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7800  val_acc=0.0448  best=0.0448@1
+    ep  10  loss=2.9366  val_acc=0.1302  best=0.1427@9
+    ep  20  loss=2.7473  val_acc=0.1885  best=0.1885@20
+    ep  30  loss=2.6122  val_acc=0.1823  best=0.1885@20
+    ep  40  loss=2.5332  val_acc=0.1885  best=0.1885@20
+    early stop at epoch 40 (patience=20)
+  S14 sl=1.0 GNN  acc=0.1875  ITR=13.25  best_val=0.1885@ep20  (103.2s)
+  S15 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S15 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7815  val_acc=0.0385  best=0.0385@1
+    ep  10  loss=2.9446  val_acc=0.1604  best=0.1740@9
+    ep  20  loss=2.7244  val_acc=0.1802  best=0.2042@15
+    ep  30  loss=2.6332  val_acc=0.2083  best=0.2083@22
+    ep  40  loss=2.5661  val_acc=0.2115  best=0.2146@32
+    ep  50  loss=2.5046  val_acc=0.2188  best=0.2229@46
+    ep  60  loss=2.4241  val_acc=0.2292  best=0.2427@58
+    ep  70  loss=2.3844  val_acc=0.2188  best=0.2427@58
+    early stop at epoch 78 (patience=20)
+  S15 sl=1.0 GNN  acc=0.1875  ITR=13.25  best_val=0.2427@ep58  (204.9s)
+  S16 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S16 sl=1.0 GNN  data loaded in 3.6s  train=7200 val=960 test=240
+    ep   1  loss=3.7917  val_acc=0.0458  best=0.0458@1
+    ep  10  loss=2.9851  val_acc=0.1948  best=0.1990@9
+    ep  20  loss=2.8007  val_acc=0.2313  best=0.2562@18
+    ep  30  loss=2.6722  val_acc=0.2531  best=0.2677@27
+    ep  40  loss=2.6181  val_acc=0.2604  best=0.2792@37
+    ep  50  loss=2.5462  val_acc=0.2875  best=0.2875@50
+    ep  60  loss=2.4682  val_acc=0.2771  best=0.2927@58
+    ep  70  loss=2.4277  val_acc=0.2833  best=0.2927@58
+    ep  80  loss=2.3452  val_acc=0.2823  best=0.2990@72
+    ep  90  loss=2.2786  val_acc=0.2885  best=0.2990@72
+    early stop at epoch 92 (patience=20)
+  S16 sl=1.0 GNN  acc=0.1875  ITR=13.25  best_val=0.2990@ep72  (235.8s)
+  S17 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S17 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7855  val_acc=0.0448  best=0.0448@1
+    ep  10  loss=3.0059  val_acc=0.1760  best=0.1760@10
+    ep  20  loss=2.7870  val_acc=0.2042  best=0.2302@17
+    ep  30  loss=2.6633  val_acc=0.2219  best=0.2344@21
+    ep  40  loss=2.5796  val_acc=0.2219  best=0.2448@32
+    ep  50  loss=2.4957  val_acc=0.2188  best=0.2448@32
+    early stop at epoch 52 (patience=20)
+  S17 sl=1.0 GNN  acc=0.1250  ITR=6.15  best_val=0.2448@ep32  (136.0s)
+  S18 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S18 sl=1.0 GNN  data loaded in 3.7s  train=7200 val=960 test=240
+    ep   1  loss=3.7733  val_acc=0.0406  best=0.0406@1
+    ep  10  loss=2.9412  val_acc=0.1667  best=0.1667@10
+    ep  20  loss=2.7160  val_acc=0.1802  best=0.1802@13
+    ep  30  loss=2.6156  val_acc=0.2083  best=0.2083@30
+    ep  40  loss=2.5726  val_acc=0.1865  best=0.2083@30
+    ep  50  loss=2.5153  val_acc=0.1833  best=0.2083@30
+    early stop at epoch 50 (patience=20)
+  S18 sl=1.0 GNN  acc=0.2625  ITR=23.74  best_val=0.2083@ep30  (131.7s)
+  S19 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S19 sl=1.0 GNN  data loaded in 3.8s  train=7200 val=960 test=240
+    ep   1  loss=3.7806  val_acc=0.0375  best=0.0375@1
+    ep  10  loss=2.8654  val_acc=0.1427  best=0.1437@7
+    ep  20  loss=2.6921  val_acc=0.1344  best=0.1531@13
+    ep  30  loss=2.5883  val_acc=0.1458  best=0.1698@27
+    ep  40  loss=2.4943  val_acc=0.1531  best=0.1698@27
+    early stop at epoch 47 (patience=20)
+  S19 sl=1.0 GNN  acc=0.1167  ITR=5.34  best_val=0.1698@ep27  (121.5s)
+  S20 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S20 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7794  val_acc=0.0552  best=0.0552@1
+    ep  10  loss=2.9754  val_acc=0.1677  best=0.1865@9
+    ep  20  loss=2.7947  val_acc=0.2240  best=0.2240@15
+    ep  30  loss=2.6781  val_acc=0.2302  best=0.2396@24
+    ep  40  loss=2.5890  val_acc=0.2427  best=0.2542@31
+    ep  50  loss=2.5261  val_acc=0.2448  best=0.2615@47
+    ep  60  loss=2.4563  val_acc=0.2406  best=0.2698@51
+    ep  70  loss=2.3772  val_acc=0.2698  best=0.2698@51
+    early stop at epoch 71 (patience=20)
+  S20 sl=1.0 GNN  acc=0.2417  ITR=20.64  best_val=0.2698@ep51  (180.5s)
+  S21 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S21 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7739  val_acc=0.0448  best=0.0448@1
+    ep  10  loss=2.9537  val_acc=0.1823  best=0.1823@10
+    ep  20  loss=2.7743  val_acc=0.2042  best=0.2115@16
+    ep  30  loss=2.6955  val_acc=0.2281  best=0.2344@29
+    ep  40  loss=2.5983  val_acc=0.2271  best=0.2448@34
+    ep  50  loss=2.5182  val_acc=0.2146  best=0.2542@47
+    ep  60  loss=2.4648  val_acc=0.2281  best=0.2542@47
+    ep  70  loss=2.4066  val_acc=0.2562  best=0.2573@61
+    ep  80  loss=2.3284  val_acc=0.2531  best=0.2677@76
+    ep  90  loss=2.2875  val_acc=0.2552  best=0.2708@86
+    ep 100  loss=2.2207  val_acc=0.2656  best=0.2708@86
+    ep 110  loss=2.1725  val_acc=0.2635  best=0.2719@101
+    ep 120  loss=2.1408  val_acc=0.2677  best=0.2719@101
+    early stop at epoch 121 (patience=20)
+  S21 sl=1.0 GNN  acc=0.2375  ITR=20.04  best_val=0.2719@ep101  (309.6s)
+  S22 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S22 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7567  val_acc=0.0406  best=0.0406@1
+    ep  10  loss=3.0107  val_acc=0.1927  best=0.1927@10
+    ep  20  loss=2.8136  val_acc=0.2229  best=0.2281@19
+    ep  30  loss=2.7234  val_acc=0.2479  best=0.2479@30
+    ep  40  loss=2.6391  val_acc=0.2344  best=0.2573@33
+    ep  50  loss=2.5806  val_acc=0.2427  best=0.2583@46
+    ep  60  loss=2.5075  val_acc=0.2229  best=0.2698@51
+    ep  70  loss=2.4344  val_acc=0.2687  best=0.2698@51
+    early stop at epoch 71 (patience=20)
+  S22 sl=1.0 GNN  acc=0.3500  ITR=38.09  best_val=0.2698@ep51  (181.6s)
+  S23 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S23 sl=1.0 GNN  data loaded in 3.6s  train=7200 val=960 test=240
+    ep   1  loss=3.7825  val_acc=0.0531  best=0.0531@1
+    ep  10  loss=2.9623  val_acc=0.1865  best=0.1865@10
+    ep  20  loss=2.7561  val_acc=0.2281  best=0.2281@20
+    ep  30  loss=2.6864  val_acc=0.2531  best=0.2531@30
+    ep  40  loss=2.5686  val_acc=0.2625  best=0.2625@40
+    ep  50  loss=2.5347  val_acc=0.2656  best=0.2729@43
+    ep  60  loss=2.4341  val_acc=0.2719  best=0.2771@53
+    ep  70  loss=2.3857  val_acc=0.2552  best=0.2771@53
+    early stop at epoch 73 (patience=20)
+  S23 sl=1.0 GNN  acc=0.1083  ITR=4.57  best_val=0.2771@ep53  (188.8s)
+  S24 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S24 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7757  val_acc=0.0510  best=0.0510@1
+    ep  10  loss=3.0216  val_acc=0.1719  best=0.1719@6
+    ep  20  loss=2.8140  val_acc=0.2333  best=0.2333@20
+    ep  30  loss=2.7370  val_acc=0.2271  best=0.2437@27
+    ep  40  loss=2.6412  val_acc=0.2437  best=0.2521@31
+    ep  50  loss=2.5787  val_acc=0.2313  best=0.2583@49
+    ep  60  loss=2.5157  val_acc=0.2292  best=0.2583@49
+    ep  70  loss=2.4468  val_acc=0.2281  best=0.2625@64
+    ep  80  loss=2.4231  val_acc=0.2635  best=0.2687@74
+    ep  90  loss=2.3411  val_acc=0.2604  best=0.2792@88
+    ep 100  loss=2.3076  val_acc=0.2708  best=0.2792@88
+    early stop at epoch 108 (patience=20)
+  S24 sl=1.0 GNN  acc=0.4125  ITR=49.56  best_val=0.2792@ep88  (276.6s)
+  S25 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S25 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7875  val_acc=0.0427  best=0.0427@1
+    ep  10  loss=2.9934  val_acc=0.2094  best=0.2094@10
+    ep  20  loss=2.8006  val_acc=0.2677  best=0.2677@20
+    ep  30  loss=2.6928  val_acc=0.2594  best=0.2740@29
+    ep  40  loss=2.6428  val_acc=0.2719  best=0.2833@38
+    ep  50  loss=2.5698  val_acc=0.2958  best=0.2958@50
+    ep  60  loss=2.4707  val_acc=0.2687  best=0.3031@54
+    ep  70  loss=2.4011  val_acc=0.2958  best=0.3031@54
+    ep  80  loss=2.3399  val_acc=0.2917  best=0.3135@75
+    ep  90  loss=2.2839  val_acc=0.3115  best=0.3135@75
+    early stop at epoch 95 (patience=20)
+  S25 sl=1.0 GNN  acc=0.2208  ITR=17.68  best_val=0.3135@ep75  (243.5s)
+  S26 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S26 sl=1.0 GNN  data loaded in 3.5s  train=7200 val=960 test=240
+    ep   1  loss=3.7882  val_acc=0.0458  best=0.0458@1
+    ep  10  loss=2.9754  val_acc=0.1677  best=0.1719@9
+    ep  20  loss=2.7874  val_acc=0.1990  best=0.2333@19
+    ep  30  loss=2.6843  val_acc=0.2510  best=0.2573@27
+    ep  40  loss=2.6146  val_acc=0.2844  best=0.2844@40
+    ep  50  loss=2.5306  val_acc=0.2896  best=0.2896@50
+    ep  60  loss=2.4562  val_acc=0.2698  best=0.2896@50
+    ep  70  loss=2.4188  val_acc=0.2740  best=0.2896@50
+    early stop at epoch 70 (patience=20)
+  S26 sl=1.0 GNN  acc=0.2417  ITR=20.64  best_val=0.2896@ep50  (179.4s)
+  S27 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S27 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7822  val_acc=0.0427  best=0.0427@1
+    ep  10  loss=3.0149  val_acc=0.1448  best=0.1604@9
+    ep  20  loss=2.8202  val_acc=0.2167  best=0.2208@19
+    ep  30  loss=2.7124  val_acc=0.2375  best=0.2375@30
+    ep  40  loss=2.6193  val_acc=0.2448  best=0.2458@37
+    ep  50  loss=2.5193  val_acc=0.2521  best=0.2521@50
+    ep  60  loss=2.4731  val_acc=0.2417  best=0.2583@58
+    ep  70  loss=2.4012  val_acc=0.2667  best=0.2667@70
+    ep  80  loss=2.3469  val_acc=0.2635  best=0.2719@76
+    ep  90  loss=2.2847  val_acc=0.2552  best=0.2719@76
+    early stop at epoch 96 (patience=20)
+  S27 sl=1.0 GNN  acc=0.3125  ITR=31.69  best_val=0.2719@ep76  (256.8s)
+  S28 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S28 sl=1.0 GNN  data loaded in 3.1s  train=7200 val=960 test=240
+    ep   1  loss=3.7825  val_acc=0.0333  best=0.0333@1
+    ep  10  loss=2.9884  val_acc=0.1552  best=0.1635@9
+    ep  20  loss=2.7940  val_acc=0.1896  best=0.2083@19
+    ep  30  loss=2.6979  val_acc=0.1906  best=0.2167@24
+    ep  40  loss=2.6034  val_acc=0.2240  best=0.2240@40
+    ep  50  loss=2.5468  val_acc=0.2167  best=0.2271@47
+    ep  60  loss=2.4821  val_acc=0.2094  best=0.2323@59
+    ep  70  loss=2.4123  val_acc=0.2188  best=0.2323@59
+    ep  80  loss=2.3605  val_acc=0.2219  best=0.2333@77
+    ep  90  loss=2.2934  val_acc=0.2167  best=0.2365@84
+    ep 100  loss=2.2337  val_acc=0.2292  best=0.2406@93
+    ep 110  loss=2.1779  val_acc=0.2344  best=0.2406@93
+    early stop at epoch 113 (patience=20)
+  S28 sl=1.0 GNN  acc=0.3583  ITR=39.57  best_val=0.2406@ep93  (299.6s)
+  S29 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S29 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7843  val_acc=0.0292  best=0.0292@1
+    ep  10  loss=2.8940  val_acc=0.1844  best=0.1844@10
+    ep  20  loss=2.7146  val_acc=0.2240  best=0.2344@15
+    ep  30  loss=2.6260  val_acc=0.2260  best=0.2344@15
+    ep  40  loss=2.5420  val_acc=0.2375  best=0.2500@31
+    ep  50  loss=2.4730  val_acc=0.2469  best=0.2500@31
+    early stop at epoch 51 (patience=20)
+  S29 sl=1.0 GNN  acc=0.0750  ITR=1.94  best_val=0.2500@ep31  (131.4s)
+  S30 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S30 sl=1.0 GNN  data loaded in 3.2s  train=7200 val=960 test=240
+    ep   1  loss=3.7743  val_acc=0.0375  best=0.0375@1
+    ep  10  loss=2.9622  val_acc=0.1521  best=0.1802@7
+    ep  20  loss=2.7746  val_acc=0.2188  best=0.2448@19
+    ep  30  loss=2.6564  val_acc=0.2552  best=0.2760@27
+    ep  40  loss=2.5867  val_acc=0.2687  best=0.2823@34
+    ep  50  loss=2.4939  val_acc=0.2677  best=0.2875@43
+    ep  60  loss=2.4381  val_acc=0.2656  best=0.3031@51
+    ep  70  loss=2.3600  val_acc=0.2990  best=0.3042@61
+    ep  80  loss=2.3180  val_acc=0.2979  best=0.3177@78
+    ep  90  loss=2.2643  val_acc=0.2969  best=0.3177@78
+    early stop at epoch 98 (patience=20)
+  S30 sl=1.0 GNN  acc=0.1250  ITR=6.15  best_val=0.3177@ep78  (251.8s)
+  S31 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S31 sl=1.0 GNN  data loaded in 3.3s  train=7200 val=960 test=240
+    ep   1  loss=3.8010  val_acc=0.0417  best=0.0417@1
+    ep  10  loss=2.9248  val_acc=0.1250  best=0.1354@9
+    ep  20  loss=2.7648  val_acc=0.1583  best=0.1677@14
+    ep  30  loss=2.6581  val_acc=0.1531  best=0.1750@23
+    ep  40  loss=2.5793  val_acc=0.1562  best=0.1750@23
+    early stop at epoch 43 (patience=20)
+  S31 sl=1.0 GNN  acc=0.3208  ITR=33.08  best_val=0.1750@ep23  (110.2s)
+  S32 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S32 sl=1.0 GNN  data loaded in 3.1s  train=7200 val=960 test=240
+    ep   1  loss=3.7691  val_acc=0.0417  best=0.0417@1
+    ep  10  loss=3.0062  val_acc=0.1833  best=0.1865@7
+    ep  20  loss=2.7836  val_acc=0.2302  best=0.2302@20
+    ep  30  loss=2.6767  val_acc=0.2531  best=0.2531@30
+    ep  40  loss=2.6042  val_acc=0.2677  best=0.2687@35
+    ep  50  loss=2.5421  val_acc=0.2594  best=0.2740@48
+    ep  60  loss=2.4583  val_acc=0.2823  best=0.2938@57
+    ep  70  loss=2.4010  val_acc=0.2510  best=0.2938@57
+    ep  80  loss=2.3422  val_acc=0.2729  best=0.2948@77
+    ep  90  loss=2.2740  val_acc=0.2781  best=0.2948@77
+    ep 100  loss=2.2436  val_acc=0.2760  best=0.3000@92
+    ep 110  loss=2.1898  val_acc=0.2875  best=0.3000@92
+    early stop at epoch 112 (patience=20)
+  S32 sl=1.0 GNN  acc=0.6042  ITR=90.45  best_val=0.3000@ep92  (295.7s)
+  S33 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S33 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7759  val_acc=0.0458  best=0.0458@1
+    ep  10  loss=2.9295  val_acc=0.1667  best=0.1667@10
+    ep  20  loss=2.7456  val_acc=0.2135  best=0.2302@19
+    ep  30  loss=2.6330  val_acc=0.2177  best=0.2365@24
+    ep  40  loss=2.5395  val_acc=0.2240  best=0.2437@31
+    ep  50  loss=2.4671  val_acc=0.2198  best=0.2479@41
+    ep  60  loss=2.3916  val_acc=0.2042  best=0.2479@41
+    early stop at epoch 61 (patience=20)
+  S33 sl=1.0 GNN  acc=0.0708  ITR=1.68  best_val=0.2479@ep41  (164.7s)
+  S34 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S34 sl=1.0 GNN  data loaded in 3.3s  train=7200 val=960 test=240
+    ep   1  loss=3.7750  val_acc=0.0344  best=0.0344@1
+    ep  10  loss=2.9503  val_acc=0.1594  best=0.1708@9
+    ep  20  loss=2.7645  val_acc=0.1969  best=0.2073@16
+    ep  30  loss=2.6782  val_acc=0.2062  best=0.2240@28
+    ep  40  loss=2.5849  val_acc=0.2146  best=0.2417@37
+    ep  50  loss=2.5163  val_acc=0.2198  best=0.2542@48
+    ep  60  loss=2.4529  val_acc=0.2385  best=0.2542@48
+    ep  70  loss=2.3861  val_acc=0.2448  best=0.2583@63
+    ep  80  loss=2.3125  val_acc=0.2562  best=0.2583@63
+    ep  90  loss=2.2700  val_acc=0.2552  best=0.2677@82
+    ep 100  loss=2.2094  val_acc=0.2458  best=0.2708@97
+    ep 110  loss=2.1520  val_acc=0.2573  best=0.2708@97
+    early stop at epoch 117 (patience=20)
+  S34 sl=1.0 GNN  acc=0.2250  ITR=18.26  best_val=0.2708@ep97  (313.5s)
+  S35 sl=1.0 GNN  train=30 val=4 subjects  device=mps
+  S35 sl=1.0 GNN  data loaded in 3.4s  train=7200 val=960 test=240
+    ep   1  loss=3.7757  val_acc=0.0521  best=0.0521@1
+    ep  10  loss=2.9748  val_acc=0.1760  best=0.1760@10
+    ep  20  loss=2.7962  val_acc=0.2292  best=0.2292@20
+    ep  30  loss=2.6720  val_acc=0.2240  best=0.2396@25
+    ep  40  loss=2.6123  val_acc=0.2313  best=0.2427@36
+    ep  50  loss=2.5377  val_acc=0.2469  best=0.2594@48
+    ep  60  loss=2.4787  val_acc=0.2458  best=0.2594@48
+    ep  70  loss=2.4058  val_acc=0.2313  best=0.2646@63
+    ep  80  loss=2.3283  val_acc=0.2500  best=0.2760@78
+    ep  90  loss=2.2805  val_acc=0.2573  best=0.2792@89
+    ep 100  loss=2.2518  val_acc=0.2687  best=0.2792@89
+    ep 110  loss=2.1711  val_acc=0.2854  best=0.2854@110
+    ep 120  loss=2.1345  val_acc=0.2812  best=0.2875@119
+    ep 130  loss=2.0969  val_acc=0.2802  best=0.2875@119
+    early stop at epoch 139 (patience=20)
+  S35 sl=1.0 GNN  acc=0.3375  ITR=35.92  best_val=0.2875@ep119  (369.8s)
+
+=== SUMMARY ===
+
+GNN  sl=0.5  n=35 subjects
+  acc   mean=0.1338  std=0.0695  se=0.0118
+  ITR   mean=12.26    std=12.21    se=2.06
+  per-subject acc: [0.212, 0.075, 0.271, 0.1, 0.113, 0.129, 0.117, 0.087, 0.129, 0.142, 0.037, 0.079, 0.062, 0.079, 0.096, 0.133, 0.104, 0.233, 0.046, 0.133, 0.146, 0.204, 0.083, 0.254, 0.096, 0.121, 0.183, 0.229, 0.042, 0.117, 0.2, 0.342, 0.083, 0.096, 0.108]
+
+GNN  sl=1.0  n=35 subjects
+  acc   mean=0.2276  std=0.1150  se=0.0194
+  ITR   mean=20.77    std=17.87    se=3.02
+  per-subject acc: [0.212, 0.121, 0.433, 0.3, 0.221, 0.212, 0.287, 0.221, 0.204, 0.142, 0.046, 0.154, 0.104, 0.188, 0.188, 0.188, 0.125, 0.263, 0.117, 0.242, 0.237, 0.35, 0.108, 0.412, 0.221, 0.242, 0.312, 0.358, 0.075, 0.125, 0.321, 0.604, 0.071, 0.225, 0.338]

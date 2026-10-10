@@ -1,0 +1,295 @@
+
+Device: cuda
+Subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+Windows: [0.5, 1.0]
+Variants: ['g2', 'g3']
+Epochs: 100  Batch: 128  LR: 0.0002  Seed: 41
+
+
+=== sl=0.5 ===
+
+--- variant=g2 ---
+  S01 sl=0.5 GNNv2c-G2  34 source subjects  device=cuda
+  S01 sl=0.5 GNNv2c-G2  train=8160  test=240
+  S01 sl=0.5 GNNv2c-G2  params=335,962
+    ep   1  loss=3.7361
+    ep  25  loss=0.1527
+    ep  50  loss=0.0294
+    ep  75  loss=0.0125
+    ep 100  loss=0.0130
+  S01 sl=0.5 GNNv2c-G2  acc=0.4583  ITR=87.84  (193.0s)
+  S02 sl=0.5 GNNv2c-G2  34 source subjects  device=cuda
+  S02 sl=0.5 GNNv2c-G2  train=8160  test=240
+  S02 sl=0.5 GNNv2c-G2  params=335,962
+    ep   1  loss=3.7355
+    ep  25  loss=0.1580
+    ep  50  loss=0.0315
+    ep  75  loss=0.0123
+    ep 100  loss=0.0112
+  S02 sl=0.5 GNNv2c-G2  acc=0.4542  ITR=86.58  (191.2s)
+  S03 sl=0.5 GNNv2c-G2  34 source subjects  device=cuda
+  S03 sl=0.5 GNNv2c-G2  train=8160  test=240
+  S03 sl=0.5 GNNv2c-G2  params=335,962
+    ep   1  loss=3.7658
+    ep  25  loss=0.1620
+    ep  50  loss=0.0304
+    ep  75  loss=0.0133
+    ep 100  loss=0.0134
+  S03 sl=0.5 GNNv2c-G2  acc=0.7542  ITR=193.08  (191.3s)
+  S04 sl=0.5 GNNv2c-G2  34 source subjects  device=cuda
+  S04 sl=0.5 GNNv2c-G2  train=8160  test=240
+  S04 sl=0.5 GNNv2c-G2  params=335,962
+    ep   1  loss=3.7427
+    ep  25  loss=0.1546
+error: unexpected argument '--sl' found
+
+  tip: to pass '--sl' as a value, use '-- --sl'
+
+Usage: tee [OPTION]... [FILE]...
+
+For more information, try '--help'.
+
+Device: cuda
+Subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+Windows: [0.5, 1.0]
+Variants: ['g2', 'g3']
+Epochs: 100  Batch: 128  LR: 0.0002  Seed: 41
+
+
+=== sl=0.5 ===
+
+--- variant=g2 ---
+  S01 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S02 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S03 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S04 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S05 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S06 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S07 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S08 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S09 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S10 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S11 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S12 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S13 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S14 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S15 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S16 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S17 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S18 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S19 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S20 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S21 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S22 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S23 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S24 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S25 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S26 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S27 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S28 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S29 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S30 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S31 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S32 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S33 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S34 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+  S35 sl=0.5 GNNv2c-G2  [skipping — checkpoint exists]
+
+--- variant=g3 ---
+  S01 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S02 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S03 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S04 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S05 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S06 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S07 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S08 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S09 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S10 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S11 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S12 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S13 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S14 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S15 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S16 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S17 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S18 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S19 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S20 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S21 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S22 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S23 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S24 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S25 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S26 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S27 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S28 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S29 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S30 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S31 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S32 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S33 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S34 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+  S35 sl=0.5 GNNv2c-G3  [skipping — checkpoint exists]
+
+=== sl=1.0 ===
+
+--- variant=g2 ---
+  S01 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S02 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S03 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S04 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S05 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S06 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S07 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S08 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S09 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S10 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S11 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S12 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S13 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S14 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S15 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S16 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S17 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S18 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S19 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S20 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S21 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S22 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S23 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S24 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S25 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S26 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S27 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S28 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S29 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S30 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S31 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S32 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S33 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S34 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+  S35 sl=1.0 GNNv2c-G2  [skipping — checkpoint exists]
+
+--- variant=g3 ---
+  S01 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S02 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S03 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S04 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S05 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S06 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S07 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S08 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S09 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S10 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S11 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S12 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S13 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S14 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S15 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S16 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S17 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S18 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S19 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S20 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S21 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S22 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S23 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S24 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S25 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S26 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S27 sl=1.0 GNNv2c-G3  [skipping — checkpoint exists]
+  S28 sl=1.0 GNNv2c-G3  34 source subjects  device=cuda
+  S28 sl=1.0 GNNv2c-G3  train=8160  test=240
+  S28 sl=1.0 GNNv2c-G3  params=488,248
+    ep   1  loss=3.0376
+    ep  25  loss=0.0721
+    ep  50  loss=0.0185
+    ep  75  loss=0.0080
+    ep 100  loss=0.0067
+  S28 sl=1.0 GNNv2c-G3  acc=0.7875  ITR=138.10  (109.6s)
+  S29 sl=1.0 GNNv2c-G3  34 source subjects  device=cuda
+  S29 sl=1.0 GNNv2c-G3  train=8160  test=240
+  S29 sl=1.0 GNNv2c-G3  params=488,248
+    ep   1  loss=2.9974
+    ep  25  loss=0.0672
+    ep  50  loss=0.0173
+    ep  75  loss=0.0075
+    ep 100  loss=0.0048
+  S29 sl=1.0 GNNv2c-G3  acc=0.2000  ITR=14.87  (105.5s)
+  S30 sl=1.0 GNNv2c-G3  34 source subjects  device=cuda
+  S30 sl=1.0 GNNv2c-G3  train=8160  test=240
+  S30 sl=1.0 GNNv2c-G3  params=488,248
+    ep   1  loss=3.0295
+    ep  25  loss=0.0698
+    ep  50  loss=0.0166
+    ep  75  loss=0.0079
+    ep 100  loss=0.0052
+  S30 sl=1.0 GNNv2c-G3  acc=0.5250  ITR=72.53  (105.6s)
+  S31 sl=1.0 GNNv2c-G3  34 source subjects  device=cuda
+  S31 sl=1.0 GNNv2c-G3  train=8160  test=240
+  S31 sl=1.0 GNNv2c-G3  params=488,248
+    ep   1  loss=3.0429
+    ep  25  loss=0.0707
+    ep  50  loss=0.0169
+    ep  75  loss=0.0078
+    ep 100  loss=0.0057
+  S31 sl=1.0 GNNv2c-G3  acc=0.6917  ITR=112.04  (105.7s)
+  S32 sl=1.0 GNNv2c-G3  34 source subjects  device=cuda
+  S32 sl=1.0 GNNv2c-G3  train=8160  test=240
+  S32 sl=1.0 GNNv2c-G3  params=488,248
+    ep   1  loss=3.0618
+    ep  25  loss=0.0751
+    ep  50  loss=0.0193
+    ep  75  loss=0.0083
+    ep 100  loss=0.0058
+  S32 sl=1.0 GNNv2c-G3  acc=0.9417  ITR=187.71  (105.7s)
+  S33 sl=1.0 GNNv2c-G3  34 source subjects  device=cuda
+  S33 sl=1.0 GNNv2c-G3  train=8160  test=240
+  S33 sl=1.0 GNNv2c-G3  params=488,248
+    ep   1  loss=3.0022
+    ep  25  loss=0.0642
+    ep  50  loss=0.0156
+    ep  75  loss=0.0071
+    ep 100  loss=0.0055
+  S33 sl=1.0 GNNv2c-G3  acc=0.1833  ITR=12.73  (105.7s)
+  S34 sl=1.0 GNNv2c-G3  34 source subjects  device=cuda
+  S34 sl=1.0 GNNv2c-G3  train=8160  test=240
+  S34 sl=1.0 GNNv2c-G3  params=488,248
+    ep   1  loss=3.0239
+    ep  25  loss=0.0749
+    ep  50  loss=0.0192
+    ep  75  loss=0.0082
+    ep 100  loss=0.0061
+  S34 sl=1.0 GNNv2c-G3  acc=0.6500  ITR=101.52  (105.5s)
+  S35 sl=1.0 GNNv2c-G3  34 source subjects  device=cuda
+  S35 sl=1.0 GNNv2c-G3  train=8160  test=240
+  S35 sl=1.0 GNNv2c-G3  params=488,248
+    ep   1  loss=3.0437
+    ep  25  loss=0.0727
+    ep  50  loss=0.0191
+    ep  75  loss=0.0082
+    ep 100  loss=0.0061
+  S35 sl=1.0 GNNv2c-G3  acc=0.7333  ITR=123.03  (105.8s)
+
+=== SUMMARY ===
+
+GNNv2c-G2  sl=0.5  n=35 subjects
+  acc  mean=0.3256  std=0.1777  se=0.0300
+  ITR  mean=57.28   std=48.86   se=8.26
+  per-subject acc: [0.458, 0.454, 0.754, 0.212, 0.292, 0.438, 0.342, 0.292, 0.379, 0.321, 0.058, 0.138, 0.133, 0.033, 0.267, 0.271, 0.329, 0.604, 0.167, 0.267, 0.3, 0.517, 0.158, 0.512, 0.117, 0.258, 0.225, 0.596, 0.171, 0.271, 0.537, 0.746, 0.171, 0.375, 0.233]
+
+GNNv2c-G3  sl=0.5  n=35 subjects
+  acc  mean=0.2914  std=0.1568  se=0.0265
+  ITR  mean=47.64   std=41.16   se=6.96
+  per-subject acc: [0.35, 0.371, 0.742, 0.283, 0.279, 0.375, 0.263, 0.263, 0.3, 0.342, 0.054, 0.079, 0.125, 0.108, 0.221, 0.254, 0.271, 0.496, 0.208, 0.296, 0.233, 0.479, 0.125, 0.458, 0.083, 0.212, 0.225, 0.496, 0.087, 0.308, 0.458, 0.65, 0.129, 0.329, 0.246]
+
+GNNv2c-G2  sl=1.0  n=35 subjects
+  acc  mean=0.6698  std=0.2073  se=0.0350
+  ITR  mean=112.32   std=48.73   se=8.24
+  per-subject acc: [0.804, 0.754, 0.958, 0.675, 0.738, 0.858, 0.779, 0.708, 0.671, 0.771, 0.167, 0.417, 0.529, 0.188, 0.671, 0.642, 0.708, 0.742, 0.463, 0.762, 0.767, 0.867, 0.271, 0.887, 0.604, 0.637, 0.742, 0.883, 0.358, 0.642, 0.854, 0.996, 0.325, 0.821, 0.783]
+
+GNNv2c-G3  sl=1.0  n=35 subjects
+  acc  mean=0.5473  std=0.2060  se=0.0348
+  ITR  mean=82.85   std=44.95   se=7.60
+  per-subject acc: [0.562, 0.642, 0.942, 0.617, 0.7, 0.704, 0.579, 0.596, 0.562, 0.592, 0.087, 0.304, 0.237, 0.383, 0.467, 0.525, 0.446, 0.671, 0.429, 0.608, 0.554, 0.771, 0.179, 0.817, 0.383, 0.558, 0.525, 0.787, 0.2, 0.525, 0.692, 0.942, 0.183, 0.65, 0.733]

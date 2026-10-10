@@ -1,0 +1,37 @@
+S01 tau=132 ms  R=0.93  block-consistency=0.92  CNN_ref acc=0.762
+S02 tau=138 ms  R=0.97  block-consistency=0.96  CNN_ref acc=0.796
+S03 tau=150 ms  R=0.95  block-consistency=0.98  CNN_ref acc=0.967
+S04 tau=150 ms  R=0.97  block-consistency=0.90  CNN_ref acc=0.654
+S05 tau=136 ms  R=0.93  block-consistency=0.97  CNN_ref acc=0.767
+S06 tau=126 ms  R=0.97  block-consistency=0.98  CNN_ref acc=0.842
+S07 tau=156 ms  R=0.92  block-consistency=0.94  CNN_ref acc=0.854
+S08 tau=132 ms  R=0.98  block-consistency=0.96  CNN_ref acc=0.683
+S09 tau=148 ms  R=0.98  block-consistency=0.92  CNN_ref acc=0.700
+S10 tau=146 ms  R=0.98  block-consistency=0.93  CNN_ref acc=0.850
+S11 tau=142 ms  R=0.96  block-consistency=0.92  CNN_ref acc=0.158
+S12 tau=138 ms  R=0.95  block-consistency=0.95  CNN_ref acc=0.467
+S13 tau=110 ms  R=0.92  block-consistency=0.84  CNN_ref acc=0.412
+S14 tau=132 ms  R=0.98  block-consistency=0.96  CNN_ref acc=0.042
+S15 tau=136 ms  R=0.97  block-consistency=0.98  CNN_ref acc=0.717
+S16 tau=150 ms  R=0.97  block-consistency=0.93  CNN_ref acc=0.708
+S17 tau=148 ms  R=0.99  block-consistency=0.97  CNN_ref acc=0.725
+S18 tau=130 ms  R=0.94  block-consistency=0.94  CNN_ref acc=0.713
+S19 tau=130 ms  R=0.97  block-consistency=0.94  CNN_ref acc=0.433
+S20 tau=130 ms  R=0.94  block-consistency=0.98  CNN_ref acc=0.771
+S21 tau=150 ms  R=0.98  block-consistency=0.93  CNN_ref acc=0.767
+S22 tau=130 ms  R=0.97  block-consistency=0.97  CNN_ref acc=0.892
+S23 tau=138 ms  R=0.97  block-consistency=0.88  CNN_ref acc=0.263
+S24 tau=130 ms  R=0.97  block-consistency=0.97  CNN_ref acc=0.883
+S25 tau=142 ms  R=0.91  block-consistency=0.96  CNN_ref acc=0.696
+S26 tau=140 ms  R=0.93  block-consistency=0.97  CNN_ref acc=0.746
+S27 tau=154 ms  R=0.98  block-consistency=0.93  CNN_ref acc=0.733
+S28 tau=140 ms  R=0.96  block-consistency=0.94  CNN_ref acc=0.946
+S29 tau=126 ms  R=0.93  block-consistency=0.82  CNN_ref acc=0.375
+S30 tau=124 ms  R=0.96  block-consistency=0.97  CNN_ref acc=0.596
+S31 tau=128 ms  R=0.99  block-consistency=0.99  CNN_ref acc=0.871
+S32 tau=144 ms  R=0.98  block-consistency=0.98  CNN_ref acc=0.988
+S33 tau=112 ms  R=0.91  block-consistency=0.75  CNN_ref acc=0.329
+S34 tau=146 ms  R=0.98  block-consistency=0.92  CNN_ref acc=0.896
+S35 tau=146 ms  R=0.99  block-consistency=0.98  CNN_ref acc=0.792
+median tau 138.0
+Spearman(|tau-median|, acc): SignificanceResult(statistic=np.float64(-0.006083630037511977), pvalue=np.float64(0.9723314003531702))

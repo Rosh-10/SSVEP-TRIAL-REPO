@@ -1,0 +1,17 @@
+
+Device: cuda  Windows: [1.0]
+Epochs: 100  Batch: 128  LR: 0.0002  Seed: 41
+
+
+=== sl=1.0 ===
+  S01 sl=1.0 GNNv2e  34 source  device=cuda
+  S01 sl=1.0 GNNv2e  params=654,750
+    ep   1  loss=2.9715
+    ep  25  loss=0.0114
+    ep  50  loss=0.0023
+    ep  75  loss=0.0008
+    ep 100  loss=0.0004
+  logits check: argmax agrees with preds on 1.000
+  S01 sl=1.0 GNNv2e  acc=0.7708  ITR=133.37  (757.7s)
+
+GNNv2e  sl=1.0  n=1  acc=0.7708±0.0000  ITR=133.37

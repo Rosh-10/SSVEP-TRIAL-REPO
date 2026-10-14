@@ -1,0 +1,288 @@
+
+Device: cuda  Windows: [1.0]  Variants: ['g2_anatomical']
+
+=== sl=1.0 ===
+
+--- variant=g2_anatomical ---
+  S01 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S01 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8160
+    ep  25  loss=0.0226
+    ep  50  loss=0.0045
+    ep  75  loss=0.0016
+    ep 100  loss=0.0006
+  S01 sl=1.0 GNNv2d-g2_anatomical  acc=0.6208  ITR=94.42  (351.1s)
+  S02 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S02 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8067
+    ep  25  loss=0.0232
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S02 sl=1.0 GNNv2d-g2_anatomical  acc=0.7667  ITR=132.20  (351.1s)
+  S03 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S03 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8621
+    ep  25  loss=0.0236
+    ep  50  loss=0.0048
+    ep  75  loss=0.0016
+    ep 100  loss=0.0006
+  S03 sl=1.0 GNNv2d-g2_anatomical  acc=0.9500  ITR=190.85  (350.8s)
+  S04 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S04 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8149
+    ep  25  loss=0.0226
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S04 sl=1.0 GNNv2d-g2_anatomical  acc=0.6750  ITR=107.78  (351.0s)
+  S05 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S05 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8277
+    ep  25  loss=0.0225
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S05 sl=1.0 GNNv2d-g2_anatomical  acc=0.6792  ITR=108.84  (350.8s)
+  S06 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S06 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8273
+    ep  25  loss=0.0230
+    ep  50  loss=0.0047
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S06 sl=1.0 GNNv2d-g2_anatomical  acc=0.8000  ITR=141.72  (350.9s)
+  S07 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S07 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8096
+    ep  25  loss=0.0219
+    ep  50  loss=0.0045
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S07 sl=1.0 GNNv2d-g2_anatomical  acc=0.6542  ITR=102.55  (350.9s)
+  S08 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S08 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8230
+    ep  25  loss=0.0219
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S08 sl=1.0 GNNv2d-g2_anatomical  acc=0.6625  ITR=104.63  (350.9s)
+  S09 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S09 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8194
+    ep  25  loss=0.0224
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S09 sl=1.0 GNNv2d-g2_anatomical  acc=0.6625  ITR=104.63  (351.0s)
+  S10 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S10 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8156
+    ep  25  loss=0.0237
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S10 sl=1.0 GNNv2d-g2_anatomical  acc=0.7000  ITR=114.20  (351.0s)
+  S11 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S11 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.7773
+    ep  25  loss=0.0211
+    ep  50  loss=0.0041
+    ep  75  loss=0.0014
+    ep 100  loss=0.0005
+  S11 sl=1.0 GNNv2d-g2_anatomical  acc=0.1250  ITR=6.15  (350.8s)
+  S12 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S12 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8077
+    ep  25  loss=0.0223
+    ep  50  loss=0.0045
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S12 sl=1.0 GNNv2d-g2_anatomical  acc=0.3583  ITR=39.57  (350.8s)
+  S13 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S13 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.7624
+    ep  25  loss=0.0224
+    ep  50  loss=0.0045
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S13 sl=1.0 GNNv2d-g2_anatomical  acc=0.3792  ITR=43.32  (350.8s)
+  S14 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S14 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8403
+    ep  25  loss=0.0228
+    ep  50  loss=0.0045
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S14 sl=1.0 GNNv2d-g2_anatomical  acc=0.3792  ITR=43.32  (350.9s)
+  S15 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S15 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8184
+    ep  25  loss=0.0225
+    ep  50  loss=0.0045
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S15 sl=1.0 GNNv2d-g2_anatomical  acc=0.5917  ITR=87.52  (350.9s)
+  S16 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S16 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8067
+    ep  25  loss=0.0235
+    ep  50  loss=0.0044
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S16 sl=1.0 GNNv2d-g2_anatomical  acc=0.5792  ITR=84.63  (351.1s)
+  S17 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S17 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.7979
+    ep  25  loss=0.0228
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S17 sl=1.0 GNNv2d-g2_anatomical  acc=0.6125  ITR=92.43  (351.0s)
+  S18 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S18 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8226
+    ep  25  loss=0.0218
+    ep  50  loss=0.0047
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S18 sl=1.0 GNNv2d-g2_anatomical  acc=0.6917  ITR=112.04  (350.9s)
+  S19 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S19 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8170
+    ep  25  loss=0.0221
+    ep  50  loss=0.0044
+    ep  75  loss=0.0014
+    ep 100  loss=0.0006
+  S19 sl=1.0 GNNv2d-g2_anatomical  acc=0.4375  ITR=54.41  (351.1s)
+  S20 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S20 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8233
+    ep  25  loss=0.0230
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S20 sl=1.0 GNNv2d-g2_anatomical  acc=0.7208  ITR=119.68  (350.9s)
+  S21 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S21 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8212
+    ep  25  loss=0.0224
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S21 sl=1.0 GNNv2d-g2_anatomical  acc=0.7250  ITR=120.80  (351.0s)
+  S22 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S22 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8275
+    ep  25  loss=0.0229
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S22 sl=1.0 GNNv2d-g2_anatomical  acc=0.8875  ITR=168.80  (350.9s)
+  S23 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S23 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.7961
+    ep  25  loss=0.0206
+    ep  50  loss=0.0043
+    ep  75  loss=0.0014
+    ep 100  loss=0.0006
+  S23 sl=1.0 GNNv2d-g2_anatomical  acc=0.2708  ITR=25.01  (350.8s)
+  S24 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S24 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8568
+    ep  25  loss=0.0232
+    ep  50  loss=0.0047
+    ep  75  loss=0.0016
+    ep 100  loss=0.0006
+  S24 sl=1.0 GNNv2d-g2_anatomical  acc=0.9000  ITR=172.98  (355.2s)
+  S25 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S25 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8344
+    ep  25  loss=0.0221
+    ep  50  loss=0.0045
+    ep  75  loss=0.0016
+    ep 100  loss=0.0006
+  S25 sl=1.0 GNNv2d-g2_anatomical  acc=0.5542  ITR=78.96  (350.9s)
+  S26 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S26 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8267
+    ep  25  loss=0.0223
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S26 sl=1.0 GNNv2d-g2_anatomical  acc=0.6583  ITR=103.59  (351.2s)
+  S27 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S27 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8138
+    ep  25  loss=0.0225
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S27 sl=1.0 GNNv2d-g2_anatomical  acc=0.6333  ITR=97.43  (350.8s)
+  S28 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S28 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8479
+    ep  25  loss=0.0239
+    ep  50  loss=0.0047
+    ep  75  loss=0.0016
+    ep 100  loss=0.0006
+  S28 sl=1.0 GNNv2d-g2_anatomical  acc=0.8667  ITR=162.03  (350.9s)
+  S29 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S29 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.7785
+    ep  25  loss=0.0217
+    ep  50  loss=0.0043
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S29 sl=1.0 GNNv2d-g2_anatomical  acc=0.2500  ITR=21.86  (350.8s)
+  S30 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S30 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8249
+    ep  25  loss=0.0219
+    ep  50  loss=0.0045
+    ep  75  loss=0.0016
+    ep 100  loss=0.0006
+  S30 sl=1.0 GNNv2d-g2_anatomical  acc=0.5833  ITR=85.59  (352.8s)
+  S31 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S31 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8413
+    ep  25  loss=0.0236
+    ep  50  loss=0.0047
+    ep  75  loss=0.0016
+    ep 100  loss=0.0006
+  S31 sl=1.0 GNNv2d-g2_anatomical  acc=0.7875  ITR=138.10  (351.4s)
+  S32 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S32 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8614
+    ep  25  loss=0.0238
+    ep  50  loss=0.0047
+    ep  75  loss=0.0016
+    ep 100  loss=0.0006
+  S32 sl=1.0 GNNv2d-g2_anatomical  acc=0.9875  ITR=206.36  (351.1s)
+  S33 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S33 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.7925
+    ep  25  loss=0.0212
+    ep  50  loss=0.0043
+    ep  75  loss=0.0014
+    ep 100  loss=0.0005
+  S33 sl=1.0 GNNv2d-g2_anatomical  acc=0.2667  ITR=24.37  (351.3s)
+  S34 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S34 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8254
+    ep  25  loss=0.0231
+    ep  50  loss=0.0046
+    ep  75  loss=0.0015
+    ep 100  loss=0.0006
+  S34 sl=1.0 GNNv2d-g2_anatomical  acc=0.7458  ITR=126.43  (351.2s)
+  S35 sl=1.0 GNNv2d-g2_anatomical  34 source  device=cuda
+  S35 sl=1.0 GNNv2d-g2_anatomical  params=655,800
+    ep   1  loss=2.8636
+    ep  25  loss=0.0237
+    ep  50  loss=0.0046
+    ep  75  loss=0.0016
+    ep 100  loss=0.0006
+  S35 sl=1.0 GNNv2d-g2_anatomical  acc=0.8083  ITR=144.16  (351.2s)
+
+GNNv2d-g2_anatomical  sl=1.0  n=35  acc=0.6277±0.2061

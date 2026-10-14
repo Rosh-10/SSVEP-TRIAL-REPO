@@ -1,0 +1,288 @@
+
+Device: cuda  Windows: [1.0]  Variants: ['g2_uniform']
+
+=== sl=1.0 ===
+
+--- variant=g2_uniform ---
+  S01 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S01 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9969
+    ep  25  loss=0.0078
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S01 sl=1.0 GNNv2d-g2_uniform  acc=0.7792  ITR=135.72  (350.1s)
+  S02 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S02 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9915
+    ep  25  loss=0.0082
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S02 sl=1.0 GNNv2d-g2_uniform  acc=0.7667  ITR=132.20  (349.6s)
+  S03 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S03 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0560
+    ep  25  loss=0.0086
+    ep  50  loss=0.0019
+    ep  75  loss=0.0006
+    ep 100  loss=0.0003
+  S03 sl=1.0 GNNv2d-g2_uniform  acc=0.9583  ITR=194.07  (349.7s)
+  S04 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S04 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9979
+    ep  25  loss=0.0082
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S04 sl=1.0 GNNv2d-g2_uniform  acc=0.6542  ITR=102.55  (349.7s)
+  S05 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S05 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0111
+    ep  25  loss=0.0081
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S05 sl=1.0 GNNv2d-g2_uniform  acc=0.7542  ITR=128.72  (349.6s)
+  S06 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S06 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0147
+    ep  25  loss=0.0085
+    ep  50  loss=0.0019
+    ep  75  loss=0.0007
+    ep 100  loss=0.0002
+  S06 sl=1.0 GNNv2d-g2_uniform  acc=0.8458  ITR=155.48  (349.6s)
+  S07 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S07 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9877
+    ep  25  loss=0.0075
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S07 sl=1.0 GNNv2d-g2_uniform  acc=0.7833  ITR=136.91  (349.7s)
+  S08 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S08 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0078
+    ep  25  loss=0.0080
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S08 sl=1.0 GNNv2d-g2_uniform  acc=0.7042  ITR=115.29  (349.6s)
+  S09 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S09 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0061
+    ep  25  loss=0.0081
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0003
+  S09 sl=1.0 GNNv2d-g2_uniform  acc=0.7042  ITR=115.29  (349.8s)
+  S10 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S10 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9929
+    ep  25  loss=0.0083
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0003
+  S10 sl=1.0 GNNv2d-g2_uniform  acc=0.7542  ITR=128.72  (349.7s)
+  S11 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S11 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9508
+    ep  25  loss=0.0076
+    ep  50  loss=0.0016
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S11 sl=1.0 GNNv2d-g2_uniform  acc=0.1500  ITR=8.78  (351.4s)
+  S12 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S12 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9922
+    ep  25  loss=0.0079
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S12 sl=1.0 GNNv2d-g2_uniform  acc=0.4500  ITR=56.89  (349.7s)
+  S13 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S13 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9381
+    ep  25  loss=0.0082
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0003
+  S13 sl=1.0 GNNv2d-g2_uniform  acc=0.5500  ITR=78.03  (349.6s)
+  S14 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S14 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0381
+    ep  25  loss=0.0080
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0003
+  S14 sl=1.0 GNNv2d-g2_uniform  acc=0.2042  ITR=15.42  (349.7s)
+  S15 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S15 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9907
+    ep  25  loss=0.0083
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S15 sl=1.0 GNNv2d-g2_uniform  acc=0.7000  ITR=114.20  (349.6s)
+  S16 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S16 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9895
+    ep  25  loss=0.0082
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S16 sl=1.0 GNNv2d-g2_uniform  acc=0.6333  ITR=97.43  (349.6s)
+  S17 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S17 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9783
+    ep  25  loss=0.0081
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S17 sl=1.0 GNNv2d-g2_uniform  acc=0.7375  ITR=124.16  (349.7s)
+  S18 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S18 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0140
+    ep  25  loss=0.0081
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S18 sl=1.0 GNNv2d-g2_uniform  acc=0.7458  ITR=126.43  (349.6s)
+  S19 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S19 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9963
+    ep  25  loss=0.0079
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S19 sl=1.0 GNNv2d-g2_uniform  acc=0.4750  ITR=61.96  (349.7s)
+  S20 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S20 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0174
+    ep  25  loss=0.0080
+    ep  50  loss=0.0019
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S20 sl=1.0 GNNv2d-g2_uniform  acc=0.7167  ITR=118.58  (349.5s)
+  S21 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S21 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0010
+    ep  25  loss=0.0081
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S21 sl=1.0 GNNv2d-g2_uniform  acc=0.7750  ITR=134.54  (349.6s)
+  S22 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S22 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0187
+    ep  25  loss=0.0084
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S22 sl=1.0 GNNv2d-g2_uniform  acc=0.8583  ITR=159.38  (349.6s)
+  S23 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S23 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9759
+    ep  25  loss=0.0073
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S23 sl=1.0 GNNv2d-g2_uniform  acc=0.2708  ITR=25.01  (349.6s)
+  S24 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S24 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0403
+    ep  25  loss=0.0082
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S24 sl=1.0 GNNv2d-g2_uniform  acc=0.8875  ITR=168.80  (349.6s)
+  S25 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S25 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0151
+    ep  25  loss=0.0078
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S25 sl=1.0 GNNv2d-g2_uniform  acc=0.6000  ITR=89.47  (349.6s)
+  S26 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S26 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0077
+    ep  25  loss=0.0079
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S26 sl=1.0 GNNv2d-g2_uniform  acc=0.6625  ITR=104.63  (349.7s)
+  S27 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S27 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9974
+    ep  25  loss=0.0080
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S27 sl=1.0 GNNv2d-g2_uniform  acc=0.7250  ITR=120.80  (349.6s)
+  S28 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S28 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0376
+    ep  25  loss=0.0089
+    ep  50  loss=0.0018
+    ep  75  loss=0.0007
+    ep 100  loss=0.0003
+  S28 sl=1.0 GNNv2d-g2_uniform  acc=0.9125  ITR=177.26  (349.8s)
+  S29 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S29 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9628
+    ep  25  loss=0.0075
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S29 sl=1.0 GNNv2d-g2_uniform  acc=0.3625  ITR=40.31  (354.0s)
+  S30 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S30 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0161
+    ep  25  loss=0.0081
+    ep  50  loss=0.0018
+    ep  75  loss=0.0007
+    ep 100  loss=0.0002
+  S30 sl=1.0 GNNv2d-g2_uniform  acc=0.6333  ITR=97.43  (349.8s)
+  S31 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S31 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0207
+    ep  25  loss=0.0084
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0003
+  S31 sl=1.0 GNNv2d-g2_uniform  acc=0.8583  ITR=159.38  (349.6s)
+  S32 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S32 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0506
+    ep  25  loss=0.0084
+    ep  50  loss=0.0019
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S32 sl=1.0 GNNv2d-g2_uniform  acc=0.9958  ITR=210.44  (349.6s)
+  S33 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S33 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=2.9660
+    ep  25  loss=0.0076
+    ep  50  loss=0.0017
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S33 sl=1.0 GNNv2d-g2_uniform  acc=0.3042  ITR=30.31  (349.6s)
+  S34 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S34 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0038
+    ep  25  loss=0.0082
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S34 sl=1.0 GNNv2d-g2_uniform  acc=0.8375  ITR=152.91  (349.6s)
+  S35 sl=1.0 GNNv2d-g2_uniform  34 source  device=cuda
+  S35 sl=1.0 GNNv2d-g2_uniform  params=655,800
+    ep   1  loss=3.0502
+    ep  25  loss=0.0081
+    ep  50  loss=0.0018
+    ep  75  loss=0.0006
+    ep 100  loss=0.0002
+  S35 sl=1.0 GNNv2d-g2_uniform  acc=0.7875  ITR=138.10  (349.8s)
+
+GNNv2d-g2_uniform  sl=1.0  n=35  acc=0.6725±0.2071

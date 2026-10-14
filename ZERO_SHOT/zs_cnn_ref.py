@@ -134,6 +134,10 @@ def run_fold_cnn(sid: int, sl: float, device: str = DEVICE) -> dict:
 
     preds = predict_all(model, X_te, device)
     acc   = float((preds == y_te).mean())
+    model.eval()
+    with torch.no_grad(): lg = np.concatenate([model(torch.as_tensor(np.asarray(X_te[i:i+64]), dtype=torch.float32).to(device)).cpu().numpy() for i in range(0, len(X_te), 64)])
+    print(f'  logits check: argmax agrees with preds on {(lg.argmax(1) == preds).mean():.3f}', flush=True)
+    np.savez(C.RESULTS_DIR / f"logits_cnnref_s{sid:02d}_{str(sl).replace('.', 'p')}.npz", logits=lg, y=y_te)
     itr   = compute_itr(acc, T)
 
     print(f"  S{sid:02d} sl={sl} CNN_ref  acc={acc:.4f}  ITR={itr:.2f}  ({elapsed}s)",

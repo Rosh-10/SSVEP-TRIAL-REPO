@@ -1,0 +1,731 @@
+
+Device: cuda  Subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]  Windows: [0.5, 1.0]
+Epochs: 100  Batch: 128  LR: 0.0002  Seed: 41
+
+
+=== sl=0.5 ===
+  S01 sl=0.5 [skipping]
+  S02 sl=0.5 CCA-Net  34 sources  device=cuda
+  S02 preprocessing done (16.6s)
+
+Device: cuda  Subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]  Windows: [0.5, 1.0]
+Epochs: 100  Batch: 128  LR: 0.0002  Seed: 41
+
+
+=== sl=0.5 ===
+  S01 sl=0.5 [skipping]
+  S02 sl=0.5 CCA-Net  34 sources  device=cuda
+    ep   1  loss=3.7020
+  S02 preprocessing done (20.2s)
+    ep   1  loss=3.7020
+    ep  25  loss=2.2929
+    ep  50  loss=1.9766
+    ep  75  loss=1.8141
+    ep 100  loss=1.7148
+  S02 CNN done (197.5s)
+  S02 CCA branch done (40.4s)
+  S02 sl=0.5 acc=0.7042 full=0.7250 | cnn=0.5458 tt=0.5167 cca=0.3833 mod=0.5500  (271.7s)
+  S03 sl=0.5 CCA-Net  34 sources  device=cuda
+  S03 preprocessing done (15.9s)
+    ep   1  loss=3.7004
+    ep  25  loss=2.3315
+    ep  50  loss=2.0151
+    ep  75  loss=1.8524
+    ep 100  loss=1.7300
+  S03 CNN done (189.4s)
+  S03 CCA branch done (32.0s)
+  S03 sl=0.5 acc=0.9500 full=0.9500 | cnn=0.8833 tt=0.7500 cca=0.8083 mod=0.8833  (237.3s)
+  S04 sl=0.5 CCA-Net  34 sources  device=cuda
+  S04 preprocessing done (15.7s)
+    ep   1  loss=3.7020
+    ep  25  loss=2.2825
+    ep  50  loss=1.9574
+    ep  75  loss=1.7997
+    ep 100  loss=1.6836
+  S04 CNN done (188.2s)
+  S04 CCA branch done (31.9s)
+  S04 sl=0.5 acc=0.6167 full=0.6125 | cnn=0.3167 tt=0.5583 cca=0.5167 mod=0.6583  (235.8s)
+  S05 sl=0.5 CCA-Net  34 sources  device=cuda
+  S05 preprocessing done (15.9s)
+    ep   1  loss=3.6986
+    ep  25  loss=2.2666
+    ep  50  loss=1.9549
+    ep  75  loss=1.7864
+    ep 100  loss=1.7138
+  S05 CNN done (188.4s)
+  S05 CCA branch done (32.1s)
+  S05 sl=0.5 acc=0.5292 full=0.5667 | cnn=0.4375 tt=0.4125 cca=0.3208 mod=0.4833  (236.4s)
+  S06 sl=0.5 CCA-Net  34 sources  device=cuda
+  S06 preprocessing done (15.8s)
+    ep   1  loss=3.7004
+    ep  25  loss=2.3001
+    ep  50  loss=1.9536
+    ep  75  loss=1.7877
+    ep 100  loss=1.6718
+  S06 CNN done (188.3s)
+  S06 CCA branch done (32.0s)
+  S06 sl=0.5 acc=0.5500 full=0.5792 | cnn=0.4958 tt=0.3667 cca=0.1708 mod=0.3333  (236.2s)
+  S07 sl=0.5 CCA-Net  34 sources  device=cuda
+  S07 preprocessing done (15.9s)
+    ep   1  loss=3.6995
+    ep  25  loss=2.3020
+    ep  50  loss=1.9605
+    ep  75  loss=1.7845
+    ep 100  loss=1.6859
+  S07 CNN done (188.6s)
+  S07 CCA branch done (32.2s)
+  S07 sl=0.5 acc=0.5667 full=0.5542 | cnn=0.4500 tt=0.4625 cca=0.2250 mod=0.4583  (236.8s)
+  S08 sl=0.5 CCA-Net  34 sources  device=cuda
+  S08 preprocessing done (15.7s)
+    ep   1  loss=3.7004
+    ep  25  loss=2.2770
+    ep  50  loss=1.9301
+    ep  75  loss=1.7912
+    ep 100  loss=1.6687
+  S08 CNN done (188.2s)
+  S08 CCA branch done (32.3s)
+  S08 sl=0.5 acc=0.2958 full=0.3000 | cnn=0.3042 tt=0.1875 cca=0.1167 mod=0.1917  (236.2s)
+  S09 sl=0.5 CCA-Net  34 sources  device=cuda
+  S09 preprocessing done (15.6s)
+    ep   1  loss=3.7002
+    ep  25  loss=2.2722
+    ep  50  loss=1.9435
+    ep  75  loss=1.7719
+    ep 100  loss=1.6799
+  S09 CNN done (188.1s)
+  S09 CCA branch done (32.0s)
+  S09 sl=0.5 acc=0.5083 full=0.5167 | cnn=0.4208 tt=0.4375 cca=0.2208 mod=0.4042  (235.7s)
+  S10 sl=0.5 CCA-Net  34 sources  device=cuda
+  S10 preprocessing done (15.7s)
+    ep   1  loss=3.7018
+    ep  25  loss=2.2765
+    ep  50  loss=1.9588
+    ep  75  loss=1.7941
+    ep 100  loss=1.7157
+  S10 CNN done (189.1s)
+  S10 CCA branch done (32.3s)
+  S10 sl=0.5 acc=0.6250 full=0.6417 | cnn=0.5583 tt=0.4083 cca=0.2542 mod=0.4458  (237.2s)
+  S11 sl=0.5 CCA-Net  34 sources  device=cuda
+  S11 preprocessing done (15.7s)
+    ep   1  loss=3.6985
+    ep  25  loss=2.2336
+    ep  50  loss=1.8893
+    ep  75  loss=1.7431
+    ep 100  loss=1.6348
+  S11 CNN done (188.3s)
+  S11 CCA branch done (32.2s)
+  S11 sl=0.5 acc=0.0958 full=0.0917 | cnn=0.0708 tt=0.1125 cca=0.0792 mod=0.1083  (236.3s)
+  S12 sl=0.5 CCA-Net  34 sources  device=cuda
+  S12 preprocessing done (15.6s)
+    ep   1  loss=3.7001
+    ep  25  loss=2.2478
+    ep  50  loss=1.9229
+    ep  75  loss=1.7773
+    ep 100  loss=1.6520
+  S12 CNN done (188.6s)
+  S12 CCA branch done (31.9s)
+  S12 sl=0.5 acc=0.4958 full=0.4792 | cnn=0.2542 tt=0.4458 cca=0.2542 mod=0.4000  (236.2s)
+  S13 sl=0.5 CCA-Net  34 sources  device=cuda
+  S13 preprocessing done (15.7s)
+    ep   1  loss=3.7007
+    ep  25  loss=2.2339
+    ep  50  loss=1.9368
+    ep  75  loss=1.7796
+    ep 100  loss=1.6691
+  S13 CNN done (188.4s)
+  S13 CCA branch done (31.8s)
+  S13 sl=0.5 acc=0.2625 full=0.2750 | cnn=0.1417 tt=0.1375 cca=0.2042 mod=0.2000  (236.0s)
+  S14 sl=0.5 CCA-Net  34 sources  device=cuda
+  S14 preprocessing done (15.7s)
+    ep   1  loss=3.7019
+    ep  25  loss=2.2320
+    ep  50  loss=1.9380
+    ep  75  loss=1.7590
+    ep 100  loss=1.6685
+  S14 CNN done (188.6s)
+  S14 CCA branch done (31.7s)
+  S14 sl=0.5 acc=0.2542 full=0.2208 | cnn=0.0167 tt=0.5458 cca=0.3208 mod=0.5917  (236.1s)
+  S15 sl=0.5 CCA-Net  34 sources  device=cuda
+  S15 preprocessing done (15.8s)
+    ep   1  loss=3.7001
+    ep  25  loss=2.2797
+    ep  50  loss=1.9310
+    ep  75  loss=1.7714
+    ep 100  loss=1.6770
+  S15 CNN done (188.7s)
+  S15 CCA branch done (32.1s)
+  S15 sl=0.5 acc=0.5083 full=0.4792 | cnn=0.4042 tt=0.3917 cca=0.1083 mod=0.3333  (236.6s)
+  S16 sl=0.5 CCA-Net  34 sources  device=cuda
+  S16 preprocessing done (15.6s)
+    ep   1  loss=3.7001
+    ep  25  loss=2.2609
+    ep  50  loss=1.9350
+    ep  75  loss=1.7825
+    ep 100  loss=1.7032
+  S16 CNN done (188.2s)
+  S16 CCA branch done (32.2s)
+  S16 sl=0.5 acc=0.3833 full=0.4000 | cnn=0.3792 tt=0.2667 cca=0.1208 mod=0.2500  (236.0s)
+  S17 sl=0.5 CCA-Net  34 sources  device=cuda
+  S17 preprocessing done (15.7s)
+    ep   1  loss=3.6988
+    ep  25  loss=2.2816
+    ep  50  loss=1.9520
+    ep  75  loss=1.7745
+    ep 100  loss=1.6933
+  S17 CNN done (188.4s)
+  S17 CCA branch done (32.1s)
+  S17 sl=0.5 acc=0.3750 full=0.3625 | cnn=0.4375 tt=0.1667 cca=0.1000 mod=0.1833  (236.2s)
+  S18 sl=0.5 CCA-Net  34 sources  device=cuda
+  S18 preprocessing done (15.8s)
+    ep   1  loss=3.7013
+    ep  25  loss=2.3158
+    ep  50  loss=1.9672
+    ep  75  loss=1.8294
+    ep 100  loss=1.7063
+  S18 CNN done (188.5s)
+  S18 CCA branch done (32.0s)
+  S18 sl=0.5 acc=0.8042 full=0.8000 | cnn=0.7167 tt=0.7083 cca=0.3917 mod=0.7042  (236.4s)
+  S19 sl=0.5 CCA-Net  34 sources  device=cuda
+  S19 preprocessing done (15.6s)
+    ep   1  loss=3.6974
+    ep  25  loss=2.2463
+    ep  50  loss=1.9062
+    ep  75  loss=1.7613
+    ep 100  loss=1.6580
+  S19 CNN done (188.7s)
+  S19 CCA branch done (31.9s)
+  S19 sl=0.5 acc=0.1625 full=0.1667 | cnn=0.1708 tt=0.1042 cca=0.0458 mod=0.0750  (236.3s)
+  S20 sl=0.5 CCA-Net  34 sources  device=cuda
+  S20 preprocessing done (15.6s)
+    ep   1  loss=3.6993
+    ep  25  loss=2.2862
+    ep  50  loss=1.9663
+    ep  75  loss=1.8093
+    ep 100  loss=1.6947
+  S20 CNN done (188.5s)
+  S20 CCA branch done (32.0s)
+  S20 sl=0.5 acc=0.4875 full=0.5250 | cnn=0.4208 tt=0.3917 cca=0.1750 mod=0.3458  (236.2s)
+  S21 sl=0.5 CCA-Net  34 sources  device=cuda
+  S21 preprocessing done (15.8s)
+    ep   1  loss=3.7010
+    ep  25  loss=2.2787
+    ep  50  loss=1.9313
+    ep  75  loss=1.7654
+    ep 100  loss=1.6921
+  S21 CNN done (188.3s)
+  S21 CCA branch done (31.9s)
+  S21 sl=0.5 acc=0.4375 full=0.4000 | cnn=0.4500 tt=0.3125 cca=0.0792 mod=0.2708  (236.0s)
+  S22 sl=0.5 CCA-Net  34 sources  device=cuda
+  S22 preprocessing done (15.7s)
+    ep   1  loss=3.7000
+    ep  25  loss=2.3078
+    ep  50  loss=1.9727
+    ep  75  loss=1.8132
+    ep 100  loss=1.7132
+  S22 CNN done (188.7s)
+  S22 CCA branch done (32.1s)
+  S22 sl=0.5 acc=0.8250 full=0.8417 | cnn=0.6875 tt=0.7375 cca=0.3917 mod=0.7500  (236.6s)
+  S23 sl=0.5 CCA-Net  34 sources  device=cuda
+  S23 preprocessing done (15.7s)
+    ep   1  loss=3.6990
+    ep  25  loss=2.2125
+    ep  50  loss=1.8775
+    ep  75  loss=1.7332
+    ep 100  loss=1.6355
+  S23 CNN done (188.6s)
+  S23 CCA branch done (32.1s)
+  S23 sl=0.5 acc=0.2542 full=0.2750 | cnn=0.1458 tt=0.1625 cca=0.2208 mod=0.2583  (236.5s)
+  S24 sl=0.5 CCA-Net  34 sources  device=cuda
+  S24 preprocessing done (15.9s)
+    ep   1  loss=3.7020
+    ep  25  loss=2.2975
+    ep  50  loss=1.9646
+    ep  75  loss=1.8107
+    ep 100  loss=1.7009
+  S24 CNN done (188.4s)
+  S24 CCA branch done (32.0s)
+  S24 sl=0.5 acc=0.7083 full=0.7250 | cnn=0.5333 tt=0.6500 cca=0.2625 mod=0.6583  (236.3s)
+  S25 sl=0.5 CCA-Net  34 sources  device=cuda
+  S25 preprocessing done (15.8s)
+    ep   1  loss=3.7007
+    ep  25  loss=2.2446
+    ep  50  loss=1.9285
+    ep  75  loss=1.7706
+    ep 100  loss=1.6721
+  S25 CNN done (189.1s)
+  S25 CCA branch done (32.0s)
+  S25 sl=0.5 acc=0.4542 full=0.4458 | cnn=0.1292 tt=0.5500 cca=0.2750 mod=0.6042  (236.9s)
+  S26 sl=0.5 CCA-Net  34 sources  device=cuda
+  S26 preprocessing done (15.7s)
+    ep   1  loss=3.7013
+    ep  25  loss=2.2743
+    ep  50  loss=1.9307
+    ep  75  loss=1.7973
+    ep 100  loss=1.6899
+  S26 CNN done (188.4s)
+  S26 CCA branch done (32.1s)
+  S26 sl=0.5 acc=0.7250 full=0.6958 | cnn=0.4083 tt=0.7667 cca=0.3792 mod=0.7708  (236.3s)
+  S27 sl=0.5 CCA-Net  34 sources  device=cuda
+  S27 preprocessing done (15.8s)
+    ep   1  loss=3.6994
+    ep  25  loss=2.2616
+    ep  50  loss=1.9542
+    ep  75  loss=1.7858
+    ep 100  loss=1.7029
+  S27 CNN done (188.8s)
+  S27 CCA branch done (32.0s)
+  S27 sl=0.5 acc=0.4458 full=0.4417 | cnn=0.3000 tt=0.3542 cca=0.2333 mod=0.4000  (236.6s)
+  S28 sl=0.5 CCA-Net  34 sources  device=cuda
+  S28 preprocessing done (15.7s)
+    ep   1  loss=3.7013
+    ep  25  loss=2.3105
+    ep  50  loss=1.9796
+    ep  75  loss=1.8187
+    ep 100  loss=1.7231
+  S28 CNN done (188.8s)
+  S28 CCA branch done (32.0s)
+  S28 sl=0.5 acc=0.7750 full=0.7708 | cnn=0.6958 tt=0.6250 cca=0.2708 mod=0.5792  (236.6s)
+  S29 sl=0.5 CCA-Net  34 sources  device=cuda
+  S29 preprocessing done (15.7s)
+    ep   1  loss=3.6952
+    ep  25  loss=2.2520
+    ep  50  loss=1.9212
+    ep  75  loss=1.7519
+    ep 100  loss=1.6798
+  S29 CNN done (188.6s)
+  S29 CCA branch done (32.0s)
+  S29 sl=0.5 acc=0.2625 full=0.2792 | cnn=0.2417 tt=0.1667 cca=0.1208 mod=0.1708  (236.3s)
+  S30 sl=0.5 CCA-Net  34 sources  device=cuda
+  S30 preprocessing done (16.0s)
+    ep   1  loss=3.7006
+    ep  25  loss=2.2868
+    ep  50  loss=1.9652
+    ep  75  loss=1.8077
+    ep 100  loss=1.6960
+  S30 CNN done (188.5s)
+  S30 CCA branch done (32.1s)
+  S30 sl=0.5 acc=0.5000 full=0.5167 | cnn=0.4875 tt=0.3292 cca=0.1667 mod=0.3417  (236.6s)
+  S31 sl=0.5 CCA-Net  34 sources  device=cuda
+  S31 preprocessing done (16.0s)
+    ep   1  loss=3.7020
+    ep  25  loss=2.2763
+    ep  50  loss=1.9580
+    ep  75  loss=1.8141
+    ep 100  loss=1.7190
+  S31 CNN done (188.2s)
+  S31 CCA branch done (32.4s)
+  S31 sl=0.5 acc=0.7333 full=0.7375 | cnn=0.5917 tt=0.6500 cca=0.4167 mod=0.6750  (236.6s)
+  S32 sl=0.5 CCA-Net  34 sources  device=cuda
+  S32 preprocessing done (15.8s)
+    ep   1  loss=3.7013
+    ep  25  loss=2.3114
+    ep  50  loss=1.9937
+    ep  75  loss=1.8351
+    ep 100  loss=1.7311
+  S32 CNN done (188.5s)
+  S32 CCA branch done (32.1s)
+  S32 sl=0.5 acc=0.8792 full=0.9042 | cnn=0.8583 tt=0.7292 cca=0.4250 mod=0.7125  (236.5s)
+  S33 sl=0.5 CCA-Net  34 sources  device=cuda
+  S33 preprocessing done (15.6s)
+    ep   1  loss=3.7005
+    ep  25  loss=2.2734
+    ep  50  loss=1.9338
+    ep  75  loss=1.7733
+    ep 100  loss=1.6571
+  S33 CNN done (188.4s)
+  S33 CCA branch done (32.0s)
+  S33 sl=0.5 acc=0.3208 full=0.3167 | cnn=0.2625 tt=0.2667 cca=0.0875 mod=0.2500  (235.9s)
+  S34 sl=0.5 CCA-Net  34 sources  device=cuda
+  S34 preprocessing done (15.7s)
+    ep   1  loss=3.7007
+    ep  25  loss=2.2841
+    ep  50  loss=1.9802
+    ep  75  loss=1.7961
+    ep 100  loss=1.6979
+  S34 CNN done (189.5s)
+  S34 CCA branch done (31.9s)
+  S34 sl=0.5 acc=0.6667 full=0.6625 | cnn=0.5458 tt=0.4792 cca=0.2833 mod=0.5583  (237.2s)
+  S35 sl=0.5 CCA-Net  34 sources  device=cuda
+  S35 preprocessing done (15.7s)
+    ep   1  loss=3.6971
+    ep  25  loss=2.2669
+    ep  50  loss=1.9345
+    ep  75  loss=1.7797
+    ep 100  loss=1.6874
+  S35 CNN done (188.6s)
+  S35 CCA branch done (31.9s)
+  S35 sl=0.5 acc=0.3458 full=0.3250 | cnn=0.2625 tt=0.2833 cca=0.0875 mod=0.2583  (236.2s)
+
+=== sl=1.0 ===
+  S01 sl=1.0 CCA-Net  34 sources  device=cuda
+  S01 preprocessing done (27.8s)
+    ep   1  loss=3.6620
+    ep  25  loss=1.1223
+    ep  50  loss=0.8115
+    ep  75  loss=0.6552
+    ep 100  loss=0.5341
+  S01 CNN done (408.5s)
+  S01 CCA branch done (47.0s)
+  S01 sl=1.0 acc=0.8958 full=0.9042 | cnn=0.8083 tt=0.8375 cca=0.6875 mod=0.9083  (483.3s)
+  S02 sl=1.0 CCA-Net  34 sources  device=cuda
+  S02 preprocessing done (27.8s)
+    ep   1  loss=3.6702
+    ep  25  loss=1.1263
+    ep  50  loss=0.8032
+    ep  75  loss=0.6329
+    ep 100  loss=0.5258
+  S02 CNN done (410.0s)
+  S02 CCA branch done (47.0s)
+  S02 sl=1.0 acc=0.9458 full=0.9542 | cnn=0.8250 tt=0.8792 cca=0.8083 mod=0.9083  (484.9s)
+  S03 sl=1.0 CCA-Net  34 sources  device=cuda
+  S03 preprocessing done (27.9s)
+    ep   1  loss=3.6676
+    ep  25  loss=1.1538
+    ep  50  loss=0.8258
+    ep  75  loss=0.6574
+    ep 100  loss=0.5274
+  S03 CNN done (410.3s)
+  S03 CCA branch done (46.9s)
+  S03 sl=1.0 acc=0.9875 full=0.9875 | cnn=0.9750 tt=0.9750 cca=0.9708 mod=0.9875  (485.3s)
+  S04 sl=1.0 CCA-Net  34 sources  device=cuda
+  S04 preprocessing done (27.8s)
+    ep   1  loss=3.6748
+    ep  25  loss=1.1039
+    ep  50  loss=0.7744
+    ep  75  loss=0.6000
+    ep 100  loss=0.5219
+  S04 CNN done (410.0s)
+  S04 CCA branch done (46.7s)
+  S04 sl=1.0 acc=0.8917 full=0.9042 | cnn=0.7000 tt=0.8875 cca=0.8750 mod=0.9250  (484.6s)
+  S05 sl=1.0 CCA-Net  34 sources  device=cuda
+  S05 preprocessing done (27.8s)
+    ep   1  loss=3.6766
+    ep  25  loss=1.1120
+    ep  50  loss=0.8076
+    ep  75  loss=0.6479
+    ep 100  loss=0.5380
+  S05 CNN done (410.1s)
+  S05 CCA branch done (46.8s)
+  S05 sl=1.0 acc=0.9583 full=0.9625 | cnn=0.7708 tt=0.9333 cca=0.8375 mod=0.9500  (484.9s)
+  S06 sl=1.0 CCA-Net  34 sources  device=cuda
+  S06 preprocessing done (27.6s)
+    ep   1  loss=3.6618
+    ep  25  loss=1.1303
+    ep  50  loss=0.8139
+    ep  75  loss=0.6377
+    ep 100  loss=0.5314
+  S06 CNN done (409.6s)
+  S06 CCA branch done (47.2s)
+  S06 sl=1.0 acc=0.9375 full=0.9333 | cnn=0.8625 tt=0.8500 cca=0.6625 mod=0.8667  (484.5s)
+  S07 sl=1.0 CCA-Net  34 sources  device=cuda
+  S07 preprocessing done (27.9s)
+    ep   1  loss=3.6753
+    ep  25  loss=1.1186
+    ep  50  loss=0.7964
+    ep  75  loss=0.6240
+    ep 100  loss=0.5164
+  S07 CNN done (409.7s)
+  S07 CCA branch done (47.2s)
+  S07 sl=1.0 acc=0.9000 full=0.8958 | cnn=0.8542 tt=0.8583 cca=0.7208 mod=0.8542  (484.9s)
+  S08 sl=1.0 CCA-Net  34 sources  device=cuda
+  S08 preprocessing done (27.7s)
+    ep   1  loss=3.6720
+    ep  25  loss=1.1211
+    ep  50  loss=0.8094
+    ep  75  loss=0.6096
+    ep 100  loss=0.5262
+  S08 CNN done (410.0s)
+  S08 CCA branch done (47.4s)
+  S08 sl=1.0 acc=0.7875 full=0.7833 | cnn=0.6833 tt=0.6792 cca=0.4667 mod=0.6875  (485.2s)
+  S09 sl=1.0 CCA-Net  34 sources  device=cuda
+  S09 preprocessing done (27.7s)
+    ep   1  loss=3.6689
+    ep  25  loss=1.1481
+    ep  50  loss=0.8020
+    ep  75  loss=0.6243
+    ep 100  loss=0.5300
+  S09 CNN done (410.0s)
+  S09 CCA branch done (47.2s)
+  S09 sl=1.0 acc=0.8250 full=0.8292 | cnn=0.6958 tt=0.7500 cca=0.6625 mod=0.8167  (485.1s)
+  S10 sl=1.0 CCA-Net  34 sources  device=cuda
+  S10 preprocessing done (27.8s)
+    ep   1  loss=3.6659
+    ep  25  loss=1.1249
+    ep  50  loss=0.7912
+    ep  75  loss=0.6421
+    ep 100  loss=0.5193
+  S10 CNN done (410.2s)
+  S10 CCA branch done (46.8s)
+  S10 sl=1.0 acc=0.9042 full=0.9083 | cnn=0.8375 tt=0.8792 cca=0.6708 mod=0.8833  (484.9s)
+  S11 sl=1.0 CCA-Net  34 sources  device=cuda
+  S11 preprocessing done (27.9s)
+    ep   1  loss=3.6688
+    ep  25  loss=1.0463
+    ep  50  loss=0.7233
+    ep  75  loss=0.5712
+    ep 100  loss=0.4627
+  S11 CNN done (410.2s)
+  S11 CCA branch done (46.8s)
+  S11 sl=1.0 acc=0.2500 full=0.2542 | cnn=0.1250 tt=0.2250 cca=0.1625 mod=0.2542  (485.0s)
+  S12 sl=1.0 CCA-Net  34 sources  device=cuda
+  S12 preprocessing done (28.9s)
+    ep   1  loss=3.6608
+    ep  25  loss=1.1061
+    ep  50  loss=0.7860
+    ep  75  loss=0.6367
+    ep 100  loss=0.5197
+  S12 CNN done (411.9s)
+  S12 CCA branch done (48.0s)
+  S12 sl=1.0 acc=0.8375 full=0.8458 | cnn=0.4208 tt=0.8500 cca=0.8417 mod=0.9333  (488.9s)
+  S13 sl=1.0 CCA-Net  34 sources  device=cuda
+  S13 preprocessing done (27.6s)
+    ep   1  loss=3.6567
+    ep  25  loss=1.1003
+    ep  50  loss=0.7899
+    ep  75  loss=0.6193
+    ep 100  loss=0.5030
+  S13 CNN done (410.9s)
+  S13 CCA branch done (47.5s)
+  S13 sl=1.0 acc=0.6917 full=0.7417 | cnn=0.4375 tt=0.5708 cca=0.5833 mod=0.6458  (486.1s)
+  S14 sl=1.0 CCA-Net  34 sources  device=cuda
+  S14 preprocessing done (28.2s)
+    ep   1  loss=3.6609
+    ep  25  loss=1.1094
+    ep  50  loss=0.7758
+    ep  75  loss=0.6215
+    ep 100  loss=0.5278
+  S14 CNN done (422.3s)
+  S14 CCA branch done (47.0s)
+  S14 sl=1.0 acc=0.6000 full=0.5292 | cnn=0.0292 tt=0.9583 cca=0.7833 mod=0.9583  (497.5s)
+  S15 sl=1.0 CCA-Net  34 sources  device=cuda
+  S15 preprocessing done (28.0s)
+    ep   1  loss=3.6723
+    ep  25  loss=1.1202
+    ep  50  loss=0.7997
+    ep  75  loss=0.6355
+    ep 100  loss=0.5286
+  S15 CNN done (409.9s)
+  S15 CCA branch done (47.0s)
+  S15 sl=1.0 acc=0.8583 full=0.8542 | cnn=0.7167 tt=0.7958 cca=0.4750 mod=0.7625  (485.0s)
+  S16 sl=1.0 CCA-Net  34 sources  device=cuda
+  S16 preprocessing done (27.7s)
+    ep   1  loss=3.6697
+    ep  25  loss=1.1224
+    ep  50  loss=0.7901
+    ep  75  loss=0.6185
+    ep 100  loss=0.5232
+  S16 CNN done (409.9s)
+  S16 CCA branch done (47.0s)
+  S16 sl=1.0 acc=0.7875 full=0.8042 | cnn=0.6875 tt=0.6250 cca=0.4708 mod=0.6167  (484.8s)
+  S17 sl=1.0 CCA-Net  34 sources  device=cuda
+  S17 preprocessing done (27.8s)
+    ep   1  loss=3.6662
+    ep  25  loss=1.1101
+    ep  50  loss=0.7945
+    ep  75  loss=0.6133
+    ep 100  loss=0.5212
+  S17 CNN done (410.4s)
+  S17 CCA branch done (46.9s)
+  S17 sl=1.0 acc=0.7708 full=0.8042 | cnn=0.7625 tt=0.5833 cca=0.4083 mod=0.6375  (485.2s)
+  S18 sl=1.0 CCA-Net  34 sources  device=cuda
+  S18 preprocessing done (28.0s)
+    ep   1  loss=3.6754
+    ep  25  loss=1.1113
+    ep  50  loss=0.7875
+    ep  75  loss=0.6172
+    ep 100  loss=0.5101
+  S18 CNN done (410.0s)
+  S18 CCA branch done (47.2s)
+  S18 sl=1.0 acc=0.8042 full=0.8125 | cnn=0.7500 tt=0.7875 cca=0.6708 mod=0.7917  (485.3s)
+  S19 sl=1.0 CCA-Net  34 sources  device=cuda
+  S19 preprocessing done (27.9s)
+    ep   1  loss=3.6727
+    ep  25  loss=1.0883
+    ep  50  loss=0.7695
+    ep  75  loss=0.5966
+    ep 100  loss=0.5001
+  S19 CNN done (410.3s)
+  S19 CCA branch done (47.1s)
+  S19 sl=1.0 acc=0.5250 full=0.5208 | cnn=0.4583 tt=0.4292 cca=0.1875 mod=0.4000  (485.3s)
+  S20 sl=1.0 CCA-Net  34 sources  device=cuda
+  S20 preprocessing done (28.0s)
+    ep   1  loss=3.6720
+    ep  25  loss=1.1109
+    ep  50  loss=0.8028
+    ep  75  loss=0.6300
+    ep 100  loss=0.5241
+  S20 CNN done (410.5s)
+  S20 CCA branch done (47.0s)
+  S20 sl=1.0 acc=0.9333 full=0.9333 | cnn=0.7583 tt=0.8750 cca=0.7167 mod=0.8875  (485.5s)
+  S21 sl=1.0 CCA-Net  34 sources  device=cuda
+  S21 preprocessing done (28.1s)
+    ep   1  loss=3.6672
+    ep  25  loss=1.1311
+    ep  50  loss=0.7974
+    ep  75  loss=0.6478
+    ep 100  loss=0.5453
+  S21 CNN done (410.1s)
+  S21 CCA branch done (46.6s)
+  S21 sl=1.0 acc=0.8833 full=0.8833 | cnn=0.8042 tt=0.7375 cca=0.5333 mod=0.7583  (484.9s)
+  S22 sl=1.0 CCA-Net  34 sources  device=cuda
+  S22 preprocessing done (27.9s)
+    ep   1  loss=3.6663
+    ep  25  loss=1.1459
+    ep  50  loss=0.8127
+    ep  75  loss=0.6424
+    ep 100  loss=0.5407
+  S22 CNN done (410.5s)
+  S22 CCA branch done (46.7s)
+  S22 sl=1.0 acc=0.9750 full=0.9750 | cnn=0.9000 tt=0.9458 cca=0.9042 mod=0.9625  (485.1s)
+  S23 sl=1.0 CCA-Net  34 sources  device=cuda
+  S23 preprocessing done (28.0s)
+    ep   1  loss=3.6673
+    ep  25  loss=1.0324
+    ep  50  loss=0.7310
+    ep  75  loss=0.5861
+    ep 100  loss=0.4636
+  S23 CNN done (410.2s)
+  S23 CCA branch done (47.0s)
+  S23 sl=1.0 acc=0.4417 full=0.5250 | cnn=0.2250 tt=0.3542 cca=0.7583 mod=0.6000  (485.2s)
+  S24 sl=1.0 CCA-Net  34 sources  device=cuda
+  S24 preprocessing done (27.8s)
+    ep   1  loss=3.6737
+    ep  25  loss=1.1450
+    ep  50  loss=0.8213
+    ep  75  loss=0.6518
+    ep 100  loss=0.5261
+  S24 CNN done (410.4s)
+  S24 CCA branch done (46.8s)
+  S24 sl=1.0 acc=0.9750 full=0.9833 | cnn=0.8625 tt=0.9667 cca=0.8042 mod=0.9625  (485.0s)
+  S25 sl=1.0 CCA-Net  34 sources  device=cuda
+  S25 preprocessing done (28.9s)
+    ep   1  loss=3.6671
+    ep  25  loss=1.1032
+    ep  50  loss=0.7915
+    ep  75  loss=0.6312
+    ep 100  loss=0.5137
+  S25 CNN done (410.3s)
+  S25 CCA branch done (46.9s)
+  S25 sl=1.0 acc=0.9333 full=0.9417 | cnn=0.6292 tt=0.9542 cca=0.7875 mod=0.9542  (486.2s)
+  S26 sl=1.0 CCA-Net  34 sources  device=cuda
+  S26 preprocessing done (27.9s)
+    ep   1  loss=3.6726
+    ep  25  loss=1.1031
+    ep  50  loss=0.8020
+    ep  75  loss=0.6206
+    ep 100  loss=0.5223
+  S26 CNN done (410.8s)
+  S26 CCA branch done (47.3s)
+  S26 sl=1.0 acc=0.9708 full=0.9667 | cnn=0.7583 tt=0.9875 cca=0.8250 mod=0.9917  (486.0s)
+  S27 sl=1.0 CCA-Net  34 sources  device=cuda
+  S27 preprocessing done (27.7s)
+    ep   1  loss=3.6713
+    ep  25  loss=1.1393
+    ep  50  loss=0.8123
+    ep  75  loss=0.6246
+    ep 100  loss=0.5203
+  S27 CNN done (410.6s)
+  S27 CCA branch done (46.7s)
+  S27 sl=1.0 acc=0.9167 full=0.9375 | cnn=0.7375 tt=0.8167 cca=0.8167 mod=0.8917  (485.1s)
+  S28 sl=1.0 CCA-Net  34 sources  device=cuda
+  S28 preprocessing done (27.5s)
+    ep   1  loss=3.6707
+    ep  25  loss=1.1371
+    ep  50  loss=0.8150
+    ep  75  loss=0.6600
+    ep 100  loss=0.5481
+  S28 CNN done (410.6s)
+  S28 CCA branch done (46.9s)
+  S28 sl=1.0 acc=0.9667 full=0.9708 | cnn=0.9250 tt=0.9292 cca=0.8500 mod=0.9250  (485.0s)
+  S29 sl=1.0 CCA-Net  34 sources  device=cuda
+  S29 preprocessing done (27.8s)
+    ep   1  loss=3.6673
+    ep  25  loss=1.0869
+    ep  50  loss=0.7957
+    ep  75  loss=0.6213
+    ep 100  loss=0.5001
+  S29 CNN done (410.0s)
+  S29 CCA branch done (46.4s)
+  S29 sl=1.0 acc=0.5875 full=0.6000 | cnn=0.4125 tt=0.4042 cca=0.4000 mod=0.4500  (484.3s)
+  S30 sl=1.0 CCA-Net  34 sources  device=cuda
+  S30 preprocessing done (28.0s)
+    ep   1  loss=3.6717
+    ep  25  loss=1.0996
+    ep  50  loss=0.7798
+    ep  75  loss=0.6263
+    ep 100  loss=0.5221
+  S30 CNN done (409.9s)
+  S30 CCA branch done (46.4s)
+  S30 sl=1.0 acc=0.8083 full=0.8167 | cnn=0.5583 tt=0.8083 cca=0.7167 mod=0.8375  (484.4s)
+  S31 sl=1.0 CCA-Net  34 sources  device=cuda
+  S31 preprocessing done (27.9s)
+    ep   1  loss=3.6710
+    ep  25  loss=1.1268
+    ep  50  loss=0.8132
+    ep  75  loss=0.6507
+    ep 100  loss=0.5231
+  S31 CNN done (410.2s)
+  S31 CCA branch done (47.0s)
+  S31 sl=1.0 acc=0.9708 full=0.9708 | cnn=0.9000 tt=0.9458 cca=0.8708 mod=0.9792  (485.1s)
+  S32 sl=1.0 CCA-Net  34 sources  device=cuda
+  S32 preprocessing done (27.9s)
+    ep   1  loss=3.6742
+    ep  25  loss=1.1428
+    ep  50  loss=0.8237
+    ep  75  loss=0.6571
+    ep 100  loss=0.5572
+  S32 CNN done (410.4s)
+  S32 CCA branch done (46.9s)
+  S32 sl=1.0 acc=1.0000 full=1.0000 | cnn=1.0000 tt=0.9917 cca=0.8750 mod=0.9792  (485.3s)
+  S33 sl=1.0 CCA-Net  34 sources  device=cuda
+  S33 preprocessing done (27.8s)
+    ep   1  loss=3.6702
+    ep  25  loss=1.0460
+    ep  50  loss=0.7497
+    ep  75  loss=0.5812
+    ep 100  loss=0.4838
+  S33 CNN done (409.9s)
+  S33 CCA branch done (46.8s)
+  S33 sl=1.0 acc=0.4667 full=0.4875 | cnn=0.2958 tt=0.4542 cca=0.2667 mod=0.4750  (484.7s)
+  S34 sl=1.0 CCA-Net  34 sources  device=cuda
+  S34 preprocessing done (27.9s)
+    ep   1  loss=3.6721
+    ep  25  loss=1.1245
+    ep  50  loss=0.8181
+    ep  75  loss=0.6440
+    ep 100  loss=0.5356
+  S34 CNN done (410.2s)
+  S34 CCA branch done (47.2s)
+  S34 sl=1.0 acc=0.9750 full=0.9750 | cnn=0.8833 tt=0.9333 cca=0.8375 mod=0.9542  (485.4s)
+  S35 sl=1.0 CCA-Net  34 sources  device=cuda
+  S35 preprocessing done (27.7s)
+    ep   1  loss=3.6705
+    ep  25  loss=1.1217
+    ep  50  loss=0.7997
+    ep  75  loss=0.6190
+    ep 100  loss=0.5263
+  S35 CNN done (410.6s)
+  S35 CCA branch done (46.7s)
+  S35 sl=1.0 acc=0.9042 full=0.9083 | cnn=0.7917 tt=0.8667 cca=0.5542 mod=0.8750  (485.0s)
+
+=== SUMMARY ===
+
+CCA-Net  sl=0.5  n=35   (paper Benchmark: CCA-Net 54.27/84.02, CSDuDoFN 42.82/70.12, ModFBtt 43.96/80.77, FBCCA-SST 25.17/67.04)
+  CNN+(f3+f2)/2 [p_labels_new_4]     mean=0.5195 std=0.2097
+  CNN+(f1+f2+f3)/3 [p_labels_new]    mean=0.5208 std=0.2123
+  CNN alone                          mean=0.4162 std=0.2067
+  Modified FBtt-CCA                  mean=0.4289 std=0.1974
+  FBCCA (SST)                        mean=0.2518 std=0.1512
+  tt + cca                           mean=0.4396 std=0.2081
+  ITR(acc) mean=115.32
+  per-subject acc: [0.675, 0.704, 0.95, 0.617, 0.529, 0.55, 0.567, 0.296, 0.508, 0.625, 0.096, 0.496, 0.263, 0.254, 0.508, 0.383, 0.375, 0.804, 0.163, 0.487, 0.438, 0.825, 0.254, 0.708, 0.454, 0.725, 0.446, 0.775, 0.263, 0.5, 0.733, 0.879, 0.321, 0.667, 0.346]
+
+CCA-Net  sl=1.0  n=35   (paper Benchmark: CCA-Net 54.27/84.02, CSDuDoFN 42.82/70.12, ModFBtt 43.96/80.77, FBCCA-SST 25.17/67.04)
+  CNN+(f3+f2)/2 [p_labels_new_4]     mean=0.8248 std=0.1792
+  CNN+(f1+f2+f3)/3 [p_labels_new]    mean=0.8315 std=0.1757
+  CNN alone                          mean=0.6812 std=0.2368
+  Modified FBtt-CCA                  mean=0.7807 std=0.1997
+  FBCCA (SST)                        mean=0.6704 std=0.2046
+  tt + cca                           mean=0.8077 std=0.1865
+  ITR(acc) mean=nan
+  per-subject acc: [0.896, 0.946, 0.988, 0.892, 0.958, 0.938, 0.9, 0.787, 0.825, 0.904, 0.25, 0.838, 0.692, 0.6, 0.858, 0.787, 0.771, 0.804, 0.525, 0.933, 0.883, 0.975, 0.442, 0.975, 0.933, 0.971, 0.917, 0.967, 0.588, 0.808, 0.971, 1.0, 0.467, 0.975, 0.904]

@@ -1,0 +1,288 @@
+
+Device: cuda  Windows: [1.0]  Variants: ['g2_identity']
+
+=== sl=1.0 ===
+
+--- variant=g2_identity ---
+  S01 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S01 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9668
+    ep  25  loss=0.0592
+    ep  50  loss=0.0103
+    ep  75  loss=0.0034
+    ep 100  loss=0.0012
+  S01 sl=1.0 GNNv2d-g2_identity  acc=0.5708  ITR=82.73  (350.1s)
+  S02 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S02 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9575
+    ep  25  loss=0.0624
+    ep  50  loss=0.0108
+    ep  75  loss=0.0034
+    ep 100  loss=0.0014
+  S02 sl=1.0 GNNv2d-g2_identity  acc=0.6625  ITR=104.63  (354.8s)
+  S03 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S03 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=3.0085
+    ep  25  loss=0.0640
+    ep  50  loss=0.0112
+    ep  75  loss=0.0035
+    ep 100  loss=0.0014
+  S03 sl=1.0 GNNv2d-g2_identity  acc=0.9542  ITR=192.45  (355.7s)
+  S04 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S04 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9610
+    ep  25  loss=0.0604
+    ep  50  loss=0.0106
+    ep  75  loss=0.0033
+    ep 100  loss=0.0014
+  S04 sl=1.0 GNNv2d-g2_identity  acc=0.6750  ITR=107.78  (350.4s)
+  S05 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S05 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9739
+    ep  25  loss=0.0604
+    ep  50  loss=0.0107
+    ep  75  loss=0.0034
+    ep 100  loss=0.0013
+  S05 sl=1.0 GNNv2d-g2_identity  acc=0.7042  ITR=115.29  (349.2s)
+  S06 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S06 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9736
+    ep  25  loss=0.0627
+    ep  50  loss=0.0107
+    ep  75  loss=0.0034
+    ep 100  loss=0.0014
+  S06 sl=1.0 GNNv2d-g2_identity  acc=0.7375  ITR=124.16  (349.2s)
+  S07 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S07 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9591
+    ep  25  loss=0.0593
+    ep  50  loss=0.0106
+    ep  75  loss=0.0034
+    ep 100  loss=0.0013
+  S07 sl=1.0 GNNv2d-g2_identity  acc=0.6542  ITR=102.55  (349.2s)
+  S08 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S08 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9687
+    ep  25  loss=0.0597
+    ep  50  loss=0.0104
+    ep  75  loss=0.0032
+    ep 100  loss=0.0013
+  S08 sl=1.0 GNNv2d-g2_identity  acc=0.6417  ITR=99.47  (349.2s)
+  S09 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S09 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9718
+    ep  25  loss=0.0603
+    ep  50  loss=0.0103
+    ep  75  loss=0.0033
+    ep 100  loss=0.0013
+  S09 sl=1.0 GNNv2d-g2_identity  acc=0.5625  ITR=80.83  (349.3s)
+  S10 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S10 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9629
+    ep  25  loss=0.0623
+    ep  50  loss=0.0108
+    ep  75  loss=0.0032
+    ep 100  loss=0.0013
+  S10 sl=1.0 GNNv2d-g2_identity  acc=0.6708  ITR=106.72  (349.2s)
+  S11 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S11 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9335
+    ep  25  loss=0.0551
+    ep  50  loss=0.0096
+    ep  75  loss=0.0031
+    ep 100  loss=0.0012
+  S11 sl=1.0 GNNv2d-g2_identity  acc=0.1208  ITR=5.74  (349.1s)
+  S12 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S12 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9646
+    ep  25  loss=0.0604
+    ep  50  loss=0.0104
+    ep  75  loss=0.0033
+    ep 100  loss=0.0013
+  S12 sl=1.0 GNNv2d-g2_identity  acc=0.3708  ITR=41.81  (349.2s)
+  S13 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S13 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9143
+    ep  25  loss=0.0593
+    ep  50  loss=0.0101
+    ep  75  loss=0.0033
+    ep 100  loss=0.0013
+  S13 sl=1.0 GNNv2d-g2_identity  acc=0.3583  ITR=39.57  (349.2s)
+  S14 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S14 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9941
+    ep  25  loss=0.0609
+    ep  50  loss=0.0105
+    ep  75  loss=0.0033
+    ep 100  loss=0.0013
+  S14 sl=1.0 GNNv2d-g2_identity  acc=0.4000  ITR=47.19  (349.2s)
+  S15 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S15 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9693
+    ep  25  loss=0.0595
+    ep  50  loss=0.0103
+    ep  75  loss=0.0032
+    ep 100  loss=0.0012
+  S15 sl=1.0 GNNv2d-g2_identity  acc=0.5833  ITR=85.59  (350.4s)
+  S16 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S16 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9536
+    ep  25  loss=0.0600
+    ep  50  loss=0.0102
+    ep  75  loss=0.0032
+    ep 100  loss=0.0013
+  S16 sl=1.0 GNNv2d-g2_identity  acc=0.5250  ITR=72.53  (349.4s)
+  S17 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S17 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9495
+    ep  25  loss=0.0609
+    ep  50  loss=0.0104
+    ep  75  loss=0.0033
+    ep 100  loss=0.0013
+  S17 sl=1.0 GNNv2d-g2_identity  acc=0.5375  ITR=75.26  (349.3s)
+  S18 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S18 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9745
+    ep  25  loss=0.0596
+    ep  50  loss=0.0105
+    ep  75  loss=0.0032
+    ep 100  loss=0.0013
+  S18 sl=1.0 GNNv2d-g2_identity  acc=0.6667  ITR=105.67  (349.4s)
+  S19 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S19 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9621
+    ep  25  loss=0.0584
+    ep  50  loss=0.0105
+    ep  75  loss=0.0033
+    ep 100  loss=0.0012
+  S19 sl=1.0 GNNv2d-g2_identity  acc=0.4875  ITR=64.54  (349.3s)
+  S20 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S20 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9800
+    ep  25  loss=0.0620
+    ep  50  loss=0.0109
+    ep  75  loss=0.0034
+    ep 100  loss=0.0013
+  S20 sl=1.0 GNNv2d-g2_identity  acc=0.6667  ITR=105.67  (349.5s)
+  S21 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S21 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9760
+    ep  25  loss=0.0607
+    ep  50  loss=0.0106
+    ep  75  loss=0.0034
+    ep 100  loss=0.0013
+  S21 sl=1.0 GNNv2d-g2_identity  acc=0.6750  ITR=107.78  (349.3s)
+  S22 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S22 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9801
+    ep  25  loss=0.0619
+    ep  50  loss=0.0105
+    ep  75  loss=0.0034
+    ep 100  loss=0.0013
+  S22 sl=1.0 GNNv2d-g2_identity  acc=0.8167  ITR=146.62  (349.2s)
+  S23 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S23 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9458
+    ep  25  loss=0.0517
+    ep  50  loss=0.0098
+    ep  75  loss=0.0031
+    ep 100  loss=0.0012
+  S23 sl=1.0 GNNv2d-g2_identity  acc=0.2250  ITR=18.26  (349.2s)
+  S24 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S24 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=3.0043
+    ep  25  loss=0.0618
+    ep  50  loss=0.0105
+    ep  75  loss=0.0035
+    ep 100  loss=0.0013
+  S24 sl=1.0 GNNv2d-g2_identity  acc=0.8500  ITR=156.77  (349.3s)
+  S25 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S25 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9793
+    ep  25  loss=0.0592
+    ep  50  loss=0.0104
+    ep  75  loss=0.0033
+    ep 100  loss=0.0014
+  S25 sl=1.0 GNNv2d-g2_identity  acc=0.5292  ITR=73.43  (349.3s)
+  S26 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S26 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9734
+    ep  25  loss=0.0604
+    ep  50  loss=0.0105
+    ep  75  loss=0.0032
+    ep 100  loss=0.0013
+  S26 sl=1.0 GNNv2d-g2_identity  acc=0.6417  ITR=99.47  (349.3s)
+  S27 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S27 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9577
+    ep  25  loss=0.0603
+    ep  50  loss=0.0106
+    ep  75  loss=0.0033
+    ep 100  loss=0.0013
+  S27 sl=1.0 GNNv2d-g2_identity  acc=0.5875  ITR=86.56  (349.2s)
+  S28 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S28 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9945
+    ep  25  loss=0.0631
+    ep  50  loss=0.0108
+    ep  75  loss=0.0034
+    ep 100  loss=0.0013
+  S28 sl=1.0 GNNv2d-g2_identity  acc=0.8000  ITR=141.72  (349.3s)
+  S29 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S29 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9311
+    ep  25  loss=0.0578
+    ep  50  loss=0.0097
+    ep  75  loss=0.0033
+    ep 100  loss=0.0012
+  S29 sl=1.0 GNNv2d-g2_identity  acc=0.2000  ITR=14.87  (349.3s)
+  S30 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S30 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9771
+    ep  25  loss=0.0590
+    ep  50  loss=0.0106
+    ep  75  loss=0.0033
+    ep 100  loss=0.0013
+  S30 sl=1.0 GNNv2d-g2_identity  acc=0.5667  ITR=81.78  (349.2s)
+  S31 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S31 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9825
+    ep  25  loss=0.0612
+    ep  50  loss=0.0109
+    ep  75  loss=0.0033
+    ep 100  loss=0.0013
+  S31 sl=1.0 GNNv2d-g2_identity  acc=0.7625  ITR=131.03  (349.4s)
+  S32 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S32 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=3.0066
+    ep  25  loss=0.0636
+    ep  50  loss=0.0110
+    ep  75  loss=0.0035
+    ep 100  loss=0.0015
+  S32 sl=1.0 GNNv2d-g2_identity  acc=0.9750  ITR=200.85  (349.2s)
+  S33 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S33 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9456
+    ep  25  loss=0.0547
+    ep  50  loss=0.0096
+    ep  75  loss=0.0031
+    ep 100  loss=0.0012
+  S33 sl=1.0 GNNv2d-g2_identity  acc=0.2375  ITR=20.04  (349.2s)
+  S34 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S34 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=2.9755
+    ep  25  loss=0.0610
+    ep  50  loss=0.0104
+    ep  75  loss=0.0033
+    ep 100  loss=0.0014
+  S34 sl=1.0 GNNv2d-g2_identity  acc=0.7375  ITR=124.16  (349.6s)
+  S35 sl=1.0 GNNv2d-g2_identity  34 source  device=cuda
+  S35 sl=1.0 GNNv2d-g2_identity  params=655,800
+    ep   1  loss=3.0131
+    ep  25  loss=0.0624
+    ep  50  loss=0.0107
+    ep  75  loss=0.0035
+    ep 100  loss=0.0014
+  S35 sl=1.0 GNNv2d-g2_identity  acc=0.8000  ITR=141.72  (349.9s)
+
+GNNv2d-g2_identity  sl=1.0  n=35  acc=0.5987±0.2007

@@ -326,6 +326,8 @@ def run_fold(sid: int, sl: float, variant: str, device: str = DEVICE) -> dict:
             print(f"    ep {ep:3d}  loss={tot/n:.4f}", flush=True)
 
     elapsed = round(time.time() - t0, 1)
+    np.savez(C.RESULTS_DIR / f"adj_gnnv2b_{variant}_s{sid:02d}_{str(sl).replace('.','p')}.npz",
+             **{k.replace('.','_'): v.detach().cpu().numpy() for k, v in model.state_dict().items() if 'A_raw' in k})
 
     preds = predict_all(model, X_te, device)
     acc   = float((preds == y_te).mean())

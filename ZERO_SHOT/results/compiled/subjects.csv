@@ -1,0 +1,13 @@
+method,description,window,all_35,exp_S01-08,naive_S09-35,hard4_mean,hard_S11,hard_S19,hard_S29,hard_S33,other_31
+cca_net_off,CCA-Net replication: CNN + Modified FBtt-CCA + FBCCA(SST),0p5,51.95,61.09,49.24,21.04,9.58,16.25,26.25,32.08,55.94
+cca_net_off,CCA-Net replication: CNN + Modified FBtt-CCA + FBCCA(SST),1p0,82.48,91.3,79.86,45.73,25.0,52.5,58.75,46.67,87.22
+fbttcca_yf,FBtt-CCA (classical),0p5,39.15,43.91,37.75,13.44,8.75,8.33,14.17,22.5,42.47
+fbttcca_yf,FBtt-CCA (classical),1p0,77.71,85.83,75.31,39.17,21.67,37.92,48.75,48.33,82.69
+cnn_ref,CCA-Net CNN branch alone (CSDuDoFN-like),0p5,41.54,49.01,39.32,15.73,6.25,17.08,17.5,22.08,44.87
+cnn_ref,CCA-Net CNN branch alone (CSDuDoFN-like),1p0,68.32,79.84,64.91,31.35,13.75,42.08,37.5,32.08,73.09
+gnnv3e_lr,v3e lr: learned signed 9x9 spatial map (best 9-ch),0p5,39.83,43.8,38.66,16.15,5.83,16.25,15.0,27.5,42.89
+gnnv3e_lr,v3e lr: learned signed 9x9 spatial map (best 9-ch),1p0,76.1,83.39,73.94,36.77,18.75,36.25,38.75,53.33,81.17
+gnnv3g_dense19,"v3g dense19: free signed map, 19 ch  [seed 41]",0p5,41.92,46.3,40.62,15.83,6.67,12.92,15.83,27.92,45.28
+gnnv3g_dense19,"v3g dense19: free signed map, 19 ch  [seed 41]",1p0,77.54,84.22,75.56,37.81,17.5,45.42,40.0,48.33,82.66
+gnnv3l_b5d19,"v3l b5d19: dense + 5-band bank C, 19 ch  [seed 41]",0p5,42.95,45.78,42.11,16.88,5.83,12.5,20.83,28.33,46.32
+gnnv3l_b5d19,"v3l b5d19: dense + 5-band bank C, 19 ch  [seed 41]",1p0,78.24,84.58,76.36,36.46,15.0,39.58,40.83,50.42,83.63

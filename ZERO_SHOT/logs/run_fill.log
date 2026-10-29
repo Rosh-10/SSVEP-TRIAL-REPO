@@ -1,0 +1,9 @@
+05:46:00 start zs_gnn_v3k_seed.py --sl 0.5 --variant s42d19 s43d19 --resume
+06:57:20 end   zs_gnn_v3k_seed.py
+06:57:40 start zs_gnn_v3l_bank5.py --sl 0.5 --variant b5d19 b5d9 --resume
+08:03:51 end   zs_gnn_v3l_bank5.py
+08:04:08 start zs_gnn_v3j_adapt.py --sl 0.5 --variant aw19 aw9 --resume
+09:12:38 end   zs_gnn_v3j_adapt.py
+09:12:54 start zs_gnn_v3i_cap.py --sl 0.5 --variant wide19 --resume
+10:00:51 end   zs_gnn_v3i_cap.py
+10:00:51 ALL DONE

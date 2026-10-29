@@ -1,0 +1,5607 @@
+.
+├── ZERO_SHOT.rar
+├── ZERO_SHOT_WORKFLOW_AND_RESULTS.md
+├── __pycache__
+│   ├── zs_baselines.cpython-312.pyc
+│   ├── zs_cca_net.cpython-312.pyc
+│   ├── zs_cca_official.cpython-312.pyc
+│   ├── zs_config.cpython-312.pyc
+│   ├── zs_data.cpython-312.pyc
+│   ├── zs_data.cpython-314.pyc
+│   ├── zs_data64.cpython-312.pyc
+│   ├── zs_elec.cpython-312.pyc
+│   ├── zs_fuse.cpython-312.pyc
+│   ├── zs_fuse_ens.cpython-312.pyc
+│   ├── zs_gnn_model.cpython-312.pyc
+│   ├── zs_gnn_train.cpython-312.pyc
+│   ├── zs_gnn_v2c.cpython-312.pyc
+│   ├── zs_gnn_v2e.cpython-312.pyc
+│   ├── zs_gnn_v3_common.cpython-312.pyc
+│   ├── zs_gnn_v3b_freq2.cpython-312.pyc
+│   ├── zs_gnn_v3e_contrast.cpython-312.pyc
+│   ├── zs_gnn_v3g_graph.cpython-312.pyc
+│   ├── zs_gnn_v3k_seed.cpython-312.pyc
+│   ├── zs_gnn_v3l_bank5.cpython-312.pyc
+│   └── zs_gnn_v3m_bank5seed.cpython-312.pyc
+├── ablation_anatomical.txt
+├── ablation_identity.txt
+├── ablation_uniform.txt
+├── all_results
+│   └── New folder
+│       ├── all_models.csv
+│       ├── all_results.rar
+│       ├── all_results.xlsx
+│       ├── fusion.csv
+│       ├── per_subject_acc.csv
+│       ├── report_tables.md
+│       ├── seeds.csv
+│       ├── subjects.csv
+│       └── tests.csv
+├── bench_c.py
+├── bench_v2e.py
+├── bench_v2e.zip
+├── benchmark
+│   ├── 64-channels.loc
+│   ├── Freq_Phase.mat
+│   ├── S1.mat
+│   ├── S10.mat
+│   ├── S11.mat
+│   ├── S12.mat
+│   ├── S13.mat
+│   ├── S14.mat
+│   ├── S15.mat
+│   ├── S16.mat
+│   ├── S17.mat
+│   ├── S18.mat
+│   ├── S19.mat
+│   ├── S2.mat
+│   ├── S20.mat
+│   ├── S21.mat
+│   ├── S22.mat
+│   ├── S23.mat
+│   ├── S24.mat
+│   ├── S25.mat
+│   ├── S26.mat
+│   ├── S27.mat
+│   ├── S28.mat
+│   ├── S29.mat
+│   ├── S3.mat
+│   ├── S30.mat
+│   ├── S31.mat
+│   ├── S32.mat
+│   ├── S33.mat
+│   ├── S34.mat
+│   ├── S35.mat
+│   ├── S4.mat
+│   ├── S5.mat
+│   ├── S6.mat
+│   ├── S7.mat
+│   ├── S8.mat
+│   ├── S9.mat
+│   ├── Sub_info.txt
+│   └── readme.txt
+├── cache
+│   ├── S10_A64_0p5.npy
+│   ├── S10_A64_1p0.npy
+│   ├── S10_BC19_0p5.npy
+│   ├── S10_BC19_1p0.npy
+│   ├── S10_BC9_0p5.npy
+│   ├── S10_BC9_1p0.npy
+│   ├── S10_ch9.npy
+│   ├── S11_A64_0p5.npy
+│   ├── S11_A64_1p0.npy
+│   ├── S11_BC19_0p5.npy
+│   ├── S11_BC19_1p0.npy
+│   ├── S11_BC9_0p5.npy
+│   ├── S11_BC9_1p0.npy
+│   ├── S11_ch9.npy
+│   ├── S12_A64_0p5.npy
+│   ├── S12_A64_1p0.npy
+│   ├── S12_BC19_0p5.npy
+│   ├── S12_BC19_1p0.npy
+│   ├── S12_BC9_0p5.npy
+│   ├── S12_BC9_1p0.npy
+│   ├── S12_ch9.npy
+│   ├── S13_A64_0p5.npy
+│   ├── S13_A64_1p0.npy
+│   ├── S13_BC19_0p5.npy
+│   ├── S13_BC19_1p0.npy
+│   ├── S13_BC9_0p5.npy
+│   ├── S13_BC9_1p0.npy
+│   ├── S13_ch9.npy
+│   ├── S14_A64_0p5.npy
+│   ├── S14_A64_1p0.npy
+│   ├── S14_BC19_0p5.npy
+│   ├── S14_BC19_1p0.npy
+│   ├── S14_BC9_0p5.npy
+│   ├── S14_BC9_1p0.npy
+│   ├── S14_ch9.npy
+│   ├── S15_A64_0p5.npy
+│   ├── S15_A64_1p0.npy
+│   ├── S15_BC19_0p5.npy
+│   ├── S15_BC19_1p0.npy
+│   ├── S15_BC9_0p5.npy
+│   ├── S15_BC9_1p0.npy
+│   ├── S15_ch9.npy
+│   ├── S16_A64_0p5.npy
+│   ├── S16_A64_1p0.npy
+│   ├── S16_BC19_0p5.npy
+│   ├── S16_BC19_1p0.npy
+│   ├── S16_BC9_0p5.npy
+│   ├── S16_BC9_1p0.npy
+│   ├── S16_ch9.npy
+│   ├── S17_A64_0p5.npy
+│   ├── S17_A64_1p0.npy
+│   ├── S17_BC19_0p5.npy
+│   ├── S17_BC19_1p0.npy
+│   ├── S17_BC9_0p5.npy
+│   ├── S17_BC9_1p0.npy
+│   ├── S17_ch9.npy
+│   ├── S18_A64_0p5.npy
+│   ├── S18_A64_1p0.npy
+│   ├── S18_BC19_0p5.npy
+│   ├── S18_BC19_1p0.npy
+│   ├── S18_BC9_0p5.npy
+│   ├── S18_BC9_1p0.npy
+│   ├── S18_ch9.npy
+│   ├── S19_A64_0p5.npy
+│   ├── S19_A64_1p0.npy
+│   ├── S19_BC19_0p5.npy
+│   ├── S19_BC19_1p0.npy
+│   ├── S19_BC9_0p5.npy
+│   ├── S19_BC9_1p0.npy
+│   ├── S19_ch9.npy
+│   ├── S1_A64_0p5.npy
+│   ├── S1_A64_1p0.npy
+│   ├── S1_BC19_0p5.npy
+│   ├── S1_BC19_1p0.npy
+│   ├── S1_BC9_0p5.npy
+│   ├── S1_BC9_1p0.npy
+│   ├── S1_ch9.npy
+│   ├── S20_A64_0p5.npy
+│   ├── S20_A64_1p0.npy
+│   ├── S20_BC19_0p5.npy
+│   ├── S20_BC19_1p0.npy
+│   ├── S20_BC9_0p5.npy
+│   ├── S20_BC9_1p0.npy
+│   ├── S20_ch9.npy
+│   ├── S21_A64_0p5.npy
+│   ├── S21_A64_1p0.npy
+│   ├── S21_BC19_0p5.npy
+│   ├── S21_BC19_1p0.npy
+│   ├── S21_BC9_0p5.npy
+│   ├── S21_BC9_1p0.npy
+│   ├── S21_ch9.npy
+│   ├── S22_A64_0p5.npy
+│   ├── S22_A64_1p0.npy
+│   ├── S22_BC19_0p5.npy
+│   ├── S22_BC19_1p0.npy
+│   ├── S22_BC9_0p5.npy
+│   ├── S22_BC9_1p0.npy
+│   ├── S22_ch9.npy
+│   ├── S23_A64_0p5.npy
+│   ├── S23_A64_1p0.npy
+│   ├── S23_BC19_0p5.npy
+│   ├── S23_BC19_1p0.npy
+│   ├── S23_BC9_0p5.npy
+│   ├── S23_BC9_1p0.npy
+│   ├── S23_ch9.npy
+│   ├── S24_A64_0p5.npy
+│   ├── S24_A64_1p0.npy
+│   ├── S24_BC19_0p5.npy
+│   ├── S24_BC19_1p0.npy
+│   ├── S24_BC9_0p5.npy
+│   ├── S24_BC9_1p0.npy
+│   ├── S24_ch9.npy
+│   ├── S25_A64_0p5.npy
+│   ├── S25_A64_1p0.npy
+│   ├── S25_BC19_0p5.npy
+│   ├── S25_BC19_1p0.npy
+│   ├── S25_BC9_0p5.npy
+│   ├── S25_BC9_1p0.npy
+│   ├── S25_ch9.npy
+│   ├── S26_A64_0p5.npy
+│   ├── S26_A64_1p0.npy
+│   ├── S26_BC19_0p5.npy
+│   ├── S26_BC19_1p0.npy
+│   ├── S26_BC9_0p5.npy
+│   ├── S26_BC9_1p0.npy
+│   ├── S26_ch9.npy
+│   ├── S27_A64_0p5.npy
+│   ├── S27_A64_1p0.npy
+│   ├── S27_BC19_0p5.npy
+│   ├── S27_BC19_1p0.npy
+│   ├── S27_BC9_0p5.npy
+│   ├── S27_BC9_1p0.npy
+│   ├── S27_ch9.npy
+│   ├── S28_A64_0p5.npy
+│   ├── S28_A64_1p0.npy
+│   ├── S28_BC19_0p5.npy
+│   ├── S28_BC19_1p0.npy
+│   ├── S28_BC9_0p5.npy
+│   ├── S28_BC9_1p0.npy
+│   ├── S28_ch9.npy
+│   ├── S29_A64_0p5.npy
+│   ├── S29_A64_1p0.npy
+│   ├── S29_BC19_0p5.npy
+│   ├── S29_BC19_1p0.npy
+│   ├── S29_BC9_0p5.npy
+│   ├── S29_BC9_1p0.npy
+│   ├── S29_ch9.npy
+│   ├── S2_A64_0p5.npy
+│   ├── S2_A64_1p0.npy
+│   ├── S2_BC19_0p5.npy
+│   ├── S2_BC19_1p0.npy
+│   ├── S2_BC9_0p5.npy
+│   ├── S2_BC9_1p0.npy
+│   ├── S2_ch9.npy
+│   ├── S30_A64_0p5.npy
+│   ├── S30_A64_1p0.npy
+│   ├── S30_BC19_0p5.npy
+│   ├── S30_BC19_1p0.npy
+│   ├── S30_BC9_0p5.npy
+│   ├── S30_BC9_1p0.npy
+│   ├── S30_ch9.npy
+│   ├── S31_A64_0p5.npy
+│   ├── S31_A64_1p0.npy
+│   ├── S31_BC19_0p5.npy
+│   ├── S31_BC19_1p0.npy
+│   ├── S31_BC9_0p5.npy
+│   ├── S31_BC9_1p0.npy
+│   ├── S31_ch9.npy
+│   ├── S32_A64_0p5.npy
+│   ├── S32_A64_1p0.npy
+│   ├── S32_BC19_0p5.npy
+│   ├── S32_BC19_1p0.npy
+│   ├── S32_BC9_0p5.npy
+│   ├── S32_BC9_1p0.npy
+│   ├── S32_ch9.npy
+│   ├── S33_A64_0p5.npy
+│   ├── S33_A64_1p0.npy
+│   ├── S33_BC19_0p5.npy
+│   ├── S33_BC19_1p0.npy
+│   ├── S33_BC9_0p5.npy
+│   ├── S33_BC9_1p0.npy
+│   ├── S33_ch9.npy
+│   ├── S34_A64_0p5.npy
+│   ├── S34_A64_1p0.npy
+│   ├── S34_BC19_0p5.npy
+│   ├── S34_BC19_1p0.npy
+│   ├── S34_BC9_0p5.npy
+│   ├── S34_BC9_1p0.npy
+│   ├── S34_ch9.npy
+│   ├── S35_A64_0p5.npy
+│   ├── S35_A64_1p0.npy
+│   ├── S35_BC19_0p5.npy
+│   ├── S35_BC19_1p0.npy
+│   ├── S35_BC9_0p5.npy
+│   ├── S35_BC9_1p0.npy
+│   ├── S35_ch9.npy
+│   ├── S3_A64_0p5.npy
+│   ├── S3_A64_1p0.npy
+│   ├── S3_BC19_0p5.npy
+│   ├── S3_BC19_1p0.npy
+│   ├── S3_BC9_0p5.npy
+│   ├── S3_BC9_1p0.npy
+│   ├── S3_ch9.npy
+│   ├── S4_A64_0p5.npy
+│   ├── S4_A64_1p0.npy
+│   ├── S4_BC19_0p5.npy
+│   ├── S4_BC19_1p0.npy
+│   ├── S4_BC9_0p5.npy
+│   ├── S4_BC9_1p0.npy
+│   ├── S4_ch9.npy
+│   ├── S5_A64_0p5.npy
+│   ├── S5_A64_1p0.npy
+│   ├── S5_BC19_0p5.npy
+│   ├── S5_BC19_1p0.npy
+│   ├── S5_BC9_0p5.npy
+│   ├── S5_BC9_1p0.npy
+│   ├── S5_ch9.npy
+│   ├── S6_A64_0p5.npy
+│   ├── S6_A64_1p0.npy
+│   ├── S6_BC19_0p5.npy
+│   ├── S6_BC19_1p0.npy
+│   ├── S6_BC9_0p5.npy
+│   ├── S6_BC9_1p0.npy
+│   ├── S6_ch9.npy
+│   ├── S7_A64_0p5.npy
+│   ├── S7_A64_1p0.npy
+│   ├── S7_BC19_0p5.npy
+│   ├── S7_BC19_1p0.npy
+│   ├── S7_BC9_0p5.npy
+│   ├── S7_BC9_1p0.npy
+│   ├── S7_ch9.npy
+│   ├── S8_A64_0p5.npy
+│   ├── S8_A64_1p0.npy
+│   ├── S8_BC19_0p5.npy
+│   ├── S8_BC19_1p0.npy
+│   ├── S8_BC9_0p5.npy
+│   ├── S8_BC9_1p0.npy
+│   ├── S8_ch9.npy
+│   ├── S9_A64_0p5.npy
+│   ├── S9_A64_1p0.npy
+│   ├── S9_BC19_0p5.npy
+│   ├── S9_BC19_1p0.npy
+│   ├── S9_BC9_0p5.npy
+│   ├── S9_BC9_1p0.npy
+│   └── S9_ch9.npy
+├── check_net.py.bak
+├── compile_dense19.txt
+├── compile_fg2.txt
+├── compile_lr.txt
+├── compile_results.py
+├── feats_log.txt
+├── filestructure.txt
+├── gnnv2_s01_test.txt
+├── heat_slide12.png
+├── heat_slide12.py
+├── heat_subjects.png
+├── heat_subjects.py
+├── latency_check.py
+├── latency_check_out.txt
+├── learned_head_gnnv2b_g2.png
+├── learned_head_gnnv2c_g2.png
+├── logits_log.txt
+├── logs
+│   ├── all_models.txt
+│   ├── cache_bank5.log
+│   ├── compile_dense19.txt
+│   ├── compile_lr.txt
+│   ├── f_v3i.log
+│   ├── f_v3j.log
+│   ├── f_v3k.log
+│   ├── f_v3l.log
+│   ├── f_v3m_05.log
+│   ├── f_v3m_10.log
+│   ├── freq3.log
+│   ├── run_all.log
+│   ├── run_b5seed.log
+│   ├── run_fill.log
+│   ├── smoke_v3m.log
+│   ├── smoke_zs_gnn_v3i_cap.log
+│   ├── smoke_zs_gnn_v3j_adapt.log
+│   ├── smoke_zs_gnn_v3k_seed.log
+│   ├── smoke_zs_gnn_v3l_bank5.log
+│   ├── v2d_05.log
+│   ├── v2e.log
+│   ├── v3a_pb_05.log
+│   ├── v3a_sh.log
+│   ├── v3g_05.log
+│   ├── v3g_10.log
+│   ├── v3g_64.log
+│   ├── v3h.log
+│   ├── v3j.log
+│   ├── v3k_42.log
+│   ├── v3k_43.log
+│   └── v3l.log
+├── plot_head.py
+├── pyfiles_in_zs.7z
+├── results
+│   ├── adj_gnnv2b_g2_s01_0p5.npz
+│   ├── adj_gnnv2c_g2_s01_0p5.npz
+│   ├── all_models.csv
+│   ├── cca_net_off_s01_0p5.json
+│   ├── cca_net_off_s01_1p0.json
+│   ├── cca_net_off_s02_0p5.json
+│   ├── cca_net_off_s02_1p0.json
+│   ├── cca_net_off_s03_0p5.json
+│   ├── cca_net_off_s03_1p0.json
+│   ├── cca_net_off_s04_0p5.json
+│   ├── cca_net_off_s04_1p0.json
+│   ├── cca_net_off_s05_0p5.json
+│   ├── cca_net_off_s05_1p0.json
+│   ├── cca_net_off_s06_0p5.json
+│   ├── cca_net_off_s06_1p0.json
+│   ├── cca_net_off_s07_0p5.json
+│   ├── cca_net_off_s07_1p0.json
+│   ├── cca_net_off_s08_0p5.json
+│   ├── cca_net_off_s08_1p0.json
+│   ├── cca_net_off_s09_0p5.json
+│   ├── cca_net_off_s09_1p0.json
+│   ├── cca_net_off_s10_0p5.json
+│   ├── cca_net_off_s10_1p0.json
+│   ├── cca_net_off_s11_0p5.json
+│   ├── cca_net_off_s11_1p0.json
+│   ├── cca_net_off_s12_0p5.json
+│   ├── cca_net_off_s12_1p0.json
+│   ├── cca_net_off_s13_0p5.json
+│   ├── cca_net_off_s13_1p0.json
+│   ├── cca_net_off_s14_0p5.json
+│   ├── cca_net_off_s14_1p0.json
+│   ├── cca_net_off_s15_0p5.json
+│   ├── cca_net_off_s15_1p0.json
+│   ├── cca_net_off_s16_0p5.json
+│   ├── cca_net_off_s16_1p0.json
+│   ├── cca_net_off_s17_0p5.json
+│   ├── cca_net_off_s17_1p0.json
+│   ├── cca_net_off_s18_0p5.json
+│   ├── cca_net_off_s18_1p0.json
+│   ├── cca_net_off_s19_0p5.json
+│   ├── cca_net_off_s19_1p0.json
+│   ├── cca_net_off_s20_0p5.json
+│   ├── cca_net_off_s20_1p0.json
+│   ├── cca_net_off_s21_0p5.json
+│   ├── cca_net_off_s21_1p0.json
+│   ├── cca_net_off_s22_0p5.json
+│   ├── cca_net_off_s22_1p0.json
+│   ├── cca_net_off_s23_0p5.json
+│   ├── cca_net_off_s23_1p0.json
+│   ├── cca_net_off_s24_0p5.json
+│   ├── cca_net_off_s24_1p0.json
+│   ├── cca_net_off_s25_0p5.json
+│   ├── cca_net_off_s25_1p0.json
+│   ├── cca_net_off_s26_0p5.json
+│   ├── cca_net_off_s26_1p0.json
+│   ├── cca_net_off_s27_0p5.json
+│   ├── cca_net_off_s27_1p0.json
+│   ├── cca_net_off_s28_0p5.json
+│   ├── cca_net_off_s28_1p0.json
+│   ├── cca_net_off_s29_0p5.json
+│   ├── cca_net_off_s29_1p0.json
+│   ├── cca_net_off_s30_0p5.json
+│   ├── cca_net_off_s30_1p0.json
+│   ├── cca_net_off_s31_0p5.json
+│   ├── cca_net_off_s31_1p0.json
+│   ├── cca_net_off_s32_0p5.json
+│   ├── cca_net_off_s32_1p0.json
+│   ├── cca_net_off_s33_0p5.json
+│   ├── cca_net_off_s33_1p0.json
+│   ├── cca_net_off_s34_0p5.json
+│   ├── cca_net_off_s34_1p0.json
+│   ├── cca_net_off_s35_0p5.json
+│   ├── cca_net_off_s35_1p0.json
+│   ├── ccafeats_s01_0p5.npz
+│   ├── ccafeats_s01_1p0.npz
+│   ├── ccafeats_s02_0p5.npz
+│   ├── ccafeats_s02_1p0.npz
+│   ├── ccafeats_s03_0p5.npz
+│   ├── ccafeats_s03_1p0.npz
+│   ├── ccafeats_s04_0p5.npz
+│   ├── ccafeats_s04_1p0.npz
+│   ├── ccafeats_s05_0p5.npz
+│   ├── ccafeats_s05_1p0.npz
+│   ├── ccafeats_s06_0p5.npz
+│   ├── ccafeats_s06_1p0.npz
+│   ├── ccafeats_s07_0p5.npz
+│   ├── ccafeats_s07_1p0.npz
+│   ├── ccafeats_s08_0p5.npz
+│   ├── ccafeats_s08_1p0.npz
+│   ├── ccafeats_s09_0p5.npz
+│   ├── ccafeats_s09_1p0.npz
+│   ├── ccafeats_s10_0p5.npz
+│   ├── ccafeats_s10_1p0.npz
+│   ├── ccafeats_s11_0p5.npz
+│   ├── ccafeats_s11_1p0.npz
+│   ├── ccafeats_s12_0p5.npz
+│   ├── ccafeats_s12_1p0.npz
+│   ├── ccafeats_s13_0p5.npz
+│   ├── ccafeats_s13_1p0.npz
+│   ├── ccafeats_s14_0p5.npz
+│   ├── ccafeats_s14_1p0.npz
+│   ├── ccafeats_s15_0p5.npz
+│   ├── ccafeats_s15_1p0.npz
+│   ├── ccafeats_s16_0p5.npz
+│   ├── ccafeats_s16_1p0.npz
+│   ├── ccafeats_s17_0p5.npz
+│   ├── ccafeats_s17_1p0.npz
+│   ├── ccafeats_s18_0p5.npz
+│   ├── ccafeats_s18_1p0.npz
+│   ├── ccafeats_s19_0p5.npz
+│   ├── ccafeats_s19_1p0.npz
+│   ├── ccafeats_s20_0p5.npz
+│   ├── ccafeats_s20_1p0.npz
+│   ├── ccafeats_s21_0p5.npz
+│   ├── ccafeats_s21_1p0.npz
+│   ├── ccafeats_s22_0p5.npz
+│   ├── ccafeats_s22_1p0.npz
+│   ├── ccafeats_s23_0p5.npz
+│   ├── ccafeats_s23_1p0.npz
+│   ├── ccafeats_s24_0p5.npz
+│   ├── ccafeats_s24_1p0.npz
+│   ├── ccafeats_s25_0p5.npz
+│   ├── ccafeats_s25_1p0.npz
+│   ├── ccafeats_s26_0p5.npz
+│   ├── ccafeats_s26_1p0.npz
+│   ├── ccafeats_s27_0p5.npz
+│   ├── ccafeats_s27_1p0.npz
+│   ├── ccafeats_s28_0p5.npz
+│   ├── ccafeats_s28_1p0.npz
+│   ├── ccafeats_s29_0p5.npz
+│   ├── ccafeats_s29_1p0.npz
+│   ├── ccafeats_s30_0p5.npz
+│   ├── ccafeats_s30_1p0.npz
+│   ├── ccafeats_s31_0p5.npz
+│   ├── ccafeats_s31_1p0.npz
+│   ├── ccafeats_s32_0p5.npz
+│   ├── ccafeats_s32_1p0.npz
+│   ├── ccafeats_s33_0p5.npz
+│   ├── ccafeats_s33_1p0.npz
+│   ├── ccafeats_s34_0p5.npz
+│   ├── ccafeats_s34_1p0.npz
+│   ├── ccafeats_s35_0p5.npz
+│   ├── ccafeats_s35_1p0.npz
+│   ├── cnn_ref_s01_0p5.json
+│   ├── cnn_ref_s01_1p0.json
+│   ├── cnn_ref_s02_0p5.json
+│   ├── cnn_ref_s02_1p0.json
+│   ├── cnn_ref_s03_0p5.json
+│   ├── cnn_ref_s03_1p0.json
+│   ├── cnn_ref_s04_0p5.json
+│   ├── cnn_ref_s04_1p0.json
+│   ├── cnn_ref_s05_0p5.json
+│   ├── cnn_ref_s05_1p0.json
+│   ├── cnn_ref_s06_0p5.json
+│   ├── cnn_ref_s06_1p0.json
+│   ├── cnn_ref_s07_0p5.json
+│   ├── cnn_ref_s07_1p0.json
+│   ├── cnn_ref_s08_0p5.json
+│   ├── cnn_ref_s08_1p0.json
+│   ├── cnn_ref_s09_0p5.json
+│   ├── cnn_ref_s09_1p0.json
+│   ├── cnn_ref_s10_0p5.json
+│   ├── cnn_ref_s10_1p0.json
+│   ├── cnn_ref_s11_0p5.json
+│   ├── cnn_ref_s11_1p0.json
+│   ├── cnn_ref_s12_0p5.json
+│   ├── cnn_ref_s12_1p0.json
+│   ├── cnn_ref_s13_0p5.json
+│   ├── cnn_ref_s13_1p0.json
+│   ├── cnn_ref_s14_0p5.json
+│   ├── cnn_ref_s14_1p0.json
+│   ├── cnn_ref_s15_0p5.json
+│   ├── cnn_ref_s15_1p0.json
+│   ├── cnn_ref_s16_0p5.json
+│   ├── cnn_ref_s16_1p0.json
+│   ├── cnn_ref_s17_0p5.json
+│   ├── cnn_ref_s17_1p0.json
+│   ├── cnn_ref_s18_0p5.json
+│   ├── cnn_ref_s18_1p0.json
+│   ├── cnn_ref_s19_0p5.json
+│   ├── cnn_ref_s19_1p0.json
+│   ├── cnn_ref_s20_0p5.json
+│   ├── cnn_ref_s20_1p0.json
+│   ├── cnn_ref_s21_0p5.json
+│   ├── cnn_ref_s21_1p0.json
+│   ├── cnn_ref_s22_0p5.json
+│   ├── cnn_ref_s22_1p0.json
+│   ├── cnn_ref_s23_0p5.json
+│   ├── cnn_ref_s23_1p0.json
+│   ├── cnn_ref_s24_0p5.json
+│   ├── cnn_ref_s24_1p0.json
+│   ├── cnn_ref_s25_0p5.json
+│   ├── cnn_ref_s25_1p0.json
+│   ├── cnn_ref_s26_0p5.json
+│   ├── cnn_ref_s26_1p0.json
+│   ├── cnn_ref_s27_0p5.json
+│   ├── cnn_ref_s27_1p0.json
+│   ├── cnn_ref_s28_0p5.json
+│   ├── cnn_ref_s28_1p0.json
+│   ├── cnn_ref_s29_0p5.json
+│   ├── cnn_ref_s29_1p0.json
+│   ├── cnn_ref_s30_0p5.json
+│   ├── cnn_ref_s30_1p0.json
+│   ├── cnn_ref_s31_0p5.json
+│   ├── cnn_ref_s31_1p0.json
+│   ├── cnn_ref_s32_0p5.json
+│   ├── cnn_ref_s32_1p0.json
+│   ├── cnn_ref_s33_0p5.json
+│   ├── cnn_ref_s33_1p0.json
+│   ├── cnn_ref_s34_0p5.json
+│   ├── cnn_ref_s34_1p0.json
+│   ├── cnn_ref_s35_0p5.json
+│   ├── cnn_ref_s35_1p0.json
+│   ├── compiled
+│   │   ├── all_models.csv
+│   │   ├── all_results.xlsx
+│   │   ├── fusion.csv
+│   │   ├── per_subject_acc.csv
+│   │   ├── report_tables.md
+│   │   ├── seeds.csv
+│   │   ├── subjects.csv
+│   │   └── tests.csv
+│   ├── compiled_summary.csv
+│   ├── consolidated
+│   │   ├── all_models.csv
+│   │   ├── all_results.xlsx
+│   │   ├── fusion.csv
+│   │   ├── per_subject_acc.csv
+│   │   ├── report_tables.md
+│   │   ├── seeds.csv
+│   │   ├── subjects.csv
+│   │   └── tests.csv
+│   ├── fold_s01_fbcca_0p5.json
+│   ├── fold_s01_fbcca_1p0.json
+│   ├── fold_s01_fbttcca_yf_0p5.json
+│   ├── fold_s01_fbttcca_yf_1p0.json
+│   ├── fold_s02_fbcca_0p5.json
+│   ├── fold_s02_fbcca_1p0.json
+│   ├── fold_s02_fbttcca_yf_0p5.json
+│   ├── fold_s02_fbttcca_yf_1p0.json
+│   ├── fold_s03_fbcca_0p5.json
+│   ├── fold_s03_fbcca_1p0.json
+│   ├── fold_s03_fbttcca_yf_0p5.json
+│   ├── fold_s03_fbttcca_yf_1p0.json
+│   ├── fold_s04_fbcca_0p5.json
+│   ├── fold_s04_fbcca_1p0.json
+│   ├── fold_s04_fbttcca_yf_0p5.json
+│   ├── fold_s04_fbttcca_yf_1p0.json
+│   ├── fold_s05_fbcca_0p5.json
+│   ├── fold_s05_fbcca_1p0.json
+│   ├── fold_s05_fbttcca_yf_0p5.json
+│   ├── fold_s05_fbttcca_yf_1p0.json
+│   ├── fold_s06_fbcca_0p5.json
+│   ├── fold_s06_fbcca_1p0.json
+│   ├── fold_s06_fbttcca_yf_0p5.json
+│   ├── fold_s06_fbttcca_yf_1p0.json
+│   ├── fold_s07_fbcca_0p5.json
+│   ├── fold_s07_fbcca_1p0.json
+│   ├── fold_s07_fbttcca_yf_0p5.json
+│   ├── fold_s07_fbttcca_yf_1p0.json
+│   ├── fold_s08_fbcca_0p5.json
+│   ├── fold_s08_fbcca_1p0.json
+│   ├── fold_s08_fbttcca_yf_0p5.json
+│   ├── fold_s08_fbttcca_yf_1p0.json
+│   ├── fold_s09_fbcca_0p5.json
+│   ├── fold_s09_fbcca_1p0.json
+│   ├── fold_s09_fbttcca_yf_0p5.json
+│   ├── fold_s09_fbttcca_yf_1p0.json
+│   ├── fold_s10_fbcca_0p5.json
+│   ├── fold_s10_fbcca_1p0.json
+│   ├── fold_s10_fbttcca_yf_0p5.json
+│   ├── fold_s10_fbttcca_yf_1p0.json
+│   ├── fold_s11_fbcca_0p5.json
+│   ├── fold_s11_fbcca_1p0.json
+│   ├── fold_s11_fbttcca_yf_0p5.json
+│   ├── fold_s11_fbttcca_yf_1p0.json
+│   ├── fold_s12_fbcca_0p5.json
+│   ├── fold_s12_fbcca_1p0.json
+│   ├── fold_s12_fbttcca_yf_0p5.json
+│   ├── fold_s12_fbttcca_yf_1p0.json
+│   ├── fold_s13_fbcca_0p5.json
+│   ├── fold_s13_fbcca_1p0.json
+│   ├── fold_s13_fbttcca_yf_0p5.json
+│   ├── fold_s13_fbttcca_yf_1p0.json
+│   ├── fold_s14_fbcca_0p5.json
+│   ├── fold_s14_fbcca_1p0.json
+│   ├── fold_s14_fbttcca_yf_0p5.json
+│   ├── fold_s14_fbttcca_yf_1p0.json
+│   ├── fold_s15_fbcca_0p5.json
+│   ├── fold_s15_fbcca_1p0.json
+│   ├── fold_s15_fbttcca_yf_0p5.json
+│   ├── fold_s15_fbttcca_yf_1p0.json
+│   ├── fold_s16_fbcca_0p5.json
+│   ├── fold_s16_fbcca_1p0.json
+│   ├── fold_s16_fbttcca_yf_0p5.json
+│   ├── fold_s16_fbttcca_yf_1p0.json
+│   ├── fold_s17_fbcca_0p5.json
+│   ├── fold_s17_fbcca_1p0.json
+│   ├── fold_s17_fbttcca_yf_0p5.json
+│   ├── fold_s17_fbttcca_yf_1p0.json
+│   ├── fold_s18_fbcca_0p5.json
+│   ├── fold_s18_fbcca_1p0.json
+│   ├── fold_s18_fbttcca_yf_0p5.json
+│   ├── fold_s18_fbttcca_yf_1p0.json
+│   ├── fold_s19_fbcca_0p5.json
+│   ├── fold_s19_fbcca_1p0.json
+│   ├── fold_s19_fbttcca_yf_0p5.json
+│   ├── fold_s19_fbttcca_yf_1p0.json
+│   ├── fold_s20_fbcca_0p5.json
+│   ├── fold_s20_fbcca_1p0.json
+│   ├── fold_s20_fbttcca_yf_0p5.json
+│   ├── fold_s20_fbttcca_yf_1p0.json
+│   ├── fold_s21_fbcca_0p5.json
+│   ├── fold_s21_fbcca_1p0.json
+│   ├── fold_s21_fbttcca_yf_0p5.json
+│   ├── fold_s21_fbttcca_yf_1p0.json
+│   ├── fold_s22_fbcca_0p5.json
+│   ├── fold_s22_fbcca_1p0.json
+│   ├── fold_s22_fbttcca_yf_0p5.json
+│   ├── fold_s22_fbttcca_yf_1p0.json
+│   ├── fold_s23_fbcca_0p5.json
+│   ├── fold_s23_fbcca_1p0.json
+│   ├── fold_s23_fbttcca_yf_0p5.json
+│   ├── fold_s23_fbttcca_yf_1p0.json
+│   ├── fold_s24_fbcca_0p5.json
+│   ├── fold_s24_fbcca_1p0.json
+│   ├── fold_s24_fbttcca_yf_0p5.json
+│   ├── fold_s24_fbttcca_yf_1p0.json
+│   ├── fold_s25_fbcca_0p5.json
+│   ├── fold_s25_fbcca_1p0.json
+│   ├── fold_s25_fbttcca_yf_0p5.json
+│   ├── fold_s25_fbttcca_yf_1p0.json
+│   ├── fold_s26_fbcca_0p5.json
+│   ├── fold_s26_fbcca_1p0.json
+│   ├── fold_s26_fbttcca_yf_0p5.json
+│   ├── fold_s26_fbttcca_yf_1p0.json
+│   ├── fold_s27_fbcca_0p5.json
+│   ├── fold_s27_fbcca_1p0.json
+│   ├── fold_s27_fbttcca_yf_0p5.json
+│   ├── fold_s27_fbttcca_yf_1p0.json
+│   ├── fold_s28_fbcca_0p5.json
+│   ├── fold_s28_fbcca_1p0.json
+│   ├── fold_s28_fbttcca_yf_0p5.json
+│   ├── fold_s28_fbttcca_yf_1p0.json
+│   ├── fold_s29_fbcca_0p5.json
+│   ├── fold_s29_fbcca_1p0.json
+│   ├── fold_s29_fbttcca_yf_0p5.json
+│   ├── fold_s29_fbttcca_yf_1p0.json
+│   ├── fold_s30_fbcca_0p5.json
+│   ├── fold_s30_fbcca_1p0.json
+│   ├── fold_s30_fbttcca_yf_0p5.json
+│   ├── fold_s30_fbttcca_yf_1p0.json
+│   ├── fold_s31_fbcca_0p5.json
+│   ├── fold_s31_fbcca_1p0.json
+│   ├── fold_s31_fbttcca_yf_0p5.json
+│   ├── fold_s31_fbttcca_yf_1p0.json
+│   ├── fold_s32_fbcca_0p5.json
+│   ├── fold_s32_fbcca_1p0.json
+│   ├── fold_s32_fbttcca_yf_0p5.json
+│   ├── fold_s32_fbttcca_yf_1p0.json
+│   ├── fold_s33_fbcca_0p5.json
+│   ├── fold_s33_fbcca_1p0.json
+│   ├── fold_s33_fbttcca_yf_0p5.json
+│   ├── fold_s33_fbttcca_yf_1p0.json
+│   ├── fold_s34_fbcca_0p5.json
+│   ├── fold_s34_fbcca_1p0.json
+│   ├── fold_s34_fbttcca_yf_0p5.json
+│   ├── fold_s34_fbttcca_yf_1p0.json
+│   ├── fold_s35_fbcca_0p5.json
+│   ├── fold_s35_fbcca_1p0.json
+│   ├── fold_s35_fbttcca_yf_0p5.json
+│   ├── fold_s35_fbttcca_yf_1p0.json
+│   ├── gnn_s01_0p5.json
+│   ├── gnn_s01_1p0.json
+│   ├── gnn_s02_0p5.json
+│   ├── gnn_s02_1p0.json
+│   ├── gnn_s03_0p5.json
+│   ├── gnn_s03_1p0.json
+│   ├── gnn_s04_0p5.json
+│   ├── gnn_s04_1p0.json
+│   ├── gnn_s05_0p5.json
+│   ├── gnn_s05_1p0.json
+│   ├── gnn_s06_0p5.json
+│   ├── gnn_s06_1p0.json
+│   ├── gnn_s07_0p5.json
+│   ├── gnn_s07_1p0.json
+│   ├── gnn_s08_0p5.json
+│   ├── gnn_s08_1p0.json
+│   ├── gnn_s09_0p5.json
+│   ├── gnn_s09_1p0.json
+│   ├── gnn_s10_0p5.json
+│   ├── gnn_s10_1p0.json
+│   ├── gnn_s11_0p5.json
+│   ├── gnn_s11_1p0.json
+│   ├── gnn_s12_0p5.json
+│   ├── gnn_s12_1p0.json
+│   ├── gnn_s13_0p5.json
+│   ├── gnn_s13_1p0.json
+│   ├── gnn_s14_0p5.json
+│   ├── gnn_s14_1p0.json
+│   ├── gnn_s15_0p5.json
+│   ├── gnn_s15_1p0.json
+│   ├── gnn_s16_0p5.json
+│   ├── gnn_s16_1p0.json
+│   ├── gnn_s17_0p5.json
+│   ├── gnn_s17_1p0.json
+│   ├── gnn_s18_0p5.json
+│   ├── gnn_s18_1p0.json
+│   ├── gnn_s19_0p5.json
+│   ├── gnn_s19_1p0.json
+│   ├── gnn_s20_0p5.json
+│   ├── gnn_s20_1p0.json
+│   ├── gnn_s21_0p5.json
+│   ├── gnn_s21_1p0.json
+│   ├── gnn_s22_0p5.json
+│   ├── gnn_s22_1p0.json
+│   ├── gnn_s23_0p5.json
+│   ├── gnn_s23_1p0.json
+│   ├── gnn_s24_0p5.json
+│   ├── gnn_s24_1p0.json
+│   ├── gnn_s25_0p5.json
+│   ├── gnn_s25_1p0.json
+│   ├── gnn_s26_0p5.json
+│   ├── gnn_s26_1p0.json
+│   ├── gnn_s27_0p5.json
+│   ├── gnn_s27_1p0.json
+│   ├── gnn_s28_0p5.json
+│   ├── gnn_s28_1p0.json
+│   ├── gnn_s29_0p5.json
+│   ├── gnn_s29_1p0.json
+│   ├── gnn_s30_0p5.json
+│   ├── gnn_s30_1p0.json
+│   ├── gnn_s31_0p5.json
+│   ├── gnn_s31_1p0.json
+│   ├── gnn_s32_0p5.json
+│   ├── gnn_s32_1p0.json
+│   ├── gnn_s33_0p5.json
+│   ├── gnn_s33_1p0.json
+│   ├── gnn_s34_0p5.json
+│   ├── gnn_s34_1p0.json
+│   ├── gnn_s35_0p5.json
+│   ├── gnn_s35_1p0.json
+│   ├── gnnv2_g2_s01_0p5.json
+│   ├── gnnv2_g2_s01_1p0.json
+│   ├── gnnv2_g2_s02_0p5.json
+│   ├── gnnv2_g2_s02_1p0.json
+│   ├── gnnv2_g2_s03_0p5.json
+│   ├── gnnv2_g2_s03_1p0.json
+│   ├── gnnv2_g2_s04_0p5.json
+│   ├── gnnv2_g2_s04_1p0.json
+│   ├── gnnv2_g2_s05_0p5.json
+│   ├── gnnv2_g2_s05_1p0.json
+│   ├── gnnv2_g2_s06_0p5.json
+│   ├── gnnv2_g2_s06_1p0.json
+│   ├── gnnv2_g2_s07_0p5.json
+│   ├── gnnv2_g2_s07_1p0.json
+│   ├── gnnv2_g2_s08_0p5.json
+│   ├── gnnv2_g2_s08_1p0.json
+│   ├── gnnv2_g2_s09_0p5.json
+│   ├── gnnv2_g2_s09_1p0.json
+│   ├── gnnv2_g2_s10_0p5.json
+│   ├── gnnv2_g2_s10_1p0.json
+│   ├── gnnv2_g2_s11_0p5.json
+│   ├── gnnv2_g2_s11_1p0.json
+│   ├── gnnv2_g2_s12_0p5.json
+│   ├── gnnv2_g2_s12_1p0.json
+│   ├── gnnv2_g2_s13_0p5.json
+│   ├── gnnv2_g2_s13_1p0.json
+│   ├── gnnv2_g2_s14_0p5.json
+│   ├── gnnv2_g2_s14_1p0.json
+│   ├── gnnv2_g2_s15_0p5.json
+│   ├── gnnv2_g2_s15_1p0.json
+│   ├── gnnv2_g2_s16_0p5.json
+│   ├── gnnv2_g2_s16_1p0.json
+│   ├── gnnv2_g2_s17_0p5.json
+│   ├── gnnv2_g2_s17_1p0.json
+│   ├── gnnv2_g2_s18_0p5.json
+│   ├── gnnv2_g2_s18_1p0.json
+│   ├── gnnv2_g2_s19_0p5.json
+│   ├── gnnv2_g2_s19_1p0.json
+│   ├── gnnv2_g2_s20_0p5.json
+│   ├── gnnv2_g2_s20_1p0.json
+│   ├── gnnv2_g2_s21_0p5.json
+│   ├── gnnv2_g2_s21_1p0.json
+│   ├── gnnv2_g2_s22_0p5.json
+│   ├── gnnv2_g2_s22_1p0.json
+│   ├── gnnv2_g2_s23_0p5.json
+│   ├── gnnv2_g2_s23_1p0.json
+│   ├── gnnv2_g2_s24_0p5.json
+│   ├── gnnv2_g2_s24_1p0.json
+│   ├── gnnv2_g2_s25_0p5.json
+│   ├── gnnv2_g2_s25_1p0.json
+│   ├── gnnv2_g2_s26_0p5.json
+│   ├── gnnv2_g2_s26_1p0.json
+│   ├── gnnv2_g2_s27_0p5.json
+│   ├── gnnv2_g2_s27_1p0.json
+│   ├── gnnv2_g2_s28_0p5.json
+│   ├── gnnv2_g2_s28_1p0.json
+│   ├── gnnv2_g2_s29_0p5.json
+│   ├── gnnv2_g2_s29_1p0.json
+│   ├── gnnv2_g2_s30_0p5.json
+│   ├── gnnv2_g2_s30_1p0.json
+│   ├── gnnv2_g2_s31_0p5.json
+│   ├── gnnv2_g2_s31_1p0.json
+│   ├── gnnv2_g2_s32_0p5.json
+│   ├── gnnv2_g2_s32_1p0.json
+│   ├── gnnv2_g2_s33_0p5.json
+│   ├── gnnv2_g2_s33_1p0.json
+│   ├── gnnv2_g2_s34_0p5.json
+│   ├── gnnv2_g2_s34_1p0.json
+│   ├── gnnv2_g2_s35_0p5.json
+│   ├── gnnv2_g2_s35_1p0.json
+│   ├── gnnv2_g3_s01_0p5.json
+│   ├── gnnv2_g3_s01_1p0.json
+│   ├── gnnv2_g3_s02_0p5.json
+│   ├── gnnv2_g3_s02_1p0.json
+│   ├── gnnv2_g3_s03_0p5.json
+│   ├── gnnv2_g3_s03_1p0.json
+│   ├── gnnv2_g3_s04_0p5.json
+│   ├── gnnv2_g3_s04_1p0.json
+│   ├── gnnv2_g3_s05_0p5.json
+│   ├── gnnv2_g3_s05_1p0.json
+│   ├── gnnv2_g3_s06_0p5.json
+│   ├── gnnv2_g3_s06_1p0.json
+│   ├── gnnv2_g3_s07_0p5.json
+│   ├── gnnv2_g3_s07_1p0.json
+│   ├── gnnv2_g3_s08_0p5.json
+│   ├── gnnv2_g3_s08_1p0.json
+│   ├── gnnv2_g3_s09_0p5.json
+│   ├── gnnv2_g3_s09_1p0.json
+│   ├── gnnv2_g3_s10_0p5.json
+│   ├── gnnv2_g3_s10_1p0.json
+│   ├── gnnv2_g3_s11_0p5.json
+│   ├── gnnv2_g3_s11_1p0.json
+│   ├── gnnv2_g3_s12_0p5.json
+│   ├── gnnv2_g3_s12_1p0.json
+│   ├── gnnv2_g3_s13_0p5.json
+│   ├── gnnv2_g3_s13_1p0.json
+│   ├── gnnv2_g3_s14_0p5.json
+│   ├── gnnv2_g3_s14_1p0.json
+│   ├── gnnv2_g3_s15_0p5.json
+│   ├── gnnv2_g3_s15_1p0.json
+│   ├── gnnv2_g3_s16_0p5.json
+│   ├── gnnv2_g3_s16_1p0.json
+│   ├── gnnv2_g3_s17_0p5.json
+│   ├── gnnv2_g3_s17_1p0.json
+│   ├── gnnv2_g3_s18_0p5.json
+│   ├── gnnv2_g3_s18_1p0.json
+│   ├── gnnv2_g3_s19_0p5.json
+│   ├── gnnv2_g3_s19_1p0.json
+│   ├── gnnv2_g3_s20_0p5.json
+│   ├── gnnv2_g3_s20_1p0.json
+│   ├── gnnv2_g3_s21_0p5.json
+│   ├── gnnv2_g3_s21_1p0.json
+│   ├── gnnv2_g3_s22_0p5.json
+│   ├── gnnv2_g3_s22_1p0.json
+│   ├── gnnv2_g3_s23_0p5.json
+│   ├── gnnv2_g3_s23_1p0.json
+│   ├── gnnv2_g3_s24_0p5.json
+│   ├── gnnv2_g3_s24_1p0.json
+│   ├── gnnv2_g3_s25_0p5.json
+│   ├── gnnv2_g3_s25_1p0.json
+│   ├── gnnv2_g3_s26_0p5.json
+│   ├── gnnv2_g3_s26_1p0.json
+│   ├── gnnv2_g3_s27_0p5.json
+│   ├── gnnv2_g3_s27_1p0.json
+│   ├── gnnv2_g3_s28_0p5.json
+│   ├── gnnv2_g3_s28_1p0.json
+│   ├── gnnv2_g3_s29_0p5.json
+│   ├── gnnv2_g3_s29_1p0.json
+│   ├── gnnv2_g3_s30_0p5.json
+│   ├── gnnv2_g3_s30_1p0.json
+│   ├── gnnv2_g3_s31_0p5.json
+│   ├── gnnv2_g3_s31_1p0.json
+│   ├── gnnv2_g3_s32_0p5.json
+│   ├── gnnv2_g3_s32_1p0.json
+│   ├── gnnv2_g3_s33_0p5.json
+│   ├── gnnv2_g3_s33_1p0.json
+│   ├── gnnv2_g3_s34_0p5.json
+│   ├── gnnv2_g3_s34_1p0.json
+│   ├── gnnv2_g3_s35_0p5.json
+│   ├── gnnv2_g3_s35_1p0.json
+│   ├── gnnv2b_g2_s01_0p5.json
+│   ├── gnnv2b_g2_s01_1p0.json
+│   ├── gnnv2b_g2_s02_0p5.json
+│   ├── gnnv2b_g2_s02_1p0.json
+│   ├── gnnv2b_g2_s03_0p5.json
+│   ├── gnnv2b_g2_s03_1p0.json
+│   ├── gnnv2b_g2_s04_0p5.json
+│   ├── gnnv2b_g2_s04_1p0.json
+│   ├── gnnv2b_g2_s05_0p5.json
+│   ├── gnnv2b_g2_s05_1p0.json
+│   ├── gnnv2b_g2_s06_0p5.json
+│   ├── gnnv2b_g2_s06_1p0.json
+│   ├── gnnv2b_g2_s07_0p5.json
+│   ├── gnnv2b_g2_s07_1p0.json
+│   ├── gnnv2b_g2_s08_0p5.json
+│   ├── gnnv2b_g2_s08_1p0.json
+│   ├── gnnv2b_g2_s09_0p5.json
+│   ├── gnnv2b_g2_s09_1p0.json
+│   ├── gnnv2b_g2_s10_0p5.json
+│   ├── gnnv2b_g2_s10_1p0.json
+│   ├── gnnv2b_g2_s11_0p5.json
+│   ├── gnnv2b_g2_s11_1p0.json
+│   ├── gnnv2b_g2_s12_0p5.json
+│   ├── gnnv2b_g2_s12_1p0.json
+│   ├── gnnv2b_g2_s13_0p5.json
+│   ├── gnnv2b_g2_s13_1p0.json
+│   ├── gnnv2b_g2_s14_0p5.json
+│   ├── gnnv2b_g2_s14_1p0.json
+│   ├── gnnv2b_g2_s15_0p5.json
+│   ├── gnnv2b_g2_s15_1p0.json
+│   ├── gnnv2b_g2_s16_0p5.json
+│   ├── gnnv2b_g2_s16_1p0.json
+│   ├── gnnv2b_g2_s17_0p5.json
+│   ├── gnnv2b_g2_s17_1p0.json
+│   ├── gnnv2b_g2_s18_0p5.json
+│   ├── gnnv2b_g2_s18_1p0.json
+│   ├── gnnv2b_g2_s19_0p5.json
+│   ├── gnnv2b_g2_s19_1p0.json
+│   ├── gnnv2b_g2_s20_0p5.json
+│   ├── gnnv2b_g2_s20_1p0.json
+│   ├── gnnv2b_g2_s21_0p5.json
+│   ├── gnnv2b_g2_s21_1p0.json
+│   ├── gnnv2b_g2_s22_0p5.json
+│   ├── gnnv2b_g2_s22_1p0.json
+│   ├── gnnv2b_g2_s23_0p5.json
+│   ├── gnnv2b_g2_s23_1p0.json
+│   ├── gnnv2b_g2_s24_0p5.json
+│   ├── gnnv2b_g2_s24_1p0.json
+│   ├── gnnv2b_g2_s25_0p5.json
+│   ├── gnnv2b_g2_s25_1p0.json
+│   ├── gnnv2b_g2_s26_0p5.json
+│   ├── gnnv2b_g2_s26_1p0.json
+│   ├── gnnv2b_g2_s27_0p5.json
+│   ├── gnnv2b_g2_s27_1p0.json
+│   ├── gnnv2b_g2_s28_0p5.json
+│   ├── gnnv2b_g2_s28_1p0.json
+│   ├── gnnv2b_g2_s29_0p5.json
+│   ├── gnnv2b_g2_s29_1p0.json
+│   ├── gnnv2b_g2_s30_0p5.json
+│   ├── gnnv2b_g2_s30_1p0.json
+│   ├── gnnv2b_g2_s31_0p5.json
+│   ├── gnnv2b_g2_s31_1p0.json
+│   ├── gnnv2b_g2_s32_0p5.json
+│   ├── gnnv2b_g2_s32_1p0.json
+│   ├── gnnv2b_g2_s33_0p5.json
+│   ├── gnnv2b_g2_s33_1p0.json
+│   ├── gnnv2b_g2_s34_0p5.json
+│   ├── gnnv2b_g2_s34_1p0.json
+│   ├── gnnv2b_g2_s35_0p5.json
+│   ├── gnnv2b_g2_s35_1p0.json
+│   ├── gnnv2b_g3_s01_0p5.json
+│   ├── gnnv2b_g3_s01_1p0.json
+│   ├── gnnv2b_g3_s02_0p5.json
+│   ├── gnnv2b_g3_s02_1p0.json
+│   ├── gnnv2b_g3_s03_0p5.json
+│   ├── gnnv2b_g3_s03_1p0.json
+│   ├── gnnv2b_g3_s04_0p5.json
+│   ├── gnnv2b_g3_s04_1p0.json
+│   ├── gnnv2b_g3_s05_0p5.json
+│   ├── gnnv2b_g3_s05_1p0.json
+│   ├── gnnv2b_g3_s06_0p5.json
+│   ├── gnnv2b_g3_s06_1p0.json
+│   ├── gnnv2b_g3_s07_0p5.json
+│   ├── gnnv2b_g3_s07_1p0.json
+│   ├── gnnv2b_g3_s08_0p5.json
+│   ├── gnnv2b_g3_s08_1p0.json
+│   ├── gnnv2b_g3_s09_0p5.json
+│   ├── gnnv2b_g3_s09_1p0.json
+│   ├── gnnv2b_g3_s10_0p5.json
+│   ├── gnnv2b_g3_s10_1p0.json
+│   ├── gnnv2b_g3_s11_0p5.json
+│   ├── gnnv2b_g3_s11_1p0.json
+│   ├── gnnv2b_g3_s12_0p5.json
+│   ├── gnnv2b_g3_s12_1p0.json
+│   ├── gnnv2b_g3_s13_0p5.json
+│   ├── gnnv2b_g3_s13_1p0.json
+│   ├── gnnv2b_g3_s14_0p5.json
+│   ├── gnnv2b_g3_s14_1p0.json
+│   ├── gnnv2b_g3_s15_0p5.json
+│   ├── gnnv2b_g3_s15_1p0.json
+│   ├── gnnv2b_g3_s16_0p5.json
+│   ├── gnnv2b_g3_s16_1p0.json
+│   ├── gnnv2b_g3_s17_0p5.json
+│   ├── gnnv2b_g3_s17_1p0.json
+│   ├── gnnv2b_g3_s18_0p5.json
+│   ├── gnnv2b_g3_s18_1p0.json
+│   ├── gnnv2b_g3_s19_0p5.json
+│   ├── gnnv2b_g3_s19_1p0.json
+│   ├── gnnv2b_g3_s20_0p5.json
+│   ├── gnnv2b_g3_s20_1p0.json
+│   ├── gnnv2b_g3_s21_0p5.json
+│   ├── gnnv2b_g3_s21_1p0.json
+│   ├── gnnv2b_g3_s22_0p5.json
+│   ├── gnnv2b_g3_s22_1p0.json
+│   ├── gnnv2b_g3_s23_0p5.json
+│   ├── gnnv2b_g3_s23_1p0.json
+│   ├── gnnv2b_g3_s24_0p5.json
+│   ├── gnnv2b_g3_s24_1p0.json
+│   ├── gnnv2b_g3_s25_0p5.json
+│   ├── gnnv2b_g3_s25_1p0.json
+│   ├── gnnv2b_g3_s26_0p5.json
+│   ├── gnnv2b_g3_s26_1p0.json
+│   ├── gnnv2b_g3_s27_0p5.json
+│   ├── gnnv2b_g3_s27_1p0.json
+│   ├── gnnv2b_g3_s28_0p5.json
+│   ├── gnnv2b_g3_s28_1p0.json
+│   ├── gnnv2b_g3_s29_0p5.json
+│   ├── gnnv2b_g3_s29_1p0.json
+│   ├── gnnv2b_g3_s30_0p5.json
+│   ├── gnnv2b_g3_s30_1p0.json
+│   ├── gnnv2b_g3_s31_0p5.json
+│   ├── gnnv2b_g3_s31_1p0.json
+│   ├── gnnv2b_g3_s32_0p5.json
+│   ├── gnnv2b_g3_s32_1p0.json
+│   ├── gnnv2b_g3_s33_0p5.json
+│   ├── gnnv2b_g3_s33_1p0.json
+│   ├── gnnv2b_g3_s34_0p5.json
+│   ├── gnnv2b_g3_s34_1p0.json
+│   ├── gnnv2b_g3_s35_0p5.json
+│   ├── gnnv2b_g3_s35_1p0.json
+│   ├── gnnv2c_g2_s01_0p5.json
+│   ├── gnnv2c_g2_s01_1p0.json
+│   ├── gnnv2c_g2_s02_0p5.json
+│   ├── gnnv2c_g2_s02_1p0.json
+│   ├── gnnv2c_g2_s03_0p5.json
+│   ├── gnnv2c_g2_s03_1p0.json
+│   ├── gnnv2c_g2_s04_0p5.json
+│   ├── gnnv2c_g2_s04_1p0.json
+│   ├── gnnv2c_g2_s05_0p5.json
+│   ├── gnnv2c_g2_s05_1p0.json
+│   ├── gnnv2c_g2_s06_0p5.json
+│   ├── gnnv2c_g2_s06_1p0.json
+│   ├── gnnv2c_g2_s07_0p5.json
+│   ├── gnnv2c_g2_s07_1p0.json
+│   ├── gnnv2c_g2_s08_0p5.json
+│   ├── gnnv2c_g2_s08_1p0.json
+│   ├── gnnv2c_g2_s09_0p5.json
+│   ├── gnnv2c_g2_s09_1p0.json
+│   ├── gnnv2c_g2_s10_0p5.json
+│   ├── gnnv2c_g2_s10_1p0.json
+│   ├── gnnv2c_g2_s11_0p5.json
+│   ├── gnnv2c_g2_s11_1p0.json
+│   ├── gnnv2c_g2_s12_0p5.json
+│   ├── gnnv2c_g2_s12_1p0.json
+│   ├── gnnv2c_g2_s13_0p5.json
+│   ├── gnnv2c_g2_s13_1p0.json
+│   ├── gnnv2c_g2_s14_0p5.json
+│   ├── gnnv2c_g2_s14_1p0.json
+│   ├── gnnv2c_g2_s15_0p5.json
+│   ├── gnnv2c_g2_s15_1p0.json
+│   ├── gnnv2c_g2_s16_0p5.json
+│   ├── gnnv2c_g2_s16_1p0.json
+│   ├── gnnv2c_g2_s17_0p5.json
+│   ├── gnnv2c_g2_s17_1p0.json
+│   ├── gnnv2c_g2_s18_0p5.json
+│   ├── gnnv2c_g2_s18_1p0.json
+│   ├── gnnv2c_g2_s19_0p5.json
+│   ├── gnnv2c_g2_s19_1p0.json
+│   ├── gnnv2c_g2_s20_0p5.json
+│   ├── gnnv2c_g2_s20_1p0.json
+│   ├── gnnv2c_g2_s21_0p5.json
+│   ├── gnnv2c_g2_s21_1p0.json
+│   ├── gnnv2c_g2_s22_0p5.json
+│   ├── gnnv2c_g2_s22_1p0.json
+│   ├── gnnv2c_g2_s23_0p5.json
+│   ├── gnnv2c_g2_s23_1p0.json
+│   ├── gnnv2c_g2_s24_0p5.json
+│   ├── gnnv2c_g2_s24_1p0.json
+│   ├── gnnv2c_g2_s25_0p5.json
+│   ├── gnnv2c_g2_s25_1p0.json
+│   ├── gnnv2c_g2_s26_0p5.json
+│   ├── gnnv2c_g2_s26_1p0.json
+│   ├── gnnv2c_g2_s27_0p5.json
+│   ├── gnnv2c_g2_s27_1p0.json
+│   ├── gnnv2c_g2_s28_0p5.json
+│   ├── gnnv2c_g2_s28_1p0.json
+│   ├── gnnv2c_g2_s29_0p5.json
+│   ├── gnnv2c_g2_s29_1p0.json
+│   ├── gnnv2c_g2_s30_0p5.json
+│   ├── gnnv2c_g2_s30_1p0.json
+│   ├── gnnv2c_g2_s31_0p5.json
+│   ├── gnnv2c_g2_s31_1p0.json
+│   ├── gnnv2c_g2_s32_0p5.json
+│   ├── gnnv2c_g2_s32_1p0.json
+│   ├── gnnv2c_g2_s33_0p5.json
+│   ├── gnnv2c_g2_s33_1p0.json
+│   ├── gnnv2c_g2_s34_0p5.json
+│   ├── gnnv2c_g2_s34_1p0.json
+│   ├── gnnv2c_g2_s35_0p5.json
+│   ├── gnnv2c_g2_s35_1p0.json
+│   ├── gnnv2c_g3_s01_0p5.json
+│   ├── gnnv2c_g3_s01_1p0.json
+│   ├── gnnv2c_g3_s02_0p5.json
+│   ├── gnnv2c_g3_s02_1p0.json
+│   ├── gnnv2c_g3_s03_0p5.json
+│   ├── gnnv2c_g3_s03_1p0.json
+│   ├── gnnv2c_g3_s04_0p5.json
+│   ├── gnnv2c_g3_s04_1p0.json
+│   ├── gnnv2c_g3_s05_0p5.json
+│   ├── gnnv2c_g3_s05_1p0.json
+│   ├── gnnv2c_g3_s06_0p5.json
+│   ├── gnnv2c_g3_s06_1p0.json
+│   ├── gnnv2c_g3_s07_0p5.json
+│   ├── gnnv2c_g3_s07_1p0.json
+│   ├── gnnv2c_g3_s08_0p5.json
+│   ├── gnnv2c_g3_s08_1p0.json
+│   ├── gnnv2c_g3_s09_0p5.json
+│   ├── gnnv2c_g3_s09_1p0.json
+│   ├── gnnv2c_g3_s10_0p5.json
+│   ├── gnnv2c_g3_s10_1p0.json
+│   ├── gnnv2c_g3_s11_0p5.json
+│   ├── gnnv2c_g3_s11_1p0.json
+│   ├── gnnv2c_g3_s12_0p5.json
+│   ├── gnnv2c_g3_s12_1p0.json
+│   ├── gnnv2c_g3_s13_0p5.json
+│   ├── gnnv2c_g3_s13_1p0.json
+│   ├── gnnv2c_g3_s14_0p5.json
+│   ├── gnnv2c_g3_s14_1p0.json
+│   ├── gnnv2c_g3_s15_0p5.json
+│   ├── gnnv2c_g3_s15_1p0.json
+│   ├── gnnv2c_g3_s16_0p5.json
+│   ├── gnnv2c_g3_s16_1p0.json
+│   ├── gnnv2c_g3_s17_0p5.json
+│   ├── gnnv2c_g3_s17_1p0.json
+│   ├── gnnv2c_g3_s18_0p5.json
+│   ├── gnnv2c_g3_s18_1p0.json
+│   ├── gnnv2c_g3_s19_0p5.json
+│   ├── gnnv2c_g3_s19_1p0.json
+│   ├── gnnv2c_g3_s20_0p5.json
+│   ├── gnnv2c_g3_s20_1p0.json
+│   ├── gnnv2c_g3_s21_0p5.json
+│   ├── gnnv2c_g3_s21_1p0.json
+│   ├── gnnv2c_g3_s22_0p5.json
+│   ├── gnnv2c_g3_s22_1p0.json
+│   ├── gnnv2c_g3_s23_0p5.json
+│   ├── gnnv2c_g3_s23_1p0.json
+│   ├── gnnv2c_g3_s24_0p5.json
+│   ├── gnnv2c_g3_s24_1p0.json
+│   ├── gnnv2c_g3_s25_0p5.json
+│   ├── gnnv2c_g3_s25_1p0.json
+│   ├── gnnv2c_g3_s26_0p5.json
+│   ├── gnnv2c_g3_s26_1p0.json
+│   ├── gnnv2c_g3_s27_0p5.json
+│   ├── gnnv2c_g3_s27_1p0.json
+│   ├── gnnv2c_g3_s28_0p5.json
+│   ├── gnnv2c_g3_s28_1p0.json
+│   ├── gnnv2c_g3_s29_0p5.json
+│   ├── gnnv2c_g3_s29_1p0.json
+│   ├── gnnv2c_g3_s30_0p5.json
+│   ├── gnnv2c_g3_s30_1p0.json
+│   ├── gnnv2c_g3_s31_0p5.json
+│   ├── gnnv2c_g3_s31_1p0.json
+│   ├── gnnv2c_g3_s32_0p5.json
+│   ├── gnnv2c_g3_s32_1p0.json
+│   ├── gnnv2c_g3_s33_0p5.json
+│   ├── gnnv2c_g3_s33_1p0.json
+│   ├── gnnv2c_g3_s34_0p5.json
+│   ├── gnnv2c_g3_s34_1p0.json
+│   ├── gnnv2c_g3_s35_0p5.json
+│   ├── gnnv2c_g3_s35_1p0.json
+│   ├── gnnv2d_g2_anatomical_s01_1p0.json
+│   ├── gnnv2d_g2_anatomical_s02_1p0.json
+│   ├── gnnv2d_g2_anatomical_s03_1p0.json
+│   ├── gnnv2d_g2_anatomical_s04_1p0.json
+│   ├── gnnv2d_g2_anatomical_s05_1p0.json
+│   ├── gnnv2d_g2_anatomical_s06_1p0.json
+│   ├── gnnv2d_g2_anatomical_s07_1p0.json
+│   ├── gnnv2d_g2_anatomical_s08_1p0.json
+│   ├── gnnv2d_g2_anatomical_s09_1p0.json
+│   ├── gnnv2d_g2_anatomical_s10_1p0.json
+│   ├── gnnv2d_g2_anatomical_s11_1p0.json
+│   ├── gnnv2d_g2_anatomical_s12_1p0.json
+│   ├── gnnv2d_g2_anatomical_s13_1p0.json
+│   ├── gnnv2d_g2_anatomical_s14_1p0.json
+│   ├── gnnv2d_g2_anatomical_s15_1p0.json
+│   ├── gnnv2d_g2_anatomical_s16_1p0.json
+│   ├── gnnv2d_g2_anatomical_s17_1p0.json
+│   ├── gnnv2d_g2_anatomical_s18_1p0.json
+│   ├── gnnv2d_g2_anatomical_s19_1p0.json
+│   ├── gnnv2d_g2_anatomical_s20_1p0.json
+│   ├── gnnv2d_g2_anatomical_s21_1p0.json
+│   ├── gnnv2d_g2_anatomical_s22_1p0.json
+│   ├── gnnv2d_g2_anatomical_s23_1p0.json
+│   ├── gnnv2d_g2_anatomical_s24_1p0.json
+│   ├── gnnv2d_g2_anatomical_s25_1p0.json
+│   ├── gnnv2d_g2_anatomical_s26_1p0.json
+│   ├── gnnv2d_g2_anatomical_s27_1p0.json
+│   ├── gnnv2d_g2_anatomical_s28_1p0.json
+│   ├── gnnv2d_g2_anatomical_s29_1p0.json
+│   ├── gnnv2d_g2_anatomical_s30_1p0.json
+│   ├── gnnv2d_g2_anatomical_s31_1p0.json
+│   ├── gnnv2d_g2_anatomical_s32_1p0.json
+│   ├── gnnv2d_g2_anatomical_s33_1p0.json
+│   ├── gnnv2d_g2_anatomical_s34_1p0.json
+│   ├── gnnv2d_g2_anatomical_s35_1p0.json
+│   ├── gnnv2d_g2_identity_s01_1p0.json
+│   ├── gnnv2d_g2_identity_s02_1p0.json
+│   ├── gnnv2d_g2_identity_s03_1p0.json
+│   ├── gnnv2d_g2_identity_s04_1p0.json
+│   ├── gnnv2d_g2_identity_s05_1p0.json
+│   ├── gnnv2d_g2_identity_s06_1p0.json
+│   ├── gnnv2d_g2_identity_s07_1p0.json
+│   ├── gnnv2d_g2_identity_s08_1p0.json
+│   ├── gnnv2d_g2_identity_s09_1p0.json
+│   ├── gnnv2d_g2_identity_s10_1p0.json
+│   ├── gnnv2d_g2_identity_s11_1p0.json
+│   ├── gnnv2d_g2_identity_s12_1p0.json
+│   ├── gnnv2d_g2_identity_s13_1p0.json
+│   ├── gnnv2d_g2_identity_s14_1p0.json
+│   ├── gnnv2d_g2_identity_s15_1p0.json
+│   ├── gnnv2d_g2_identity_s16_1p0.json
+│   ├── gnnv2d_g2_identity_s17_1p0.json
+│   ├── gnnv2d_g2_identity_s18_1p0.json
+│   ├── gnnv2d_g2_identity_s19_1p0.json
+│   ├── gnnv2d_g2_identity_s20_1p0.json
+│   ├── gnnv2d_g2_identity_s21_1p0.json
+│   ├── gnnv2d_g2_identity_s22_1p0.json
+│   ├── gnnv2d_g2_identity_s23_1p0.json
+│   ├── gnnv2d_g2_identity_s24_1p0.json
+│   ├── gnnv2d_g2_identity_s25_1p0.json
+│   ├── gnnv2d_g2_identity_s26_1p0.json
+│   ├── gnnv2d_g2_identity_s27_1p0.json
+│   ├── gnnv2d_g2_identity_s28_1p0.json
+│   ├── gnnv2d_g2_identity_s29_1p0.json
+│   ├── gnnv2d_g2_identity_s30_1p0.json
+│   ├── gnnv2d_g2_identity_s31_1p0.json
+│   ├── gnnv2d_g2_identity_s32_1p0.json
+│   ├── gnnv2d_g2_identity_s33_1p0.json
+│   ├── gnnv2d_g2_identity_s34_1p0.json
+│   ├── gnnv2d_g2_identity_s35_1p0.json
+│   ├── gnnv2d_g2_learned_s01_0p5.json
+│   ├── gnnv2d_g2_uniform_s01_1p0.json
+│   ├── gnnv2d_g2_uniform_s02_1p0.json
+│   ├── gnnv2d_g2_uniform_s03_1p0.json
+│   ├── gnnv2d_g2_uniform_s04_1p0.json
+│   ├── gnnv2d_g2_uniform_s05_1p0.json
+│   ├── gnnv2d_g2_uniform_s06_1p0.json
+│   ├── gnnv2d_g2_uniform_s07_1p0.json
+│   ├── gnnv2d_g2_uniform_s08_1p0.json
+│   ├── gnnv2d_g2_uniform_s09_1p0.json
+│   ├── gnnv2d_g2_uniform_s10_1p0.json
+│   ├── gnnv2d_g2_uniform_s11_1p0.json
+│   ├── gnnv2d_g2_uniform_s12_1p0.json
+│   ├── gnnv2d_g2_uniform_s13_1p0.json
+│   ├── gnnv2d_g2_uniform_s14_1p0.json
+│   ├── gnnv2d_g2_uniform_s15_1p0.json
+│   ├── gnnv2d_g2_uniform_s16_1p0.json
+│   ├── gnnv2d_g2_uniform_s17_1p0.json
+│   ├── gnnv2d_g2_uniform_s18_1p0.json
+│   ├── gnnv2d_g2_uniform_s19_1p0.json
+│   ├── gnnv2d_g2_uniform_s20_1p0.json
+│   ├── gnnv2d_g2_uniform_s21_1p0.json
+│   ├── gnnv2d_g2_uniform_s22_1p0.json
+│   ├── gnnv2d_g2_uniform_s23_1p0.json
+│   ├── gnnv2d_g2_uniform_s24_1p0.json
+│   ├── gnnv2d_g2_uniform_s25_1p0.json
+│   ├── gnnv2d_g2_uniform_s26_1p0.json
+│   ├── gnnv2d_g2_uniform_s27_1p0.json
+│   ├── gnnv2d_g2_uniform_s28_1p0.json
+│   ├── gnnv2d_g2_uniform_s29_1p0.json
+│   ├── gnnv2d_g2_uniform_s30_1p0.json
+│   ├── gnnv2d_g2_uniform_s31_1p0.json
+│   ├── gnnv2d_g2_uniform_s32_1p0.json
+│   ├── gnnv2d_g2_uniform_s33_1p0.json
+│   ├── gnnv2d_g2_uniform_s34_1p0.json
+│   ├── gnnv2d_g2_uniform_s35_1p0.json
+│   ├── gnnv2e_s01_1p0.json
+│   ├── gnnv3a_pb_s01_0p5.json
+│   ├── gnnv3a_pb_s01_1p0.json
+│   ├── gnnv3a_pb_s02_0p5.json
+│   ├── gnnv3a_pb_s02_1p0.json
+│   ├── gnnv3a_pb_s03_0p5.json
+│   ├── gnnv3a_pb_s03_1p0.json
+│   ├── gnnv3a_pb_s04_0p5.json
+│   ├── gnnv3a_pb_s04_1p0.json
+│   ├── gnnv3a_pb_s05_0p5.json
+│   ├── gnnv3a_pb_s05_1p0.json
+│   ├── gnnv3a_pb_s06_0p5.json
+│   ├── gnnv3a_pb_s06_1p0.json
+│   ├── gnnv3a_pb_s07_0p5.json
+│   ├── gnnv3a_pb_s07_1p0.json
+│   ├── gnnv3a_pb_s08_0p5.json
+│   ├── gnnv3a_pb_s08_1p0.json
+│   ├── gnnv3a_pb_s09_0p5.json
+│   ├── gnnv3a_pb_s09_1p0.json
+│   ├── gnnv3a_pb_s10_0p5.json
+│   ├── gnnv3a_pb_s10_1p0.json
+│   ├── gnnv3a_pb_s11_0p5.json
+│   ├── gnnv3a_pb_s11_1p0.json
+│   ├── gnnv3a_pb_s12_0p5.json
+│   ├── gnnv3a_pb_s12_1p0.json
+│   ├── gnnv3a_pb_s13_0p5.json
+│   ├── gnnv3a_pb_s13_1p0.json
+│   ├── gnnv3a_pb_s14_0p5.json
+│   ├── gnnv3a_pb_s14_1p0.json
+│   ├── gnnv3a_pb_s15_0p5.json
+│   ├── gnnv3a_pb_s15_1p0.json
+│   ├── gnnv3a_pb_s16_0p5.json
+│   ├── gnnv3a_pb_s16_1p0.json
+│   ├── gnnv3a_pb_s17_0p5.json
+│   ├── gnnv3a_pb_s17_1p0.json
+│   ├── gnnv3a_pb_s18_0p5.json
+│   ├── gnnv3a_pb_s18_1p0.json
+│   ├── gnnv3a_pb_s19_0p5.json
+│   ├── gnnv3a_pb_s19_1p0.json
+│   ├── gnnv3a_pb_s20_0p5.json
+│   ├── gnnv3a_pb_s20_1p0.json
+│   ├── gnnv3a_pb_s21_0p5.json
+│   ├── gnnv3a_pb_s21_1p0.json
+│   ├── gnnv3a_pb_s22_0p5.json
+│   ├── gnnv3a_pb_s22_1p0.json
+│   ├── gnnv3a_pb_s23_0p5.json
+│   ├── gnnv3a_pb_s23_1p0.json
+│   ├── gnnv3a_pb_s24_0p5.json
+│   ├── gnnv3a_pb_s24_1p0.json
+│   ├── gnnv3a_pb_s25_0p5.json
+│   ├── gnnv3a_pb_s25_1p0.json
+│   ├── gnnv3a_pb_s26_0p5.json
+│   ├── gnnv3a_pb_s26_1p0.json
+│   ├── gnnv3a_pb_s27_0p5.json
+│   ├── gnnv3a_pb_s27_1p0.json
+│   ├── gnnv3a_pb_s28_0p5.json
+│   ├── gnnv3a_pb_s28_1p0.json
+│   ├── gnnv3a_pb_s29_0p5.json
+│   ├── gnnv3a_pb_s29_1p0.json
+│   ├── gnnv3a_pb_s30_0p5.json
+│   ├── gnnv3a_pb_s30_1p0.json
+│   ├── gnnv3a_pb_s31_0p5.json
+│   ├── gnnv3a_pb_s31_1p0.json
+│   ├── gnnv3a_pb_s32_0p5.json
+│   ├── gnnv3a_pb_s32_1p0.json
+│   ├── gnnv3a_pb_s33_0p5.json
+│   ├── gnnv3a_pb_s33_1p0.json
+│   ├── gnnv3a_pb_s34_0p5.json
+│   ├── gnnv3a_pb_s34_1p0.json
+│   ├── gnnv3a_pb_s35_0p5.json
+│   ├── gnnv3a_pb_s35_1p0.json
+│   ├── gnnv3a_sh_s01_1p0.json
+│   ├── gnnv3b2_fg2_s01_1p0.json
+│   ├── gnnv3b2_fg3_s01_1p0.json
+│   ├── gnnv3b3_fg2_s01_0p5.json
+│   ├── gnnv3b3_fg2_s01_1p0.json
+│   ├── gnnv3b3_fg2_s02_0p5.json
+│   ├── gnnv3b3_fg2_s02_1p0.json
+│   ├── gnnv3b3_fg2_s03_0p5.json
+│   ├── gnnv3b3_fg2_s03_1p0.json
+│   ├── gnnv3b3_fg2_s04_0p5.json
+│   ├── gnnv3b3_fg2_s04_1p0.json
+│   ├── gnnv3b3_fg2_s05_0p5.json
+│   ├── gnnv3b3_fg2_s05_1p0.json
+│   ├── gnnv3b3_fg2_s06_0p5.json
+│   ├── gnnv3b3_fg2_s06_1p0.json
+│   ├── gnnv3b3_fg2_s07_0p5.json
+│   ├── gnnv3b3_fg2_s07_1p0.json
+│   ├── gnnv3b3_fg2_s08_0p5.json
+│   ├── gnnv3b3_fg2_s08_1p0.json
+│   ├── gnnv3b3_fg2_s09_0p5.json
+│   ├── gnnv3b3_fg2_s09_1p0.json
+│   ├── gnnv3b3_fg2_s10_0p5.json
+│   ├── gnnv3b3_fg2_s10_1p0.json
+│   ├── gnnv3b3_fg2_s11_0p5.json
+│   ├── gnnv3b3_fg2_s11_1p0.json
+│   ├── gnnv3b3_fg2_s12_0p5.json
+│   ├── gnnv3b3_fg2_s12_1p0.json
+│   ├── gnnv3b3_fg2_s13_0p5.json
+│   ├── gnnv3b3_fg2_s13_1p0.json
+│   ├── gnnv3b3_fg2_s14_0p5.json
+│   ├── gnnv3b3_fg2_s14_1p0.json
+│   ├── gnnv3b3_fg2_s15_0p5.json
+│   ├── gnnv3b3_fg2_s15_1p0.json
+│   ├── gnnv3b3_fg2_s16_0p5.json
+│   ├── gnnv3b3_fg2_s16_1p0.json
+│   ├── gnnv3b3_fg2_s17_0p5.json
+│   ├── gnnv3b3_fg2_s17_1p0.json
+│   ├── gnnv3b3_fg2_s18_0p5.json
+│   ├── gnnv3b3_fg2_s18_1p0.json
+│   ├── gnnv3b3_fg2_s19_0p5.json
+│   ├── gnnv3b3_fg2_s19_1p0.json
+│   ├── gnnv3b3_fg2_s20_0p5.json
+│   ├── gnnv3b3_fg2_s20_1p0.json
+│   ├── gnnv3b3_fg2_s21_0p5.json
+│   ├── gnnv3b3_fg2_s21_1p0.json
+│   ├── gnnv3b3_fg2_s22_0p5.json
+│   ├── gnnv3b3_fg2_s22_1p0.json
+│   ├── gnnv3b3_fg2_s23_0p5.json
+│   ├── gnnv3b3_fg2_s23_1p0.json
+│   ├── gnnv3b3_fg2_s24_0p5.json
+│   ├── gnnv3b3_fg2_s24_1p0.json
+│   ├── gnnv3b3_fg2_s25_0p5.json
+│   ├── gnnv3b3_fg2_s25_1p0.json
+│   ├── gnnv3b3_fg2_s26_0p5.json
+│   ├── gnnv3b3_fg2_s26_1p0.json
+│   ├── gnnv3b3_fg2_s27_0p5.json
+│   ├── gnnv3b3_fg2_s27_1p0.json
+│   ├── gnnv3b3_fg2_s28_0p5.json
+│   ├── gnnv3b3_fg2_s28_1p0.json
+│   ├── gnnv3b3_fg2_s29_0p5.json
+│   ├── gnnv3b3_fg2_s29_1p0.json
+│   ├── gnnv3b3_fg2_s30_0p5.json
+│   ├── gnnv3b3_fg2_s30_1p0.json
+│   ├── gnnv3b3_fg2_s31_0p5.json
+│   ├── gnnv3b3_fg2_s31_1p0.json
+│   ├── gnnv3b3_fg2_s32_0p5.json
+│   ├── gnnv3b3_fg2_s32_1p0.json
+│   ├── gnnv3b3_fg2_s33_0p5.json
+│   ├── gnnv3b3_fg2_s33_1p0.json
+│   ├── gnnv3b3_fg2_s34_0p5.json
+│   ├── gnnv3b3_fg2_s34_1p0.json
+│   ├── gnnv3b3_fg2_s35_0p5.json
+│   ├── gnnv3b3_fg2_s35_1p0.json
+│   ├── gnnv3b3_fg3_s01_0p5.json
+│   ├── gnnv3b3_fg3_s01_1p0.json
+│   ├── gnnv3b3_fg3_s02_0p5.json
+│   ├── gnnv3b3_fg3_s02_1p0.json
+│   ├── gnnv3b3_fg3_s03_0p5.json
+│   ├── gnnv3b3_fg3_s03_1p0.json
+│   ├── gnnv3b3_fg3_s04_0p5.json
+│   ├── gnnv3b3_fg3_s04_1p0.json
+│   ├── gnnv3b3_fg3_s05_0p5.json
+│   ├── gnnv3b3_fg3_s05_1p0.json
+│   ├── gnnv3b3_fg3_s06_0p5.json
+│   ├── gnnv3b3_fg3_s06_1p0.json
+│   ├── gnnv3b3_fg3_s07_0p5.json
+│   ├── gnnv3b3_fg3_s07_1p0.json
+│   ├── gnnv3b3_fg3_s08_0p5.json
+│   ├── gnnv3b3_fg3_s08_1p0.json
+│   ├── gnnv3b3_fg3_s09_0p5.json
+│   ├── gnnv3b3_fg3_s09_1p0.json
+│   ├── gnnv3b3_fg3_s10_0p5.json
+│   ├── gnnv3b3_fg3_s10_1p0.json
+│   ├── gnnv3b3_fg3_s11_0p5.json
+│   ├── gnnv3b3_fg3_s11_1p0.json
+│   ├── gnnv3b3_fg3_s12_0p5.json
+│   ├── gnnv3b3_fg3_s12_1p0.json
+│   ├── gnnv3b3_fg3_s13_0p5.json
+│   ├── gnnv3b3_fg3_s13_1p0.json
+│   ├── gnnv3b3_fg3_s14_0p5.json
+│   ├── gnnv3b3_fg3_s14_1p0.json
+│   ├── gnnv3b3_fg3_s15_0p5.json
+│   ├── gnnv3b3_fg3_s15_1p0.json
+│   ├── gnnv3b3_fg3_s16_0p5.json
+│   ├── gnnv3b3_fg3_s16_1p0.json
+│   ├── gnnv3b3_fg3_s17_0p5.json
+│   ├── gnnv3b3_fg3_s17_1p0.json
+│   ├── gnnv3b3_fg3_s18_0p5.json
+│   ├── gnnv3b3_fg3_s18_1p0.json
+│   ├── gnnv3b3_fg3_s19_0p5.json
+│   ├── gnnv3b3_fg3_s19_1p0.json
+│   ├── gnnv3b3_fg3_s20_0p5.json
+│   ├── gnnv3b3_fg3_s20_1p0.json
+│   ├── gnnv3b3_fg3_s21_0p5.json
+│   ├── gnnv3b3_fg3_s21_1p0.json
+│   ├── gnnv3b3_fg3_s22_0p5.json
+│   ├── gnnv3b3_fg3_s22_1p0.json
+│   ├── gnnv3b3_fg3_s23_0p5.json
+│   ├── gnnv3b3_fg3_s23_1p0.json
+│   ├── gnnv3b3_fg3_s24_0p5.json
+│   ├── gnnv3b3_fg3_s24_1p0.json
+│   ├── gnnv3b3_fg3_s25_0p5.json
+│   ├── gnnv3b3_fg3_s25_1p0.json
+│   ├── gnnv3b3_fg3_s26_0p5.json
+│   ├── gnnv3b3_fg3_s26_1p0.json
+│   ├── gnnv3b3_fg3_s27_0p5.json
+│   ├── gnnv3b3_fg3_s27_1p0.json
+│   ├── gnnv3b3_fg3_s28_0p5.json
+│   ├── gnnv3b3_fg3_s28_1p0.json
+│   ├── gnnv3b3_fg3_s29_0p5.json
+│   ├── gnnv3b3_fg3_s29_1p0.json
+│   ├── gnnv3b3_fg3_s30_0p5.json
+│   ├── gnnv3b3_fg3_s30_1p0.json
+│   ├── gnnv3b3_fg3_s31_0p5.json
+│   ├── gnnv3b3_fg3_s31_1p0.json
+│   ├── gnnv3b3_fg3_s32_0p5.json
+│   ├── gnnv3b3_fg3_s32_1p0.json
+│   ├── gnnv3b3_fg3_s33_0p5.json
+│   ├── gnnv3b3_fg3_s33_1p0.json
+│   ├── gnnv3b3_fg3_s34_0p5.json
+│   ├── gnnv3b3_fg3_s34_1p0.json
+│   ├── gnnv3b3_fg3_s35_0p5.json
+│   ├── gnnv3b3_fg3_s35_1p0.json
+│   ├── gnnv3b_fg2_s01_1p0.json
+│   ├── gnnv3b_fg3_s01_1p0.json
+│   ├── gnnv3c_h5_s01_0p5.json
+│   ├── gnnv3c_h5_s01_1p0.json
+│   ├── gnnv3c_h5_s02_0p5.json
+│   ├── gnnv3c_h5_s02_1p0.json
+│   ├── gnnv3c_h5_s03_0p5.json
+│   ├── gnnv3c_h5_s03_1p0.json
+│   ├── gnnv3c_h5_s04_0p5.json
+│   ├── gnnv3c_h5_s04_1p0.json
+│   ├── gnnv3c_h5_s05_0p5.json
+│   ├── gnnv3c_h5_s05_1p0.json
+│   ├── gnnv3c_h5_s06_0p5.json
+│   ├── gnnv3c_h5_s06_1p0.json
+│   ├── gnnv3c_h5_s07_0p5.json
+│   ├── gnnv3c_h5_s07_1p0.json
+│   ├── gnnv3c_h5_s08_0p5.json
+│   ├── gnnv3c_h5_s08_1p0.json
+│   ├── gnnv3c_h5_s09_0p5.json
+│   ├── gnnv3c_h5_s09_1p0.json
+│   ├── gnnv3c_h5_s10_0p5.json
+│   ├── gnnv3c_h5_s10_1p0.json
+│   ├── gnnv3c_h5_s11_0p5.json
+│   ├── gnnv3c_h5_s11_1p0.json
+│   ├── gnnv3c_h5_s12_0p5.json
+│   ├── gnnv3c_h5_s12_1p0.json
+│   ├── gnnv3c_h5_s13_0p5.json
+│   ├── gnnv3c_h5_s13_1p0.json
+│   ├── gnnv3c_h5_s14_0p5.json
+│   ├── gnnv3c_h5_s14_1p0.json
+│   ├── gnnv3c_h5_s15_0p5.json
+│   ├── gnnv3c_h5_s15_1p0.json
+│   ├── gnnv3c_h5_s16_0p5.json
+│   ├── gnnv3c_h5_s16_1p0.json
+│   ├── gnnv3c_h5_s17_0p5.json
+│   ├── gnnv3c_h5_s17_1p0.json
+│   ├── gnnv3c_h5_s18_0p5.json
+│   ├── gnnv3c_h5_s18_1p0.json
+│   ├── gnnv3c_h5_s19_0p5.json
+│   ├── gnnv3c_h5_s19_1p0.json
+│   ├── gnnv3c_h5_s20_0p5.json
+│   ├── gnnv3c_h5_s20_1p0.json
+│   ├── gnnv3c_h5_s21_0p5.json
+│   ├── gnnv3c_h5_s21_1p0.json
+│   ├── gnnv3c_h5_s22_0p5.json
+│   ├── gnnv3c_h5_s22_1p0.json
+│   ├── gnnv3c_h5_s23_0p5.json
+│   ├── gnnv3c_h5_s23_1p0.json
+│   ├── gnnv3c_h5_s24_0p5.json
+│   ├── gnnv3c_h5_s24_1p0.json
+│   ├── gnnv3c_h5_s25_0p5.json
+│   ├── gnnv3c_h5_s25_1p0.json
+│   ├── gnnv3c_h5_s26_0p5.json
+│   ├── gnnv3c_h5_s26_1p0.json
+│   ├── gnnv3c_h5_s27_0p5.json
+│   ├── gnnv3c_h5_s27_1p0.json
+│   ├── gnnv3c_h5_s28_0p5.json
+│   ├── gnnv3c_h5_s28_1p0.json
+│   ├── gnnv3c_h5_s29_0p5.json
+│   ├── gnnv3c_h5_s29_1p0.json
+│   ├── gnnv3c_h5_s30_0p5.json
+│   ├── gnnv3c_h5_s30_1p0.json
+│   ├── gnnv3c_h5_s31_0p5.json
+│   ├── gnnv3c_h5_s31_1p0.json
+│   ├── gnnv3c_h5_s32_0p5.json
+│   ├── gnnv3c_h5_s32_1p0.json
+│   ├── gnnv3c_h5_s33_0p5.json
+│   ├── gnnv3c_h5_s33_1p0.json
+│   ├── gnnv3c_h5_s34_0p5.json
+│   ├── gnnv3c_h5_s34_1p0.json
+│   ├── gnnv3c_h5_s35_0p5.json
+│   ├── gnnv3c_h5_s35_1p0.json
+│   ├── gnnv3c_ng_s01_0p5.json
+│   ├── gnnv3c_ng_s01_1p0.json
+│   ├── gnnv3c_ng_s02_0p5.json
+│   ├── gnnv3c_ng_s02_1p0.json
+│   ├── gnnv3c_ng_s03_0p5.json
+│   ├── gnnv3c_ng_s03_1p0.json
+│   ├── gnnv3c_ng_s04_0p5.json
+│   ├── gnnv3c_ng_s04_1p0.json
+│   ├── gnnv3c_ng_s05_0p5.json
+│   ├── gnnv3c_ng_s05_1p0.json
+│   ├── gnnv3c_ng_s06_0p5.json
+│   ├── gnnv3c_ng_s06_1p0.json
+│   ├── gnnv3c_ng_s07_0p5.json
+│   ├── gnnv3c_ng_s07_1p0.json
+│   ├── gnnv3c_ng_s08_0p5.json
+│   ├── gnnv3c_ng_s08_1p0.json
+│   ├── gnnv3c_ng_s09_0p5.json
+│   ├── gnnv3c_ng_s09_1p0.json
+│   ├── gnnv3c_ng_s10_0p5.json
+│   ├── gnnv3c_ng_s10_1p0.json
+│   ├── gnnv3c_ng_s11_0p5.json
+│   ├── gnnv3c_ng_s11_1p0.json
+│   ├── gnnv3c_ng_s12_0p5.json
+│   ├── gnnv3c_ng_s12_1p0.json
+│   ├── gnnv3c_ng_s13_0p5.json
+│   ├── gnnv3c_ng_s13_1p0.json
+│   ├── gnnv3c_ng_s14_0p5.json
+│   ├── gnnv3c_ng_s14_1p0.json
+│   ├── gnnv3c_ng_s15_0p5.json
+│   ├── gnnv3c_ng_s15_1p0.json
+│   ├── gnnv3c_ng_s16_0p5.json
+│   ├── gnnv3c_ng_s16_1p0.json
+│   ├── gnnv3c_ng_s17_0p5.json
+│   ├── gnnv3c_ng_s17_1p0.json
+│   ├── gnnv3c_ng_s18_0p5.json
+│   ├── gnnv3c_ng_s18_1p0.json
+│   ├── gnnv3c_ng_s19_0p5.json
+│   ├── gnnv3c_ng_s19_1p0.json
+│   ├── gnnv3c_ng_s20_0p5.json
+│   ├── gnnv3c_ng_s20_1p0.json
+│   ├── gnnv3c_ng_s21_0p5.json
+│   ├── gnnv3c_ng_s21_1p0.json
+│   ├── gnnv3c_ng_s22_0p5.json
+│   ├── gnnv3c_ng_s22_1p0.json
+│   ├── gnnv3c_ng_s23_0p5.json
+│   ├── gnnv3c_ng_s23_1p0.json
+│   ├── gnnv3c_ng_s24_0p5.json
+│   ├── gnnv3c_ng_s24_1p0.json
+│   ├── gnnv3c_ng_s25_0p5.json
+│   ├── gnnv3c_ng_s25_1p0.json
+│   ├── gnnv3c_ng_s26_0p5.json
+│   ├── gnnv3c_ng_s26_1p0.json
+│   ├── gnnv3c_ng_s27_0p5.json
+│   ├── gnnv3c_ng_s27_1p0.json
+│   ├── gnnv3c_ng_s28_0p5.json
+│   ├── gnnv3c_ng_s28_1p0.json
+│   ├── gnnv3c_ng_s29_0p5.json
+│   ├── gnnv3c_ng_s29_1p0.json
+│   ├── gnnv3c_ng_s30_0p5.json
+│   ├── gnnv3c_ng_s30_1p0.json
+│   ├── gnnv3c_ng_s31_0p5.json
+│   ├── gnnv3c_ng_s31_1p0.json
+│   ├── gnnv3c_ng_s32_0p5.json
+│   ├── gnnv3c_ng_s32_1p0.json
+│   ├── gnnv3c_ng_s33_0p5.json
+│   ├── gnnv3c_ng_s33_1p0.json
+│   ├── gnnv3c_ng_s34_0p5.json
+│   ├── gnnv3c_ng_s34_1p0.json
+│   ├── gnnv3c_ng_s35_0p5.json
+│   ├── gnnv3c_ng_s35_1p0.json
+│   ├── gnnv3c_ngh5_s01_0p5.json
+│   ├── gnnv3c_ngh5_s01_1p0.json
+│   ├── gnnv3c_ngh5_s02_0p5.json
+│   ├── gnnv3c_ngh5_s02_1p0.json
+│   ├── gnnv3c_ngh5_s03_0p5.json
+│   ├── gnnv3c_ngh5_s03_1p0.json
+│   ├── gnnv3c_ngh5_s04_0p5.json
+│   ├── gnnv3c_ngh5_s04_1p0.json
+│   ├── gnnv3c_ngh5_s05_0p5.json
+│   ├── gnnv3c_ngh5_s05_1p0.json
+│   ├── gnnv3c_ngh5_s06_0p5.json
+│   ├── gnnv3c_ngh5_s06_1p0.json
+│   ├── gnnv3c_ngh5_s07_0p5.json
+│   ├── gnnv3c_ngh5_s07_1p0.json
+│   ├── gnnv3c_ngh5_s08_0p5.json
+│   ├── gnnv3c_ngh5_s08_1p0.json
+│   ├── gnnv3c_ngh5_s09_0p5.json
+│   ├── gnnv3c_ngh5_s09_1p0.json
+│   ├── gnnv3c_ngh5_s10_0p5.json
+│   ├── gnnv3c_ngh5_s10_1p0.json
+│   ├── gnnv3c_ngh5_s11_0p5.json
+│   ├── gnnv3c_ngh5_s11_1p0.json
+│   ├── gnnv3c_ngh5_s12_0p5.json
+│   ├── gnnv3c_ngh5_s12_1p0.json
+│   ├── gnnv3c_ngh5_s13_0p5.json
+│   ├── gnnv3c_ngh5_s13_1p0.json
+│   ├── gnnv3c_ngh5_s14_0p5.json
+│   ├── gnnv3c_ngh5_s14_1p0.json
+│   ├── gnnv3c_ngh5_s15_0p5.json
+│   ├── gnnv3c_ngh5_s15_1p0.json
+│   ├── gnnv3c_ngh5_s16_0p5.json
+│   ├── gnnv3c_ngh5_s16_1p0.json
+│   ├── gnnv3c_ngh5_s17_0p5.json
+│   ├── gnnv3c_ngh5_s17_1p0.json
+│   ├── gnnv3c_ngh5_s18_0p5.json
+│   ├── gnnv3c_ngh5_s18_1p0.json
+│   ├── gnnv3c_ngh5_s19_0p5.json
+│   ├── gnnv3c_ngh5_s19_1p0.json
+│   ├── gnnv3c_ngh5_s20_0p5.json
+│   ├── gnnv3c_ngh5_s20_1p0.json
+│   ├── gnnv3c_ngh5_s21_0p5.json
+│   ├── gnnv3c_ngh5_s21_1p0.json
+│   ├── gnnv3c_ngh5_s22_0p5.json
+│   ├── gnnv3c_ngh5_s22_1p0.json
+│   ├── gnnv3c_ngh5_s23_0p5.json
+│   ├── gnnv3c_ngh5_s23_1p0.json
+│   ├── gnnv3c_ngh5_s24_0p5.json
+│   ├── gnnv3c_ngh5_s24_1p0.json
+│   ├── gnnv3c_ngh5_s25_0p5.json
+│   ├── gnnv3c_ngh5_s25_1p0.json
+│   ├── gnnv3c_ngh5_s26_0p5.json
+│   ├── gnnv3c_ngh5_s26_1p0.json
+│   ├── gnnv3c_ngh5_s27_0p5.json
+│   ├── gnnv3c_ngh5_s27_1p0.json
+│   ├── gnnv3c_ngh5_s28_0p5.json
+│   ├── gnnv3c_ngh5_s28_1p0.json
+│   ├── gnnv3c_ngh5_s29_0p5.json
+│   ├── gnnv3c_ngh5_s29_1p0.json
+│   ├── gnnv3c_ngh5_s30_0p5.json
+│   ├── gnnv3c_ngh5_s30_1p0.json
+│   ├── gnnv3c_ngh5_s31_0p5.json
+│   ├── gnnv3c_ngh5_s31_1p0.json
+│   ├── gnnv3c_ngh5_s32_0p5.json
+│   ├── gnnv3c_ngh5_s32_1p0.json
+│   ├── gnnv3c_ngh5_s33_0p5.json
+│   ├── gnnv3c_ngh5_s33_1p0.json
+│   ├── gnnv3c_ngh5_s34_0p5.json
+│   ├── gnnv3c_ngh5_s34_1p0.json
+│   ├── gnnv3c_ngh5_s35_0p5.json
+│   ├── gnnv3c_ngh5_s35_1p0.json
+│   ├── gnnv3d_fgu_s01_0p5.json
+│   ├── gnnv3d_fgu_s01_1p0.json
+│   ├── gnnv3d_fgu_s02_0p5.json
+│   ├── gnnv3d_fgu_s02_1p0.json
+│   ├── gnnv3d_fgu_s03_0p5.json
+│   ├── gnnv3d_fgu_s03_1p0.json
+│   ├── gnnv3d_fgu_s04_0p5.json
+│   ├── gnnv3d_fgu_s04_1p0.json
+│   ├── gnnv3d_fgu_s05_0p5.json
+│   ├── gnnv3d_fgu_s05_1p0.json
+│   ├── gnnv3d_fgu_s06_0p5.json
+│   ├── gnnv3d_fgu_s06_1p0.json
+│   ├── gnnv3d_fgu_s07_0p5.json
+│   ├── gnnv3d_fgu_s07_1p0.json
+│   ├── gnnv3d_fgu_s08_0p5.json
+│   ├── gnnv3d_fgu_s08_1p0.json
+│   ├── gnnv3d_fgu_s09_0p5.json
+│   ├── gnnv3d_fgu_s09_1p0.json
+│   ├── gnnv3d_fgu_s10_0p5.json
+│   ├── gnnv3d_fgu_s10_1p0.json
+│   ├── gnnv3d_fgu_s11_0p5.json
+│   ├── gnnv3d_fgu_s11_1p0.json
+│   ├── gnnv3d_fgu_s12_0p5.json
+│   ├── gnnv3d_fgu_s12_1p0.json
+│   ├── gnnv3d_fgu_s13_0p5.json
+│   ├── gnnv3d_fgu_s13_1p0.json
+│   ├── gnnv3d_fgu_s14_0p5.json
+│   ├── gnnv3d_fgu_s14_1p0.json
+│   ├── gnnv3d_fgu_s15_0p5.json
+│   ├── gnnv3d_fgu_s15_1p0.json
+│   ├── gnnv3d_fgu_s16_0p5.json
+│   ├── gnnv3d_fgu_s16_1p0.json
+│   ├── gnnv3d_fgu_s17_0p5.json
+│   ├── gnnv3d_fgu_s17_1p0.json
+│   ├── gnnv3d_fgu_s18_0p5.json
+│   ├── gnnv3d_fgu_s18_1p0.json
+│   ├── gnnv3d_fgu_s19_0p5.json
+│   ├── gnnv3d_fgu_s19_1p0.json
+│   ├── gnnv3d_fgu_s20_0p5.json
+│   ├── gnnv3d_fgu_s20_1p0.json
+│   ├── gnnv3d_fgu_s21_0p5.json
+│   ├── gnnv3d_fgu_s21_1p0.json
+│   ├── gnnv3d_fgu_s22_0p5.json
+│   ├── gnnv3d_fgu_s22_1p0.json
+│   ├── gnnv3d_fgu_s23_0p5.json
+│   ├── gnnv3d_fgu_s23_1p0.json
+│   ├── gnnv3d_fgu_s24_0p5.json
+│   ├── gnnv3d_fgu_s24_1p0.json
+│   ├── gnnv3d_fgu_s25_0p5.json
+│   ├── gnnv3d_fgu_s25_1p0.json
+│   ├── gnnv3d_fgu_s26_0p5.json
+│   ├── gnnv3d_fgu_s26_1p0.json
+│   ├── gnnv3d_fgu_s27_0p5.json
+│   ├── gnnv3d_fgu_s27_1p0.json
+│   ├── gnnv3d_fgu_s28_0p5.json
+│   ├── gnnv3d_fgu_s28_1p0.json
+│   ├── gnnv3d_fgu_s29_0p5.json
+│   ├── gnnv3d_fgu_s29_1p0.json
+│   ├── gnnv3d_fgu_s30_0p5.json
+│   ├── gnnv3d_fgu_s30_1p0.json
+│   ├── gnnv3d_fgu_s31_0p5.json
+│   ├── gnnv3d_fgu_s31_1p0.json
+│   ├── gnnv3d_fgu_s32_0p5.json
+│   ├── gnnv3d_fgu_s32_1p0.json
+│   ├── gnnv3d_fgu_s33_0p5.json
+│   ├── gnnv3d_fgu_s33_1p0.json
+│   ├── gnnv3d_fgu_s34_0p5.json
+│   ├── gnnv3d_fgu_s34_1p0.json
+│   ├── gnnv3d_fgu_s35_0p5.json
+│   ├── gnnv3d_fgu_s35_1p0.json
+│   ├── gnnv3e_cm_s01_0p5.json
+│   ├── gnnv3e_cm_s01_1p0.json
+│   ├── gnnv3e_cm_s02_0p5.json
+│   ├── gnnv3e_cm_s02_1p0.json
+│   ├── gnnv3e_cm_s03_0p5.json
+│   ├── gnnv3e_cm_s03_1p0.json
+│   ├── gnnv3e_cm_s04_0p5.json
+│   ├── gnnv3e_cm_s04_1p0.json
+│   ├── gnnv3e_cm_s05_0p5.json
+│   ├── gnnv3e_cm_s05_1p0.json
+│   ├── gnnv3e_cm_s06_0p5.json
+│   ├── gnnv3e_cm_s06_1p0.json
+│   ├── gnnv3e_cm_s07_0p5.json
+│   ├── gnnv3e_cm_s07_1p0.json
+│   ├── gnnv3e_cm_s08_0p5.json
+│   ├── gnnv3e_cm_s08_1p0.json
+│   ├── gnnv3e_cm_s09_0p5.json
+│   ├── gnnv3e_cm_s09_1p0.json
+│   ├── gnnv3e_cm_s10_0p5.json
+│   ├── gnnv3e_cm_s10_1p0.json
+│   ├── gnnv3e_cm_s11_0p5.json
+│   ├── gnnv3e_cm_s11_1p0.json
+│   ├── gnnv3e_cm_s12_0p5.json
+│   ├── gnnv3e_cm_s12_1p0.json
+│   ├── gnnv3e_cm_s13_0p5.json
+│   ├── gnnv3e_cm_s13_1p0.json
+│   ├── gnnv3e_cm_s14_0p5.json
+│   ├── gnnv3e_cm_s14_1p0.json
+│   ├── gnnv3e_cm_s15_0p5.json
+│   ├── gnnv3e_cm_s15_1p0.json
+│   ├── gnnv3e_cm_s16_0p5.json
+│   ├── gnnv3e_cm_s16_1p0.json
+│   ├── gnnv3e_cm_s17_0p5.json
+│   ├── gnnv3e_cm_s17_1p0.json
+│   ├── gnnv3e_cm_s18_0p5.json
+│   ├── gnnv3e_cm_s18_1p0.json
+│   ├── gnnv3e_cm_s19_0p5.json
+│   ├── gnnv3e_cm_s19_1p0.json
+│   ├── gnnv3e_cm_s20_0p5.json
+│   ├── gnnv3e_cm_s20_1p0.json
+│   ├── gnnv3e_cm_s21_0p5.json
+│   ├── gnnv3e_cm_s21_1p0.json
+│   ├── gnnv3e_cm_s22_0p5.json
+│   ├── gnnv3e_cm_s22_1p0.json
+│   ├── gnnv3e_cm_s23_0p5.json
+│   ├── gnnv3e_cm_s23_1p0.json
+│   ├── gnnv3e_cm_s24_0p5.json
+│   ├── gnnv3e_cm_s24_1p0.json
+│   ├── gnnv3e_cm_s25_0p5.json
+│   ├── gnnv3e_cm_s25_1p0.json
+│   ├── gnnv3e_cm_s26_0p5.json
+│   ├── gnnv3e_cm_s26_1p0.json
+│   ├── gnnv3e_cm_s27_0p5.json
+│   ├── gnnv3e_cm_s27_1p0.json
+│   ├── gnnv3e_cm_s28_0p5.json
+│   ├── gnnv3e_cm_s28_1p0.json
+│   ├── gnnv3e_cm_s29_0p5.json
+│   ├── gnnv3e_cm_s29_1p0.json
+│   ├── gnnv3e_cm_s30_0p5.json
+│   ├── gnnv3e_cm_s30_1p0.json
+│   ├── gnnv3e_cm_s31_0p5.json
+│   ├── gnnv3e_cm_s31_1p0.json
+│   ├── gnnv3e_cm_s32_0p5.json
+│   ├── gnnv3e_cm_s32_1p0.json
+│   ├── gnnv3e_cm_s33_0p5.json
+│   ├── gnnv3e_cm_s33_1p0.json
+│   ├── gnnv3e_cm_s34_0p5.json
+│   ├── gnnv3e_cm_s34_1p0.json
+│   ├── gnnv3e_cm_s35_0p5.json
+│   ├── gnnv3e_cm_s35_1p0.json
+│   ├── gnnv3e_lr_s01_0p5.json
+│   ├── gnnv3e_lr_s01_1p0.json
+│   ├── gnnv3e_lr_s02_0p5.json
+│   ├── gnnv3e_lr_s02_1p0.json
+│   ├── gnnv3e_lr_s03_0p5.json
+│   ├── gnnv3e_lr_s03_1p0.json
+│   ├── gnnv3e_lr_s04_0p5.json
+│   ├── gnnv3e_lr_s04_1p0.json
+│   ├── gnnv3e_lr_s05_0p5.json
+│   ├── gnnv3e_lr_s05_1p0.json
+│   ├── gnnv3e_lr_s06_0p5.json
+│   ├── gnnv3e_lr_s06_1p0.json
+│   ├── gnnv3e_lr_s07_0p5.json
+│   ├── gnnv3e_lr_s07_1p0.json
+│   ├── gnnv3e_lr_s08_0p5.json
+│   ├── gnnv3e_lr_s08_1p0.json
+│   ├── gnnv3e_lr_s09_0p5.json
+│   ├── gnnv3e_lr_s09_1p0.json
+│   ├── gnnv3e_lr_s10_0p5.json
+│   ├── gnnv3e_lr_s10_1p0.json
+│   ├── gnnv3e_lr_s11_0p5.json
+│   ├── gnnv3e_lr_s11_1p0.json
+│   ├── gnnv3e_lr_s12_0p5.json
+│   ├── gnnv3e_lr_s12_1p0.json
+│   ├── gnnv3e_lr_s13_0p5.json
+│   ├── gnnv3e_lr_s13_1p0.json
+│   ├── gnnv3e_lr_s14_0p5.json
+│   ├── gnnv3e_lr_s14_1p0.json
+│   ├── gnnv3e_lr_s15_0p5.json
+│   ├── gnnv3e_lr_s15_1p0.json
+│   ├── gnnv3e_lr_s16_0p5.json
+│   ├── gnnv3e_lr_s16_1p0.json
+│   ├── gnnv3e_lr_s17_0p5.json
+│   ├── gnnv3e_lr_s17_1p0.json
+│   ├── gnnv3e_lr_s18_0p5.json
+│   ├── gnnv3e_lr_s18_1p0.json
+│   ├── gnnv3e_lr_s19_0p5.json
+│   ├── gnnv3e_lr_s19_1p0.json
+│   ├── gnnv3e_lr_s20_0p5.json
+│   ├── gnnv3e_lr_s20_1p0.json
+│   ├── gnnv3e_lr_s21_0p5.json
+│   ├── gnnv3e_lr_s21_1p0.json
+│   ├── gnnv3e_lr_s22_0p5.json
+│   ├── gnnv3e_lr_s22_1p0.json
+│   ├── gnnv3e_lr_s23_0p5.json
+│   ├── gnnv3e_lr_s23_1p0.json
+│   ├── gnnv3e_lr_s24_0p5.json
+│   ├── gnnv3e_lr_s24_1p0.json
+│   ├── gnnv3e_lr_s25_0p5.json
+│   ├── gnnv3e_lr_s25_1p0.json
+│   ├── gnnv3e_lr_s26_0p5.json
+│   ├── gnnv3e_lr_s26_1p0.json
+│   ├── gnnv3e_lr_s27_0p5.json
+│   ├── gnnv3e_lr_s27_1p0.json
+│   ├── gnnv3e_lr_s28_0p5.json
+│   ├── gnnv3e_lr_s28_1p0.json
+│   ├── gnnv3e_lr_s29_0p5.json
+│   ├── gnnv3e_lr_s29_1p0.json
+│   ├── gnnv3e_lr_s30_0p5.json
+│   ├── gnnv3e_lr_s30_1p0.json
+│   ├── gnnv3e_lr_s31_0p5.json
+│   ├── gnnv3e_lr_s31_1p0.json
+│   ├── gnnv3e_lr_s32_0p5.json
+│   ├── gnnv3e_lr_s32_1p0.json
+│   ├── gnnv3e_lr_s33_0p5.json
+│   ├── gnnv3e_lr_s33_1p0.json
+│   ├── gnnv3e_lr_s34_0p5.json
+│   ├── gnnv3e_lr_s34_1p0.json
+│   ├── gnnv3e_lr_s35_0p5.json
+│   ├── gnnv3e_lr_s35_1p0.json
+│   ├── gnnv3g_dense19_s01_0p5.json
+│   ├── gnnv3g_dense19_s01_1p0.json
+│   ├── gnnv3g_dense19_s02_0p5.json
+│   ├── gnnv3g_dense19_s02_1p0.json
+│   ├── gnnv3g_dense19_s03_0p5.json
+│   ├── gnnv3g_dense19_s03_1p0.json
+│   ├── gnnv3g_dense19_s04_0p5.json
+│   ├── gnnv3g_dense19_s04_1p0.json
+│   ├── gnnv3g_dense19_s05_0p5.json
+│   ├── gnnv3g_dense19_s05_1p0.json
+│   ├── gnnv3g_dense19_s06_0p5.json
+│   ├── gnnv3g_dense19_s06_1p0.json
+│   ├── gnnv3g_dense19_s07_0p5.json
+│   ├── gnnv3g_dense19_s07_1p0.json
+│   ├── gnnv3g_dense19_s08_0p5.json
+│   ├── gnnv3g_dense19_s08_1p0.json
+│   ├── gnnv3g_dense19_s09_0p5.json
+│   ├── gnnv3g_dense19_s09_1p0.json
+│   ├── gnnv3g_dense19_s10_0p5.json
+│   ├── gnnv3g_dense19_s10_1p0.json
+│   ├── gnnv3g_dense19_s11_0p5.json
+│   ├── gnnv3g_dense19_s11_1p0.json
+│   ├── gnnv3g_dense19_s12_0p5.json
+│   ├── gnnv3g_dense19_s12_1p0.json
+│   ├── gnnv3g_dense19_s13_0p5.json
+│   ├── gnnv3g_dense19_s13_1p0.json
+│   ├── gnnv3g_dense19_s14_0p5.json
+│   ├── gnnv3g_dense19_s14_1p0.json
+│   ├── gnnv3g_dense19_s15_0p5.json
+│   ├── gnnv3g_dense19_s15_1p0.json
+│   ├── gnnv3g_dense19_s16_0p5.json
+│   ├── gnnv3g_dense19_s16_1p0.json
+│   ├── gnnv3g_dense19_s17_0p5.json
+│   ├── gnnv3g_dense19_s17_1p0.json
+│   ├── gnnv3g_dense19_s18_0p5.json
+│   ├── gnnv3g_dense19_s18_1p0.json
+│   ├── gnnv3g_dense19_s19_0p5.json
+│   ├── gnnv3g_dense19_s19_1p0.json
+│   ├── gnnv3g_dense19_s20_0p5.json
+│   ├── gnnv3g_dense19_s20_1p0.json
+│   ├── gnnv3g_dense19_s21_0p5.json
+│   ├── gnnv3g_dense19_s21_1p0.json
+│   ├── gnnv3g_dense19_s22_0p5.json
+│   ├── gnnv3g_dense19_s22_1p0.json
+│   ├── gnnv3g_dense19_s23_0p5.json
+│   ├── gnnv3g_dense19_s23_1p0.json
+│   ├── gnnv3g_dense19_s24_0p5.json
+│   ├── gnnv3g_dense19_s24_1p0.json
+│   ├── gnnv3g_dense19_s25_0p5.json
+│   ├── gnnv3g_dense19_s25_1p0.json
+│   ├── gnnv3g_dense19_s26_0p5.json
+│   ├── gnnv3g_dense19_s26_1p0.json
+│   ├── gnnv3g_dense19_s27_0p5.json
+│   ├── gnnv3g_dense19_s27_1p0.json
+│   ├── gnnv3g_dense19_s28_0p5.json
+│   ├── gnnv3g_dense19_s28_1p0.json
+│   ├── gnnv3g_dense19_s29_0p5.json
+│   ├── gnnv3g_dense19_s29_1p0.json
+│   ├── gnnv3g_dense19_s30_0p5.json
+│   ├── gnnv3g_dense19_s30_1p0.json
+│   ├── gnnv3g_dense19_s31_0p5.json
+│   ├── gnnv3g_dense19_s31_1p0.json
+│   ├── gnnv3g_dense19_s32_0p5.json
+│   ├── gnnv3g_dense19_s32_1p0.json
+│   ├── gnnv3g_dense19_s33_0p5.json
+│   ├── gnnv3g_dense19_s33_1p0.json
+│   ├── gnnv3g_dense19_s34_0p5.json
+│   ├── gnnv3g_dense19_s34_1p0.json
+│   ├── gnnv3g_dense19_s35_0p5.json
+│   ├── gnnv3g_dense19_s35_1p0.json
+│   ├── gnnv3g_dense64_s01_0p5.json
+│   ├── gnnv3g_dense64_s02_0p5.json
+│   ├── gnnv3g_dense64_s03_0p5.json
+│   ├── gnnv3g_dense64_s04_0p5.json
+│   ├── gnnv3g_dense64_s05_0p5.json
+│   ├── gnnv3g_dense64_s06_0p5.json
+│   ├── gnnv3g_dense64_s07_0p5.json
+│   ├── gnnv3g_dense64_s08_0p5.json
+│   ├── gnnv3g_dense64_s09_0p5.json
+│   ├── gnnv3g_dense64_s10_0p5.json
+│   ├── gnnv3g_dense64_s11_0p5.json
+│   ├── gnnv3g_dense64_s12_0p5.json
+│   ├── gnnv3g_dense64_s13_0p5.json
+│   ├── gnnv3g_dense64_s14_0p5.json
+│   ├── gnnv3g_dense64_s15_0p5.json
+│   ├── gnnv3g_dense64_s16_0p5.json
+│   ├── gnnv3g_dense64_s17_0p5.json
+│   ├── gnnv3g_dense64_s18_0p5.json
+│   ├── gnnv3g_dense64_s19_0p5.json
+│   ├── gnnv3g_dense64_s20_0p5.json
+│   ├── gnnv3g_dense64_s21_0p5.json
+│   ├── gnnv3g_dense64_s22_0p5.json
+│   ├── gnnv3g_dense64_s23_0p5.json
+│   ├── gnnv3g_dense64_s24_0p5.json
+│   ├── gnnv3g_dense64_s25_0p5.json
+│   ├── gnnv3g_dense64_s26_0p5.json
+│   ├── gnnv3g_dense64_s27_0p5.json
+│   ├── gnnv3g_dense64_s28_0p5.json
+│   ├── gnnv3g_dense64_s29_0p5.json
+│   ├── gnnv3g_dense64_s30_0p5.json
+│   ├── gnnv3g_dense64_s31_0p5.json
+│   ├── gnnv3g_dense64_s32_0p5.json
+│   ├── gnnv3g_dense64_s33_0p5.json
+│   ├── gnnv3g_dense64_s34_0p5.json
+│   ├── gnnv3g_dense64_s35_0p5.json
+│   ├── gnnv3g_knn19_s01_0p5.json
+│   ├── gnnv3g_knn19_s01_1p0.json
+│   ├── gnnv3g_knn19_s02_0p5.json
+│   ├── gnnv3g_knn19_s02_1p0.json
+│   ├── gnnv3g_knn19_s03_0p5.json
+│   ├── gnnv3g_knn19_s03_1p0.json
+│   ├── gnnv3g_knn19_s04_0p5.json
+│   ├── gnnv3g_knn19_s04_1p0.json
+│   ├── gnnv3g_knn19_s05_0p5.json
+│   ├── gnnv3g_knn19_s05_1p0.json
+│   ├── gnnv3g_knn19_s06_0p5.json
+│   ├── gnnv3g_knn19_s06_1p0.json
+│   ├── gnnv3g_knn19_s07_0p5.json
+│   ├── gnnv3g_knn19_s07_1p0.json
+│   ├── gnnv3g_knn19_s08_0p5.json
+│   ├── gnnv3g_knn19_s08_1p0.json
+│   ├── gnnv3g_knn19_s09_0p5.json
+│   ├── gnnv3g_knn19_s09_1p0.json
+│   ├── gnnv3g_knn19_s10_0p5.json
+│   ├── gnnv3g_knn19_s10_1p0.json
+│   ├── gnnv3g_knn19_s11_0p5.json
+│   ├── gnnv3g_knn19_s11_1p0.json
+│   ├── gnnv3g_knn19_s12_0p5.json
+│   ├── gnnv3g_knn19_s12_1p0.json
+│   ├── gnnv3g_knn19_s13_0p5.json
+│   ├── gnnv3g_knn19_s13_1p0.json
+│   ├── gnnv3g_knn19_s14_0p5.json
+│   ├── gnnv3g_knn19_s14_1p0.json
+│   ├── gnnv3g_knn19_s15_0p5.json
+│   ├── gnnv3g_knn19_s15_1p0.json
+│   ├── gnnv3g_knn19_s16_0p5.json
+│   ├── gnnv3g_knn19_s16_1p0.json
+│   ├── gnnv3g_knn19_s17_0p5.json
+│   ├── gnnv3g_knn19_s17_1p0.json
+│   ├── gnnv3g_knn19_s18_0p5.json
+│   ├── gnnv3g_knn19_s18_1p0.json
+│   ├── gnnv3g_knn19_s19_0p5.json
+│   ├── gnnv3g_knn19_s19_1p0.json
+│   ├── gnnv3g_knn19_s20_0p5.json
+│   ├── gnnv3g_knn19_s20_1p0.json
+│   ├── gnnv3g_knn19_s21_0p5.json
+│   ├── gnnv3g_knn19_s21_1p0.json
+│   ├── gnnv3g_knn19_s22_0p5.json
+│   ├── gnnv3g_knn19_s22_1p0.json
+│   ├── gnnv3g_knn19_s23_0p5.json
+│   ├── gnnv3g_knn19_s23_1p0.json
+│   ├── gnnv3g_knn19_s24_0p5.json
+│   ├── gnnv3g_knn19_s24_1p0.json
+│   ├── gnnv3g_knn19_s25_0p5.json
+│   ├── gnnv3g_knn19_s25_1p0.json
+│   ├── gnnv3g_knn19_s26_0p5.json
+│   ├── gnnv3g_knn19_s26_1p0.json
+│   ├── gnnv3g_knn19_s27_0p5.json
+│   ├── gnnv3g_knn19_s27_1p0.json
+│   ├── gnnv3g_knn19_s28_0p5.json
+│   ├── gnnv3g_knn19_s28_1p0.json
+│   ├── gnnv3g_knn19_s29_0p5.json
+│   ├── gnnv3g_knn19_s29_1p0.json
+│   ├── gnnv3g_knn19_s30_0p5.json
+│   ├── gnnv3g_knn19_s30_1p0.json
+│   ├── gnnv3g_knn19_s31_0p5.json
+│   ├── gnnv3g_knn19_s31_1p0.json
+│   ├── gnnv3g_knn19_s32_0p5.json
+│   ├── gnnv3g_knn19_s32_1p0.json
+│   ├── gnnv3g_knn19_s33_0p5.json
+│   ├── gnnv3g_knn19_s33_1p0.json
+│   ├── gnnv3g_knn19_s34_0p5.json
+│   ├── gnnv3g_knn19_s34_1p0.json
+│   ├── gnnv3g_knn19_s35_0p5.json
+│   ├── gnnv3g_knn19_s35_1p0.json
+│   ├── gnnv3g_knn64_s01_0p5.json
+│   ├── gnnv3g_knn64_s02_0p5.json
+│   ├── gnnv3g_knn64_s03_0p5.json
+│   ├── gnnv3g_knn64_s04_0p5.json
+│   ├── gnnv3g_knn64_s05_0p5.json
+│   ├── gnnv3g_knn64_s06_0p5.json
+│   ├── gnnv3g_knn64_s07_0p5.json
+│   ├── gnnv3g_knn64_s08_0p5.json
+│   ├── gnnv3g_knn64_s09_0p5.json
+│   ├── gnnv3g_knn64_s10_0p5.json
+│   ├── gnnv3g_knn64_s11_0p5.json
+│   ├── gnnv3g_knn64_s12_0p5.json
+│   ├── gnnv3g_knn64_s13_0p5.json
+│   ├── gnnv3g_knn64_s14_0p5.json
+│   ├── gnnv3g_knn64_s15_0p5.json
+│   ├── gnnv3g_knn64_s16_0p5.json
+│   ├── gnnv3g_knn64_s17_0p5.json
+│   ├── gnnv3g_knn64_s18_0p5.json
+│   ├── gnnv3g_knn64_s19_0p5.json
+│   ├── gnnv3g_knn64_s20_0p5.json
+│   ├── gnnv3g_knn64_s21_0p5.json
+│   ├── gnnv3g_knn64_s22_0p5.json
+│   ├── gnnv3g_knn64_s23_0p5.json
+│   ├── gnnv3g_knn64_s24_0p5.json
+│   ├── gnnv3g_knn64_s25_0p5.json
+│   ├── gnnv3g_knn64_s26_0p5.json
+│   ├── gnnv3g_knn64_s27_0p5.json
+│   ├── gnnv3g_knn64_s28_0p5.json
+│   ├── gnnv3g_knn64_s29_0p5.json
+│   ├── gnnv3g_knn64_s30_0p5.json
+│   ├── gnnv3g_knn64_s31_0p5.json
+│   ├── gnnv3g_knn64_s32_0p5.json
+│   ├── gnnv3g_knn64_s33_0p5.json
+│   ├── gnnv3g_knn64_s34_0p5.json
+│   ├── gnnv3g_knn64_s35_0p5.json
+│   ├── gnnv3g_knn9_s01_0p5.json
+│   ├── gnnv3g_knn9_s01_1p0.json
+│   ├── gnnv3g_knn9_s02_0p5.json
+│   ├── gnnv3g_knn9_s02_1p0.json
+│   ├── gnnv3g_knn9_s03_0p5.json
+│   ├── gnnv3g_knn9_s03_1p0.json
+│   ├── gnnv3g_knn9_s04_0p5.json
+│   ├── gnnv3g_knn9_s04_1p0.json
+│   ├── gnnv3g_knn9_s05_0p5.json
+│   ├── gnnv3g_knn9_s05_1p0.json
+│   ├── gnnv3g_knn9_s06_0p5.json
+│   ├── gnnv3g_knn9_s06_1p0.json
+│   ├── gnnv3g_knn9_s07_0p5.json
+│   ├── gnnv3g_knn9_s07_1p0.json
+│   ├── gnnv3g_knn9_s08_0p5.json
+│   ├── gnnv3g_knn9_s08_1p0.json
+│   ├── gnnv3g_knn9_s09_0p5.json
+│   ├── gnnv3g_knn9_s09_1p0.json
+│   ├── gnnv3g_knn9_s10_0p5.json
+│   ├── gnnv3g_knn9_s10_1p0.json
+│   ├── gnnv3g_knn9_s11_0p5.json
+│   ├── gnnv3g_knn9_s11_1p0.json
+│   ├── gnnv3g_knn9_s12_0p5.json
+│   ├── gnnv3g_knn9_s12_1p0.json
+│   ├── gnnv3g_knn9_s13_0p5.json
+│   ├── gnnv3g_knn9_s13_1p0.json
+│   ├── gnnv3g_knn9_s14_0p5.json
+│   ├── gnnv3g_knn9_s14_1p0.json
+│   ├── gnnv3g_knn9_s15_0p5.json
+│   ├── gnnv3g_knn9_s15_1p0.json
+│   ├── gnnv3g_knn9_s16_0p5.json
+│   ├── gnnv3g_knn9_s16_1p0.json
+│   ├── gnnv3g_knn9_s17_0p5.json
+│   ├── gnnv3g_knn9_s17_1p0.json
+│   ├── gnnv3g_knn9_s18_0p5.json
+│   ├── gnnv3g_knn9_s18_1p0.json
+│   ├── gnnv3g_knn9_s19_0p5.json
+│   ├── gnnv3g_knn9_s19_1p0.json
+│   ├── gnnv3g_knn9_s20_0p5.json
+│   ├── gnnv3g_knn9_s20_1p0.json
+│   ├── gnnv3g_knn9_s21_0p5.json
+│   ├── gnnv3g_knn9_s21_1p0.json
+│   ├── gnnv3g_knn9_s22_0p5.json
+│   ├── gnnv3g_knn9_s22_1p0.json
+│   ├── gnnv3g_knn9_s23_0p5.json
+│   ├── gnnv3g_knn9_s23_1p0.json
+│   ├── gnnv3g_knn9_s24_0p5.json
+│   ├── gnnv3g_knn9_s24_1p0.json
+│   ├── gnnv3g_knn9_s25_0p5.json
+│   ├── gnnv3g_knn9_s25_1p0.json
+│   ├── gnnv3g_knn9_s26_0p5.json
+│   ├── gnnv3g_knn9_s26_1p0.json
+│   ├── gnnv3g_knn9_s27_0p5.json
+│   ├── gnnv3g_knn9_s27_1p0.json
+│   ├── gnnv3g_knn9_s28_0p5.json
+│   ├── gnnv3g_knn9_s28_1p0.json
+│   ├── gnnv3g_knn9_s29_0p5.json
+│   ├── gnnv3g_knn9_s29_1p0.json
+│   ├── gnnv3g_knn9_s30_0p5.json
+│   ├── gnnv3g_knn9_s30_1p0.json
+│   ├── gnnv3g_knn9_s31_0p5.json
+│   ├── gnnv3g_knn9_s31_1p0.json
+│   ├── gnnv3g_knn9_s32_0p5.json
+│   ├── gnnv3g_knn9_s32_1p0.json
+│   ├── gnnv3g_knn9_s33_0p5.json
+│   ├── gnnv3g_knn9_s33_1p0.json
+│   ├── gnnv3g_knn9_s34_0p5.json
+│   ├── gnnv3g_knn9_s34_1p0.json
+│   ├── gnnv3g_knn9_s35_0p5.json
+│   ├── gnnv3g_knn9_s35_1p0.json
+│   ├── gnnv3h_fga_s01_0p5.json
+│   ├── gnnv3h_fga_s01_1p0.json
+│   ├── gnnv3h_fga_s02_0p5.json
+│   ├── gnnv3h_fga_s02_1p0.json
+│   ├── gnnv3h_fga_s03_0p5.json
+│   ├── gnnv3h_fga_s03_1p0.json
+│   ├── gnnv3h_fga_s04_0p5.json
+│   ├── gnnv3h_fga_s04_1p0.json
+│   ├── gnnv3h_fga_s05_0p5.json
+│   ├── gnnv3h_fga_s05_1p0.json
+│   ├── gnnv3h_fga_s06_0p5.json
+│   ├── gnnv3h_fga_s06_1p0.json
+│   ├── gnnv3h_fga_s07_0p5.json
+│   ├── gnnv3h_fga_s07_1p0.json
+│   ├── gnnv3h_fga_s08_0p5.json
+│   ├── gnnv3h_fga_s08_1p0.json
+│   ├── gnnv3h_fga_s09_0p5.json
+│   ├── gnnv3h_fga_s09_1p0.json
+│   ├── gnnv3h_fga_s10_0p5.json
+│   ├── gnnv3h_fga_s10_1p0.json
+│   ├── gnnv3h_fga_s11_0p5.json
+│   ├── gnnv3h_fga_s11_1p0.json
+│   ├── gnnv3h_fga_s12_0p5.json
+│   ├── gnnv3h_fga_s12_1p0.json
+│   ├── gnnv3h_fga_s13_0p5.json
+│   ├── gnnv3h_fga_s13_1p0.json
+│   ├── gnnv3h_fga_s14_0p5.json
+│   ├── gnnv3h_fga_s14_1p0.json
+│   ├── gnnv3h_fga_s15_0p5.json
+│   ├── gnnv3h_fga_s15_1p0.json
+│   ├── gnnv3h_fga_s16_0p5.json
+│   ├── gnnv3h_fga_s16_1p0.json
+│   ├── gnnv3h_fga_s17_0p5.json
+│   ├── gnnv3h_fga_s17_1p0.json
+│   ├── gnnv3h_fga_s18_0p5.json
+│   ├── gnnv3h_fga_s18_1p0.json
+│   ├── gnnv3h_fga_s19_0p5.json
+│   ├── gnnv3h_fga_s19_1p0.json
+│   ├── gnnv3h_fga_s20_0p5.json
+│   ├── gnnv3h_fga_s20_1p0.json
+│   ├── gnnv3h_fga_s21_0p5.json
+│   ├── gnnv3h_fga_s21_1p0.json
+│   ├── gnnv3h_fga_s22_0p5.json
+│   ├── gnnv3h_fga_s22_1p0.json
+│   ├── gnnv3h_fga_s23_0p5.json
+│   ├── gnnv3h_fga_s23_1p0.json
+│   ├── gnnv3h_fga_s24_0p5.json
+│   ├── gnnv3h_fga_s24_1p0.json
+│   ├── gnnv3h_fga_s25_0p5.json
+│   ├── gnnv3h_fga_s25_1p0.json
+│   ├── gnnv3h_fga_s26_0p5.json
+│   ├── gnnv3h_fga_s26_1p0.json
+│   ├── gnnv3h_fga_s27_0p5.json
+│   ├── gnnv3h_fga_s27_1p0.json
+│   ├── gnnv3h_fga_s28_0p5.json
+│   ├── gnnv3h_fga_s28_1p0.json
+│   ├── gnnv3h_fga_s29_0p5.json
+│   ├── gnnv3h_fga_s29_1p0.json
+│   ├── gnnv3h_fga_s30_0p5.json
+│   ├── gnnv3h_fga_s30_1p0.json
+│   ├── gnnv3h_fga_s31_0p5.json
+│   ├── gnnv3h_fga_s31_1p0.json
+│   ├── gnnv3h_fga_s32_0p5.json
+│   ├── gnnv3h_fga_s32_1p0.json
+│   ├── gnnv3h_fga_s33_0p5.json
+│   ├── gnnv3h_fga_s33_1p0.json
+│   ├── gnnv3h_fga_s34_0p5.json
+│   ├── gnnv3h_fga_s34_1p0.json
+│   ├── gnnv3h_fga_s35_0p5.json
+│   ├── gnnv3h_fga_s35_1p0.json
+│   ├── gnnv3i_wide19_s01_0p5.json
+│   ├── gnnv3i_wide19_s01_1p0.json
+│   ├── gnnv3i_wide19_s02_0p5.json
+│   ├── gnnv3i_wide19_s02_1p0.json
+│   ├── gnnv3i_wide19_s03_0p5.json
+│   ├── gnnv3i_wide19_s03_1p0.json
+│   ├── gnnv3i_wide19_s04_0p5.json
+│   ├── gnnv3i_wide19_s04_1p0.json
+│   ├── gnnv3i_wide19_s05_0p5.json
+│   ├── gnnv3i_wide19_s05_1p0.json
+│   ├── gnnv3i_wide19_s06_0p5.json
+│   ├── gnnv3i_wide19_s06_1p0.json
+│   ├── gnnv3i_wide19_s07_0p5.json
+│   ├── gnnv3i_wide19_s07_1p0.json
+│   ├── gnnv3i_wide19_s08_0p5.json
+│   ├── gnnv3i_wide19_s08_1p0.json
+│   ├── gnnv3i_wide19_s09_0p5.json
+│   ├── gnnv3i_wide19_s09_1p0.json
+│   ├── gnnv3i_wide19_s10_0p5.json
+│   ├── gnnv3i_wide19_s10_1p0.json
+│   ├── gnnv3i_wide19_s11_0p5.json
+│   ├── gnnv3i_wide19_s11_1p0.json
+│   ├── gnnv3i_wide19_s12_0p5.json
+│   ├── gnnv3i_wide19_s12_1p0.json
+│   ├── gnnv3i_wide19_s13_0p5.json
+│   ├── gnnv3i_wide19_s13_1p0.json
+│   ├── gnnv3i_wide19_s14_0p5.json
+│   ├── gnnv3i_wide19_s14_1p0.json
+│   ├── gnnv3i_wide19_s15_0p5.json
+│   ├── gnnv3i_wide19_s15_1p0.json
+│   ├── gnnv3i_wide19_s16_0p5.json
+│   ├── gnnv3i_wide19_s16_1p0.json
+│   ├── gnnv3i_wide19_s17_0p5.json
+│   ├── gnnv3i_wide19_s17_1p0.json
+│   ├── gnnv3i_wide19_s18_0p5.json
+│   ├── gnnv3i_wide19_s18_1p0.json
+│   ├── gnnv3i_wide19_s19_0p5.json
+│   ├── gnnv3i_wide19_s19_1p0.json
+│   ├── gnnv3i_wide19_s20_0p5.json
+│   ├── gnnv3i_wide19_s20_1p0.json
+│   ├── gnnv3i_wide19_s21_0p5.json
+│   ├── gnnv3i_wide19_s21_1p0.json
+│   ├── gnnv3i_wide19_s22_0p5.json
+│   ├── gnnv3i_wide19_s22_1p0.json
+│   ├── gnnv3i_wide19_s23_0p5.json
+│   ├── gnnv3i_wide19_s23_1p0.json
+│   ├── gnnv3i_wide19_s24_0p5.json
+│   ├── gnnv3i_wide19_s24_1p0.json
+│   ├── gnnv3i_wide19_s25_0p5.json
+│   ├── gnnv3i_wide19_s25_1p0.json
+│   ├── gnnv3i_wide19_s26_0p5.json
+│   ├── gnnv3i_wide19_s26_1p0.json
+│   ├── gnnv3i_wide19_s27_0p5.json
+│   ├── gnnv3i_wide19_s27_1p0.json
+│   ├── gnnv3i_wide19_s28_0p5.json
+│   ├── gnnv3i_wide19_s28_1p0.json
+│   ├── gnnv3i_wide19_s29_0p5.json
+│   ├── gnnv3i_wide19_s29_1p0.json
+│   ├── gnnv3i_wide19_s30_0p5.json
+│   ├── gnnv3i_wide19_s30_1p0.json
+│   ├── gnnv3i_wide19_s31_0p5.json
+│   ├── gnnv3i_wide19_s31_1p0.json
+│   ├── gnnv3i_wide19_s32_0p5.json
+│   ├── gnnv3i_wide19_s32_1p0.json
+│   ├── gnnv3i_wide19_s33_0p5.json
+│   ├── gnnv3i_wide19_s33_1p0.json
+│   ├── gnnv3i_wide19_s34_0p5.json
+│   ├── gnnv3i_wide19_s34_1p0.json
+│   ├── gnnv3i_wide19_s35_0p5.json
+│   ├── gnnv3i_wide19_s35_1p0.json
+│   ├── gnnv3j_aw19_s01_0p5.json
+│   ├── gnnv3j_aw19_s01_1p0.json
+│   ├── gnnv3j_aw19_s02_0p5.json
+│   ├── gnnv3j_aw19_s02_1p0.json
+│   ├── gnnv3j_aw19_s03_0p5.json
+│   ├── gnnv3j_aw19_s03_1p0.json
+│   ├── gnnv3j_aw19_s04_0p5.json
+│   ├── gnnv3j_aw19_s04_1p0.json
+│   ├── gnnv3j_aw19_s05_0p5.json
+│   ├── gnnv3j_aw19_s05_1p0.json
+│   ├── gnnv3j_aw19_s06_0p5.json
+│   ├── gnnv3j_aw19_s06_1p0.json
+│   ├── gnnv3j_aw19_s07_0p5.json
+│   ├── gnnv3j_aw19_s07_1p0.json
+│   ├── gnnv3j_aw19_s08_0p5.json
+│   ├── gnnv3j_aw19_s08_1p0.json
+│   ├── gnnv3j_aw19_s09_0p5.json
+│   ├── gnnv3j_aw19_s09_1p0.json
+│   ├── gnnv3j_aw19_s10_0p5.json
+│   ├── gnnv3j_aw19_s10_1p0.json
+│   ├── gnnv3j_aw19_s11_0p5.json
+│   ├── gnnv3j_aw19_s11_1p0.json
+│   ├── gnnv3j_aw19_s12_0p5.json
+│   ├── gnnv3j_aw19_s12_1p0.json
+│   ├── gnnv3j_aw19_s13_0p5.json
+│   ├── gnnv3j_aw19_s13_1p0.json
+│   ├── gnnv3j_aw19_s14_0p5.json
+│   ├── gnnv3j_aw19_s14_1p0.json
+│   ├── gnnv3j_aw19_s15_0p5.json
+│   ├── gnnv3j_aw19_s15_1p0.json
+│   ├── gnnv3j_aw19_s16_0p5.json
+│   ├── gnnv3j_aw19_s16_1p0.json
+│   ├── gnnv3j_aw19_s17_0p5.json
+│   ├── gnnv3j_aw19_s17_1p0.json
+│   ├── gnnv3j_aw19_s18_0p5.json
+│   ├── gnnv3j_aw19_s18_1p0.json
+│   ├── gnnv3j_aw19_s19_0p5.json
+│   ├── gnnv3j_aw19_s19_1p0.json
+│   ├── gnnv3j_aw19_s20_0p5.json
+│   ├── gnnv3j_aw19_s20_1p0.json
+│   ├── gnnv3j_aw19_s21_0p5.json
+│   ├── gnnv3j_aw19_s21_1p0.json
+│   ├── gnnv3j_aw19_s22_0p5.json
+│   ├── gnnv3j_aw19_s22_1p0.json
+│   ├── gnnv3j_aw19_s23_0p5.json
+│   ├── gnnv3j_aw19_s23_1p0.json
+│   ├── gnnv3j_aw19_s24_0p5.json
+│   ├── gnnv3j_aw19_s24_1p0.json
+│   ├── gnnv3j_aw19_s25_0p5.json
+│   ├── gnnv3j_aw19_s25_1p0.json
+│   ├── gnnv3j_aw19_s26_0p5.json
+│   ├── gnnv3j_aw19_s26_1p0.json
+│   ├── gnnv3j_aw19_s27_0p5.json
+│   ├── gnnv3j_aw19_s27_1p0.json
+│   ├── gnnv3j_aw19_s28_0p5.json
+│   ├── gnnv3j_aw19_s28_1p0.json
+│   ├── gnnv3j_aw19_s29_0p5.json
+│   ├── gnnv3j_aw19_s29_1p0.json
+│   ├── gnnv3j_aw19_s30_0p5.json
+│   ├── gnnv3j_aw19_s30_1p0.json
+│   ├── gnnv3j_aw19_s31_0p5.json
+│   ├── gnnv3j_aw19_s31_1p0.json
+│   ├── gnnv3j_aw19_s32_0p5.json
+│   ├── gnnv3j_aw19_s32_1p0.json
+│   ├── gnnv3j_aw19_s33_0p5.json
+│   ├── gnnv3j_aw19_s33_1p0.json
+│   ├── gnnv3j_aw19_s34_0p5.json
+│   ├── gnnv3j_aw19_s34_1p0.json
+│   ├── gnnv3j_aw19_s35_0p5.json
+│   ├── gnnv3j_aw19_s35_1p0.json
+│   ├── gnnv3j_aw9_s01_0p5.json
+│   ├── gnnv3j_aw9_s01_1p0.json
+│   ├── gnnv3j_aw9_s02_0p5.json
+│   ├── gnnv3j_aw9_s02_1p0.json
+│   ├── gnnv3j_aw9_s03_0p5.json
+│   ├── gnnv3j_aw9_s03_1p0.json
+│   ├── gnnv3j_aw9_s04_0p5.json
+│   ├── gnnv3j_aw9_s04_1p0.json
+│   ├── gnnv3j_aw9_s05_0p5.json
+│   ├── gnnv3j_aw9_s05_1p0.json
+│   ├── gnnv3j_aw9_s06_0p5.json
+│   ├── gnnv3j_aw9_s06_1p0.json
+│   ├── gnnv3j_aw9_s07_0p5.json
+│   ├── gnnv3j_aw9_s07_1p0.json
+│   ├── gnnv3j_aw9_s08_0p5.json
+│   ├── gnnv3j_aw9_s08_1p0.json
+│   ├── gnnv3j_aw9_s09_0p5.json
+│   ├── gnnv3j_aw9_s09_1p0.json
+│   ├── gnnv3j_aw9_s10_0p5.json
+│   ├── gnnv3j_aw9_s10_1p0.json
+│   ├── gnnv3j_aw9_s11_0p5.json
+│   ├── gnnv3j_aw9_s11_1p0.json
+│   ├── gnnv3j_aw9_s12_0p5.json
+│   ├── gnnv3j_aw9_s12_1p0.json
+│   ├── gnnv3j_aw9_s13_0p5.json
+│   ├── gnnv3j_aw9_s13_1p0.json
+│   ├── gnnv3j_aw9_s14_0p5.json
+│   ├── gnnv3j_aw9_s14_1p0.json
+│   ├── gnnv3j_aw9_s15_0p5.json
+│   ├── gnnv3j_aw9_s15_1p0.json
+│   ├── gnnv3j_aw9_s16_0p5.json
+│   ├── gnnv3j_aw9_s16_1p0.json
+│   ├── gnnv3j_aw9_s17_0p5.json
+│   ├── gnnv3j_aw9_s17_1p0.json
+│   ├── gnnv3j_aw9_s18_0p5.json
+│   ├── gnnv3j_aw9_s18_1p0.json
+│   ├── gnnv3j_aw9_s19_0p5.json
+│   ├── gnnv3j_aw9_s19_1p0.json
+│   ├── gnnv3j_aw9_s20_0p5.json
+│   ├── gnnv3j_aw9_s20_1p0.json
+│   ├── gnnv3j_aw9_s21_0p5.json
+│   ├── gnnv3j_aw9_s21_1p0.json
+│   ├── gnnv3j_aw9_s22_0p5.json
+│   ├── gnnv3j_aw9_s22_1p0.json
+│   ├── gnnv3j_aw9_s23_0p5.json
+│   ├── gnnv3j_aw9_s23_1p0.json
+│   ├── gnnv3j_aw9_s24_0p5.json
+│   ├── gnnv3j_aw9_s24_1p0.json
+│   ├── gnnv3j_aw9_s25_0p5.json
+│   ├── gnnv3j_aw9_s25_1p0.json
+│   ├── gnnv3j_aw9_s26_0p5.json
+│   ├── gnnv3j_aw9_s26_1p0.json
+│   ├── gnnv3j_aw9_s27_0p5.json
+│   ├── gnnv3j_aw9_s27_1p0.json
+│   ├── gnnv3j_aw9_s28_0p5.json
+│   ├── gnnv3j_aw9_s28_1p0.json
+│   ├── gnnv3j_aw9_s29_0p5.json
+│   ├── gnnv3j_aw9_s29_1p0.json
+│   ├── gnnv3j_aw9_s30_0p5.json
+│   ├── gnnv3j_aw9_s30_1p0.json
+│   ├── gnnv3j_aw9_s31_0p5.json
+│   ├── gnnv3j_aw9_s31_1p0.json
+│   ├── gnnv3j_aw9_s32_0p5.json
+│   ├── gnnv3j_aw9_s32_1p0.json
+│   ├── gnnv3j_aw9_s33_0p5.json
+│   ├── gnnv3j_aw9_s33_1p0.json
+│   ├── gnnv3j_aw9_s34_0p5.json
+│   ├── gnnv3j_aw9_s34_1p0.json
+│   ├── gnnv3j_aw9_s35_0p5.json
+│   ├── gnnv3j_aw9_s35_1p0.json
+│   ├── gnnv3k_s42d19_s01_0p5.json
+│   ├── gnnv3k_s42d19_s01_1p0.json
+│   ├── gnnv3k_s42d19_s02_0p5.json
+│   ├── gnnv3k_s42d19_s02_1p0.json
+│   ├── gnnv3k_s42d19_s03_0p5.json
+│   ├── gnnv3k_s42d19_s03_1p0.json
+│   ├── gnnv3k_s42d19_s04_0p5.json
+│   ├── gnnv3k_s42d19_s04_1p0.json
+│   ├── gnnv3k_s42d19_s05_0p5.json
+│   ├── gnnv3k_s42d19_s05_1p0.json
+│   ├── gnnv3k_s42d19_s06_0p5.json
+│   ├── gnnv3k_s42d19_s06_1p0.json
+│   ├── gnnv3k_s42d19_s07_0p5.json
+│   ├── gnnv3k_s42d19_s07_1p0.json
+│   ├── gnnv3k_s42d19_s08_0p5.json
+│   ├── gnnv3k_s42d19_s08_1p0.json
+│   ├── gnnv3k_s42d19_s09_0p5.json
+│   ├── gnnv3k_s42d19_s09_1p0.json
+│   ├── gnnv3k_s42d19_s10_0p5.json
+│   ├── gnnv3k_s42d19_s10_1p0.json
+│   ├── gnnv3k_s42d19_s11_0p5.json
+│   ├── gnnv3k_s42d19_s11_1p0.json
+│   ├── gnnv3k_s42d19_s12_0p5.json
+│   ├── gnnv3k_s42d19_s12_1p0.json
+│   ├── gnnv3k_s42d19_s13_0p5.json
+│   ├── gnnv3k_s42d19_s13_1p0.json
+│   ├── gnnv3k_s42d19_s14_0p5.json
+│   ├── gnnv3k_s42d19_s14_1p0.json
+│   ├── gnnv3k_s42d19_s15_0p5.json
+│   ├── gnnv3k_s42d19_s15_1p0.json
+│   ├── gnnv3k_s42d19_s16_0p5.json
+│   ├── gnnv3k_s42d19_s16_1p0.json
+│   ├── gnnv3k_s42d19_s17_0p5.json
+│   ├── gnnv3k_s42d19_s17_1p0.json
+│   ├── gnnv3k_s42d19_s18_0p5.json
+│   ├── gnnv3k_s42d19_s18_1p0.json
+│   ├── gnnv3k_s42d19_s19_0p5.json
+│   ├── gnnv3k_s42d19_s19_1p0.json
+│   ├── gnnv3k_s42d19_s20_0p5.json
+│   ├── gnnv3k_s42d19_s20_1p0.json
+│   ├── gnnv3k_s42d19_s21_0p5.json
+│   ├── gnnv3k_s42d19_s21_1p0.json
+│   ├── gnnv3k_s42d19_s22_0p5.json
+│   ├── gnnv3k_s42d19_s22_1p0.json
+│   ├── gnnv3k_s42d19_s23_0p5.json
+│   ├── gnnv3k_s42d19_s23_1p0.json
+│   ├── gnnv3k_s42d19_s24_0p5.json
+│   ├── gnnv3k_s42d19_s24_1p0.json
+│   ├── gnnv3k_s42d19_s25_0p5.json
+│   ├── gnnv3k_s42d19_s25_1p0.json
+│   ├── gnnv3k_s42d19_s26_0p5.json
+│   ├── gnnv3k_s42d19_s26_1p0.json
+│   ├── gnnv3k_s42d19_s27_0p5.json
+│   ├── gnnv3k_s42d19_s27_1p0.json
+│   ├── gnnv3k_s42d19_s28_0p5.json
+│   ├── gnnv3k_s42d19_s28_1p0.json
+│   ├── gnnv3k_s42d19_s29_0p5.json
+│   ├── gnnv3k_s42d19_s29_1p0.json
+│   ├── gnnv3k_s42d19_s30_0p5.json
+│   ├── gnnv3k_s42d19_s30_1p0.json
+│   ├── gnnv3k_s42d19_s31_0p5.json
+│   ├── gnnv3k_s42d19_s31_1p0.json
+│   ├── gnnv3k_s42d19_s32_0p5.json
+│   ├── gnnv3k_s42d19_s32_1p0.json
+│   ├── gnnv3k_s42d19_s33_0p5.json
+│   ├── gnnv3k_s42d19_s33_1p0.json
+│   ├── gnnv3k_s42d19_s34_0p5.json
+│   ├── gnnv3k_s42d19_s34_1p0.json
+│   ├── gnnv3k_s42d19_s35_0p5.json
+│   ├── gnnv3k_s42d19_s35_1p0.json
+│   ├── gnnv3k_s43d19_s01_0p5.json
+│   ├── gnnv3k_s43d19_s01_1p0.json
+│   ├── gnnv3k_s43d19_s02_0p5.json
+│   ├── gnnv3k_s43d19_s02_1p0.json
+│   ├── gnnv3k_s43d19_s03_0p5.json
+│   ├── gnnv3k_s43d19_s03_1p0.json
+│   ├── gnnv3k_s43d19_s04_0p5.json
+│   ├── gnnv3k_s43d19_s04_1p0.json
+│   ├── gnnv3k_s43d19_s05_0p5.json
+│   ├── gnnv3k_s43d19_s05_1p0.json
+│   ├── gnnv3k_s43d19_s06_0p5.json
+│   ├── gnnv3k_s43d19_s06_1p0.json
+│   ├── gnnv3k_s43d19_s07_0p5.json
+│   ├── gnnv3k_s43d19_s07_1p0.json
+│   ├── gnnv3k_s43d19_s08_0p5.json
+│   ├── gnnv3k_s43d19_s08_1p0.json
+│   ├── gnnv3k_s43d19_s09_0p5.json
+│   ├── gnnv3k_s43d19_s09_1p0.json
+│   ├── gnnv3k_s43d19_s10_0p5.json
+│   ├── gnnv3k_s43d19_s10_1p0.json
+│   ├── gnnv3k_s43d19_s11_0p5.json
+│   ├── gnnv3k_s43d19_s11_1p0.json
+│   ├── gnnv3k_s43d19_s12_0p5.json
+│   ├── gnnv3k_s43d19_s12_1p0.json
+│   ├── gnnv3k_s43d19_s13_0p5.json
+│   ├── gnnv3k_s43d19_s13_1p0.json
+│   ├── gnnv3k_s43d19_s14_0p5.json
+│   ├── gnnv3k_s43d19_s14_1p0.json
+│   ├── gnnv3k_s43d19_s15_0p5.json
+│   ├── gnnv3k_s43d19_s15_1p0.json
+│   ├── gnnv3k_s43d19_s16_0p5.json
+│   ├── gnnv3k_s43d19_s16_1p0.json
+│   ├── gnnv3k_s43d19_s17_0p5.json
+│   ├── gnnv3k_s43d19_s17_1p0.json
+│   ├── gnnv3k_s43d19_s18_0p5.json
+│   ├── gnnv3k_s43d19_s18_1p0.json
+│   ├── gnnv3k_s43d19_s19_0p5.json
+│   ├── gnnv3k_s43d19_s19_1p0.json
+│   ├── gnnv3k_s43d19_s20_0p5.json
+│   ├── gnnv3k_s43d19_s20_1p0.json
+│   ├── gnnv3k_s43d19_s21_0p5.json
+│   ├── gnnv3k_s43d19_s21_1p0.json
+│   ├── gnnv3k_s43d19_s22_0p5.json
+│   ├── gnnv3k_s43d19_s22_1p0.json
+│   ├── gnnv3k_s43d19_s23_0p5.json
+│   ├── gnnv3k_s43d19_s23_1p0.json
+│   ├── gnnv3k_s43d19_s24_0p5.json
+│   ├── gnnv3k_s43d19_s24_1p0.json
+│   ├── gnnv3k_s43d19_s25_0p5.json
+│   ├── gnnv3k_s43d19_s25_1p0.json
+│   ├── gnnv3k_s43d19_s26_0p5.json
+│   ├── gnnv3k_s43d19_s26_1p0.json
+│   ├── gnnv3k_s43d19_s27_0p5.json
+│   ├── gnnv3k_s43d19_s27_1p0.json
+│   ├── gnnv3k_s43d19_s28_0p5.json
+│   ├── gnnv3k_s43d19_s28_1p0.json
+│   ├── gnnv3k_s43d19_s29_0p5.json
+│   ├── gnnv3k_s43d19_s29_1p0.json
+│   ├── gnnv3k_s43d19_s30_0p5.json
+│   ├── gnnv3k_s43d19_s30_1p0.json
+│   ├── gnnv3k_s43d19_s31_0p5.json
+│   ├── gnnv3k_s43d19_s31_1p0.json
+│   ├── gnnv3k_s43d19_s32_0p5.json
+│   ├── gnnv3k_s43d19_s32_1p0.json
+│   ├── gnnv3k_s43d19_s33_0p5.json
+│   ├── gnnv3k_s43d19_s33_1p0.json
+│   ├── gnnv3k_s43d19_s34_0p5.json
+│   ├── gnnv3k_s43d19_s34_1p0.json
+│   ├── gnnv3k_s43d19_s35_0p5.json
+│   ├── gnnv3k_s43d19_s35_1p0.json
+│   ├── gnnv3l_b5d19_s01_0p5.json
+│   ├── gnnv3l_b5d19_s01_1p0.json
+│   ├── gnnv3l_b5d19_s02_0p5.json
+│   ├── gnnv3l_b5d19_s02_1p0.json
+│   ├── gnnv3l_b5d19_s03_0p5.json
+│   ├── gnnv3l_b5d19_s03_1p0.json
+│   ├── gnnv3l_b5d19_s04_0p5.json
+│   ├── gnnv3l_b5d19_s04_1p0.json
+│   ├── gnnv3l_b5d19_s05_0p5.json
+│   ├── gnnv3l_b5d19_s05_1p0.json
+│   ├── gnnv3l_b5d19_s06_0p5.json
+│   ├── gnnv3l_b5d19_s06_1p0.json
+│   ├── gnnv3l_b5d19_s07_0p5.json
+│   ├── gnnv3l_b5d19_s07_1p0.json
+│   ├── gnnv3l_b5d19_s08_0p5.json
+│   ├── gnnv3l_b5d19_s08_1p0.json
+│   ├── gnnv3l_b5d19_s09_0p5.json
+│   ├── gnnv3l_b5d19_s09_1p0.json
+│   ├── gnnv3l_b5d19_s10_0p5.json
+│   ├── gnnv3l_b5d19_s10_1p0.json
+│   ├── gnnv3l_b5d19_s11_0p5.json
+│   ├── gnnv3l_b5d19_s11_1p0.json
+│   ├── gnnv3l_b5d19_s12_0p5.json
+│   ├── gnnv3l_b5d19_s12_1p0.json
+│   ├── gnnv3l_b5d19_s13_0p5.json
+│   ├── gnnv3l_b5d19_s13_1p0.json
+│   ├── gnnv3l_b5d19_s14_0p5.json
+│   ├── gnnv3l_b5d19_s14_1p0.json
+│   ├── gnnv3l_b5d19_s15_0p5.json
+│   ├── gnnv3l_b5d19_s15_1p0.json
+│   ├── gnnv3l_b5d19_s16_0p5.json
+│   ├── gnnv3l_b5d19_s16_1p0.json
+│   ├── gnnv3l_b5d19_s17_0p5.json
+│   ├── gnnv3l_b5d19_s17_1p0.json
+│   ├── gnnv3l_b5d19_s18_0p5.json
+│   ├── gnnv3l_b5d19_s18_1p0.json
+│   ├── gnnv3l_b5d19_s19_0p5.json
+│   ├── gnnv3l_b5d19_s19_1p0.json
+│   ├── gnnv3l_b5d19_s20_0p5.json
+│   ├── gnnv3l_b5d19_s20_1p0.json
+│   ├── gnnv3l_b5d19_s21_0p5.json
+│   ├── gnnv3l_b5d19_s21_1p0.json
+│   ├── gnnv3l_b5d19_s22_0p5.json
+│   ├── gnnv3l_b5d19_s22_1p0.json
+│   ├── gnnv3l_b5d19_s23_0p5.json
+│   ├── gnnv3l_b5d19_s23_1p0.json
+│   ├── gnnv3l_b5d19_s24_0p5.json
+│   ├── gnnv3l_b5d19_s24_1p0.json
+│   ├── gnnv3l_b5d19_s25_0p5.json
+│   ├── gnnv3l_b5d19_s25_1p0.json
+│   ├── gnnv3l_b5d19_s26_0p5.json
+│   ├── gnnv3l_b5d19_s26_1p0.json
+│   ├── gnnv3l_b5d19_s27_0p5.json
+│   ├── gnnv3l_b5d19_s27_1p0.json
+│   ├── gnnv3l_b5d19_s28_0p5.json
+│   ├── gnnv3l_b5d19_s28_1p0.json
+│   ├── gnnv3l_b5d19_s29_0p5.json
+│   ├── gnnv3l_b5d19_s29_1p0.json
+│   ├── gnnv3l_b5d19_s30_0p5.json
+│   ├── gnnv3l_b5d19_s30_1p0.json
+│   ├── gnnv3l_b5d19_s31_0p5.json
+│   ├── gnnv3l_b5d19_s31_1p0.json
+│   ├── gnnv3l_b5d19_s32_0p5.json
+│   ├── gnnv3l_b5d19_s32_1p0.json
+│   ├── gnnv3l_b5d19_s33_0p5.json
+│   ├── gnnv3l_b5d19_s33_1p0.json
+│   ├── gnnv3l_b5d19_s34_0p5.json
+│   ├── gnnv3l_b5d19_s34_1p0.json
+│   ├── gnnv3l_b5d19_s35_0p5.json
+│   ├── gnnv3l_b5d19_s35_1p0.json
+│   ├── gnnv3l_b5d9_s01_0p5.json
+│   ├── gnnv3l_b5d9_s01_1p0.json
+│   ├── gnnv3l_b5d9_s02_0p5.json
+│   ├── gnnv3l_b5d9_s02_1p0.json
+│   ├── gnnv3l_b5d9_s03_0p5.json
+│   ├── gnnv3l_b5d9_s03_1p0.json
+│   ├── gnnv3l_b5d9_s04_0p5.json
+│   ├── gnnv3l_b5d9_s04_1p0.json
+│   ├── gnnv3l_b5d9_s05_0p5.json
+│   ├── gnnv3l_b5d9_s05_1p0.json
+│   ├── gnnv3l_b5d9_s06_0p5.json
+│   ├── gnnv3l_b5d9_s06_1p0.json
+│   ├── gnnv3l_b5d9_s07_0p5.json
+│   ├── gnnv3l_b5d9_s07_1p0.json
+│   ├── gnnv3l_b5d9_s08_0p5.json
+│   ├── gnnv3l_b5d9_s08_1p0.json
+│   ├── gnnv3l_b5d9_s09_0p5.json
+│   ├── gnnv3l_b5d9_s09_1p0.json
+│   ├── gnnv3l_b5d9_s10_0p5.json
+│   ├── gnnv3l_b5d9_s10_1p0.json
+│   ├── gnnv3l_b5d9_s11_0p5.json
+│   ├── gnnv3l_b5d9_s11_1p0.json
+│   ├── gnnv3l_b5d9_s12_0p5.json
+│   ├── gnnv3l_b5d9_s12_1p0.json
+│   ├── gnnv3l_b5d9_s13_0p5.json
+│   ├── gnnv3l_b5d9_s13_1p0.json
+│   ├── gnnv3l_b5d9_s14_0p5.json
+│   ├── gnnv3l_b5d9_s14_1p0.json
+│   ├── gnnv3l_b5d9_s15_0p5.json
+│   ├── gnnv3l_b5d9_s15_1p0.json
+│   ├── gnnv3l_b5d9_s16_0p5.json
+│   ├── gnnv3l_b5d9_s16_1p0.json
+│   ├── gnnv3l_b5d9_s17_0p5.json
+│   ├── gnnv3l_b5d9_s17_1p0.json
+│   ├── gnnv3l_b5d9_s18_0p5.json
+│   ├── gnnv3l_b5d9_s18_1p0.json
+│   ├── gnnv3l_b5d9_s19_0p5.json
+│   ├── gnnv3l_b5d9_s19_1p0.json
+│   ├── gnnv3l_b5d9_s20_0p5.json
+│   ├── gnnv3l_b5d9_s20_1p0.json
+│   ├── gnnv3l_b5d9_s21_0p5.json
+│   ├── gnnv3l_b5d9_s21_1p0.json
+│   ├── gnnv3l_b5d9_s22_0p5.json
+│   ├── gnnv3l_b5d9_s22_1p0.json
+│   ├── gnnv3l_b5d9_s23_0p5.json
+│   ├── gnnv3l_b5d9_s23_1p0.json
+│   ├── gnnv3l_b5d9_s24_0p5.json
+│   ├── gnnv3l_b5d9_s24_1p0.json
+│   ├── gnnv3l_b5d9_s25_0p5.json
+│   ├── gnnv3l_b5d9_s25_1p0.json
+│   ├── gnnv3l_b5d9_s26_0p5.json
+│   ├── gnnv3l_b5d9_s26_1p0.json
+│   ├── gnnv3l_b5d9_s27_0p5.json
+│   ├── gnnv3l_b5d9_s27_1p0.json
+│   ├── gnnv3l_b5d9_s28_0p5.json
+│   ├── gnnv3l_b5d9_s28_1p0.json
+│   ├── gnnv3l_b5d9_s29_0p5.json
+│   ├── gnnv3l_b5d9_s29_1p0.json
+│   ├── gnnv3l_b5d9_s30_0p5.json
+│   ├── gnnv3l_b5d9_s30_1p0.json
+│   ├── gnnv3l_b5d9_s31_0p5.json
+│   ├── gnnv3l_b5d9_s31_1p0.json
+│   ├── gnnv3l_b5d9_s32_0p5.json
+│   ├── gnnv3l_b5d9_s32_1p0.json
+│   ├── gnnv3l_b5d9_s33_0p5.json
+│   ├── gnnv3l_b5d9_s33_1p0.json
+│   ├── gnnv3l_b5d9_s34_0p5.json
+│   ├── gnnv3l_b5d9_s34_1p0.json
+│   ├── gnnv3l_b5d9_s35_0p5.json
+│   ├── gnnv3l_b5d9_s35_1p0.json
+│   ├── gnnv3m_s42b5d19_s01_0p5.json
+│   ├── gnnv3m_s42b5d19_s01_1p0.json
+│   ├── gnnv3m_s42b5d19_s02_0p5.json
+│   ├── gnnv3m_s42b5d19_s02_1p0.json
+│   ├── gnnv3m_s42b5d19_s03_0p5.json
+│   ├── gnnv3m_s42b5d19_s03_1p0.json
+│   ├── gnnv3m_s42b5d19_s04_0p5.json
+│   ├── gnnv3m_s42b5d19_s04_1p0.json
+│   ├── gnnv3m_s42b5d19_s05_0p5.json
+│   ├── gnnv3m_s42b5d19_s05_1p0.json
+│   ├── gnnv3m_s42b5d19_s06_0p5.json
+│   ├── gnnv3m_s42b5d19_s06_1p0.json
+│   ├── gnnv3m_s42b5d19_s07_0p5.json
+│   ├── gnnv3m_s42b5d19_s07_1p0.json
+│   ├── gnnv3m_s42b5d19_s08_0p5.json
+│   ├── gnnv3m_s42b5d19_s08_1p0.json
+│   ├── gnnv3m_s42b5d19_s09_0p5.json
+│   ├── gnnv3m_s42b5d19_s09_1p0.json
+│   ├── gnnv3m_s42b5d19_s10_0p5.json
+│   ├── gnnv3m_s42b5d19_s10_1p0.json
+│   ├── gnnv3m_s42b5d19_s11_0p5.json
+│   ├── gnnv3m_s42b5d19_s11_1p0.json
+│   ├── gnnv3m_s42b5d19_s12_0p5.json
+│   ├── gnnv3m_s42b5d19_s12_1p0.json
+│   ├── gnnv3m_s42b5d19_s13_0p5.json
+│   ├── gnnv3m_s42b5d19_s13_1p0.json
+│   ├── gnnv3m_s42b5d19_s14_0p5.json
+│   ├── gnnv3m_s42b5d19_s14_1p0.json
+│   ├── gnnv3m_s42b5d19_s15_0p5.json
+│   ├── gnnv3m_s42b5d19_s15_1p0.json
+│   ├── gnnv3m_s42b5d19_s16_0p5.json
+│   ├── gnnv3m_s42b5d19_s16_1p0.json
+│   ├── gnnv3m_s42b5d19_s17_0p5.json
+│   ├── gnnv3m_s42b5d19_s17_1p0.json
+│   ├── gnnv3m_s42b5d19_s18_0p5.json
+│   ├── gnnv3m_s42b5d19_s18_1p0.json
+│   ├── gnnv3m_s42b5d19_s19_0p5.json
+│   ├── gnnv3m_s42b5d19_s19_1p0.json
+│   ├── gnnv3m_s42b5d19_s20_0p5.json
+│   ├── gnnv3m_s42b5d19_s20_1p0.json
+│   ├── gnnv3m_s42b5d19_s21_0p5.json
+│   ├── gnnv3m_s42b5d19_s21_1p0.json
+│   ├── gnnv3m_s42b5d19_s22_0p5.json
+│   ├── gnnv3m_s42b5d19_s22_1p0.json
+│   ├── gnnv3m_s42b5d19_s23_0p5.json
+│   ├── gnnv3m_s42b5d19_s23_1p0.json
+│   ├── gnnv3m_s42b5d19_s24_0p5.json
+│   ├── gnnv3m_s42b5d19_s24_1p0.json
+│   ├── gnnv3m_s42b5d19_s25_0p5.json
+│   ├── gnnv3m_s42b5d19_s25_1p0.json
+│   ├── gnnv3m_s42b5d19_s26_0p5.json
+│   ├── gnnv3m_s42b5d19_s26_1p0.json
+│   ├── gnnv3m_s42b5d19_s27_0p5.json
+│   ├── gnnv3m_s42b5d19_s27_1p0.json
+│   ├── gnnv3m_s42b5d19_s28_0p5.json
+│   ├── gnnv3m_s42b5d19_s28_1p0.json
+│   ├── gnnv3m_s42b5d19_s29_0p5.json
+│   ├── gnnv3m_s42b5d19_s29_1p0.json
+│   ├── gnnv3m_s42b5d19_s30_0p5.json
+│   ├── gnnv3m_s42b5d19_s30_1p0.json
+│   ├── gnnv3m_s42b5d19_s31_0p5.json
+│   ├── gnnv3m_s42b5d19_s31_1p0.json
+│   ├── gnnv3m_s42b5d19_s32_0p5.json
+│   ├── gnnv3m_s42b5d19_s32_1p0.json
+│   ├── gnnv3m_s42b5d19_s33_0p5.json
+│   ├── gnnv3m_s42b5d19_s33_1p0.json
+│   ├── gnnv3m_s42b5d19_s34_0p5.json
+│   ├── gnnv3m_s42b5d19_s34_1p0.json
+│   ├── gnnv3m_s42b5d19_s35_0p5.json
+│   ├── gnnv3m_s42b5d19_s35_1p0.json
+│   ├── gnnv3m_s43b5d19_s01_0p5.json
+│   ├── gnnv3m_s43b5d19_s01_1p0.json
+│   ├── gnnv3m_s43b5d19_s02_0p5.json
+│   ├── gnnv3m_s43b5d19_s02_1p0.json
+│   ├── gnnv3m_s43b5d19_s03_0p5.json
+│   ├── gnnv3m_s43b5d19_s03_1p0.json
+│   ├── gnnv3m_s43b5d19_s04_0p5.json
+│   ├── gnnv3m_s43b5d19_s04_1p0.json
+│   ├── gnnv3m_s43b5d19_s05_0p5.json
+│   ├── gnnv3m_s43b5d19_s05_1p0.json
+│   ├── gnnv3m_s43b5d19_s06_0p5.json
+│   ├── gnnv3m_s43b5d19_s06_1p0.json
+│   ├── gnnv3m_s43b5d19_s07_0p5.json
+│   ├── gnnv3m_s43b5d19_s07_1p0.json
+│   ├── gnnv3m_s43b5d19_s08_0p5.json
+│   ├── gnnv3m_s43b5d19_s08_1p0.json
+│   ├── gnnv3m_s43b5d19_s09_0p5.json
+│   ├── gnnv3m_s43b5d19_s09_1p0.json
+│   ├── gnnv3m_s43b5d19_s10_0p5.json
+│   ├── gnnv3m_s43b5d19_s10_1p0.json
+│   ├── gnnv3m_s43b5d19_s11_0p5.json
+│   ├── gnnv3m_s43b5d19_s11_1p0.json
+│   ├── gnnv3m_s43b5d19_s12_0p5.json
+│   ├── gnnv3m_s43b5d19_s12_1p0.json
+│   ├── gnnv3m_s43b5d19_s13_0p5.json
+│   ├── gnnv3m_s43b5d19_s13_1p0.json
+│   ├── gnnv3m_s43b5d19_s14_0p5.json
+│   ├── gnnv3m_s43b5d19_s14_1p0.json
+│   ├── gnnv3m_s43b5d19_s15_0p5.json
+│   ├── gnnv3m_s43b5d19_s15_1p0.json
+│   ├── gnnv3m_s43b5d19_s16_0p5.json
+│   ├── gnnv3m_s43b5d19_s16_1p0.json
+│   ├── gnnv3m_s43b5d19_s17_0p5.json
+│   ├── gnnv3m_s43b5d19_s17_1p0.json
+│   ├── gnnv3m_s43b5d19_s18_0p5.json
+│   ├── gnnv3m_s43b5d19_s18_1p0.json
+│   ├── gnnv3m_s43b5d19_s19_0p5.json
+│   ├── gnnv3m_s43b5d19_s19_1p0.json
+│   ├── gnnv3m_s43b5d19_s20_0p5.json
+│   ├── gnnv3m_s43b5d19_s20_1p0.json
+│   ├── gnnv3m_s43b5d19_s21_0p5.json
+│   ├── gnnv3m_s43b5d19_s21_1p0.json
+│   ├── gnnv3m_s43b5d19_s22_0p5.json
+│   ├── gnnv3m_s43b5d19_s22_1p0.json
+│   ├── gnnv3m_s43b5d19_s23_0p5.json
+│   ├── gnnv3m_s43b5d19_s23_1p0.json
+│   ├── gnnv3m_s43b5d19_s24_0p5.json
+│   ├── gnnv3m_s43b5d19_s24_1p0.json
+│   ├── gnnv3m_s43b5d19_s25_0p5.json
+│   ├── gnnv3m_s43b5d19_s25_1p0.json
+│   ├── gnnv3m_s43b5d19_s26_0p5.json
+│   ├── gnnv3m_s43b5d19_s26_1p0.json
+│   ├── gnnv3m_s43b5d19_s27_0p5.json
+│   ├── gnnv3m_s43b5d19_s27_1p0.json
+│   ├── gnnv3m_s43b5d19_s28_0p5.json
+│   ├── gnnv3m_s43b5d19_s28_1p0.json
+│   ├── gnnv3m_s43b5d19_s29_0p5.json
+│   ├── gnnv3m_s43b5d19_s29_1p0.json
+│   ├── gnnv3m_s43b5d19_s30_0p5.json
+│   ├── gnnv3m_s43b5d19_s30_1p0.json
+│   ├── gnnv3m_s43b5d19_s31_0p5.json
+│   ├── gnnv3m_s43b5d19_s31_1p0.json
+│   ├── gnnv3m_s43b5d19_s32_0p5.json
+│   ├── gnnv3m_s43b5d19_s32_1p0.json
+│   ├── gnnv3m_s43b5d19_s33_0p5.json
+│   ├── gnnv3m_s43b5d19_s33_1p0.json
+│   ├── gnnv3m_s43b5d19_s34_0p5.json
+│   ├── gnnv3m_s43b5d19_s34_1p0.json
+│   ├── gnnv3m_s43b5d19_s35_0p5.json
+│   ├── gnnv3m_s43b5d19_s35_1p0.json
+│   ├── logits_cnnref_s01_0p5.npz
+│   ├── logits_cnnref_s01_1p0.npz
+│   ├── logits_cnnref_s02_0p5.npz
+│   ├── logits_cnnref_s02_1p0.npz
+│   ├── logits_cnnref_s03_0p5.npz
+│   ├── logits_cnnref_s03_1p0.npz
+│   ├── logits_cnnref_s04_0p5.npz
+│   ├── logits_cnnref_s04_1p0.npz
+│   ├── logits_cnnref_s05_0p5.npz
+│   ├── logits_cnnref_s05_1p0.npz
+│   ├── logits_cnnref_s06_0p5.npz
+│   ├── logits_cnnref_s06_1p0.npz
+│   ├── logits_cnnref_s07_0p5.npz
+│   ├── logits_cnnref_s07_1p0.npz
+│   ├── logits_cnnref_s08_0p5.npz
+│   ├── logits_cnnref_s08_1p0.npz
+│   ├── logits_cnnref_s09_0p5.npz
+│   ├── logits_cnnref_s09_1p0.npz
+│   ├── logits_cnnref_s10_0p5.npz
+│   ├── logits_cnnref_s10_1p0.npz
+│   ├── logits_cnnref_s11_0p5.npz
+│   ├── logits_cnnref_s11_1p0.npz
+│   ├── logits_cnnref_s12_0p5.npz
+│   ├── logits_cnnref_s12_1p0.npz
+│   ├── logits_cnnref_s13_0p5.npz
+│   ├── logits_cnnref_s13_1p0.npz
+│   ├── logits_cnnref_s14_0p5.npz
+│   ├── logits_cnnref_s14_1p0.npz
+│   ├── logits_cnnref_s15_0p5.npz
+│   ├── logits_cnnref_s15_1p0.npz
+│   ├── logits_cnnref_s16_0p5.npz
+│   ├── logits_cnnref_s16_1p0.npz
+│   ├── logits_cnnref_s17_0p5.npz
+│   ├── logits_cnnref_s17_1p0.npz
+│   ├── logits_cnnref_s18_0p5.npz
+│   ├── logits_cnnref_s18_1p0.npz
+│   ├── logits_cnnref_s19_0p5.npz
+│   ├── logits_cnnref_s19_1p0.npz
+│   ├── logits_cnnref_s20_0p5.npz
+│   ├── logits_cnnref_s20_1p0.npz
+│   ├── logits_cnnref_s21_0p5.npz
+│   ├── logits_cnnref_s21_1p0.npz
+│   ├── logits_cnnref_s22_0p5.npz
+│   ├── logits_cnnref_s22_1p0.npz
+│   ├── logits_cnnref_s23_0p5.npz
+│   ├── logits_cnnref_s23_1p0.npz
+│   ├── logits_cnnref_s24_0p5.npz
+│   ├── logits_cnnref_s24_1p0.npz
+│   ├── logits_cnnref_s25_0p5.npz
+│   ├── logits_cnnref_s25_1p0.npz
+│   ├── logits_cnnref_s26_0p5.npz
+│   ├── logits_cnnref_s26_1p0.npz
+│   ├── logits_cnnref_s27_0p5.npz
+│   ├── logits_cnnref_s27_1p0.npz
+│   ├── logits_cnnref_s28_0p5.npz
+│   ├── logits_cnnref_s28_1p0.npz
+│   ├── logits_cnnref_s29_0p5.npz
+│   ├── logits_cnnref_s29_1p0.npz
+│   ├── logits_cnnref_s30_0p5.npz
+│   ├── logits_cnnref_s30_1p0.npz
+│   ├── logits_cnnref_s31_0p5.npz
+│   ├── logits_cnnref_s31_1p0.npz
+│   ├── logits_cnnref_s32_0p5.npz
+│   ├── logits_cnnref_s32_1p0.npz
+│   ├── logits_cnnref_s33_0p5.npz
+│   ├── logits_cnnref_s33_1p0.npz
+│   ├── logits_cnnref_s34_0p5.npz
+│   ├── logits_cnnref_s34_1p0.npz
+│   ├── logits_cnnref_s35_0p5.npz
+│   ├── logits_cnnref_s35_1p0.npz
+│   ├── logits_gnnv2c_g2_s01_0p5.npz
+│   ├── logits_gnnv2c_g2_s01_1p0.npz
+│   ├── logits_gnnv2c_g2_s02_0p5.npz
+│   ├── logits_gnnv2c_g2_s02_1p0.npz
+│   ├── logits_gnnv2c_g2_s03_0p5.npz
+│   ├── logits_gnnv2c_g2_s03_1p0.npz
+│   ├── logits_gnnv2c_g2_s04_0p5.npz
+│   ├── logits_gnnv2c_g2_s04_1p0.npz
+│   ├── logits_gnnv2c_g2_s05_0p5.npz
+│   ├── logits_gnnv2c_g2_s05_1p0.npz
+│   ├── logits_gnnv2c_g2_s06_0p5.npz
+│   ├── logits_gnnv2c_g2_s06_1p0.npz
+│   ├── logits_gnnv2c_g2_s07_0p5.npz
+│   ├── logits_gnnv2c_g2_s07_1p0.npz
+│   ├── logits_gnnv2c_g2_s08_0p5.npz
+│   ├── logits_gnnv2c_g2_s08_1p0.npz
+│   ├── logits_gnnv2c_g2_s09_0p5.npz
+│   ├── logits_gnnv2c_g2_s09_1p0.npz
+│   ├── logits_gnnv2c_g2_s10_0p5.npz
+│   ├── logits_gnnv2c_g2_s10_1p0.npz
+│   ├── logits_gnnv2c_g2_s11_0p5.npz
+│   ├── logits_gnnv2c_g2_s11_1p0.npz
+│   ├── logits_gnnv2c_g2_s12_0p5.npz
+│   ├── logits_gnnv2c_g2_s12_1p0.npz
+│   ├── logits_gnnv2c_g2_s13_0p5.npz
+│   ├── logits_gnnv2c_g2_s13_1p0.npz
+│   ├── logits_gnnv2c_g2_s14_0p5.npz
+│   ├── logits_gnnv2c_g2_s14_1p0.npz
+│   ├── logits_gnnv2c_g2_s15_0p5.npz
+│   ├── logits_gnnv2c_g2_s15_1p0.npz
+│   ├── logits_gnnv2c_g2_s16_0p5.npz
+│   ├── logits_gnnv2c_g2_s16_1p0.npz
+│   ├── logits_gnnv2c_g2_s17_0p5.npz
+│   ├── logits_gnnv2c_g2_s17_1p0.npz
+│   ├── logits_gnnv2c_g2_s18_0p5.npz
+│   ├── logits_gnnv2c_g2_s18_1p0.npz
+│   ├── logits_gnnv2c_g2_s19_0p5.npz
+│   ├── logits_gnnv2c_g2_s19_1p0.npz
+│   ├── logits_gnnv2c_g2_s20_0p5.npz
+│   ├── logits_gnnv2c_g2_s20_1p0.npz
+│   ├── logits_gnnv2c_g2_s21_0p5.npz
+│   ├── logits_gnnv2c_g2_s21_1p0.npz
+│   ├── logits_gnnv2c_g2_s22_0p5.npz
+│   ├── logits_gnnv2c_g2_s22_1p0.npz
+│   ├── logits_gnnv2c_g2_s23_0p5.npz
+│   ├── logits_gnnv2c_g2_s23_1p0.npz
+│   ├── logits_gnnv2c_g2_s24_0p5.npz
+│   ├── logits_gnnv2c_g2_s24_1p0.npz
+│   ├── logits_gnnv2c_g2_s25_0p5.npz
+│   ├── logits_gnnv2c_g2_s25_1p0.npz
+│   ├── logits_gnnv2c_g2_s26_0p5.npz
+│   ├── logits_gnnv2c_g2_s26_1p0.npz
+│   ├── logits_gnnv2c_g2_s27_0p5.npz
+│   ├── logits_gnnv2c_g2_s27_1p0.npz
+│   ├── logits_gnnv2c_g2_s28_0p5.npz
+│   ├── logits_gnnv2c_g2_s28_1p0.npz
+│   ├── logits_gnnv2c_g2_s29_0p5.npz
+│   ├── logits_gnnv2c_g2_s29_1p0.npz
+│   ├── logits_gnnv2c_g2_s30_0p5.npz
+│   ├── logits_gnnv2c_g2_s30_1p0.npz
+│   ├── logits_gnnv2c_g2_s31_0p5.npz
+│   ├── logits_gnnv2c_g2_s31_1p0.npz
+│   ├── logits_gnnv2c_g2_s32_0p5.npz
+│   ├── logits_gnnv2c_g2_s32_1p0.npz
+│   ├── logits_gnnv2c_g2_s33_0p5.npz
+│   ├── logits_gnnv2c_g2_s33_1p0.npz
+│   ├── logits_gnnv2c_g2_s34_0p5.npz
+│   ├── logits_gnnv2c_g2_s34_1p0.npz
+│   ├── logits_gnnv2c_g2_s35_0p5.npz
+│   ├── logits_gnnv2c_g2_s35_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s01_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s02_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s03_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s04_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s05_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s06_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s07_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s08_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s09_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s10_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s11_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s12_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s13_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s14_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s15_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s16_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s17_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s18_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s19_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s20_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s21_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s22_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s23_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s24_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s25_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s26_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s27_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s28_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s29_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s30_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s31_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s32_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s33_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s34_1p0.npz
+│   ├── logits_gnnv2d_g2_anatomical_s35_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s01_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s02_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s03_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s04_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s05_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s06_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s07_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s08_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s09_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s10_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s11_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s12_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s13_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s14_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s15_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s16_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s17_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s18_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s19_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s20_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s21_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s22_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s23_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s24_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s25_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s26_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s27_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s28_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s29_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s30_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s31_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s32_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s33_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s34_1p0.npz
+│   ├── logits_gnnv2d_g2_identity_s35_1p0.npz
+│   ├── logits_gnnv2d_g2_learned_s01_0p5.npz
+│   ├── logits_gnnv2d_g2_uniform_s01_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s02_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s03_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s04_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s05_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s06_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s07_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s08_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s09_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s10_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s11_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s12_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s13_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s14_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s15_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s16_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s17_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s18_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s19_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s20_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s21_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s22_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s23_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s24_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s25_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s26_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s27_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s28_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s29_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s30_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s31_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s32_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s33_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s34_1p0.npz
+│   ├── logits_gnnv2d_g2_uniform_s35_1p0.npz
+│   ├── logits_gnnv2e_s01_1p0.npz
+│   ├── logits_gnnv3e_lr_s01_0p5.npz
+│   ├── logits_gnnv3e_lr_s01_1p0.npz
+│   ├── logits_gnnv3e_lr_s02_0p5.npz
+│   ├── logits_gnnv3e_lr_s02_1p0.npz
+│   ├── logits_gnnv3e_lr_s03_0p5.npz
+│   ├── logits_gnnv3e_lr_s03_1p0.npz
+│   ├── logits_gnnv3e_lr_s04_0p5.npz
+│   ├── logits_gnnv3e_lr_s04_1p0.npz
+│   ├── logits_gnnv3e_lr_s05_0p5.npz
+│   ├── logits_gnnv3e_lr_s05_1p0.npz
+│   ├── logits_gnnv3e_lr_s06_0p5.npz
+│   ├── logits_gnnv3e_lr_s06_1p0.npz
+│   ├── logits_gnnv3e_lr_s07_0p5.npz
+│   ├── logits_gnnv3e_lr_s07_1p0.npz
+│   ├── logits_gnnv3e_lr_s08_0p5.npz
+│   ├── logits_gnnv3e_lr_s08_1p0.npz
+│   ├── logits_gnnv3e_lr_s09_0p5.npz
+│   ├── logits_gnnv3e_lr_s09_1p0.npz
+│   ├── logits_gnnv3e_lr_s10_0p5.npz
+│   ├── logits_gnnv3e_lr_s10_1p0.npz
+│   ├── logits_gnnv3e_lr_s11_0p5.npz
+│   ├── logits_gnnv3e_lr_s11_1p0.npz
+│   ├── logits_gnnv3e_lr_s12_0p5.npz
+│   ├── logits_gnnv3e_lr_s12_1p0.npz
+│   ├── logits_gnnv3e_lr_s13_0p5.npz
+│   ├── logits_gnnv3e_lr_s13_1p0.npz
+│   ├── logits_gnnv3e_lr_s14_0p5.npz
+│   ├── logits_gnnv3e_lr_s14_1p0.npz
+│   ├── logits_gnnv3e_lr_s15_0p5.npz
+│   ├── logits_gnnv3e_lr_s15_1p0.npz
+│   ├── logits_gnnv3e_lr_s16_0p5.npz
+│   ├── logits_gnnv3e_lr_s16_1p0.npz
+│   ├── logits_gnnv3e_lr_s17_0p5.npz
+│   ├── logits_gnnv3e_lr_s17_1p0.npz
+│   ├── logits_gnnv3e_lr_s18_0p5.npz
+│   ├── logits_gnnv3e_lr_s18_1p0.npz
+│   ├── logits_gnnv3e_lr_s19_0p5.npz
+│   ├── logits_gnnv3e_lr_s19_1p0.npz
+│   ├── logits_gnnv3e_lr_s20_0p5.npz
+│   ├── logits_gnnv3e_lr_s20_1p0.npz
+│   ├── logits_gnnv3e_lr_s21_0p5.npz
+│   ├── logits_gnnv3e_lr_s21_1p0.npz
+│   ├── logits_gnnv3e_lr_s22_0p5.npz
+│   ├── logits_gnnv3e_lr_s22_1p0.npz
+│   ├── logits_gnnv3e_lr_s23_0p5.npz
+│   ├── logits_gnnv3e_lr_s23_1p0.npz
+│   ├── logits_gnnv3e_lr_s24_0p5.npz
+│   ├── logits_gnnv3e_lr_s24_1p0.npz
+│   ├── logits_gnnv3e_lr_s25_0p5.npz
+│   ├── logits_gnnv3e_lr_s25_1p0.npz
+│   ├── logits_gnnv3e_lr_s26_0p5.npz
+│   ├── logits_gnnv3e_lr_s26_1p0.npz
+│   ├── logits_gnnv3e_lr_s27_0p5.npz
+│   ├── logits_gnnv3e_lr_s27_1p0.npz
+│   ├── logits_gnnv3e_lr_s28_0p5.npz
+│   ├── logits_gnnv3e_lr_s28_1p0.npz
+│   ├── logits_gnnv3e_lr_s29_0p5.npz
+│   ├── logits_gnnv3e_lr_s29_1p0.npz
+│   ├── logits_gnnv3e_lr_s30_0p5.npz
+│   ├── logits_gnnv3e_lr_s30_1p0.npz
+│   ├── logits_gnnv3e_lr_s31_0p5.npz
+│   ├── logits_gnnv3e_lr_s31_1p0.npz
+│   ├── logits_gnnv3e_lr_s32_0p5.npz
+│   ├── logits_gnnv3e_lr_s32_1p0.npz
+│   ├── logits_gnnv3e_lr_s33_0p5.npz
+│   ├── logits_gnnv3e_lr_s33_1p0.npz
+│   ├── logits_gnnv3e_lr_s34_0p5.npz
+│   ├── logits_gnnv3e_lr_s34_1p0.npz
+│   ├── logits_gnnv3e_lr_s35_0p5.npz
+│   ├── logits_gnnv3e_lr_s35_1p0.npz
+│   ├── logits_gnnv3g_dense19_s01_0p5.npz
+│   ├── logits_gnnv3g_dense19_s01_1p0.npz
+│   ├── logits_gnnv3g_dense19_s02_0p5.npz
+│   ├── logits_gnnv3g_dense19_s02_1p0.npz
+│   ├── logits_gnnv3g_dense19_s03_0p5.npz
+│   ├── logits_gnnv3g_dense19_s03_1p0.npz
+│   ├── logits_gnnv3g_dense19_s04_0p5.npz
+│   ├── logits_gnnv3g_dense19_s04_1p0.npz
+│   ├── logits_gnnv3g_dense19_s05_0p5.npz
+│   ├── logits_gnnv3g_dense19_s05_1p0.npz
+│   ├── logits_gnnv3g_dense19_s06_0p5.npz
+│   ├── logits_gnnv3g_dense19_s06_1p0.npz
+│   ├── logits_gnnv3g_dense19_s07_0p5.npz
+│   ├── logits_gnnv3g_dense19_s07_1p0.npz
+│   ├── logits_gnnv3g_dense19_s08_0p5.npz
+│   ├── logits_gnnv3g_dense19_s08_1p0.npz
+│   ├── logits_gnnv3g_dense19_s09_0p5.npz
+│   ├── logits_gnnv3g_dense19_s09_1p0.npz
+│   ├── logits_gnnv3g_dense19_s10_0p5.npz
+│   ├── logits_gnnv3g_dense19_s10_1p0.npz
+│   ├── logits_gnnv3g_dense19_s11_0p5.npz
+│   ├── logits_gnnv3g_dense19_s11_1p0.npz
+│   ├── logits_gnnv3g_dense19_s12_0p5.npz
+│   ├── logits_gnnv3g_dense19_s12_1p0.npz
+│   ├── logits_gnnv3g_dense19_s13_0p5.npz
+│   ├── logits_gnnv3g_dense19_s13_1p0.npz
+│   ├── logits_gnnv3g_dense19_s14_0p5.npz
+│   ├── logits_gnnv3g_dense19_s14_1p0.npz
+│   ├── logits_gnnv3g_dense19_s15_0p5.npz
+│   ├── logits_gnnv3g_dense19_s15_1p0.npz
+│   ├── logits_gnnv3g_dense19_s16_0p5.npz
+│   ├── logits_gnnv3g_dense19_s16_1p0.npz
+│   ├── logits_gnnv3g_dense19_s17_0p5.npz
+│   ├── logits_gnnv3g_dense19_s17_1p0.npz
+│   ├── logits_gnnv3g_dense19_s18_0p5.npz
+│   ├── logits_gnnv3g_dense19_s18_1p0.npz
+│   ├── logits_gnnv3g_dense19_s19_0p5.npz
+│   ├── logits_gnnv3g_dense19_s19_1p0.npz
+│   ├── logits_gnnv3g_dense19_s20_0p5.npz
+│   ├── logits_gnnv3g_dense19_s20_1p0.npz
+│   ├── logits_gnnv3g_dense19_s21_0p5.npz
+│   ├── logits_gnnv3g_dense19_s21_1p0.npz
+│   ├── logits_gnnv3g_dense19_s22_0p5.npz
+│   ├── logits_gnnv3g_dense19_s22_1p0.npz
+│   ├── logits_gnnv3g_dense19_s23_0p5.npz
+│   ├── logits_gnnv3g_dense19_s23_1p0.npz
+│   ├── logits_gnnv3g_dense19_s24_0p5.npz
+│   ├── logits_gnnv3g_dense19_s24_1p0.npz
+│   ├── logits_gnnv3g_dense19_s25_0p5.npz
+│   ├── logits_gnnv3g_dense19_s25_1p0.npz
+│   ├── logits_gnnv3g_dense19_s26_0p5.npz
+│   ├── logits_gnnv3g_dense19_s26_1p0.npz
+│   ├── logits_gnnv3g_dense19_s27_0p5.npz
+│   ├── logits_gnnv3g_dense19_s27_1p0.npz
+│   ├── logits_gnnv3g_dense19_s28_0p5.npz
+│   ├── logits_gnnv3g_dense19_s28_1p0.npz
+│   ├── logits_gnnv3g_dense19_s29_0p5.npz
+│   ├── logits_gnnv3g_dense19_s29_1p0.npz
+│   ├── logits_gnnv3g_dense19_s30_0p5.npz
+│   ├── logits_gnnv3g_dense19_s30_1p0.npz
+│   ├── logits_gnnv3g_dense19_s31_0p5.npz
+│   ├── logits_gnnv3g_dense19_s31_1p0.npz
+│   ├── logits_gnnv3g_dense19_s32_0p5.npz
+│   ├── logits_gnnv3g_dense19_s32_1p0.npz
+│   ├── logits_gnnv3g_dense19_s33_0p5.npz
+│   ├── logits_gnnv3g_dense19_s33_1p0.npz
+│   ├── logits_gnnv3g_dense19_s34_0p5.npz
+│   ├── logits_gnnv3g_dense19_s34_1p0.npz
+│   ├── logits_gnnv3g_dense19_s35_0p5.npz
+│   ├── logits_gnnv3g_dense19_s35_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s01_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s01_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s02_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s02_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s03_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s03_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s04_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s04_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s05_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s05_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s06_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s06_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s07_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s07_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s08_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s08_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s09_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s09_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s10_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s10_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s11_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s11_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s12_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s12_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s13_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s13_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s14_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s14_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s15_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s15_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s16_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s16_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s17_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s17_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s18_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s18_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s19_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s19_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s20_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s20_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s21_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s21_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s22_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s22_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s23_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s23_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s24_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s24_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s25_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s25_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s26_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s26_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s27_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s27_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s28_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s28_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s29_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s29_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s30_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s30_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s31_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s31_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s32_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s32_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s33_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s33_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s34_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s34_1p0.npz
+│   ├── logits_gnnv3k_s42d19_s35_0p5.npz
+│   ├── logits_gnnv3k_s42d19_s35_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s01_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s01_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s02_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s02_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s03_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s03_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s04_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s04_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s05_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s05_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s06_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s06_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s07_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s07_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s08_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s08_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s09_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s09_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s10_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s10_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s11_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s11_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s12_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s12_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s13_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s13_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s14_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s14_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s15_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s15_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s16_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s16_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s17_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s17_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s18_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s18_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s19_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s19_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s20_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s20_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s21_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s21_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s22_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s22_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s23_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s23_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s24_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s24_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s25_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s25_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s26_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s26_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s27_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s27_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s28_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s28_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s29_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s29_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s30_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s30_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s31_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s31_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s32_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s32_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s33_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s33_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s34_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s34_1p0.npz
+│   ├── logits_gnnv3k_s43d19_s35_0p5.npz
+│   ├── logits_gnnv3k_s43d19_s35_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s01_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s01_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s02_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s02_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s03_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s03_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s04_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s04_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s05_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s05_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s06_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s06_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s07_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s07_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s08_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s08_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s09_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s09_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s10_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s10_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s11_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s11_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s12_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s12_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s13_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s13_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s14_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s14_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s15_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s15_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s16_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s16_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s17_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s17_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s18_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s18_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s19_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s19_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s20_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s20_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s21_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s21_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s22_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s22_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s23_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s23_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s24_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s24_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s25_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s25_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s26_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s26_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s27_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s27_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s28_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s28_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s29_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s29_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s30_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s30_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s31_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s31_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s32_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s32_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s33_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s33_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s34_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s34_1p0.npz
+│   ├── logits_gnnv3l_b5d19_s35_0p5.npz
+│   ├── logits_gnnv3l_b5d19_s35_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s01_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s01_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s02_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s02_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s03_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s03_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s04_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s04_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s05_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s05_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s06_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s06_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s07_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s07_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s08_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s08_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s09_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s09_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s10_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s10_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s11_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s11_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s12_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s12_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s13_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s13_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s14_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s14_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s15_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s15_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s16_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s16_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s17_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s17_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s18_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s18_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s19_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s19_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s20_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s20_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s21_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s21_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s22_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s22_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s23_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s23_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s24_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s24_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s25_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s25_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s26_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s26_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s27_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s27_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s28_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s28_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s29_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s29_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s30_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s30_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s31_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s31_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s32_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s32_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s33_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s33_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s34_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s34_1p0.npz
+│   ├── logits_gnnv3l_b5d9_s35_0p5.npz
+│   ├── logits_gnnv3l_b5d9_s35_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s01_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s01_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s02_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s02_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s03_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s03_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s04_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s04_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s05_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s05_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s06_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s06_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s07_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s07_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s08_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s08_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s09_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s09_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s10_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s10_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s11_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s11_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s12_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s12_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s13_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s13_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s14_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s14_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s15_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s15_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s16_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s16_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s17_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s17_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s18_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s18_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s19_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s19_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s20_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s20_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s21_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s21_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s22_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s22_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s23_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s23_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s24_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s24_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s25_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s25_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s26_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s26_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s27_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s27_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s28_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s28_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s29_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s29_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s30_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s30_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s31_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s31_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s32_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s32_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s33_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s33_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s34_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s34_1p0.npz
+│   ├── logits_gnnv3m_s42b5d19_s35_0p5.npz
+│   ├── logits_gnnv3m_s42b5d19_s35_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s01_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s01_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s02_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s02_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s03_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s03_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s04_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s04_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s05_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s05_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s06_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s06_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s07_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s07_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s08_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s08_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s09_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s09_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s10_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s10_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s11_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s11_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s12_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s12_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s13_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s13_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s14_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s14_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s15_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s15_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s16_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s16_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s17_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s17_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s18_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s18_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s19_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s19_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s20_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s20_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s21_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s21_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s22_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s22_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s23_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s23_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s24_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s24_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s25_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s25_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s26_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s26_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s27_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s27_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s28_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s28_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s29_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s29_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s30_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s30_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s31_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s31_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s32_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s32_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s33_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s33_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s34_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s34_1p0.npz
+│   ├── logits_gnnv3m_s43b5d19_s35_0p5.npz
+│   ├── logits_gnnv3m_s43b5d19_s35_1p0.npz
+│   ├── models
+│   │   ├── gnnv3a_pb_s01_0p5.pt
+│   │   ├── gnnv3a_pb_s01_1p0.pt
+│   │   ├── gnnv3a_pb_s02_0p5.pt
+│   │   ├── gnnv3a_pb_s02_1p0.pt
+│   │   ├── gnnv3a_pb_s03_0p5.pt
+│   │   ├── gnnv3a_pb_s03_1p0.pt
+│   │   ├── gnnv3a_pb_s04_0p5.pt
+│   │   ├── gnnv3a_pb_s04_1p0.pt
+│   │   ├── gnnv3a_pb_s05_0p5.pt
+│   │   ├── gnnv3a_pb_s05_1p0.pt
+│   │   ├── gnnv3a_pb_s06_0p5.pt
+│   │   ├── gnnv3a_pb_s06_1p0.pt
+│   │   ├── gnnv3a_pb_s07_0p5.pt
+│   │   ├── gnnv3a_pb_s07_1p0.pt
+│   │   ├── gnnv3a_pb_s08_0p5.pt
+│   │   ├── gnnv3a_pb_s08_1p0.pt
+│   │   ├── gnnv3a_pb_s09_0p5.pt
+│   │   ├── gnnv3a_pb_s09_1p0.pt
+│   │   ├── gnnv3a_pb_s10_0p5.pt
+│   │   ├── gnnv3a_pb_s10_1p0.pt
+│   │   ├── gnnv3a_pb_s11_0p5.pt
+│   │   ├── gnnv3a_pb_s11_1p0.pt
+│   │   ├── gnnv3a_pb_s12_0p5.pt
+│   │   ├── gnnv3a_pb_s12_1p0.pt
+│   │   ├── gnnv3a_pb_s13_0p5.pt
+│   │   ├── gnnv3a_pb_s13_1p0.pt
+│   │   ├── gnnv3a_pb_s14_0p5.pt
+│   │   ├── gnnv3a_pb_s14_1p0.pt
+│   │   ├── gnnv3a_pb_s15_0p5.pt
+│   │   ├── gnnv3a_pb_s15_1p0.pt
+│   │   ├── gnnv3a_pb_s16_0p5.pt
+│   │   ├── gnnv3a_pb_s16_1p0.pt
+│   │   ├── gnnv3a_pb_s17_0p5.pt
+│   │   ├── gnnv3a_pb_s17_1p0.pt
+│   │   ├── gnnv3a_pb_s18_0p5.pt
+│   │   ├── gnnv3a_pb_s18_1p0.pt
+│   │   ├── gnnv3a_pb_s19_0p5.pt
+│   │   ├── gnnv3a_pb_s19_1p0.pt
+│   │   ├── gnnv3a_pb_s20_0p5.pt
+│   │   ├── gnnv3a_pb_s20_1p0.pt
+│   │   ├── gnnv3a_pb_s21_0p5.pt
+│   │   ├── gnnv3a_pb_s21_1p0.pt
+│   │   ├── gnnv3a_pb_s22_0p5.pt
+│   │   ├── gnnv3a_pb_s22_1p0.pt
+│   │   ├── gnnv3a_pb_s23_0p5.pt
+│   │   ├── gnnv3a_pb_s23_1p0.pt
+│   │   ├── gnnv3a_pb_s24_0p5.pt
+│   │   ├── gnnv3a_pb_s24_1p0.pt
+│   │   ├── gnnv3a_pb_s25_0p5.pt
+│   │   ├── gnnv3a_pb_s25_1p0.pt
+│   │   ├── gnnv3a_pb_s26_0p5.pt
+│   │   ├── gnnv3a_pb_s26_1p0.pt
+│   │   ├── gnnv3a_pb_s27_0p5.pt
+│   │   ├── gnnv3a_pb_s27_1p0.pt
+│   │   ├── gnnv3a_pb_s28_0p5.pt
+│   │   ├── gnnv3a_pb_s28_1p0.pt
+│   │   ├── gnnv3a_pb_s29_0p5.pt
+│   │   ├── gnnv3a_pb_s29_1p0.pt
+│   │   ├── gnnv3a_pb_s30_0p5.pt
+│   │   ├── gnnv3a_pb_s30_1p0.pt
+│   │   ├── gnnv3a_pb_s31_0p5.pt
+│   │   ├── gnnv3a_pb_s31_1p0.pt
+│   │   ├── gnnv3a_pb_s32_0p5.pt
+│   │   ├── gnnv3a_pb_s32_1p0.pt
+│   │   ├── gnnv3a_pb_s33_0p5.pt
+│   │   ├── gnnv3a_pb_s33_1p0.pt
+│   │   ├── gnnv3a_pb_s34_0p5.pt
+│   │   ├── gnnv3a_pb_s34_1p0.pt
+│   │   ├── gnnv3a_pb_s35_0p5.pt
+│   │   ├── gnnv3a_pb_s35_1p0.pt
+│   │   ├── gnnv3a_sh_s01_1p0.pt
+│   │   ├── gnnv3b2_fg2_s01_1p0.pt
+│   │   ├── gnnv3b2_fg3_s01_1p0.pt
+│   │   ├── gnnv3b3_fg2_s01_0p5.pt
+│   │   ├── gnnv3b3_fg2_s01_1p0.pt
+│   │   ├── gnnv3b3_fg2_s02_0p5.pt
+│   │   ├── gnnv3b3_fg2_s02_1p0.pt
+│   │   ├── gnnv3b3_fg2_s03_0p5.pt
+│   │   ├── gnnv3b3_fg2_s03_1p0.pt
+│   │   ├── gnnv3b3_fg2_s04_0p5.pt
+│   │   ├── gnnv3b3_fg2_s04_1p0.pt
+│   │   ├── gnnv3b3_fg2_s05_0p5.pt
+│   │   ├── gnnv3b3_fg2_s05_1p0.pt
+│   │   ├── gnnv3b3_fg2_s06_0p5.pt
+│   │   ├── gnnv3b3_fg2_s06_1p0.pt
+│   │   ├── gnnv3b3_fg2_s07_0p5.pt
+│   │   ├── gnnv3b3_fg2_s07_1p0.pt
+│   │   ├── gnnv3b3_fg2_s08_0p5.pt
+│   │   ├── gnnv3b3_fg2_s08_1p0.pt
+│   │   ├── gnnv3b3_fg2_s09_0p5.pt
+│   │   ├── gnnv3b3_fg2_s09_1p0.pt
+│   │   ├── gnnv3b3_fg2_s10_0p5.pt
+│   │   ├── gnnv3b3_fg2_s10_1p0.pt
+│   │   ├── gnnv3b3_fg2_s11_0p5.pt
+│   │   ├── gnnv3b3_fg2_s11_1p0.pt
+│   │   ├── gnnv3b3_fg2_s12_0p5.pt
+│   │   ├── gnnv3b3_fg2_s12_1p0.pt
+│   │   ├── gnnv3b3_fg2_s13_0p5.pt
+│   │   ├── gnnv3b3_fg2_s13_1p0.pt
+│   │   ├── gnnv3b3_fg2_s14_0p5.pt
+│   │   ├── gnnv3b3_fg2_s14_1p0.pt
+│   │   ├── gnnv3b3_fg2_s15_0p5.pt
+│   │   ├── gnnv3b3_fg2_s15_1p0.pt
+│   │   ├── gnnv3b3_fg2_s16_0p5.pt
+│   │   ├── gnnv3b3_fg2_s16_1p0.pt
+│   │   ├── gnnv3b3_fg2_s17_0p5.pt
+│   │   ├── gnnv3b3_fg2_s17_1p0.pt
+│   │   ├── gnnv3b3_fg2_s18_0p5.pt
+│   │   ├── gnnv3b3_fg2_s18_1p0.pt
+│   │   ├── gnnv3b3_fg2_s19_0p5.pt
+│   │   ├── gnnv3b3_fg2_s19_1p0.pt
+│   │   ├── gnnv3b3_fg2_s20_0p5.pt
+│   │   ├── gnnv3b3_fg2_s20_1p0.pt
+│   │   ├── gnnv3b3_fg2_s21_0p5.pt
+│   │   ├── gnnv3b3_fg2_s21_1p0.pt
+│   │   ├── gnnv3b3_fg2_s22_0p5.pt
+│   │   ├── gnnv3b3_fg2_s22_1p0.pt
+│   │   ├── gnnv3b3_fg2_s23_0p5.pt
+│   │   ├── gnnv3b3_fg2_s23_1p0.pt
+│   │   ├── gnnv3b3_fg2_s24_0p5.pt
+│   │   ├── gnnv3b3_fg2_s24_1p0.pt
+│   │   ├── gnnv3b3_fg2_s25_0p5.pt
+│   │   ├── gnnv3b3_fg2_s25_1p0.pt
+│   │   ├── gnnv3b3_fg2_s26_0p5.pt
+│   │   ├── gnnv3b3_fg2_s26_1p0.pt
+│   │   ├── gnnv3b3_fg2_s27_0p5.pt
+│   │   ├── gnnv3b3_fg2_s27_1p0.pt
+│   │   ├── gnnv3b3_fg2_s28_0p5.pt
+│   │   ├── gnnv3b3_fg2_s28_1p0.pt
+│   │   ├── gnnv3b3_fg2_s29_0p5.pt
+│   │   ├── gnnv3b3_fg2_s29_1p0.pt
+│   │   ├── gnnv3b3_fg2_s30_0p5.pt
+│   │   ├── gnnv3b3_fg2_s30_1p0.pt
+│   │   ├── gnnv3b3_fg2_s31_0p5.pt
+│   │   ├── gnnv3b3_fg2_s31_1p0.pt
+│   │   ├── gnnv3b3_fg2_s32_0p5.pt
+│   │   ├── gnnv3b3_fg2_s32_1p0.pt
+│   │   ├── gnnv3b3_fg2_s33_0p5.pt
+│   │   ├── gnnv3b3_fg2_s33_1p0.pt
+│   │   ├── gnnv3b3_fg2_s34_0p5.pt
+│   │   ├── gnnv3b3_fg2_s34_1p0.pt
+│   │   ├── gnnv3b3_fg2_s35_0p5.pt
+│   │   ├── gnnv3b3_fg2_s35_1p0.pt
+│   │   ├── gnnv3b3_fg3_s01_0p5.pt
+│   │   ├── gnnv3b3_fg3_s01_1p0.pt
+│   │   ├── gnnv3b3_fg3_s02_0p5.pt
+│   │   ├── gnnv3b3_fg3_s02_1p0.pt
+│   │   ├── gnnv3b3_fg3_s03_0p5.pt
+│   │   ├── gnnv3b3_fg3_s03_1p0.pt
+│   │   ├── gnnv3b3_fg3_s04_0p5.pt
+│   │   ├── gnnv3b3_fg3_s04_1p0.pt
+│   │   ├── gnnv3b3_fg3_s05_0p5.pt
+│   │   ├── gnnv3b3_fg3_s05_1p0.pt
+│   │   ├── gnnv3b3_fg3_s06_0p5.pt
+│   │   ├── gnnv3b3_fg3_s06_1p0.pt
+│   │   ├── gnnv3b3_fg3_s07_0p5.pt
+│   │   ├── gnnv3b3_fg3_s07_1p0.pt
+│   │   ├── gnnv3b3_fg3_s08_0p5.pt
+│   │   ├── gnnv3b3_fg3_s08_1p0.pt
+│   │   ├── gnnv3b3_fg3_s09_0p5.pt
+│   │   ├── gnnv3b3_fg3_s09_1p0.pt
+│   │   ├── gnnv3b3_fg3_s10_0p5.pt
+│   │   ├── gnnv3b3_fg3_s10_1p0.pt
+│   │   ├── gnnv3b3_fg3_s11_0p5.pt
+│   │   ├── gnnv3b3_fg3_s11_1p0.pt
+│   │   ├── gnnv3b3_fg3_s12_0p5.pt
+│   │   ├── gnnv3b3_fg3_s12_1p0.pt
+│   │   ├── gnnv3b3_fg3_s13_0p5.pt
+│   │   ├── gnnv3b3_fg3_s13_1p0.pt
+│   │   ├── gnnv3b3_fg3_s14_0p5.pt
+│   │   ├── gnnv3b3_fg3_s14_1p0.pt
+│   │   ├── gnnv3b3_fg3_s15_0p5.pt
+│   │   ├── gnnv3b3_fg3_s15_1p0.pt
+│   │   ├── gnnv3b3_fg3_s16_0p5.pt
+│   │   ├── gnnv3b3_fg3_s16_1p0.pt
+│   │   ├── gnnv3b3_fg3_s17_0p5.pt
+│   │   ├── gnnv3b3_fg3_s17_1p0.pt
+│   │   ├── gnnv3b3_fg3_s18_0p5.pt
+│   │   ├── gnnv3b3_fg3_s18_1p0.pt
+│   │   ├── gnnv3b3_fg3_s19_0p5.pt
+│   │   ├── gnnv3b3_fg3_s19_1p0.pt
+│   │   ├── gnnv3b3_fg3_s20_0p5.pt
+│   │   ├── gnnv3b3_fg3_s20_1p0.pt
+│   │   ├── gnnv3b3_fg3_s21_0p5.pt
+│   │   ├── gnnv3b3_fg3_s21_1p0.pt
+│   │   ├── gnnv3b3_fg3_s22_0p5.pt
+│   │   ├── gnnv3b3_fg3_s22_1p0.pt
+│   │   ├── gnnv3b3_fg3_s23_0p5.pt
+│   │   ├── gnnv3b3_fg3_s23_1p0.pt
+│   │   ├── gnnv3b3_fg3_s24_0p5.pt
+│   │   ├── gnnv3b3_fg3_s24_1p0.pt
+│   │   ├── gnnv3b3_fg3_s25_0p5.pt
+│   │   ├── gnnv3b3_fg3_s25_1p0.pt
+│   │   ├── gnnv3b3_fg3_s26_0p5.pt
+│   │   ├── gnnv3b3_fg3_s26_1p0.pt
+│   │   ├── gnnv3b3_fg3_s27_0p5.pt
+│   │   ├── gnnv3b3_fg3_s27_1p0.pt
+│   │   ├── gnnv3b3_fg3_s28_0p5.pt
+│   │   ├── gnnv3b3_fg3_s28_1p0.pt
+│   │   ├── gnnv3b3_fg3_s29_0p5.pt
+│   │   ├── gnnv3b3_fg3_s29_1p0.pt
+│   │   ├── gnnv3b3_fg3_s30_0p5.pt
+│   │   ├── gnnv3b3_fg3_s30_1p0.pt
+│   │   ├── gnnv3b3_fg3_s31_0p5.pt
+│   │   ├── gnnv3b3_fg3_s31_1p0.pt
+│   │   ├── gnnv3b3_fg3_s32_0p5.pt
+│   │   ├── gnnv3b3_fg3_s32_1p0.pt
+│   │   ├── gnnv3b3_fg3_s33_0p5.pt
+│   │   ├── gnnv3b3_fg3_s33_1p0.pt
+│   │   ├── gnnv3b3_fg3_s34_0p5.pt
+│   │   ├── gnnv3b3_fg3_s34_1p0.pt
+│   │   ├── gnnv3b3_fg3_s35_0p5.pt
+│   │   ├── gnnv3b3_fg3_s35_1p0.pt
+│   │   ├── gnnv3b_fg2_s01_1p0.pt
+│   │   ├── gnnv3b_fg3_s01_1p0.pt
+│   │   ├── gnnv3c_h5_s01_0p5.pt
+│   │   ├── gnnv3c_h5_s01_1p0.pt
+│   │   ├── gnnv3c_h5_s02_0p5.pt
+│   │   ├── gnnv3c_h5_s02_1p0.pt
+│   │   ├── gnnv3c_h5_s03_0p5.pt
+│   │   ├── gnnv3c_h5_s03_1p0.pt
+│   │   ├── gnnv3c_h5_s04_0p5.pt
+│   │   ├── gnnv3c_h5_s04_1p0.pt
+│   │   ├── gnnv3c_h5_s05_0p5.pt
+│   │   ├── gnnv3c_h5_s05_1p0.pt
+│   │   ├── gnnv3c_h5_s06_0p5.pt
+│   │   ├── gnnv3c_h5_s06_1p0.pt
+│   │   ├── gnnv3c_h5_s07_0p5.pt
+│   │   ├── gnnv3c_h5_s07_1p0.pt
+│   │   ├── gnnv3c_h5_s08_0p5.pt
+│   │   ├── gnnv3c_h5_s08_1p0.pt
+│   │   ├── gnnv3c_h5_s09_0p5.pt
+│   │   ├── gnnv3c_h5_s09_1p0.pt
+│   │   ├── gnnv3c_h5_s10_0p5.pt
+│   │   ├── gnnv3c_h5_s10_1p0.pt
+│   │   ├── gnnv3c_h5_s11_0p5.pt
+│   │   ├── gnnv3c_h5_s11_1p0.pt
+│   │   ├── gnnv3c_h5_s12_0p5.pt
+│   │   ├── gnnv3c_h5_s12_1p0.pt
+│   │   ├── gnnv3c_h5_s13_0p5.pt
+│   │   ├── gnnv3c_h5_s13_1p0.pt
+│   │   ├── gnnv3c_h5_s14_0p5.pt
+│   │   ├── gnnv3c_h5_s14_1p0.pt
+│   │   ├── gnnv3c_h5_s15_0p5.pt
+│   │   ├── gnnv3c_h5_s15_1p0.pt
+│   │   ├── gnnv3c_h5_s16_0p5.pt
+│   │   ├── gnnv3c_h5_s16_1p0.pt
+│   │   ├── gnnv3c_h5_s17_0p5.pt
+│   │   ├── gnnv3c_h5_s17_1p0.pt
+│   │   ├── gnnv3c_h5_s18_0p5.pt
+│   │   ├── gnnv3c_h5_s18_1p0.pt
+│   │   ├── gnnv3c_h5_s19_0p5.pt
+│   │   ├── gnnv3c_h5_s19_1p0.pt
+│   │   ├── gnnv3c_h5_s20_0p5.pt
+│   │   ├── gnnv3c_h5_s20_1p0.pt
+│   │   ├── gnnv3c_h5_s21_0p5.pt
+│   │   ├── gnnv3c_h5_s21_1p0.pt
+│   │   ├── gnnv3c_h5_s22_0p5.pt
+│   │   ├── gnnv3c_h5_s22_1p0.pt
+│   │   ├── gnnv3c_h5_s23_0p5.pt
+│   │   ├── gnnv3c_h5_s23_1p0.pt
+│   │   ├── gnnv3c_h5_s24_0p5.pt
+│   │   ├── gnnv3c_h5_s24_1p0.pt
+│   │   ├── gnnv3c_h5_s25_0p5.pt
+│   │   ├── gnnv3c_h5_s25_1p0.pt
+│   │   ├── gnnv3c_h5_s26_0p5.pt
+│   │   ├── gnnv3c_h5_s26_1p0.pt
+│   │   ├── gnnv3c_h5_s27_0p5.pt
+│   │   ├── gnnv3c_h5_s27_1p0.pt
+│   │   ├── gnnv3c_h5_s28_0p5.pt
+│   │   ├── gnnv3c_h5_s28_1p0.pt
+│   │   ├── gnnv3c_h5_s29_0p5.pt
+│   │   ├── gnnv3c_h5_s29_1p0.pt
+│   │   ├── gnnv3c_h5_s30_0p5.pt
+│   │   ├── gnnv3c_h5_s30_1p0.pt
+│   │   ├── gnnv3c_h5_s31_0p5.pt
+│   │   ├── gnnv3c_h5_s31_1p0.pt
+│   │   ├── gnnv3c_h5_s32_0p5.pt
+│   │   ├── gnnv3c_h5_s32_1p0.pt
+│   │   ├── gnnv3c_h5_s33_0p5.pt
+│   │   ├── gnnv3c_h5_s33_1p0.pt
+│   │   ├── gnnv3c_h5_s34_0p5.pt
+│   │   ├── gnnv3c_h5_s34_1p0.pt
+│   │   ├── gnnv3c_h5_s35_0p5.pt
+│   │   ├── gnnv3c_h5_s35_1p0.pt
+│   │   ├── gnnv3c_ng_s01_0p5.pt
+│   │   ├── gnnv3c_ng_s01_1p0.pt
+│   │   ├── gnnv3c_ng_s02_0p5.pt
+│   │   ├── gnnv3c_ng_s02_1p0.pt
+│   │   ├── gnnv3c_ng_s03_0p5.pt
+│   │   ├── gnnv3c_ng_s03_1p0.pt
+│   │   ├── gnnv3c_ng_s04_0p5.pt
+│   │   ├── gnnv3c_ng_s04_1p0.pt
+│   │   ├── gnnv3c_ng_s05_0p5.pt
+│   │   ├── gnnv3c_ng_s05_1p0.pt
+│   │   ├── gnnv3c_ng_s06_0p5.pt
+│   │   ├── gnnv3c_ng_s06_1p0.pt
+│   │   ├── gnnv3c_ng_s07_0p5.pt
+│   │   ├── gnnv3c_ng_s07_1p0.pt
+│   │   ├── gnnv3c_ng_s08_0p5.pt
+│   │   ├── gnnv3c_ng_s08_1p0.pt
+│   │   ├── gnnv3c_ng_s09_0p5.pt
+│   │   ├── gnnv3c_ng_s09_1p0.pt
+│   │   ├── gnnv3c_ng_s10_0p5.pt
+│   │   ├── gnnv3c_ng_s10_1p0.pt
+│   │   ├── gnnv3c_ng_s11_0p5.pt
+│   │   ├── gnnv3c_ng_s11_1p0.pt
+│   │   ├── gnnv3c_ng_s12_0p5.pt
+│   │   ├── gnnv3c_ng_s12_1p0.pt
+│   │   ├── gnnv3c_ng_s13_0p5.pt
+│   │   ├── gnnv3c_ng_s13_1p0.pt
+│   │   ├── gnnv3c_ng_s14_0p5.pt
+│   │   ├── gnnv3c_ng_s14_1p0.pt
+│   │   ├── gnnv3c_ng_s15_0p5.pt
+│   │   ├── gnnv3c_ng_s15_1p0.pt
+│   │   ├── gnnv3c_ng_s16_0p5.pt
+│   │   ├── gnnv3c_ng_s16_1p0.pt
+│   │   ├── gnnv3c_ng_s17_0p5.pt
+│   │   ├── gnnv3c_ng_s17_1p0.pt
+│   │   ├── gnnv3c_ng_s18_0p5.pt
+│   │   ├── gnnv3c_ng_s18_1p0.pt
+│   │   ├── gnnv3c_ng_s19_0p5.pt
+│   │   ├── gnnv3c_ng_s19_1p0.pt
+│   │   ├── gnnv3c_ng_s20_0p5.pt
+│   │   ├── gnnv3c_ng_s20_1p0.pt
+│   │   ├── gnnv3c_ng_s21_0p5.pt
+│   │   ├── gnnv3c_ng_s21_1p0.pt
+│   │   ├── gnnv3c_ng_s22_0p5.pt
+│   │   ├── gnnv3c_ng_s22_1p0.pt
+│   │   ├── gnnv3c_ng_s23_0p5.pt
+│   │   ├── gnnv3c_ng_s23_1p0.pt
+│   │   ├── gnnv3c_ng_s24_0p5.pt
+│   │   ├── gnnv3c_ng_s24_1p0.pt
+│   │   ├── gnnv3c_ng_s25_0p5.pt
+│   │   ├── gnnv3c_ng_s25_1p0.pt
+│   │   ├── gnnv3c_ng_s26_0p5.pt
+│   │   ├── gnnv3c_ng_s26_1p0.pt
+│   │   ├── gnnv3c_ng_s27_0p5.pt
+│   │   ├── gnnv3c_ng_s27_1p0.pt
+│   │   ├── gnnv3c_ng_s28_0p5.pt
+│   │   ├── gnnv3c_ng_s28_1p0.pt
+│   │   ├── gnnv3c_ng_s29_0p5.pt
+│   │   ├── gnnv3c_ng_s29_1p0.pt
+│   │   ├── gnnv3c_ng_s30_0p5.pt
+│   │   ├── gnnv3c_ng_s30_1p0.pt
+│   │   ├── gnnv3c_ng_s31_0p5.pt
+│   │   ├── gnnv3c_ng_s31_1p0.pt
+│   │   ├── gnnv3c_ng_s32_0p5.pt
+│   │   ├── gnnv3c_ng_s32_1p0.pt
+│   │   ├── gnnv3c_ng_s33_0p5.pt
+│   │   ├── gnnv3c_ng_s33_1p0.pt
+│   │   ├── gnnv3c_ng_s34_0p5.pt
+│   │   ├── gnnv3c_ng_s34_1p0.pt
+│   │   ├── gnnv3c_ng_s35_0p5.pt
+│   │   ├── gnnv3c_ng_s35_1p0.pt
+│   │   ├── gnnv3c_ngh5_s01_0p5.pt
+│   │   ├── gnnv3c_ngh5_s01_1p0.pt
+│   │   ├── gnnv3c_ngh5_s02_0p5.pt
+│   │   ├── gnnv3c_ngh5_s02_1p0.pt
+│   │   ├── gnnv3c_ngh5_s03_0p5.pt
+│   │   ├── gnnv3c_ngh5_s03_1p0.pt
+│   │   ├── gnnv3c_ngh5_s04_0p5.pt
+│   │   ├── gnnv3c_ngh5_s04_1p0.pt
+│   │   ├── gnnv3c_ngh5_s05_0p5.pt
+│   │   ├── gnnv3c_ngh5_s05_1p0.pt
+│   │   ├── gnnv3c_ngh5_s06_0p5.pt
+│   │   ├── gnnv3c_ngh5_s06_1p0.pt
+│   │   ├── gnnv3c_ngh5_s07_0p5.pt
+│   │   ├── gnnv3c_ngh5_s07_1p0.pt
+│   │   ├── gnnv3c_ngh5_s08_0p5.pt
+│   │   ├── gnnv3c_ngh5_s08_1p0.pt
+│   │   ├── gnnv3c_ngh5_s09_0p5.pt
+│   │   ├── gnnv3c_ngh5_s09_1p0.pt
+│   │   ├── gnnv3c_ngh5_s10_0p5.pt
+│   │   ├── gnnv3c_ngh5_s10_1p0.pt
+│   │   ├── gnnv3c_ngh5_s11_0p5.pt
+│   │   ├── gnnv3c_ngh5_s11_1p0.pt
+│   │   ├── gnnv3c_ngh5_s12_0p5.pt
+│   │   ├── gnnv3c_ngh5_s12_1p0.pt
+│   │   ├── gnnv3c_ngh5_s13_0p5.pt
+│   │   ├── gnnv3c_ngh5_s13_1p0.pt
+│   │   ├── gnnv3c_ngh5_s14_0p5.pt
+│   │   ├── gnnv3c_ngh5_s14_1p0.pt
+│   │   ├── gnnv3c_ngh5_s15_0p5.pt
+│   │   ├── gnnv3c_ngh5_s15_1p0.pt
+│   │   ├── gnnv3c_ngh5_s16_0p5.pt
+│   │   ├── gnnv3c_ngh5_s16_1p0.pt
+│   │   ├── gnnv3c_ngh5_s17_0p5.pt
+│   │   ├── gnnv3c_ngh5_s17_1p0.pt
+│   │   ├── gnnv3c_ngh5_s18_0p5.pt
+│   │   ├── gnnv3c_ngh5_s18_1p0.pt
+│   │   ├── gnnv3c_ngh5_s19_0p5.pt
+│   │   ├── gnnv3c_ngh5_s19_1p0.pt
+│   │   ├── gnnv3c_ngh5_s20_0p5.pt
+│   │   ├── gnnv3c_ngh5_s20_1p0.pt
+│   │   ├── gnnv3c_ngh5_s21_0p5.pt
+│   │   ├── gnnv3c_ngh5_s21_1p0.pt
+│   │   ├── gnnv3c_ngh5_s22_0p5.pt
+│   │   ├── gnnv3c_ngh5_s22_1p0.pt
+│   │   ├── gnnv3c_ngh5_s23_0p5.pt
+│   │   ├── gnnv3c_ngh5_s23_1p0.pt
+│   │   ├── gnnv3c_ngh5_s24_0p5.pt
+│   │   ├── gnnv3c_ngh5_s24_1p0.pt
+│   │   ├── gnnv3c_ngh5_s25_0p5.pt
+│   │   ├── gnnv3c_ngh5_s25_1p0.pt
+│   │   ├── gnnv3c_ngh5_s26_0p5.pt
+│   │   ├── gnnv3c_ngh5_s26_1p0.pt
+│   │   ├── gnnv3c_ngh5_s27_0p5.pt
+│   │   ├── gnnv3c_ngh5_s27_1p0.pt
+│   │   ├── gnnv3c_ngh5_s28_0p5.pt
+│   │   ├── gnnv3c_ngh5_s28_1p0.pt
+│   │   ├── gnnv3c_ngh5_s29_0p5.pt
+│   │   ├── gnnv3c_ngh5_s29_1p0.pt
+│   │   ├── gnnv3c_ngh5_s30_0p5.pt
+│   │   ├── gnnv3c_ngh5_s30_1p0.pt
+│   │   ├── gnnv3c_ngh5_s31_0p5.pt
+│   │   ├── gnnv3c_ngh5_s31_1p0.pt
+│   │   ├── gnnv3c_ngh5_s32_0p5.pt
+│   │   ├── gnnv3c_ngh5_s32_1p0.pt
+│   │   ├── gnnv3c_ngh5_s33_0p5.pt
+│   │   ├── gnnv3c_ngh5_s33_1p0.pt
+│   │   ├── gnnv3c_ngh5_s34_0p5.pt
+│   │   ├── gnnv3c_ngh5_s34_1p0.pt
+│   │   ├── gnnv3c_ngh5_s35_0p5.pt
+│   │   ├── gnnv3c_ngh5_s35_1p0.pt
+│   │   ├── gnnv3d_fgu_s01_0p5.pt
+│   │   ├── gnnv3d_fgu_s01_1p0.pt
+│   │   ├── gnnv3d_fgu_s02_0p5.pt
+│   │   ├── gnnv3d_fgu_s02_1p0.pt
+│   │   ├── gnnv3d_fgu_s03_0p5.pt
+│   │   ├── gnnv3d_fgu_s03_1p0.pt
+│   │   ├── gnnv3d_fgu_s04_0p5.pt
+│   │   ├── gnnv3d_fgu_s04_1p0.pt
+│   │   ├── gnnv3d_fgu_s05_0p5.pt
+│   │   ├── gnnv3d_fgu_s05_1p0.pt
+│   │   ├── gnnv3d_fgu_s06_0p5.pt
+│   │   ├── gnnv3d_fgu_s06_1p0.pt
+│   │   ├── gnnv3d_fgu_s07_0p5.pt
+│   │   ├── gnnv3d_fgu_s07_1p0.pt
+│   │   ├── gnnv3d_fgu_s08_0p5.pt
+│   │   ├── gnnv3d_fgu_s08_1p0.pt
+│   │   ├── gnnv3d_fgu_s09_0p5.pt
+│   │   ├── gnnv3d_fgu_s09_1p0.pt
+│   │   ├── gnnv3d_fgu_s10_0p5.pt
+│   │   ├── gnnv3d_fgu_s10_1p0.pt
+│   │   ├── gnnv3d_fgu_s11_0p5.pt
+│   │   ├── gnnv3d_fgu_s11_1p0.pt
+│   │   ├── gnnv3d_fgu_s12_0p5.pt
+│   │   ├── gnnv3d_fgu_s12_1p0.pt
+│   │   ├── gnnv3d_fgu_s13_0p5.pt
+│   │   ├── gnnv3d_fgu_s13_1p0.pt
+│   │   ├── gnnv3d_fgu_s14_0p5.pt
+│   │   ├── gnnv3d_fgu_s14_1p0.pt
+│   │   ├── gnnv3d_fgu_s15_0p5.pt
+│   │   ├── gnnv3d_fgu_s15_1p0.pt
+│   │   ├── gnnv3d_fgu_s16_0p5.pt
+│   │   ├── gnnv3d_fgu_s16_1p0.pt
+│   │   ├── gnnv3d_fgu_s17_0p5.pt
+│   │   ├── gnnv3d_fgu_s17_1p0.pt
+│   │   ├── gnnv3d_fgu_s18_0p5.pt
+│   │   ├── gnnv3d_fgu_s18_1p0.pt
+│   │   ├── gnnv3d_fgu_s19_0p5.pt
+│   │   ├── gnnv3d_fgu_s19_1p0.pt
+│   │   ├── gnnv3d_fgu_s20_0p5.pt
+│   │   ├── gnnv3d_fgu_s20_1p0.pt
+│   │   ├── gnnv3d_fgu_s21_0p5.pt
+│   │   ├── gnnv3d_fgu_s21_1p0.pt
+│   │   ├── gnnv3d_fgu_s22_0p5.pt
+│   │   ├── gnnv3d_fgu_s22_1p0.pt
+│   │   ├── gnnv3d_fgu_s23_0p5.pt
+│   │   ├── gnnv3d_fgu_s23_1p0.pt
+│   │   ├── gnnv3d_fgu_s24_0p5.pt
+│   │   ├── gnnv3d_fgu_s24_1p0.pt
+│   │   ├── gnnv3d_fgu_s25_0p5.pt
+│   │   ├── gnnv3d_fgu_s25_1p0.pt
+│   │   ├── gnnv3d_fgu_s26_0p5.pt
+│   │   ├── gnnv3d_fgu_s26_1p0.pt
+│   │   ├── gnnv3d_fgu_s27_0p5.pt
+│   │   ├── gnnv3d_fgu_s27_1p0.pt
+│   │   ├── gnnv3d_fgu_s28_0p5.pt
+│   │   ├── gnnv3d_fgu_s28_1p0.pt
+│   │   ├── gnnv3d_fgu_s29_0p5.pt
+│   │   ├── gnnv3d_fgu_s29_1p0.pt
+│   │   ├── gnnv3d_fgu_s30_0p5.pt
+│   │   ├── gnnv3d_fgu_s30_1p0.pt
+│   │   ├── gnnv3d_fgu_s31_0p5.pt
+│   │   ├── gnnv3d_fgu_s31_1p0.pt
+│   │   ├── gnnv3d_fgu_s32_0p5.pt
+│   │   ├── gnnv3d_fgu_s32_1p0.pt
+│   │   ├── gnnv3d_fgu_s33_0p5.pt
+│   │   ├── gnnv3d_fgu_s33_1p0.pt
+│   │   ├── gnnv3d_fgu_s34_0p5.pt
+│   │   ├── gnnv3d_fgu_s34_1p0.pt
+│   │   ├── gnnv3d_fgu_s35_0p5.pt
+│   │   ├── gnnv3d_fgu_s35_1p0.pt
+│   │   ├── gnnv3e_cm_s01_0p5.pt
+│   │   ├── gnnv3e_cm_s01_1p0.pt
+│   │   ├── gnnv3e_cm_s02_0p5.pt
+│   │   ├── gnnv3e_cm_s02_1p0.pt
+│   │   ├── gnnv3e_cm_s03_0p5.pt
+│   │   ├── gnnv3e_cm_s03_1p0.pt
+│   │   ├── gnnv3e_cm_s04_0p5.pt
+│   │   ├── gnnv3e_cm_s04_1p0.pt
+│   │   ├── gnnv3e_cm_s05_0p5.pt
+│   │   ├── gnnv3e_cm_s05_1p0.pt
+│   │   ├── gnnv3e_cm_s06_0p5.pt
+│   │   ├── gnnv3e_cm_s06_1p0.pt
+│   │   ├── gnnv3e_cm_s07_0p5.pt
+│   │   ├── gnnv3e_cm_s07_1p0.pt
+│   │   ├── gnnv3e_cm_s08_0p5.pt
+│   │   ├── gnnv3e_cm_s08_1p0.pt
+│   │   ├── gnnv3e_cm_s09_0p5.pt
+│   │   ├── gnnv3e_cm_s09_1p0.pt
+│   │   ├── gnnv3e_cm_s10_0p5.pt
+│   │   ├── gnnv3e_cm_s10_1p0.pt
+│   │   ├── gnnv3e_cm_s11_0p5.pt
+│   │   ├── gnnv3e_cm_s11_1p0.pt
+│   │   ├── gnnv3e_cm_s12_0p5.pt
+│   │   ├── gnnv3e_cm_s12_1p0.pt
+│   │   ├── gnnv3e_cm_s13_0p5.pt
+│   │   ├── gnnv3e_cm_s13_1p0.pt
+│   │   ├── gnnv3e_cm_s14_0p5.pt
+│   │   ├── gnnv3e_cm_s14_1p0.pt
+│   │   ├── gnnv3e_cm_s15_0p5.pt
+│   │   ├── gnnv3e_cm_s15_1p0.pt
+│   │   ├── gnnv3e_cm_s16_0p5.pt
+│   │   ├── gnnv3e_cm_s16_1p0.pt
+│   │   ├── gnnv3e_cm_s17_0p5.pt
+│   │   ├── gnnv3e_cm_s17_1p0.pt
+│   │   ├── gnnv3e_cm_s18_0p5.pt
+│   │   ├── gnnv3e_cm_s18_1p0.pt
+│   │   ├── gnnv3e_cm_s19_0p5.pt
+│   │   ├── gnnv3e_cm_s19_1p0.pt
+│   │   ├── gnnv3e_cm_s20_0p5.pt
+│   │   ├── gnnv3e_cm_s20_1p0.pt
+│   │   ├── gnnv3e_cm_s21_0p5.pt
+│   │   ├── gnnv3e_cm_s21_1p0.pt
+│   │   ├── gnnv3e_cm_s22_0p5.pt
+│   │   ├── gnnv3e_cm_s22_1p0.pt
+│   │   ├── gnnv3e_cm_s23_0p5.pt
+│   │   ├── gnnv3e_cm_s23_1p0.pt
+│   │   ├── gnnv3e_cm_s24_0p5.pt
+│   │   ├── gnnv3e_cm_s24_1p0.pt
+│   │   ├── gnnv3e_cm_s25_0p5.pt
+│   │   ├── gnnv3e_cm_s25_1p0.pt
+│   │   ├── gnnv3e_cm_s26_0p5.pt
+│   │   ├── gnnv3e_cm_s26_1p0.pt
+│   │   ├── gnnv3e_cm_s27_0p5.pt
+│   │   ├── gnnv3e_cm_s27_1p0.pt
+│   │   ├── gnnv3e_cm_s28_0p5.pt
+│   │   ├── gnnv3e_cm_s28_1p0.pt
+│   │   ├── gnnv3e_cm_s29_0p5.pt
+│   │   ├── gnnv3e_cm_s29_1p0.pt
+│   │   ├── gnnv3e_cm_s30_0p5.pt
+│   │   ├── gnnv3e_cm_s30_1p0.pt
+│   │   ├── gnnv3e_cm_s31_0p5.pt
+│   │   ├── gnnv3e_cm_s31_1p0.pt
+│   │   ├── gnnv3e_cm_s32_0p5.pt
+│   │   ├── gnnv3e_cm_s32_1p0.pt
+│   │   ├── gnnv3e_cm_s33_0p5.pt
+│   │   ├── gnnv3e_cm_s33_1p0.pt
+│   │   ├── gnnv3e_cm_s34_0p5.pt
+│   │   ├── gnnv3e_cm_s34_1p0.pt
+│   │   ├── gnnv3e_cm_s35_0p5.pt
+│   │   ├── gnnv3e_cm_s35_1p0.pt
+│   │   ├── gnnv3e_lr_s01_0p5.pt
+│   │   ├── gnnv3e_lr_s01_1p0.pt
+│   │   ├── gnnv3e_lr_s02_0p5.pt
+│   │   ├── gnnv3e_lr_s02_1p0.pt
+│   │   ├── gnnv3e_lr_s03_0p5.pt
+│   │   ├── gnnv3e_lr_s03_1p0.pt
+│   │   ├── gnnv3e_lr_s04_0p5.pt
+│   │   ├── gnnv3e_lr_s04_1p0.pt
+│   │   ├── gnnv3e_lr_s05_0p5.pt
+│   │   ├── gnnv3e_lr_s05_1p0.pt
+│   │   ├── gnnv3e_lr_s06_0p5.pt
+│   │   ├── gnnv3e_lr_s06_1p0.pt
+│   │   ├── gnnv3e_lr_s07_0p5.pt
+│   │   ├── gnnv3e_lr_s07_1p0.pt
+│   │   ├── gnnv3e_lr_s08_0p5.pt
+│   │   ├── gnnv3e_lr_s08_1p0.pt
+│   │   ├── gnnv3e_lr_s09_0p5.pt
+│   │   ├── gnnv3e_lr_s09_1p0.pt
+│   │   ├── gnnv3e_lr_s10_0p5.pt
+│   │   ├── gnnv3e_lr_s10_1p0.pt
+│   │   ├── gnnv3e_lr_s11_0p5.pt
+│   │   ├── gnnv3e_lr_s11_1p0.pt
+│   │   ├── gnnv3e_lr_s12_0p5.pt
+│   │   ├── gnnv3e_lr_s12_1p0.pt
+│   │   ├── gnnv3e_lr_s13_0p5.pt
+│   │   ├── gnnv3e_lr_s13_1p0.pt
+│   │   ├── gnnv3e_lr_s14_0p5.pt
+│   │   ├── gnnv3e_lr_s14_1p0.pt
+│   │   ├── gnnv3e_lr_s15_0p5.pt
+│   │   ├── gnnv3e_lr_s15_1p0.pt
+│   │   ├── gnnv3e_lr_s16_0p5.pt
+│   │   ├── gnnv3e_lr_s16_1p0.pt
+│   │   ├── gnnv3e_lr_s17_0p5.pt
+│   │   ├── gnnv3e_lr_s17_1p0.pt
+│   │   ├── gnnv3e_lr_s18_0p5.pt
+│   │   ├── gnnv3e_lr_s18_1p0.pt
+│   │   ├── gnnv3e_lr_s19_0p5.pt
+│   │   ├── gnnv3e_lr_s19_1p0.pt
+│   │   ├── gnnv3e_lr_s20_0p5.pt
+│   │   ├── gnnv3e_lr_s20_1p0.pt
+│   │   ├── gnnv3e_lr_s21_0p5.pt
+│   │   ├── gnnv3e_lr_s21_1p0.pt
+│   │   ├── gnnv3e_lr_s22_0p5.pt
+│   │   ├── gnnv3e_lr_s22_1p0.pt
+│   │   ├── gnnv3e_lr_s23_0p5.pt
+│   │   ├── gnnv3e_lr_s23_1p0.pt
+│   │   ├── gnnv3e_lr_s24_0p5.pt
+│   │   ├── gnnv3e_lr_s24_1p0.pt
+│   │   ├── gnnv3e_lr_s25_0p5.pt
+│   │   ├── gnnv3e_lr_s25_1p0.pt
+│   │   ├── gnnv3e_lr_s26_0p5.pt
+│   │   ├── gnnv3e_lr_s26_1p0.pt
+│   │   ├── gnnv3e_lr_s27_0p5.pt
+│   │   ├── gnnv3e_lr_s27_1p0.pt
+│   │   ├── gnnv3e_lr_s28_0p5.pt
+│   │   ├── gnnv3e_lr_s28_1p0.pt
+│   │   ├── gnnv3e_lr_s29_0p5.pt
+│   │   ├── gnnv3e_lr_s29_1p0.pt
+│   │   ├── gnnv3e_lr_s30_0p5.pt
+│   │   ├── gnnv3e_lr_s30_1p0.pt
+│   │   ├── gnnv3e_lr_s31_0p5.pt
+│   │   ├── gnnv3e_lr_s31_1p0.pt
+│   │   ├── gnnv3e_lr_s32_0p5.pt
+│   │   ├── gnnv3e_lr_s32_1p0.pt
+│   │   ├── gnnv3e_lr_s33_0p5.pt
+│   │   ├── gnnv3e_lr_s33_1p0.pt
+│   │   ├── gnnv3e_lr_s34_0p5.pt
+│   │   ├── gnnv3e_lr_s34_1p0.pt
+│   │   ├── gnnv3e_lr_s35_0p5.pt
+│   │   ├── gnnv3e_lr_s35_1p0.pt
+│   │   ├── gnnv3g_dense19_s01_0p5.pt
+│   │   ├── gnnv3g_dense19_s01_1p0.pt
+│   │   ├── gnnv3g_dense19_s02_0p5.pt
+│   │   ├── gnnv3g_dense19_s02_1p0.pt
+│   │   ├── gnnv3g_dense19_s03_0p5.pt
+│   │   ├── gnnv3g_dense19_s03_1p0.pt
+│   │   ├── gnnv3g_dense19_s04_0p5.pt
+│   │   ├── gnnv3g_dense19_s04_1p0.pt
+│   │   ├── gnnv3g_dense19_s05_0p5.pt
+│   │   ├── gnnv3g_dense19_s05_1p0.pt
+│   │   ├── gnnv3g_dense19_s06_0p5.pt
+│   │   ├── gnnv3g_dense19_s06_1p0.pt
+│   │   ├── gnnv3g_dense19_s07_0p5.pt
+│   │   ├── gnnv3g_dense19_s07_1p0.pt
+│   │   ├── gnnv3g_dense19_s08_0p5.pt
+│   │   ├── gnnv3g_dense19_s08_1p0.pt
+│   │   ├── gnnv3g_dense19_s09_0p5.pt
+│   │   ├── gnnv3g_dense19_s09_1p0.pt
+│   │   ├── gnnv3g_dense19_s10_0p5.pt
+│   │   ├── gnnv3g_dense19_s10_1p0.pt
+│   │   ├── gnnv3g_dense19_s11_0p5.pt
+│   │   ├── gnnv3g_dense19_s11_1p0.pt
+│   │   ├── gnnv3g_dense19_s12_0p5.pt
+│   │   ├── gnnv3g_dense19_s12_1p0.pt
+│   │   ├── gnnv3g_dense19_s13_0p5.pt
+│   │   ├── gnnv3g_dense19_s13_1p0.pt
+│   │   ├── gnnv3g_dense19_s14_0p5.pt
+│   │   ├── gnnv3g_dense19_s14_1p0.pt
+│   │   ├── gnnv3g_dense19_s15_0p5.pt
+│   │   ├── gnnv3g_dense19_s15_1p0.pt
+│   │   ├── gnnv3g_dense19_s16_0p5.pt
+│   │   ├── gnnv3g_dense19_s16_1p0.pt
+│   │   ├── gnnv3g_dense19_s17_0p5.pt
+│   │   ├── gnnv3g_dense19_s17_1p0.pt
+│   │   ├── gnnv3g_dense19_s18_0p5.pt
+│   │   ├── gnnv3g_dense19_s18_1p0.pt
+│   │   ├── gnnv3g_dense19_s19_0p5.pt
+│   │   ├── gnnv3g_dense19_s19_1p0.pt
+│   │   ├── gnnv3g_dense19_s20_0p5.pt
+│   │   ├── gnnv3g_dense19_s20_1p0.pt
+│   │   ├── gnnv3g_dense19_s21_0p5.pt
+│   │   ├── gnnv3g_dense19_s21_1p0.pt
+│   │   ├── gnnv3g_dense19_s22_0p5.pt
+│   │   ├── gnnv3g_dense19_s22_1p0.pt
+│   │   ├── gnnv3g_dense19_s23_0p5.pt
+│   │   ├── gnnv3g_dense19_s23_1p0.pt
+│   │   ├── gnnv3g_dense19_s24_0p5.pt
+│   │   ├── gnnv3g_dense19_s24_1p0.pt
+│   │   ├── gnnv3g_dense19_s25_0p5.pt
+│   │   ├── gnnv3g_dense19_s25_1p0.pt
+│   │   ├── gnnv3g_dense19_s26_0p5.pt
+│   │   ├── gnnv3g_dense19_s26_1p0.pt
+│   │   ├── gnnv3g_dense19_s27_0p5.pt
+│   │   ├── gnnv3g_dense19_s27_1p0.pt
+│   │   ├── gnnv3g_dense19_s28_0p5.pt
+│   │   ├── gnnv3g_dense19_s28_1p0.pt
+│   │   ├── gnnv3g_dense19_s29_0p5.pt
+│   │   ├── gnnv3g_dense19_s29_1p0.pt
+│   │   ├── gnnv3g_dense19_s30_0p5.pt
+│   │   ├── gnnv3g_dense19_s30_1p0.pt
+│   │   ├── gnnv3g_dense19_s31_0p5.pt
+│   │   ├── gnnv3g_dense19_s31_1p0.pt
+│   │   ├── gnnv3g_dense19_s32_0p5.pt
+│   │   ├── gnnv3g_dense19_s32_1p0.pt
+│   │   ├── gnnv3g_dense19_s33_0p5.pt
+│   │   ├── gnnv3g_dense19_s33_1p0.pt
+│   │   ├── gnnv3g_dense19_s34_0p5.pt
+│   │   ├── gnnv3g_dense19_s34_1p0.pt
+│   │   ├── gnnv3g_dense19_s35_0p5.pt
+│   │   ├── gnnv3g_dense19_s35_1p0.pt
+│   │   ├── gnnv3g_dense64_s01_0p5.pt
+│   │   ├── gnnv3g_dense64_s02_0p5.pt
+│   │   ├── gnnv3g_dense64_s03_0p5.pt
+│   │   ├── gnnv3g_dense64_s04_0p5.pt
+│   │   ├── gnnv3g_dense64_s05_0p5.pt
+│   │   ├── gnnv3g_dense64_s06_0p5.pt
+│   │   ├── gnnv3g_dense64_s07_0p5.pt
+│   │   ├── gnnv3g_dense64_s08_0p5.pt
+│   │   ├── gnnv3g_dense64_s09_0p5.pt
+│   │   ├── gnnv3g_dense64_s10_0p5.pt
+│   │   ├── gnnv3g_dense64_s11_0p5.pt
+│   │   ├── gnnv3g_dense64_s12_0p5.pt
+│   │   ├── gnnv3g_dense64_s13_0p5.pt
+│   │   ├── gnnv3g_dense64_s14_0p5.pt
+│   │   ├── gnnv3g_dense64_s15_0p5.pt
+│   │   ├── gnnv3g_dense64_s16_0p5.pt
+│   │   ├── gnnv3g_dense64_s17_0p5.pt
+│   │   ├── gnnv3g_dense64_s18_0p5.pt
+│   │   ├── gnnv3g_dense64_s19_0p5.pt
+│   │   ├── gnnv3g_dense64_s20_0p5.pt
+│   │   ├── gnnv3g_dense64_s21_0p5.pt
+│   │   ├── gnnv3g_dense64_s22_0p5.pt
+│   │   ├── gnnv3g_dense64_s23_0p5.pt
+│   │   ├── gnnv3g_dense64_s24_0p5.pt
+│   │   ├── gnnv3g_dense64_s25_0p5.pt
+│   │   ├── gnnv3g_dense64_s26_0p5.pt
+│   │   ├── gnnv3g_dense64_s27_0p5.pt
+│   │   ├── gnnv3g_dense64_s28_0p5.pt
+│   │   ├── gnnv3g_dense64_s29_0p5.pt
+│   │   ├── gnnv3g_dense64_s30_0p5.pt
+│   │   ├── gnnv3g_dense64_s31_0p5.pt
+│   │   ├── gnnv3g_dense64_s32_0p5.pt
+│   │   ├── gnnv3g_dense64_s33_0p5.pt
+│   │   ├── gnnv3g_dense64_s34_0p5.pt
+│   │   ├── gnnv3g_dense64_s35_0p5.pt
+│   │   ├── gnnv3g_knn19_s01_0p5.pt
+│   │   ├── gnnv3g_knn19_s01_1p0.pt
+│   │   ├── gnnv3g_knn19_s02_0p5.pt
+│   │   ├── gnnv3g_knn19_s02_1p0.pt
+│   │   ├── gnnv3g_knn19_s03_0p5.pt
+│   │   ├── gnnv3g_knn19_s03_1p0.pt
+│   │   ├── gnnv3g_knn19_s04_0p5.pt
+│   │   ├── gnnv3g_knn19_s04_1p0.pt
+│   │   ├── gnnv3g_knn19_s05_0p5.pt
+│   │   ├── gnnv3g_knn19_s05_1p0.pt
+│   │   ├── gnnv3g_knn19_s06_0p5.pt
+│   │   ├── gnnv3g_knn19_s06_1p0.pt
+│   │   ├── gnnv3g_knn19_s07_0p5.pt
+│   │   ├── gnnv3g_knn19_s07_1p0.pt
+│   │   ├── gnnv3g_knn19_s08_0p5.pt
+│   │   ├── gnnv3g_knn19_s08_1p0.pt
+│   │   ├── gnnv3g_knn19_s09_0p5.pt
+│   │   ├── gnnv3g_knn19_s09_1p0.pt
+│   │   ├── gnnv3g_knn19_s10_0p5.pt
+│   │   ├── gnnv3g_knn19_s10_1p0.pt
+│   │   ├── gnnv3g_knn19_s11_0p5.pt
+│   │   ├── gnnv3g_knn19_s11_1p0.pt
+│   │   ├── gnnv3g_knn19_s12_0p5.pt
+│   │   ├── gnnv3g_knn19_s12_1p0.pt
+│   │   ├── gnnv3g_knn19_s13_0p5.pt
+│   │   ├── gnnv3g_knn19_s13_1p0.pt
+│   │   ├── gnnv3g_knn19_s14_0p5.pt
+│   │   ├── gnnv3g_knn19_s14_1p0.pt
+│   │   ├── gnnv3g_knn19_s15_0p5.pt
+│   │   ├── gnnv3g_knn19_s15_1p0.pt
+│   │   ├── gnnv3g_knn19_s16_0p5.pt
+│   │   ├── gnnv3g_knn19_s16_1p0.pt
+│   │   ├── gnnv3g_knn19_s17_0p5.pt
+│   │   ├── gnnv3g_knn19_s17_1p0.pt
+│   │   ├── gnnv3g_knn19_s18_0p5.pt
+│   │   ├── gnnv3g_knn19_s18_1p0.pt
+│   │   ├── gnnv3g_knn19_s19_0p5.pt
+│   │   ├── gnnv3g_knn19_s19_1p0.pt
+│   │   ├── gnnv3g_knn19_s20_0p5.pt
+│   │   ├── gnnv3g_knn19_s20_1p0.pt
+│   │   ├── gnnv3g_knn19_s21_0p5.pt
+│   │   ├── gnnv3g_knn19_s21_1p0.pt
+│   │   ├── gnnv3g_knn19_s22_0p5.pt
+│   │   ├── gnnv3g_knn19_s22_1p0.pt
+│   │   ├── gnnv3g_knn19_s23_0p5.pt
+│   │   ├── gnnv3g_knn19_s23_1p0.pt
+│   │   ├── gnnv3g_knn19_s24_0p5.pt
+│   │   ├── gnnv3g_knn19_s24_1p0.pt
+│   │   ├── gnnv3g_knn19_s25_0p5.pt
+│   │   ├── gnnv3g_knn19_s25_1p0.pt
+│   │   ├── gnnv3g_knn19_s26_0p5.pt
+│   │   ├── gnnv3g_knn19_s26_1p0.pt
+│   │   ├── gnnv3g_knn19_s27_0p5.pt
+│   │   ├── gnnv3g_knn19_s27_1p0.pt
+│   │   ├── gnnv3g_knn19_s28_0p5.pt
+│   │   ├── gnnv3g_knn19_s28_1p0.pt
+│   │   ├── gnnv3g_knn19_s29_0p5.pt
+│   │   ├── gnnv3g_knn19_s29_1p0.pt
+│   │   ├── gnnv3g_knn19_s30_0p5.pt
+│   │   ├── gnnv3g_knn19_s30_1p0.pt
+│   │   ├── gnnv3g_knn19_s31_0p5.pt
+│   │   ├── gnnv3g_knn19_s31_1p0.pt
+│   │   ├── gnnv3g_knn19_s32_0p5.pt
+│   │   ├── gnnv3g_knn19_s32_1p0.pt
+│   │   ├── gnnv3g_knn19_s33_0p5.pt
+│   │   ├── gnnv3g_knn19_s33_1p0.pt
+│   │   ├── gnnv3g_knn19_s34_0p5.pt
+│   │   ├── gnnv3g_knn19_s34_1p0.pt
+│   │   ├── gnnv3g_knn19_s35_0p5.pt
+│   │   ├── gnnv3g_knn19_s35_1p0.pt
+│   │   ├── gnnv3g_knn64_s01_0p5.pt
+│   │   ├── gnnv3g_knn64_s02_0p5.pt
+│   │   ├── gnnv3g_knn64_s03_0p5.pt
+│   │   ├── gnnv3g_knn64_s04_0p5.pt
+│   │   ├── gnnv3g_knn64_s05_0p5.pt
+│   │   ├── gnnv3g_knn64_s06_0p5.pt
+│   │   ├── gnnv3g_knn64_s07_0p5.pt
+│   │   ├── gnnv3g_knn64_s08_0p5.pt
+│   │   ├── gnnv3g_knn64_s09_0p5.pt
+│   │   ├── gnnv3g_knn64_s10_0p5.pt
+│   │   ├── gnnv3g_knn64_s11_0p5.pt
+│   │   ├── gnnv3g_knn64_s12_0p5.pt
+│   │   ├── gnnv3g_knn64_s13_0p5.pt
+│   │   ├── gnnv3g_knn64_s14_0p5.pt
+│   │   ├── gnnv3g_knn64_s15_0p5.pt
+│   │   ├── gnnv3g_knn64_s16_0p5.pt
+│   │   ├── gnnv3g_knn64_s17_0p5.pt
+│   │   ├── gnnv3g_knn64_s18_0p5.pt
+│   │   ├── gnnv3g_knn64_s19_0p5.pt
+│   │   ├── gnnv3g_knn64_s20_0p5.pt
+│   │   ├── gnnv3g_knn64_s21_0p5.pt
+│   │   ├── gnnv3g_knn64_s22_0p5.pt
+│   │   ├── gnnv3g_knn64_s23_0p5.pt
+│   │   ├── gnnv3g_knn64_s24_0p5.pt
+│   │   ├── gnnv3g_knn64_s25_0p5.pt
+│   │   ├── gnnv3g_knn64_s26_0p5.pt
+│   │   ├── gnnv3g_knn64_s27_0p5.pt
+│   │   ├── gnnv3g_knn64_s28_0p5.pt
+│   │   ├── gnnv3g_knn64_s29_0p5.pt
+│   │   ├── gnnv3g_knn64_s30_0p5.pt
+│   │   ├── gnnv3g_knn64_s31_0p5.pt
+│   │   ├── gnnv3g_knn64_s32_0p5.pt
+│   │   ├── gnnv3g_knn64_s33_0p5.pt
+│   │   ├── gnnv3g_knn64_s34_0p5.pt
+│   │   ├── gnnv3g_knn64_s35_0p5.pt
+│   │   ├── gnnv3g_knn9_s01_0p5.pt
+│   │   ├── gnnv3g_knn9_s01_1p0.pt
+│   │   ├── gnnv3g_knn9_s02_0p5.pt
+│   │   ├── gnnv3g_knn9_s02_1p0.pt
+│   │   ├── gnnv3g_knn9_s03_0p5.pt
+│   │   ├── gnnv3g_knn9_s03_1p0.pt
+│   │   ├── gnnv3g_knn9_s04_0p5.pt
+│   │   ├── gnnv3g_knn9_s04_1p0.pt
+│   │   ├── gnnv3g_knn9_s05_0p5.pt
+│   │   ├── gnnv3g_knn9_s05_1p0.pt
+│   │   ├── gnnv3g_knn9_s06_0p5.pt
+│   │   ├── gnnv3g_knn9_s06_1p0.pt
+│   │   ├── gnnv3g_knn9_s07_0p5.pt
+│   │   ├── gnnv3g_knn9_s07_1p0.pt
+│   │   ├── gnnv3g_knn9_s08_0p5.pt
+│   │   ├── gnnv3g_knn9_s08_1p0.pt
+│   │   ├── gnnv3g_knn9_s09_0p5.pt
+│   │   ├── gnnv3g_knn9_s09_1p0.pt
+│   │   ├── gnnv3g_knn9_s10_0p5.pt
+│   │   ├── gnnv3g_knn9_s10_1p0.pt
+│   │   ├── gnnv3g_knn9_s11_0p5.pt
+│   │   ├── gnnv3g_knn9_s11_1p0.pt
+│   │   ├── gnnv3g_knn9_s12_0p5.pt
+│   │   ├── gnnv3g_knn9_s12_1p0.pt
+│   │   ├── gnnv3g_knn9_s13_0p5.pt
+│   │   ├── gnnv3g_knn9_s13_1p0.pt
+│   │   ├── gnnv3g_knn9_s14_0p5.pt
+│   │   ├── gnnv3g_knn9_s14_1p0.pt
+│   │   ├── gnnv3g_knn9_s15_0p5.pt
+│   │   ├── gnnv3g_knn9_s15_1p0.pt
+│   │   ├── gnnv3g_knn9_s16_0p5.pt
+│   │   ├── gnnv3g_knn9_s16_1p0.pt
+│   │   ├── gnnv3g_knn9_s17_0p5.pt
+│   │   ├── gnnv3g_knn9_s17_1p0.pt
+│   │   ├── gnnv3g_knn9_s18_0p5.pt
+│   │   ├── gnnv3g_knn9_s18_1p0.pt
+│   │   ├── gnnv3g_knn9_s19_0p5.pt
+│   │   ├── gnnv3g_knn9_s19_1p0.pt
+│   │   ├── gnnv3g_knn9_s20_0p5.pt
+│   │   ├── gnnv3g_knn9_s20_1p0.pt
+│   │   ├── gnnv3g_knn9_s21_0p5.pt
+│   │   ├── gnnv3g_knn9_s21_1p0.pt
+│   │   ├── gnnv3g_knn9_s22_0p5.pt
+│   │   ├── gnnv3g_knn9_s22_1p0.pt
+│   │   ├── gnnv3g_knn9_s23_0p5.pt
+│   │   ├── gnnv3g_knn9_s23_1p0.pt
+│   │   ├── gnnv3g_knn9_s24_0p5.pt
+│   │   ├── gnnv3g_knn9_s24_1p0.pt
+│   │   ├── gnnv3g_knn9_s25_0p5.pt
+│   │   ├── gnnv3g_knn9_s25_1p0.pt
+│   │   ├── gnnv3g_knn9_s26_0p5.pt
+│   │   ├── gnnv3g_knn9_s26_1p0.pt
+│   │   ├── gnnv3g_knn9_s27_0p5.pt
+│   │   ├── gnnv3g_knn9_s27_1p0.pt
+│   │   ├── gnnv3g_knn9_s28_0p5.pt
+│   │   ├── gnnv3g_knn9_s28_1p0.pt
+│   │   ├── gnnv3g_knn9_s29_0p5.pt
+│   │   ├── gnnv3g_knn9_s29_1p0.pt
+│   │   ├── gnnv3g_knn9_s30_0p5.pt
+│   │   ├── gnnv3g_knn9_s30_1p0.pt
+│   │   ├── gnnv3g_knn9_s31_0p5.pt
+│   │   ├── gnnv3g_knn9_s31_1p0.pt
+│   │   ├── gnnv3g_knn9_s32_0p5.pt
+│   │   ├── gnnv3g_knn9_s32_1p0.pt
+│   │   ├── gnnv3g_knn9_s33_0p5.pt
+│   │   ├── gnnv3g_knn9_s33_1p0.pt
+│   │   ├── gnnv3g_knn9_s34_0p5.pt
+│   │   ├── gnnv3g_knn9_s34_1p0.pt
+│   │   ├── gnnv3g_knn9_s35_0p5.pt
+│   │   ├── gnnv3g_knn9_s35_1p0.pt
+│   │   ├── gnnv3h_fga_s01_0p5.pt
+│   │   ├── gnnv3h_fga_s01_1p0.pt
+│   │   ├── gnnv3h_fga_s02_0p5.pt
+│   │   ├── gnnv3h_fga_s02_1p0.pt
+│   │   ├── gnnv3h_fga_s03_0p5.pt
+│   │   ├── gnnv3h_fga_s03_1p0.pt
+│   │   ├── gnnv3h_fga_s04_0p5.pt
+│   │   ├── gnnv3h_fga_s04_1p0.pt
+│   │   ├── gnnv3h_fga_s05_0p5.pt
+│   │   ├── gnnv3h_fga_s05_1p0.pt
+│   │   ├── gnnv3h_fga_s06_0p5.pt
+│   │   ├── gnnv3h_fga_s06_1p0.pt
+│   │   ├── gnnv3h_fga_s07_0p5.pt
+│   │   ├── gnnv3h_fga_s07_1p0.pt
+│   │   ├── gnnv3h_fga_s08_0p5.pt
+│   │   ├── gnnv3h_fga_s08_1p0.pt
+│   │   ├── gnnv3h_fga_s09_0p5.pt
+│   │   ├── gnnv3h_fga_s09_1p0.pt
+│   │   ├── gnnv3h_fga_s10_0p5.pt
+│   │   ├── gnnv3h_fga_s10_1p0.pt
+│   │   ├── gnnv3h_fga_s11_0p5.pt
+│   │   ├── gnnv3h_fga_s11_1p0.pt
+│   │   ├── gnnv3h_fga_s12_0p5.pt
+│   │   ├── gnnv3h_fga_s12_1p0.pt
+│   │   ├── gnnv3h_fga_s13_0p5.pt
+│   │   ├── gnnv3h_fga_s13_1p0.pt
+│   │   ├── gnnv3h_fga_s14_0p5.pt
+│   │   ├── gnnv3h_fga_s14_1p0.pt
+│   │   ├── gnnv3h_fga_s15_0p5.pt
+│   │   ├── gnnv3h_fga_s15_1p0.pt
+│   │   ├── gnnv3h_fga_s16_0p5.pt
+│   │   ├── gnnv3h_fga_s16_1p0.pt
+│   │   ├── gnnv3h_fga_s17_0p5.pt
+│   │   ├── gnnv3h_fga_s17_1p0.pt
+│   │   ├── gnnv3h_fga_s18_0p5.pt
+│   │   ├── gnnv3h_fga_s18_1p0.pt
+│   │   ├── gnnv3h_fga_s19_0p5.pt
+│   │   ├── gnnv3h_fga_s19_1p0.pt
+│   │   ├── gnnv3h_fga_s20_0p5.pt
+│   │   ├── gnnv3h_fga_s20_1p0.pt
+│   │   ├── gnnv3h_fga_s21_0p5.pt
+│   │   ├── gnnv3h_fga_s21_1p0.pt
+│   │   ├── gnnv3h_fga_s22_0p5.pt
+│   │   ├── gnnv3h_fga_s22_1p0.pt
+│   │   ├── gnnv3h_fga_s23_0p5.pt
+│   │   ├── gnnv3h_fga_s23_1p0.pt
+│   │   ├── gnnv3h_fga_s24_0p5.pt
+│   │   ├── gnnv3h_fga_s24_1p0.pt
+│   │   ├── gnnv3h_fga_s25_0p5.pt
+│   │   ├── gnnv3h_fga_s25_1p0.pt
+│   │   ├── gnnv3h_fga_s26_0p5.pt
+│   │   ├── gnnv3h_fga_s26_1p0.pt
+│   │   ├── gnnv3h_fga_s27_0p5.pt
+│   │   ├── gnnv3h_fga_s27_1p0.pt
+│   │   ├── gnnv3h_fga_s28_0p5.pt
+│   │   ├── gnnv3h_fga_s28_1p0.pt
+│   │   ├── gnnv3h_fga_s29_0p5.pt
+│   │   ├── gnnv3h_fga_s29_1p0.pt
+│   │   ├── gnnv3h_fga_s30_0p5.pt
+│   │   ├── gnnv3h_fga_s30_1p0.pt
+│   │   ├── gnnv3h_fga_s31_0p5.pt
+│   │   ├── gnnv3h_fga_s31_1p0.pt
+│   │   ├── gnnv3h_fga_s32_0p5.pt
+│   │   ├── gnnv3h_fga_s32_1p0.pt
+│   │   ├── gnnv3h_fga_s33_0p5.pt
+│   │   ├── gnnv3h_fga_s33_1p0.pt
+│   │   ├── gnnv3h_fga_s34_0p5.pt
+│   │   ├── gnnv3h_fga_s34_1p0.pt
+│   │   ├── gnnv3h_fga_s35_0p5.pt
+│   │   ├── gnnv3h_fga_s35_1p0.pt
+│   │   ├── gnnv3i_wide19_s01_0p5.pt
+│   │   ├── gnnv3i_wide19_s01_1p0.pt
+│   │   ├── gnnv3i_wide19_s02_0p5.pt
+│   │   ├── gnnv3i_wide19_s02_1p0.pt
+│   │   ├── gnnv3i_wide19_s03_0p5.pt
+│   │   ├── gnnv3i_wide19_s03_1p0.pt
+│   │   ├── gnnv3i_wide19_s04_0p5.pt
+│   │   ├── gnnv3i_wide19_s04_1p0.pt
+│   │   ├── gnnv3i_wide19_s05_0p5.pt
+│   │   ├── gnnv3i_wide19_s05_1p0.pt
+│   │   ├── gnnv3i_wide19_s06_0p5.pt
+│   │   ├── gnnv3i_wide19_s06_1p0.pt
+│   │   ├── gnnv3i_wide19_s07_0p5.pt
+│   │   ├── gnnv3i_wide19_s07_1p0.pt
+│   │   ├── gnnv3i_wide19_s08_0p5.pt
+│   │   ├── gnnv3i_wide19_s08_1p0.pt
+│   │   ├── gnnv3i_wide19_s09_0p5.pt
+│   │   ├── gnnv3i_wide19_s09_1p0.pt
+│   │   ├── gnnv3i_wide19_s10_0p5.pt
+│   │   ├── gnnv3i_wide19_s10_1p0.pt
+│   │   ├── gnnv3i_wide19_s11_0p5.pt
+│   │   ├── gnnv3i_wide19_s11_1p0.pt
+│   │   ├── gnnv3i_wide19_s12_0p5.pt
+│   │   ├── gnnv3i_wide19_s12_1p0.pt
+│   │   ├── gnnv3i_wide19_s13_0p5.pt
+│   │   ├── gnnv3i_wide19_s13_1p0.pt
+│   │   ├── gnnv3i_wide19_s14_0p5.pt
+│   │   ├── gnnv3i_wide19_s14_1p0.pt
+│   │   ├── gnnv3i_wide19_s15_0p5.pt
+│   │   ├── gnnv3i_wide19_s15_1p0.pt
+│   │   ├── gnnv3i_wide19_s16_0p5.pt
+│   │   ├── gnnv3i_wide19_s16_1p0.pt
+│   │   ├── gnnv3i_wide19_s17_0p5.pt
+│   │   ├── gnnv3i_wide19_s17_1p0.pt
+│   │   ├── gnnv3i_wide19_s18_0p5.pt
+│   │   ├── gnnv3i_wide19_s18_1p0.pt
+│   │   ├── gnnv3i_wide19_s19_0p5.pt
+│   │   ├── gnnv3i_wide19_s19_1p0.pt
+│   │   ├── gnnv3i_wide19_s20_0p5.pt
+│   │   ├── gnnv3i_wide19_s20_1p0.pt
+│   │   ├── gnnv3i_wide19_s21_0p5.pt
+│   │   ├── gnnv3i_wide19_s21_1p0.pt
+│   │   ├── gnnv3i_wide19_s22_0p5.pt
+│   │   ├── gnnv3i_wide19_s22_1p0.pt
+│   │   ├── gnnv3i_wide19_s23_0p5.pt
+│   │   ├── gnnv3i_wide19_s23_1p0.pt
+│   │   ├── gnnv3i_wide19_s24_0p5.pt
+│   │   ├── gnnv3i_wide19_s24_1p0.pt
+│   │   ├── gnnv3i_wide19_s25_0p5.pt
+│   │   ├── gnnv3i_wide19_s25_1p0.pt
+│   │   ├── gnnv3i_wide19_s26_0p5.pt
+│   │   ├── gnnv3i_wide19_s26_1p0.pt
+│   │   ├── gnnv3i_wide19_s27_0p5.pt
+│   │   ├── gnnv3i_wide19_s27_1p0.pt
+│   │   ├── gnnv3i_wide19_s28_0p5.pt
+│   │   ├── gnnv3i_wide19_s28_1p0.pt
+│   │   ├── gnnv3i_wide19_s29_0p5.pt
+│   │   ├── gnnv3i_wide19_s29_1p0.pt
+│   │   ├── gnnv3i_wide19_s30_0p5.pt
+│   │   ├── gnnv3i_wide19_s30_1p0.pt
+│   │   ├── gnnv3i_wide19_s31_0p5.pt
+│   │   ├── gnnv3i_wide19_s31_1p0.pt
+│   │   ├── gnnv3i_wide19_s32_0p5.pt
+│   │   ├── gnnv3i_wide19_s32_1p0.pt
+│   │   ├── gnnv3i_wide19_s33_0p5.pt
+│   │   ├── gnnv3i_wide19_s33_1p0.pt
+│   │   ├── gnnv3i_wide19_s34_0p5.pt
+│   │   ├── gnnv3i_wide19_s34_1p0.pt
+│   │   ├── gnnv3i_wide19_s35_0p5.pt
+│   │   ├── gnnv3i_wide19_s35_1p0.pt
+│   │   ├── gnnv3j_aw19_s01_0p5.pt
+│   │   ├── gnnv3j_aw19_s01_1p0.pt
+│   │   ├── gnnv3j_aw19_s02_0p5.pt
+│   │   ├── gnnv3j_aw19_s02_1p0.pt
+│   │   ├── gnnv3j_aw19_s03_0p5.pt
+│   │   ├── gnnv3j_aw19_s03_1p0.pt
+│   │   ├── gnnv3j_aw19_s04_0p5.pt
+│   │   ├── gnnv3j_aw19_s04_1p0.pt
+│   │   ├── gnnv3j_aw19_s05_0p5.pt
+│   │   ├── gnnv3j_aw19_s05_1p0.pt
+│   │   ├── gnnv3j_aw19_s06_0p5.pt
+│   │   ├── gnnv3j_aw19_s06_1p0.pt
+│   │   ├── gnnv3j_aw19_s07_0p5.pt
+│   │   ├── gnnv3j_aw19_s07_1p0.pt
+│   │   ├── gnnv3j_aw19_s08_0p5.pt
+│   │   ├── gnnv3j_aw19_s08_1p0.pt
+│   │   ├── gnnv3j_aw19_s09_0p5.pt
+│   │   ├── gnnv3j_aw19_s09_1p0.pt
+│   │   ├── gnnv3j_aw19_s10_0p5.pt
+│   │   ├── gnnv3j_aw19_s10_1p0.pt
+│   │   ├── gnnv3j_aw19_s11_0p5.pt
+│   │   ├── gnnv3j_aw19_s11_1p0.pt
+│   │   ├── gnnv3j_aw19_s12_0p5.pt
+│   │   ├── gnnv3j_aw19_s12_1p0.pt
+│   │   ├── gnnv3j_aw19_s13_0p5.pt
+│   │   ├── gnnv3j_aw19_s13_1p0.pt
+│   │   ├── gnnv3j_aw19_s14_0p5.pt
+│   │   ├── gnnv3j_aw19_s14_1p0.pt
+│   │   ├── gnnv3j_aw19_s15_0p5.pt
+│   │   ├── gnnv3j_aw19_s15_1p0.pt
+│   │   ├── gnnv3j_aw19_s16_0p5.pt
+│   │   ├── gnnv3j_aw19_s16_1p0.pt
+│   │   ├── gnnv3j_aw19_s17_0p5.pt
+│   │   ├── gnnv3j_aw19_s17_1p0.pt
+│   │   ├── gnnv3j_aw19_s18_0p5.pt
+│   │   ├── gnnv3j_aw19_s18_1p0.pt
+│   │   ├── gnnv3j_aw19_s19_0p5.pt
+│   │   ├── gnnv3j_aw19_s19_1p0.pt
+│   │   ├── gnnv3j_aw19_s20_0p5.pt
+│   │   ├── gnnv3j_aw19_s20_1p0.pt
+│   │   ├── gnnv3j_aw19_s21_0p5.pt
+│   │   ├── gnnv3j_aw19_s21_1p0.pt
+│   │   ├── gnnv3j_aw19_s22_0p5.pt
+│   │   ├── gnnv3j_aw19_s22_1p0.pt
+│   │   ├── gnnv3j_aw19_s23_0p5.pt
+│   │   ├── gnnv3j_aw19_s23_1p0.pt
+│   │   ├── gnnv3j_aw19_s24_0p5.pt
+│   │   ├── gnnv3j_aw19_s24_1p0.pt
+│   │   ├── gnnv3j_aw19_s25_0p5.pt
+│   │   ├── gnnv3j_aw19_s25_1p0.pt
+│   │   ├── gnnv3j_aw19_s26_0p5.pt
+│   │   ├── gnnv3j_aw19_s26_1p0.pt
+│   │   ├── gnnv3j_aw19_s27_0p5.pt
+│   │   ├── gnnv3j_aw19_s27_1p0.pt
+│   │   ├── gnnv3j_aw19_s28_0p5.pt
+│   │   ├── gnnv3j_aw19_s28_1p0.pt
+│   │   ├── gnnv3j_aw19_s29_0p5.pt
+│   │   ├── gnnv3j_aw19_s29_1p0.pt
+│   │   ├── gnnv3j_aw19_s30_0p5.pt
+│   │   ├── gnnv3j_aw19_s30_1p0.pt
+│   │   ├── gnnv3j_aw19_s31_0p5.pt
+│   │   ├── gnnv3j_aw19_s31_1p0.pt
+│   │   ├── gnnv3j_aw19_s32_0p5.pt
+│   │   ├── gnnv3j_aw19_s32_1p0.pt
+│   │   ├── gnnv3j_aw19_s33_0p5.pt
+│   │   ├── gnnv3j_aw19_s33_1p0.pt
+│   │   ├── gnnv3j_aw19_s34_0p5.pt
+│   │   ├── gnnv3j_aw19_s34_1p0.pt
+│   │   ├── gnnv3j_aw19_s35_0p5.pt
+│   │   ├── gnnv3j_aw19_s35_1p0.pt
+│   │   ├── gnnv3j_aw9_s01_0p5.pt
+│   │   ├── gnnv3j_aw9_s01_1p0.pt
+│   │   ├── gnnv3j_aw9_s02_0p5.pt
+│   │   ├── gnnv3j_aw9_s02_1p0.pt
+│   │   ├── gnnv3j_aw9_s03_0p5.pt
+│   │   ├── gnnv3j_aw9_s03_1p0.pt
+│   │   ├── gnnv3j_aw9_s04_0p5.pt
+│   │   ├── gnnv3j_aw9_s04_1p0.pt
+│   │   ├── gnnv3j_aw9_s05_0p5.pt
+│   │   ├── gnnv3j_aw9_s05_1p0.pt
+│   │   ├── gnnv3j_aw9_s06_0p5.pt
+│   │   ├── gnnv3j_aw9_s06_1p0.pt
+│   │   ├── gnnv3j_aw9_s07_0p5.pt
+│   │   ├── gnnv3j_aw9_s07_1p0.pt
+│   │   ├── gnnv3j_aw9_s08_0p5.pt
+│   │   ├── gnnv3j_aw9_s08_1p0.pt
+│   │   ├── gnnv3j_aw9_s09_0p5.pt
+│   │   ├── gnnv3j_aw9_s09_1p0.pt
+│   │   ├── gnnv3j_aw9_s10_0p5.pt
+│   │   ├── gnnv3j_aw9_s10_1p0.pt
+│   │   ├── gnnv3j_aw9_s11_0p5.pt
+│   │   ├── gnnv3j_aw9_s11_1p0.pt
+│   │   ├── gnnv3j_aw9_s12_0p5.pt
+│   │   ├── gnnv3j_aw9_s12_1p0.pt
+│   │   ├── gnnv3j_aw9_s13_0p5.pt
+│   │   ├── gnnv3j_aw9_s13_1p0.pt
+│   │   ├── gnnv3j_aw9_s14_0p5.pt
+│   │   ├── gnnv3j_aw9_s14_1p0.pt
+│   │   ├── gnnv3j_aw9_s15_0p5.pt
+│   │   ├── gnnv3j_aw9_s15_1p0.pt
+│   │   ├── gnnv3j_aw9_s16_0p5.pt
+│   │   ├── gnnv3j_aw9_s16_1p0.pt
+│   │   ├── gnnv3j_aw9_s17_0p5.pt
+│   │   ├── gnnv3j_aw9_s17_1p0.pt
+│   │   ├── gnnv3j_aw9_s18_0p5.pt
+│   │   ├── gnnv3j_aw9_s18_1p0.pt
+│   │   ├── gnnv3j_aw9_s19_0p5.pt
+│   │   ├── gnnv3j_aw9_s19_1p0.pt
+│   │   ├── gnnv3j_aw9_s20_0p5.pt
+│   │   ├── gnnv3j_aw9_s20_1p0.pt
+│   │   ├── gnnv3j_aw9_s21_0p5.pt
+│   │   ├── gnnv3j_aw9_s21_1p0.pt
+│   │   ├── gnnv3j_aw9_s22_0p5.pt
+│   │   ├── gnnv3j_aw9_s22_1p0.pt
+│   │   ├── gnnv3j_aw9_s23_0p5.pt
+│   │   ├── gnnv3j_aw9_s23_1p0.pt
+│   │   ├── gnnv3j_aw9_s24_0p5.pt
+│   │   ├── gnnv3j_aw9_s24_1p0.pt
+│   │   ├── gnnv3j_aw9_s25_0p5.pt
+│   │   ├── gnnv3j_aw9_s25_1p0.pt
+│   │   ├── gnnv3j_aw9_s26_0p5.pt
+│   │   ├── gnnv3j_aw9_s26_1p0.pt
+│   │   ├── gnnv3j_aw9_s27_0p5.pt
+│   │   ├── gnnv3j_aw9_s27_1p0.pt
+│   │   ├── gnnv3j_aw9_s28_0p5.pt
+│   │   ├── gnnv3j_aw9_s28_1p0.pt
+│   │   ├── gnnv3j_aw9_s29_0p5.pt
+│   │   ├── gnnv3j_aw9_s29_1p0.pt
+│   │   ├── gnnv3j_aw9_s30_0p5.pt
+│   │   ├── gnnv3j_aw9_s30_1p0.pt
+│   │   ├── gnnv3j_aw9_s31_0p5.pt
+│   │   ├── gnnv3j_aw9_s31_1p0.pt
+│   │   ├── gnnv3j_aw9_s32_0p5.pt
+│   │   ├── gnnv3j_aw9_s32_1p0.pt
+│   │   ├── gnnv3j_aw9_s33_0p5.pt
+│   │   ├── gnnv3j_aw9_s33_1p0.pt
+│   │   ├── gnnv3j_aw9_s34_0p5.pt
+│   │   ├── gnnv3j_aw9_s34_1p0.pt
+│   │   ├── gnnv3j_aw9_s35_0p5.pt
+│   │   ├── gnnv3j_aw9_s35_1p0.pt
+│   │   ├── gnnv3k_s42d19_s01_0p5.pt
+│   │   ├── gnnv3k_s42d19_s01_1p0.pt
+│   │   ├── gnnv3k_s42d19_s02_0p5.pt
+│   │   ├── gnnv3k_s42d19_s02_1p0.pt
+│   │   ├── gnnv3k_s42d19_s03_0p5.pt
+│   │   ├── gnnv3k_s42d19_s03_1p0.pt
+│   │   ├── gnnv3k_s42d19_s04_0p5.pt
+│   │   ├── gnnv3k_s42d19_s04_1p0.pt
+│   │   ├── gnnv3k_s42d19_s05_0p5.pt
+│   │   ├── gnnv3k_s42d19_s05_1p0.pt
+│   │   ├── gnnv3k_s42d19_s06_0p5.pt
+│   │   ├── gnnv3k_s42d19_s06_1p0.pt
+│   │   ├── gnnv3k_s42d19_s07_0p5.pt
+│   │   ├── gnnv3k_s42d19_s07_1p0.pt
+│   │   ├── gnnv3k_s42d19_s08_0p5.pt
+│   │   ├── gnnv3k_s42d19_s08_1p0.pt
+│   │   ├── gnnv3k_s42d19_s09_0p5.pt
+│   │   ├── gnnv3k_s42d19_s09_1p0.pt
+│   │   ├── gnnv3k_s42d19_s10_0p5.pt
+│   │   ├── gnnv3k_s42d19_s10_1p0.pt
+│   │   ├── gnnv3k_s42d19_s11_0p5.pt
+│   │   ├── gnnv3k_s42d19_s11_1p0.pt
+│   │   ├── gnnv3k_s42d19_s12_0p5.pt
+│   │   ├── gnnv3k_s42d19_s12_1p0.pt
+│   │   ├── gnnv3k_s42d19_s13_0p5.pt
+│   │   ├── gnnv3k_s42d19_s13_1p0.pt
+│   │   ├── gnnv3k_s42d19_s14_0p5.pt
+│   │   ├── gnnv3k_s42d19_s14_1p0.pt
+│   │   ├── gnnv3k_s42d19_s15_0p5.pt
+│   │   ├── gnnv3k_s42d19_s15_1p0.pt
+│   │   ├── gnnv3k_s42d19_s16_0p5.pt
+│   │   ├── gnnv3k_s42d19_s16_1p0.pt
+│   │   ├── gnnv3k_s42d19_s17_0p5.pt
+│   │   ├── gnnv3k_s42d19_s17_1p0.pt
+│   │   ├── gnnv3k_s42d19_s18_0p5.pt
+│   │   ├── gnnv3k_s42d19_s18_1p0.pt
+│   │   ├── gnnv3k_s42d19_s19_0p5.pt
+│   │   ├── gnnv3k_s42d19_s19_1p0.pt
+│   │   ├── gnnv3k_s42d19_s20_0p5.pt
+│   │   ├── gnnv3k_s42d19_s20_1p0.pt
+│   │   ├── gnnv3k_s42d19_s21_0p5.pt
+│   │   ├── gnnv3k_s42d19_s21_1p0.pt
+│   │   ├── gnnv3k_s42d19_s22_0p5.pt
+│   │   ├── gnnv3k_s42d19_s22_1p0.pt
+│   │   ├── gnnv3k_s42d19_s23_0p5.pt
+│   │   ├── gnnv3k_s42d19_s23_1p0.pt
+│   │   ├── gnnv3k_s42d19_s24_0p5.pt
+│   │   ├── gnnv3k_s42d19_s24_1p0.pt
+│   │   ├── gnnv3k_s42d19_s25_0p5.pt
+│   │   ├── gnnv3k_s42d19_s25_1p0.pt
+│   │   ├── gnnv3k_s42d19_s26_0p5.pt
+│   │   ├── gnnv3k_s42d19_s26_1p0.pt
+│   │   ├── gnnv3k_s42d19_s27_0p5.pt
+│   │   ├── gnnv3k_s42d19_s27_1p0.pt
+│   │   ├── gnnv3k_s42d19_s28_0p5.pt
+│   │   ├── gnnv3k_s42d19_s28_1p0.pt
+│   │   ├── gnnv3k_s42d19_s29_0p5.pt
+│   │   ├── gnnv3k_s42d19_s29_1p0.pt
+│   │   ├── gnnv3k_s42d19_s30_0p5.pt
+│   │   ├── gnnv3k_s42d19_s30_1p0.pt
+│   │   ├── gnnv3k_s42d19_s31_0p5.pt
+│   │   ├── gnnv3k_s42d19_s31_1p0.pt
+│   │   ├── gnnv3k_s42d19_s32_0p5.pt
+│   │   ├── gnnv3k_s42d19_s32_1p0.pt
+│   │   ├── gnnv3k_s42d19_s33_0p5.pt
+│   │   ├── gnnv3k_s42d19_s33_1p0.pt
+│   │   ├── gnnv3k_s42d19_s34_0p5.pt
+│   │   ├── gnnv3k_s42d19_s34_1p0.pt
+│   │   ├── gnnv3k_s42d19_s35_0p5.pt
+│   │   ├── gnnv3k_s42d19_s35_1p0.pt
+│   │   ├── gnnv3k_s43d19_s01_0p5.pt
+│   │   ├── gnnv3k_s43d19_s01_1p0.pt
+│   │   ├── gnnv3k_s43d19_s02_0p5.pt
+│   │   ├── gnnv3k_s43d19_s02_1p0.pt
+│   │   ├── gnnv3k_s43d19_s03_0p5.pt
+│   │   ├── gnnv3k_s43d19_s03_1p0.pt
+│   │   ├── gnnv3k_s43d19_s04_0p5.pt
+│   │   ├── gnnv3k_s43d19_s04_1p0.pt
+│   │   ├── gnnv3k_s43d19_s05_0p5.pt
+│   │   ├── gnnv3k_s43d19_s05_1p0.pt
+│   │   ├── gnnv3k_s43d19_s06_0p5.pt
+│   │   ├── gnnv3k_s43d19_s06_1p0.pt
+│   │   ├── gnnv3k_s43d19_s07_0p5.pt
+│   │   ├── gnnv3k_s43d19_s07_1p0.pt
+│   │   ├── gnnv3k_s43d19_s08_0p5.pt
+│   │   ├── gnnv3k_s43d19_s08_1p0.pt
+│   │   ├── gnnv3k_s43d19_s09_0p5.pt
+│   │   ├── gnnv3k_s43d19_s09_1p0.pt
+│   │   ├── gnnv3k_s43d19_s10_0p5.pt
+│   │   ├── gnnv3k_s43d19_s10_1p0.pt
+│   │   ├── gnnv3k_s43d19_s11_0p5.pt
+│   │   ├── gnnv3k_s43d19_s11_1p0.pt
+│   │   ├── gnnv3k_s43d19_s12_0p5.pt
+│   │   ├── gnnv3k_s43d19_s12_1p0.pt
+│   │   ├── gnnv3k_s43d19_s13_0p5.pt
+│   │   ├── gnnv3k_s43d19_s13_1p0.pt
+│   │   ├── gnnv3k_s43d19_s14_0p5.pt
+│   │   ├── gnnv3k_s43d19_s14_1p0.pt
+│   │   ├── gnnv3k_s43d19_s15_0p5.pt
+│   │   ├── gnnv3k_s43d19_s15_1p0.pt
+│   │   ├── gnnv3k_s43d19_s16_0p5.pt
+│   │   ├── gnnv3k_s43d19_s16_1p0.pt
+│   │   ├── gnnv3k_s43d19_s17_0p5.pt
+│   │   ├── gnnv3k_s43d19_s17_1p0.pt
+│   │   ├── gnnv3k_s43d19_s18_0p5.pt
+│   │   ├── gnnv3k_s43d19_s18_1p0.pt
+│   │   ├── gnnv3k_s43d19_s19_0p5.pt
+│   │   ├── gnnv3k_s43d19_s19_1p0.pt
+│   │   ├── gnnv3k_s43d19_s20_0p5.pt
+│   │   ├── gnnv3k_s43d19_s20_1p0.pt
+│   │   ├── gnnv3k_s43d19_s21_0p5.pt
+│   │   ├── gnnv3k_s43d19_s21_1p0.pt
+│   │   ├── gnnv3k_s43d19_s22_0p5.pt
+│   │   ├── gnnv3k_s43d19_s22_1p0.pt
+│   │   ├── gnnv3k_s43d19_s23_0p5.pt
+│   │   ├── gnnv3k_s43d19_s23_1p0.pt
+│   │   ├── gnnv3k_s43d19_s24_0p5.pt
+│   │   ├── gnnv3k_s43d19_s24_1p0.pt
+│   │   ├── gnnv3k_s43d19_s25_0p5.pt
+│   │   ├── gnnv3k_s43d19_s25_1p0.pt
+│   │   ├── gnnv3k_s43d19_s26_0p5.pt
+│   │   ├── gnnv3k_s43d19_s26_1p0.pt
+│   │   ├── gnnv3k_s43d19_s27_0p5.pt
+│   │   ├── gnnv3k_s43d19_s27_1p0.pt
+│   │   ├── gnnv3k_s43d19_s28_0p5.pt
+│   │   ├── gnnv3k_s43d19_s28_1p0.pt
+│   │   ├── gnnv3k_s43d19_s29_0p5.pt
+│   │   ├── gnnv3k_s43d19_s29_1p0.pt
+│   │   ├── gnnv3k_s43d19_s30_0p5.pt
+│   │   ├── gnnv3k_s43d19_s30_1p0.pt
+│   │   ├── gnnv3k_s43d19_s31_0p5.pt
+│   │   ├── gnnv3k_s43d19_s31_1p0.pt
+│   │   ├── gnnv3k_s43d19_s32_0p5.pt
+│   │   ├── gnnv3k_s43d19_s32_1p0.pt
+│   │   ├── gnnv3k_s43d19_s33_0p5.pt
+│   │   ├── gnnv3k_s43d19_s33_1p0.pt
+│   │   ├── gnnv3k_s43d19_s34_0p5.pt
+│   │   ├── gnnv3k_s43d19_s34_1p0.pt
+│   │   ├── gnnv3k_s43d19_s35_0p5.pt
+│   │   ├── gnnv3k_s43d19_s35_1p0.pt
+│   │   ├── gnnv3l_b5d19_s01_0p5.pt
+│   │   ├── gnnv3l_b5d19_s01_1p0.pt
+│   │   ├── gnnv3l_b5d19_s02_0p5.pt
+│   │   ├── gnnv3l_b5d19_s02_1p0.pt
+│   │   ├── gnnv3l_b5d19_s03_0p5.pt
+│   │   ├── gnnv3l_b5d19_s03_1p0.pt
+│   │   ├── gnnv3l_b5d19_s04_0p5.pt
+│   │   ├── gnnv3l_b5d19_s04_1p0.pt
+│   │   ├── gnnv3l_b5d19_s05_0p5.pt
+│   │   ├── gnnv3l_b5d19_s05_1p0.pt
+│   │   ├── gnnv3l_b5d19_s06_0p5.pt
+│   │   ├── gnnv3l_b5d19_s06_1p0.pt
+│   │   ├── gnnv3l_b5d19_s07_0p5.pt
+│   │   ├── gnnv3l_b5d19_s07_1p0.pt
+│   │   ├── gnnv3l_b5d19_s08_0p5.pt
+│   │   ├── gnnv3l_b5d19_s08_1p0.pt
+│   │   ├── gnnv3l_b5d19_s09_0p5.pt
+│   │   ├── gnnv3l_b5d19_s09_1p0.pt
+│   │   ├── gnnv3l_b5d19_s10_0p5.pt
+│   │   ├── gnnv3l_b5d19_s10_1p0.pt
+│   │   ├── gnnv3l_b5d19_s11_0p5.pt
+│   │   ├── gnnv3l_b5d19_s11_1p0.pt
+│   │   ├── gnnv3l_b5d19_s12_0p5.pt
+│   │   ├── gnnv3l_b5d19_s12_1p0.pt
+│   │   ├── gnnv3l_b5d19_s13_0p5.pt
+│   │   ├── gnnv3l_b5d19_s13_1p0.pt
+│   │   ├── gnnv3l_b5d19_s14_0p5.pt
+│   │   ├── gnnv3l_b5d19_s14_1p0.pt
+│   │   ├── gnnv3l_b5d19_s15_0p5.pt
+│   │   ├── gnnv3l_b5d19_s15_1p0.pt
+│   │   ├── gnnv3l_b5d19_s16_0p5.pt
+│   │   ├── gnnv3l_b5d19_s16_1p0.pt
+│   │   ├── gnnv3l_b5d19_s17_0p5.pt
+│   │   ├── gnnv3l_b5d19_s17_1p0.pt
+│   │   ├── gnnv3l_b5d19_s18_0p5.pt
+│   │   ├── gnnv3l_b5d19_s18_1p0.pt
+│   │   ├── gnnv3l_b5d19_s19_0p5.pt
+│   │   ├── gnnv3l_b5d19_s19_1p0.pt
+│   │   ├── gnnv3l_b5d19_s20_0p5.pt
+│   │   ├── gnnv3l_b5d19_s20_1p0.pt
+│   │   ├── gnnv3l_b5d19_s21_0p5.pt
+│   │   ├── gnnv3l_b5d19_s21_1p0.pt
+│   │   ├── gnnv3l_b5d19_s22_0p5.pt
+│   │   ├── gnnv3l_b5d19_s22_1p0.pt
+│   │   ├── gnnv3l_b5d19_s23_0p5.pt
+│   │   ├── gnnv3l_b5d19_s23_1p0.pt
+│   │   ├── gnnv3l_b5d19_s24_0p5.pt
+│   │   ├── gnnv3l_b5d19_s24_1p0.pt
+│   │   ├── gnnv3l_b5d19_s25_0p5.pt
+│   │   ├── gnnv3l_b5d19_s25_1p0.pt
+│   │   ├── gnnv3l_b5d19_s26_0p5.pt
+│   │   ├── gnnv3l_b5d19_s26_1p0.pt
+│   │   ├── gnnv3l_b5d19_s27_0p5.pt
+│   │   ├── gnnv3l_b5d19_s27_1p0.pt
+│   │   ├── gnnv3l_b5d19_s28_0p5.pt
+│   │   ├── gnnv3l_b5d19_s28_1p0.pt
+│   │   ├── gnnv3l_b5d19_s29_0p5.pt
+│   │   ├── gnnv3l_b5d19_s29_1p0.pt
+│   │   ├── gnnv3l_b5d19_s30_0p5.pt
+│   │   ├── gnnv3l_b5d19_s30_1p0.pt
+│   │   ├── gnnv3l_b5d19_s31_0p5.pt
+│   │   ├── gnnv3l_b5d19_s31_1p0.pt
+│   │   ├── gnnv3l_b5d19_s32_0p5.pt
+│   │   ├── gnnv3l_b5d19_s32_1p0.pt
+│   │   ├── gnnv3l_b5d19_s33_0p5.pt
+│   │   ├── gnnv3l_b5d19_s33_1p0.pt
+│   │   ├── gnnv3l_b5d19_s34_0p5.pt
+│   │   ├── gnnv3l_b5d19_s34_1p0.pt
+│   │   ├── gnnv3l_b5d19_s35_0p5.pt
+│   │   ├── gnnv3l_b5d19_s35_1p0.pt
+│   │   ├── gnnv3l_b5d9_s01_0p5.pt
+│   │   ├── gnnv3l_b5d9_s01_1p0.pt
+│   │   ├── gnnv3l_b5d9_s02_0p5.pt
+│   │   ├── gnnv3l_b5d9_s02_1p0.pt
+│   │   ├── gnnv3l_b5d9_s03_0p5.pt
+│   │   ├── gnnv3l_b5d9_s03_1p0.pt
+│   │   ├── gnnv3l_b5d9_s04_0p5.pt
+│   │   ├── gnnv3l_b5d9_s04_1p0.pt
+│   │   ├── gnnv3l_b5d9_s05_0p5.pt
+│   │   ├── gnnv3l_b5d9_s05_1p0.pt
+│   │   ├── gnnv3l_b5d9_s06_0p5.pt
+│   │   ├── gnnv3l_b5d9_s06_1p0.pt
+│   │   ├── gnnv3l_b5d9_s07_0p5.pt
+│   │   ├── gnnv3l_b5d9_s07_1p0.pt
+│   │   ├── gnnv3l_b5d9_s08_0p5.pt
+│   │   ├── gnnv3l_b5d9_s08_1p0.pt
+│   │   ├── gnnv3l_b5d9_s09_0p5.pt
+│   │   ├── gnnv3l_b5d9_s09_1p0.pt
+│   │   ├── gnnv3l_b5d9_s10_0p5.pt
+│   │   ├── gnnv3l_b5d9_s10_1p0.pt
+│   │   ├── gnnv3l_b5d9_s11_0p5.pt
+│   │   ├── gnnv3l_b5d9_s11_1p0.pt
+│   │   ├── gnnv3l_b5d9_s12_0p5.pt
+│   │   ├── gnnv3l_b5d9_s12_1p0.pt
+│   │   ├── gnnv3l_b5d9_s13_0p5.pt
+│   │   ├── gnnv3l_b5d9_s13_1p0.pt
+│   │   ├── gnnv3l_b5d9_s14_0p5.pt
+│   │   ├── gnnv3l_b5d9_s14_1p0.pt
+│   │   ├── gnnv3l_b5d9_s15_0p5.pt
+│   │   ├── gnnv3l_b5d9_s15_1p0.pt
+│   │   ├── gnnv3l_b5d9_s16_0p5.pt
+│   │   ├── gnnv3l_b5d9_s16_1p0.pt
+│   │   ├── gnnv3l_b5d9_s17_0p5.pt
+│   │   ├── gnnv3l_b5d9_s17_1p0.pt
+│   │   ├── gnnv3l_b5d9_s18_0p5.pt
+│   │   ├── gnnv3l_b5d9_s18_1p0.pt
+│   │   ├── gnnv3l_b5d9_s19_0p5.pt
+│   │   ├── gnnv3l_b5d9_s19_1p0.pt
+│   │   ├── gnnv3l_b5d9_s20_0p5.pt
+│   │   ├── gnnv3l_b5d9_s20_1p0.pt
+│   │   ├── gnnv3l_b5d9_s21_0p5.pt
+│   │   ├── gnnv3l_b5d9_s21_1p0.pt
+│   │   ├── gnnv3l_b5d9_s22_0p5.pt
+│   │   ├── gnnv3l_b5d9_s22_1p0.pt
+│   │   ├── gnnv3l_b5d9_s23_0p5.pt
+│   │   ├── gnnv3l_b5d9_s23_1p0.pt
+│   │   ├── gnnv3l_b5d9_s24_0p5.pt
+│   │   ├── gnnv3l_b5d9_s24_1p0.pt
+│   │   ├── gnnv3l_b5d9_s25_0p5.pt
+│   │   ├── gnnv3l_b5d9_s25_1p0.pt
+│   │   ├── gnnv3l_b5d9_s26_0p5.pt
+│   │   ├── gnnv3l_b5d9_s26_1p0.pt
+│   │   ├── gnnv3l_b5d9_s27_0p5.pt
+│   │   ├── gnnv3l_b5d9_s27_1p0.pt
+│   │   ├── gnnv3l_b5d9_s28_0p5.pt
+│   │   ├── gnnv3l_b5d9_s28_1p0.pt
+│   │   ├── gnnv3l_b5d9_s29_0p5.pt
+│   │   ├── gnnv3l_b5d9_s29_1p0.pt
+│   │   ├── gnnv3l_b5d9_s30_0p5.pt
+│   │   ├── gnnv3l_b5d9_s30_1p0.pt
+│   │   ├── gnnv3l_b5d9_s31_0p5.pt
+│   │   ├── gnnv3l_b5d9_s31_1p0.pt
+│   │   ├── gnnv3l_b5d9_s32_0p5.pt
+│   │   ├── gnnv3l_b5d9_s32_1p0.pt
+│   │   ├── gnnv3l_b5d9_s33_0p5.pt
+│   │   ├── gnnv3l_b5d9_s33_1p0.pt
+│   │   ├── gnnv3l_b5d9_s34_0p5.pt
+│   │   ├── gnnv3l_b5d9_s34_1p0.pt
+│   │   ├── gnnv3l_b5d9_s35_0p5.pt
+│   │   ├── gnnv3l_b5d9_s35_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s01_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s01_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s02_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s02_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s03_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s03_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s04_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s04_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s05_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s05_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s06_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s06_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s07_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s07_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s08_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s08_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s09_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s09_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s10_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s10_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s11_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s11_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s12_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s12_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s13_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s13_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s14_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s14_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s15_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s15_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s16_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s16_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s17_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s17_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s18_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s18_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s19_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s19_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s20_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s20_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s21_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s21_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s22_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s22_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s23_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s23_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s24_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s24_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s25_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s25_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s26_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s26_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s27_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s27_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s28_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s28_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s29_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s29_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s30_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s30_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s31_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s31_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s32_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s32_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s33_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s33_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s34_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s34_1p0.pt
+│   │   ├── gnnv3m_s42b5d19_s35_0p5.pt
+│   │   ├── gnnv3m_s42b5d19_s35_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s01_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s01_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s02_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s02_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s03_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s03_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s04_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s04_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s05_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s05_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s06_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s06_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s07_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s07_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s08_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s08_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s09_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s09_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s10_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s10_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s11_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s11_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s12_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s12_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s13_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s13_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s14_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s14_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s15_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s15_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s16_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s16_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s17_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s17_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s18_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s18_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s19_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s19_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s20_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s20_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s21_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s21_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s22_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s22_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s23_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s23_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s24_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s24_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s25_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s25_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s26_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s26_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s27_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s27_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s28_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s28_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s29_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s29_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s30_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s30_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s31_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s31_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s32_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s32_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s33_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s33_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s34_0p5.pt
+│   │   ├── gnnv3m_s43b5d19_s34_1p0.pt
+│   │   ├── gnnv3m_s43b5d19_s35_0p5.pt
+│   │   └── gnnv3m_s43b5d19_s35_1p0.pt
+│   ├── old
+│   │   ├── cnn_ref_s01_0p5.json
+│   │   ├── cnn_ref_s01_1p0.json
+│   │   ├── cnn_ref_s02_0p5.json
+│   │   ├── cnn_ref_s02_1p0.json
+│   │   ├── cnn_ref_s03_0p5.json
+│   │   ├── cnn_ref_s03_1p0.json
+│   │   ├── cnn_ref_s04_0p5.json
+│   │   ├── cnn_ref_s04_1p0.json
+│   │   ├── cnn_ref_s05_0p5.json
+│   │   ├── cnn_ref_s05_1p0.json
+│   │   ├── cnn_ref_s06_0p5.json
+│   │   ├── cnn_ref_s06_1p0.json
+│   │   ├── cnn_ref_s07_0p5.json
+│   │   ├── cnn_ref_s07_1p0.json
+│   │   ├── cnn_ref_s08_0p5.json
+│   │   ├── cnn_ref_s08_1p0.json
+│   │   ├── cnn_ref_s09_0p5.json
+│   │   ├── cnn_ref_s09_1p0.json
+│   │   ├── cnn_ref_s10_0p5.json
+│   │   ├── cnn_ref_s10_1p0.json
+│   │   ├── cnn_ref_s11_0p5.json
+│   │   ├── cnn_ref_s11_1p0.json
+│   │   ├── cnn_ref_s12_0p5.json
+│   │   ├── cnn_ref_s12_1p0.json
+│   │   ├── cnn_ref_s13_0p5.json
+│   │   ├── cnn_ref_s13_1p0.json
+│   │   ├── cnn_ref_s14_0p5.json
+│   │   ├── cnn_ref_s14_1p0.json
+│   │   ├── cnn_ref_s15_0p5.json
+│   │   ├── cnn_ref_s15_1p0.json
+│   │   ├── cnn_ref_s16_0p5.json
+│   │   ├── cnn_ref_s16_1p0.json
+│   │   ├── cnn_ref_s17_0p5.json
+│   │   ├── cnn_ref_s17_1p0.json
+│   │   ├── cnn_ref_s18_0p5.json
+│   │   ├── cnn_ref_s18_1p0.json
+│   │   ├── cnn_ref_s19_0p5.json
+│   │   ├── cnn_ref_s19_1p0.json
+│   │   ├── cnn_ref_s20_0p5.json
+│   │   ├── cnn_ref_s20_1p0.json
+│   │   ├── cnn_ref_s21_0p5.json
+│   │   ├── cnn_ref_s21_1p0.json
+│   │   ├── cnn_ref_s22_0p5.json
+│   │   ├── cnn_ref_s22_1p0.json
+│   │   ├── cnn_ref_s23_0p5.json
+│   │   ├── cnn_ref_s23_1p0.json
+│   │   ├── cnn_ref_s24_0p5.json
+│   │   ├── cnn_ref_s24_1p0.json
+│   │   ├── cnn_ref_s25_0p5.json
+│   │   ├── cnn_ref_s25_1p0.json
+│   │   ├── cnn_ref_s26_0p5.json
+│   │   ├── cnn_ref_s26_1p0.json
+│   │   ├── cnn_ref_s27_0p5.json
+│   │   ├── cnn_ref_s27_1p0.json
+│   │   ├── cnn_ref_s28_0p5.json
+│   │   ├── cnn_ref_s28_1p0.json
+│   │   ├── cnn_ref_s29_0p5.json
+│   │   ├── cnn_ref_s29_1p0.json
+│   │   ├── cnn_ref_s30_0p5.json
+│   │   ├── cnn_ref_s30_1p0.json
+│   │   ├── cnn_ref_s31_0p5.json
+│   │   ├── cnn_ref_s31_1p0.json
+│   │   ├── cnn_ref_s32_0p5.json
+│   │   ├── cnn_ref_s32_1p0.json
+│   │   ├── cnn_ref_s33_0p5.json
+│   │   ├── cnn_ref_s33_1p0.json
+│   │   ├── cnn_ref_s34_0p5.json
+│   │   ├── cnn_ref_s34_1p0.json
+│   │   ├── cnn_ref_s35_0p5.json
+│   │   ├── cnn_ref_s35_1p0.json
+│   │   ├── gnnv2c_g2_s01_0p5.json
+│   │   ├── gnnv2c_g2_s01_1p0.json
+│   │   ├── gnnv2c_g2_s02_0p5.json
+│   │   ├── gnnv2c_g2_s02_1p0.json
+│   │   ├── gnnv2c_g2_s03_0p5.json
+│   │   ├── gnnv2c_g2_s03_1p0.json
+│   │   ├── gnnv2c_g2_s04_0p5.json
+│   │   ├── gnnv2c_g2_s04_1p0.json
+│   │   ├── gnnv2c_g2_s05_0p5.json
+│   │   ├── gnnv2c_g2_s05_1p0.json
+│   │   ├── gnnv2c_g2_s06_0p5.json
+│   │   ├── gnnv2c_g2_s06_1p0.json
+│   │   ├── gnnv2c_g2_s07_0p5.json
+│   │   ├── gnnv2c_g2_s07_1p0.json
+│   │   ├── gnnv2c_g2_s08_0p5.json
+│   │   ├── gnnv2c_g2_s08_1p0.json
+│   │   ├── gnnv2c_g2_s09_0p5.json
+│   │   ├── gnnv2c_g2_s09_1p0.json
+│   │   ├── gnnv2c_g2_s10_0p5.json
+│   │   ├── gnnv2c_g2_s10_1p0.json
+│   │   ├── gnnv2c_g2_s11_0p5.json
+│   │   ├── gnnv2c_g2_s11_1p0.json
+│   │   ├── gnnv2c_g2_s12_0p5.json
+│   │   ├── gnnv2c_g2_s12_1p0.json
+│   │   ├── gnnv2c_g2_s13_0p5.json
+│   │   ├── gnnv2c_g2_s13_1p0.json
+│   │   ├── gnnv2c_g2_s14_0p5.json
+│   │   ├── gnnv2c_g2_s14_1p0.json
+│   │   ├── gnnv2c_g2_s15_0p5.json
+│   │   ├── gnnv2c_g2_s15_1p0.json
+│   │   ├── gnnv2c_g2_s16_0p5.json
+│   │   ├── gnnv2c_g2_s16_1p0.json
+│   │   ├── gnnv2c_g2_s17_0p5.json
+│   │   ├── gnnv2c_g2_s17_1p0.json
+│   │   ├── gnnv2c_g2_s18_0p5.json
+│   │   ├── gnnv2c_g2_s18_1p0.json
+│   │   ├── gnnv2c_g2_s19_0p5.json
+│   │   ├── gnnv2c_g2_s19_1p0.json
+│   │   ├── gnnv2c_g2_s20_0p5.json
+│   │   ├── gnnv2c_g2_s20_1p0.json
+│   │   ├── gnnv2c_g2_s21_0p5.json
+│   │   ├── gnnv2c_g2_s21_1p0.json
+│   │   ├── gnnv2c_g2_s22_0p5.json
+│   │   ├── gnnv2c_g2_s22_1p0.json
+│   │   ├── gnnv2c_g2_s23_0p5.json
+│   │   ├── gnnv2c_g2_s23_1p0.json
+│   │   ├── gnnv2c_g2_s24_0p5.json
+│   │   ├── gnnv2c_g2_s24_1p0.json
+│   │   ├── gnnv2c_g2_s25_0p5.json
+│   │   ├── gnnv2c_g2_s25_1p0.json
+│   │   ├── gnnv2c_g2_s26_0p5.json
+│   │   ├── gnnv2c_g2_s26_1p0.json
+│   │   ├── gnnv2c_g2_s27_0p5.json
+│   │   ├── gnnv2c_g2_s27_1p0.json
+│   │   ├── gnnv2c_g2_s28_0p5.json
+│   │   ├── gnnv2c_g2_s28_1p0.json
+│   │   ├── gnnv2c_g2_s29_0p5.json
+│   │   ├── gnnv2c_g2_s29_1p0.json
+│   │   ├── gnnv2c_g2_s30_0p5.json
+│   │   ├── gnnv2c_g2_s30_1p0.json
+│   │   ├── gnnv2c_g2_s31_0p5.json
+│   │   ├── gnnv2c_g2_s31_1p0.json
+│   │   ├── gnnv2c_g2_s32_0p5.json
+│   │   ├── gnnv2c_g2_s32_1p0.json
+│   │   ├── gnnv2c_g2_s33_0p5.json
+│   │   ├── gnnv2c_g2_s33_1p0.json
+│   │   ├── gnnv2c_g2_s34_0p5.json
+│   │   ├── gnnv2c_g2_s34_1p0.json
+│   │   ├── gnnv2c_g2_s35_0p5.json
+│   │   └── gnnv2c_g2_s35_1p0.json
+│   ├── old_s01
+│   │   ├── gnnv2b_g2_s01_0p5.json
+│   │   ├── gnnv2b_g2_s01_1p0.json
+│   │   ├── gnnv2b_g3_s01_0p5.json
+│   │   ├── gnnv2b_g3_s01_1p0.json
+│   │   ├── gnnv2c_g2_s01_0p5.json
+│   │   ├── gnnv2c_g2_s01_1p0.json
+│   │   ├── gnnv2c_g3_s01_0p5.json
+│   │   ├── gnnv2c_g3_s01_1p0.json
+│   │   ├── logits_gnnv2c_g2_s01_0p5.npz
+│   │   └── logits_gnnv2c_g2_s01_1p0.npz
+│   └── stage1_folds.json
+├── results_cca_net_off_all.txt
+├── results_cnnref_all.txt
+├── results_fbcca_all.txt
+├── results_fbttcca_fixed.txt
+├── results_gnn_all.txt
+├── results_gnnv2_all.txt
+├── results_gnnv2b_all.txt
+├── results_gnnv2c_all.txt
+├── results_stage1_real.txt
+├── results_tree.txt
+├── run_all.sh
+├── run_b5seed.sh
+├── run_fill.sh
+├── run_night.sh
+├── run_queue.sh
+├── sedS8naWt
+├── sedvTucFN
+├── test_stage1.py
+├── v2e_s01_fast.txt
+├── zeroshot_tree.txt
+├── zs.zip
+├── zs_b5verdict.py
+├── zs_baselines.py
+├── zs_cca_feats.py
+├── zs_cca_net.py
+├── zs_cca_official.py
+├── zs_cnn_ref.py
+├── zs_cnn_ref.py.bak
+├── zs_code.zip
+├── zs_compile_all.py
+├── zs_config.py
+├── zs_consolidate.py
+├── zs_data.py
+├── zs_data64.py
+├── zs_elec.py
+├── zs_export_logits.py
+├── zs_fuse.py
+├── zs_fuse_ens.py
+├── zs_gnn_model.py
+├── zs_gnn_train.py
+├── zs_gnn_v2.py
+├── zs_gnn_v2b.py
+├── zs_gnn_v2c.py
+├── zs_gnn_v2c.py.bak
+├── zs_gnn_v2d.py
+├── zs_gnn_v2e.py
+├── zs_gnn_v2e_orig.py
+├── zs_gnn_v3_common.py
+├── zs_gnn_v3a_band.py
+├── zs_gnn_v3b_freq.py
+├── zs_gnn_v3b_freq2.py
+├── zs_gnn_v3c_freq3.py
+├── zs_gnn_v3d_unif.py
+├── zs_gnn_v3e_contrast.py
+├── zs_gnn_v3g_graph.py
+├── zs_gnn_v3h_anat.py
+├── zs_gnn_v3i_cap.py
+├── zs_gnn_v3j_adapt.py
+├── zs_gnn_v3k_seed.py
+├── zs_gnn_v3l_bank5.py
+├── zs_gnn_v3m_bank5seed.py
+├── zs_runner.py
+├── zs_seedcmp.py
+├── zs_table.py
+└── zs_with_consolidated.zip
+
+13 directories, 5592 files

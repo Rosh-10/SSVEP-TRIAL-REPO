@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/Admin/Desktop/roshan final year proejct/SSVEP-TRIAL-REPO/ZERO_SHOT/zs_gnn_v3l_bank5.py", line 44, in <module>
+    for sid in C.SUBJECTS: prepC(sid, sl, G.chans(n)); print(f"S{sid:02d} {n}ch sl={sl} cached", flush=True)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Admin/Desktop/roshan final year proejct/SSVEP-TRIAL-REPO/ZERO_SHOT/zs_gnn_v3l_bank5.py", line 19, in prepC
+    tmp = f.with_suffix(".tmp.npy"); np.save(tmp, D.fb_stand(D.apply_bank_C(X)).astype(np.float32)); tmp.replace(f)
+                                                                                                     ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [Errno 13] Permission denied: '/mnt/c/Users/Admin/Desktop/roshan final year proejct/SSVEP-TRIAL-REPO/ZERO_SHOT/cache/S1_BC9_0p5.tmp.npy' -> '/mnt/c/Users/Admin/Desktop/roshan final year proejct/SSVEP-TRIAL-REPO/ZERO_SHOT/cache/S1_BC9_0p5.npy'

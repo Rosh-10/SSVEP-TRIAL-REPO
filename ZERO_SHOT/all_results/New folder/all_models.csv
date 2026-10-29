@@ -1,0 +1,46 @@
+method,family,channels,description,n_0p5,acc_0p5,se_0p5,itr_0p5,params,n_1p0,acc_1p0,se_1p0,itr_1p0
+cca_net_off,baseline,9,CCA-Net replication: CNN + Modified FBtt-CCA + FBCCA(SST),35,51.95,3.54,115.32,,35,82.48,3.03,153.2
+gnnv3l_b5d19,v3,19,"dense, 5-band bank C, 19 ch",35,42.95,3.39,86.88,,35,78.24,3.12,142.18
+gnnv3m_s42b5d19,v3,19,b5d19 seed 42,35,42.52,3.39,85.64,,35,77.95,3.03,141.02
+gnnv3m_s43b5d19,v3,19,b5d19 seed 43,35,43.2,3.35,87.43,,35,77.88,3.02,140.86
+fbttcca_yf,baseline,9,FBtt-CCA (classical),35,39.15,3.21,75.35,,35,77.71,3.28,141.3
+gnnv3k_s42d19,v3,19,dense19 seed 42,35,41.21,3.24,81.26,,35,77.71,3.09,140.51
+gnnv3j_aw19,v3,19,"trial-adaptive node weights, 19 ch",35,41.62,3.27,82.5,,35,77.62,3.01,139.98
+gnnv3g_dense19,v3,19,"free signed map, 19 ch",35,41.92,3.3,83.49,,35,77.54,3.01,139.73
+gnnv3k_s43d19,v3,19,dense19 seed 43,35,40.96,3.32,80.86,,35,77.26,3.1,139.26
+gnnv3i_wide19,v3,19,"dense19, 4x wider",35,41.55,3.21,82.08,,35,77.17,3.09,138.92
+gnnv2e,other,9,,0,,,,,1,77.08,0.0,133.37
+gnnv3g_knn19,v3,19,"kNN signed map, 19 ch",35,39.89,3.32,77.85,,35,76.96,3.07,138.34
+gnnv3l_b5d9,v3,9,"dense, 5-band bank C, 9 ch",35,40.99,3.39,81.2,,35,76.92,3.08,138.28
+gnnv3a_sh,other,9,,0,,,,,1,76.25,0.0,131.03
+gnnv3j_aw9,v3,9,"trial-adaptive node weights, 9 ch",35,40.76,3.31,80.21,,35,76.18,3.19,136.5
+gnnv3e_lr,v3,9,learned signed 9x9 map,35,39.83,3.35,77.77,,35,76.1,3.18,136.23
+gnnv3g_knn9,v3,9,"kNN signed map, 9 ch",35,39.08,3.23,75.13,,35,75.93,3.15,135.67
+gnnv3h_fga,v3,9,anatomical adjacency + gate,35,38.54,3.2,73.58,,35,74.86,3.29,133.11
+gnnv3c_h5,v3,9,5 harmonics,35,38.02,3.27,72.47,,35,74.69,3.29,132.68
+gnnv3c_ng,v3,9,per-node gate,35,37.3,3.1,69.83,,35,74.21,3.21,130.97
+gnnv3b3_fg2,v3,9,learned gated adjacency,35,38.15,3.19,72.47,,35,74.18,3.34,131.38
+gnnv3c_ngh5,v3,9,per-node gate + 5 harmonics,35,37.25,3.27,70.37,,35,74.01,3.25,130.56
+gnnv3d_fgu,v3,9,uniform adjacency + gate,35,38.06,3.19,72.25,,35,73.93,3.35,130.68
+gnnv3b3_fg3,v3,9,"template front end, no graph",35,34.69,3.18,63.31,,35,71.52,3.27,123.64
+gnnv3e_cm,v3,9,fixed channel-mean contrast,35,32.08,2.96,55.98,,35,68.5,3.56,116.45
+cnn_ref,baseline,9,CCA-Net CNN branch alone (CSDuDoFN-like),35,41.54,3.66,84.48,,35,68.32,3.96,117.55
+gnnv3a_pb,v3,9,per-band + layer-wise adjacency (conv front end),35,33.29,2.98,59.05,,35,67.33,3.53,113.32
+gnnv2d_g2_uniform,v2,9,graph ablation: uniform,0,,,,,35,67.25,3.5,113.02
+gnnv2c_g2,v2,9,"v2c reference, learned graph",35,32.56,3.0,57.28,,35,66.98,3.5,112.32
+gnnv2b_g2,v2,9,"v2 + GroupNorm, graph",35,33.06,2.97,58.47,,35,66.05,3.56,110.14
+gnnv2_g2,v2,9,"conv+GCN, learned graph",35,32.13,2.97,56.12,,35,65.65,3.54,109.07
+fbcca,baseline,9,FBCCA (classical),35,20.64,1.8,26.62,,35,63.49,3.53,103.48
+gnnv3b2_fg3,other,9,,0,,,,,1,63.33,0.0,97.43
+gnnv2d_g2_anatomical,v2,9,INVALID: polar-coordinate bug in anatomical adjacency,0,,,,,35,62.77,3.48,101.75
+gnnv2d_g2_identity,v2,9,graph ablation: identity,0,,,,,35,59.87,3.39,94.43
+gnnv2c_g3,v2,9,"v2c, no graph",35,29.14,2.65,47.64,,35,54.73,3.48,82.85
+gnnv2_g3,v2,9,"conv, no graph",35,29.93,2.7,49.67,,35,52.98,3.46,78.88
+gnnv2b_g3,v2,9,"v2 + GroupNorm, no graph",35,29.87,2.69,49.51,,35,52.98,3.46,78.88
+gnnv3b_fg3,other,9,,0,,,,,1,38.75,0.0,44.86
+gnnv3b2_fg2,other,9,,0,,,,,1,37.92,0.0,43.32
+gnn,v1,9,first conv+GCN,35,13.38,1.18,12.26,,35,22.76,1.94,20.77
+gnnv3b_fg2,other,9,,0,,,,,1,16.67,0.0,10.7
+gnnv2d_g2_learned,other,9,,1,45.83,0.0,87.84,,0,,,
+gnnv3g_dense64,v3,64,"free signed map, 64 ch",35,40.11,3.14,77.64,,0,,,
+gnnv3g_knn64,v3,64,"kNN signed map, 64 ch",35,39.69,3.28,77.08,,0,,,

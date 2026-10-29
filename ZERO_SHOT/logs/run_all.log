@@ -1,0 +1,10 @@
+08:23:20 start zs_gnn_v3k_seed.py --sl 1.0 --variant s42d19 --resume
+09:12:30 end   zs_gnn_v3k_seed.py
+09:12:51 start zs_gnn_v3j_adapt.py --sl 1.0 --variant aw19 aw9 --resume
+10:39:06 end   zs_gnn_v3j_adapt.py
+bank C bands 1-3 vs bank A, max diff 0.0
+10:39:39 start zs_gnn_v3l_bank5.py --sl 1.0 --variant b5d19 b5d9 --resume
+12:07:40 end   zs_gnn_v3l_bank5.py
+12:07:56 start zs_gnn_v3k_seed.py --sl 1.0 --variant s43d19 --resume
+12:55:51 end   zs_gnn_v3k_seed.py
+12:55:51 ALL DONE

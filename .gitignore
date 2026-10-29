@@ -65,7 +65,10 @@ desktop.ini
 # ── Archives ─────────────────────────────────────────────────────────────────
 *.zip
 
-# ── What IS pushed (for reference) ───────────────────────────────────────────
+*.pt
+*.json
+*.npz
+
 # ZERO_SHOT/zs_config.py
 # ZERO_SHOT/zs_data.py
 # ZERO_SHOT/zs_baselines.py
@@ -86,4 +89,6 @@ desktop.ini
 # FIRST_RUNS/graph_construction/electrode_adjacency.npz
 # README.md
 # requirements.txt
-# .gitignore
+# .gitignore*.pt
+*.json
+*.npz

@@ -1,0 +1,252 @@
+gnnv3k device=cuda subjects=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35] sl=[1.0] variants=['s42d19'] epochs=100 bs=128 lr=0.0002 seed=41
+  S01 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2408
+    ep  25  loss=0.7611
+    ep  50  loss=0.6303
+    ep  75  loss=0.5627
+    ep 100  loss=0.5170
+  S01 sl=1.0 gnnv3k-s42d19  acc=0.7125 ITR=117.48 (70.3s)
+  S02 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2312
+    ep  25  loss=0.7787
+    ep  50  loss=0.6465
+    ep  75  loss=0.5750
+    ep 100  loss=0.5326
+  S02 sl=1.0 gnnv3k-s42d19  acc=0.8375 ITR=152.91 (69.4s)
+  S03 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2606
+    ep  25  loss=0.7798
+    ep  50  loss=0.6527
+    ep  75  loss=0.5814
+    ep 100  loss=0.5361
+  S03 sl=1.0 gnnv3k-s42d19  acc=0.9750 ITR=200.85 (69.5s)
+  S04 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2479
+    ep  25  loss=0.7756
+    ep  50  loss=0.6487
+    ep  75  loss=0.5784
+    ep 100  loss=0.5331
+  S04 sl=1.0 gnnv3k-s42d19  acc=0.9208 ITR=180.17 (69.2s)
+  S05 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2429
+    ep  25  loss=0.7656
+    ep  50  loss=0.6393
+    ep  75  loss=0.5703
+    ep 100  loss=0.5263
+  S05 sl=1.0 gnnv3k-s42d19  acc=0.8167 ITR=146.62 (69.1s)
+  S06 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2392
+    ep  25  loss=0.7766
+    ep  50  loss=0.6491
+    ep  75  loss=0.5770
+    ep 100  loss=0.5317
+  S06 sl=1.0 gnnv3k-s42d19  acc=0.9250 ITR=181.65 (69.0s)
+  S07 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2483
+    ep  25  loss=0.7567
+    ep  50  loss=0.6332
+    ep  75  loss=0.5702
+    ep 100  loss=0.5209
+  S07 sl=1.0 gnnv3k-s42d19  acc=0.8000 ITR=141.72 (69.2s)
+  S08 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2407
+    ep  25  loss=0.7506
+    ep  50  loss=0.6277
+    ep  75  loss=0.5558
+    ep 100  loss=0.5081
+  S08 sl=1.0 gnnv3k-s42d19  acc=0.7167 ITR=118.58 (73.1s)
+  S09 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2455
+    ep  25  loss=0.7648
+    ep  50  loss=0.6354
+    ep  75  loss=0.5683
+    ep 100  loss=0.5190
+  S09 sl=1.0 gnnv3k-s42d19  acc=0.8167 ITR=146.62 (74.3s)
+  S10 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2479
+    ep  25  loss=0.7635
+    ep  50  loss=0.6402
+    ep  75  loss=0.5681
+    ep 100  loss=0.5258
+  S10 sl=1.0 gnnv3k-s42d19  acc=0.8708 ITR=163.36 (74.2s)
+  S11 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2281
+    ep  25  loss=0.6582
+    ep  50  loss=0.5354
+    ep  75  loss=0.4653
+    ep 100  loss=0.4201
+  S11 sl=1.0 gnnv3k-s42d19  acc=0.1708 ITR=11.19 (74.0s)
+  S12 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2355
+    ep  25  loss=0.7539
+    ep  50  loss=0.6329
+    ep  75  loss=0.5647
+    ep 100  loss=0.5162
+  S12 sl=1.0 gnnv3k-s42d19  acc=0.6208 ITR=94.42 (74.1s)
+  S13 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2159
+    ep  25  loss=0.7661
+    ep  50  loss=0.6379
+    ep  75  loss=0.5686
+    ep 100  loss=0.5184
+  S13 sl=1.0 gnnv3k-s42d19  acc=0.6000 ITR=89.47 (73.8s)
+  S14 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2439
+    ep  25  loss=0.7622
+    ep  50  loss=0.6407
+    ep  75  loss=0.5732
+    ep 100  loss=0.5254
+  S14 sl=1.0 gnnv3k-s42d19  acc=0.7458 ITR=126.43 (72.9s)
+  S15 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2352
+    ep  25  loss=0.7644
+    ep  50  loss=0.6369
+    ep  75  loss=0.5656
+    ep 100  loss=0.5194
+  S15 sl=1.0 gnnv3k-s42d19  acc=0.8000 ITR=141.72 (69.5s)
+  S16 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2464
+    ep  25  loss=0.7647
+    ep  50  loss=0.6340
+    ep  75  loss=0.5615
+    ep 100  loss=0.5191
+  S16 sl=1.0 gnnv3k-s42d19  acc=0.7583 ITR=129.87 (69.7s)
+  S17 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2290
+    ep  25  loss=0.7652
+    ep  50  loss=0.6353
+    ep  75  loss=0.5685
+    ep 100  loss=0.5174
+  S17 sl=1.0 gnnv3k-s42d19  acc=0.7375 ITR=124.16 (70.9s)
+  S18 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2492
+    ep  25  loss=0.7582
+    ep  50  loss=0.6347
+    ep  75  loss=0.5634
+    ep 100  loss=0.5171
+  S18 sl=1.0 gnnv3k-s42d19  acc=0.8042 ITR=142.93 (69.3s)
+  S19 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2421
+    ep  25  loss=0.7246
+    ep  50  loss=0.5942
+    ep  75  loss=0.5238
+    ep 100  loss=0.4846
+  S19 sl=1.0 gnnv3k-s42d19  acc=0.3917 ITR=45.63 (69.1s)
+  S20 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2494
+    ep  25  loss=0.7748
+    ep  50  loss=0.6462
+    ep  75  loss=0.5773
+    ep 100  loss=0.5296
+  S20 sl=1.0 gnnv3k-s42d19  acc=0.9083 ITR=175.82 (69.2s)
+  S21 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2492
+    ep  25  loss=0.7698
+    ep  50  loss=0.6432
+    ep  75  loss=0.5745
+    ep 100  loss=0.5261
+  S21 sl=1.0 gnnv3k-s42d19  acc=0.8583 ITR=159.38 (69.2s)
+  S22 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2490
+    ep  25  loss=0.7773
+    ep  50  loss=0.6477
+    ep  75  loss=0.5819
+    ep 100  loss=0.5320
+  S22 sl=1.0 gnnv3k-s42d19  acc=0.9583 ITR=194.07 (69.7s)
+  S23 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2331
+    ep  25  loss=0.7599
+    ep  50  loss=0.6464
+    ep  75  loss=0.5762
+    ep 100  loss=0.5333
+  S23 sl=1.0 gnnv3k-s42d19  acc=0.6792 ITR=108.84 (69.3s)
+  S24 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2603
+    ep  25  loss=0.7766
+    ep  50  loss=0.6477
+    ep  75  loss=0.5797
+    ep 100  loss=0.5304
+  S24 sl=1.0 gnnv3k-s42d19  acc=0.9583 ITR=194.07 (69.4s)
+  S25 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2502
+    ep  25  loss=0.7726
+    ep  50  loss=0.6431
+    ep  75  loss=0.5778
+    ep 100  loss=0.5336
+  S25 sl=1.0 gnnv3k-s42d19  acc=0.8792 ITR=166.06 (69.5s)
+  S26 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2458
+    ep  25  loss=0.7612
+    ep  50  loss=0.6398
+    ep  75  loss=0.5723
+    ep 100  loss=0.5258
+  S26 sl=1.0 gnnv3k-s42d19  acc=0.8292 ITR=150.38 (69.6s)
+  S27 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2326
+    ep  25  loss=0.7766
+    ep  50  loss=0.6495
+    ep  75  loss=0.5775
+    ep 100  loss=0.5283
+  S27 sl=1.0 gnnv3k-s42d19  acc=0.9250 ITR=181.65 (69.5s)
+  S28 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2462
+    ep  25  loss=0.7794
+    ep  50  loss=0.6509
+    ep  75  loss=0.5805
+    ep 100  loss=0.5372
+  S28 sl=1.0 gnnv3k-s42d19  acc=0.9417 ITR=187.71 (69.3s)
+  S29 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2343
+    ep  25  loss=0.7177
+    ep  50  loss=0.5967
+    ep  75  loss=0.5371
+    ep 100  loss=0.4914
+  S29 sl=1.0 gnnv3k-s42d19  acc=0.3958 ITR=46.41 (69.4s)
+  S30 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2400
+    ep  25  loss=0.7564
+    ep  50  loss=0.6326
+    ep  75  loss=0.5630
+    ep 100  loss=0.5209
+  S30 sl=1.0 gnnv3k-s42d19  acc=0.7208 ITR=119.68 (69.5s)
+  S31 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2390
+    ep  25  loss=0.7838
+    ep  50  loss=0.6534
+    ep  75  loss=0.5799
+    ep 100  loss=0.5398
+  S31 sl=1.0 gnnv3k-s42d19  acc=0.9458 ITR=189.27 (69.2s)
+  S32 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2537
+    ep  25  loss=0.7801
+    ep  50  loss=0.6505
+    ep  75  loss=0.5827
+    ep 100  loss=0.5346
+  S32 sl=1.0 gnnv3k-s42d19  acc=0.9875 ITR=206.36 (69.2s)
+  S33 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2375
+    ep  25  loss=0.7329
+    ep  50  loss=0.6041
+    ep  75  loss=0.5321
+    ep 100  loss=0.4848
+  S33 sl=1.0 gnnv3k-s42d19  acc=0.5042 ITR=68.05 (69.1s)
+  S34 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2441
+    ep  25  loss=0.7726
+    ep  50  loss=0.6455
+    ep  75  loss=0.5778
+    ep 100  loss=0.5302
+  S34 sl=1.0 gnnv3k-s42d19  acc=0.9417 ITR=187.71 (69.4s)
+  S35 sl=1.0 gnnv3k-s42d19  train=8160 test=240 params=23,299 device=cuda
+    ep   1  loss=3.2639
+    ep  25  loss=0.7582
+    ep  50  loss=0.6323
+    ep  75  loss=0.5638
+    ep 100  loss=0.5140
+  S35 sl=1.0 gnnv3k-s42d19  acc=0.7458 ITR=126.43 (69.5s)
+
+=== SUMMARY ===
+
+gnnv3k-s42d19  sl=1.0  n=35
+  acc mean=0.7771 std=0.1826 se=0.0309
+  ITR mean=140.51 se=7.90

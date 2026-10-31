@@ -1,4 +1,4 @@
-data=load('.\S1.mat\S1.mat');
+data=load('/Users/roshan/projects/gnn/SSVEP-TRIAL-REPO/FIRST_RUNS/EXPLORATION-USING-MATLAB/S1.mat');
 % Display all variable names inside the file
 disp(fieldnames(data));
 

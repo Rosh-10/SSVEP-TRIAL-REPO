@@ -4,9 +4,12 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parent
-DATA_DIR = Path(os.environ.get("SSVEP_RAW", ROOT.parent / "data" / "raw" / "benchmark"))  # [MY CHOICE] override with env SSVEP_RAW
-CACHE_DIR = ROOT / "cache"      # [MY CHOICE] 9-channel float64 copies, so each .mat is read once
-RESULTS_DIR = ROOT / "results"  # [MY CHOICE]
+DATASET = os.environ.get("SSVEP_DATASET", "benchmark").lower()   # benchmark (default, = paper config) | beta | ucsd
+assert DATASET in ("benchmark", "beta", "ucsd"), f"unknown SSVEP_DATASET={DATASET}"
+_SUF = "" if DATASET == "benchmark" else "_" + DATASET            # results_beta/, cache_beta/ keep datasets apart
+DATA_DIR = Path(os.environ.get("SSVEP_RAW", ROOT.parent / "data" / "raw" / DATASET))  # [MY CHOICE] override with env SSVEP_RAW
+CACHE_DIR = ROOT / f"cache{_SUF}"      # [MY CHOICE] 9-channel float64 copies, so each .mat is read once
+RESULTS_DIR = ROOT / f"results{_SUF}"  # [MY CHOICE]
 
 FS = 250                                    # [REPO] main.py rfs
 CHANNELS = [47, 53, 54, 55, 56, 57, 60, 61, 62]  # [REPO] 0-based
@@ -29,3 +32,8 @@ C_PASS, C_STOP, C_HI_PASS, C_HI_STOP = [6, 14, 22, 30, 38], [4, 10, 16, 24, 32],
 
 N_VAL = 4        # [MY CHOICE] source subjects held out for early stopping
 SEED = 41        # [REPO] main.py setup_seed(41) ; fold val split uses SEED*1000+test_sid [MY CHOICE]
+
+# ---- other datasets: only values certain from the dataset papers / toolbox docs; None = fill in after md_explore.py ----
+if DATASET != "benchmark":
+    FS, N_CLS, N_BLK, SUBJECTS = {"beta": (250, 40, 4, list(range(1, 71))), "ucsd": (256, 12, 15, list(range(1, 11)))}[DATASET]
+    CHANNELS = LATENCY = PHASE = None   # TODO: set from md_explore.py output (None makes dependent code fail loudly, not silently use Benchmark values)

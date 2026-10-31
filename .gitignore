@@ -21,7 +21,7 @@ env/
 .env/
 
 # ── Official CCA-Net repo (not our code — cite as dependency in README) ──────
-ZERO_SHOT/official/
+
 
 # ── Superseded / intermediate result files ───────────────────────────────────
 ZERO_SHOT/results/OLD_*.json

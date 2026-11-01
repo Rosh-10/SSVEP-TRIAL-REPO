@@ -92,3 +92,6 @@ desktop.ini
 # .gitignore*.pt
 *.json
 *.npz
+
+# Dataset archives kept inside data/ (not for git)
+data/New folder/
